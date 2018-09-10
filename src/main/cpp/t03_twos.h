@@ -1,0 +1,12 @@
+//
+// Created by Evgenii_Efimchik on 10.09.18.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T03_TWOS_H
+#define IFMO_CPP_PROGRAMMING_20180910_T03_TWOS_H
+
+
+int t03_twos();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T03_TWOS_H

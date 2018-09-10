@@ -1,0 +1,12 @@
+//
+// Created by Evgenii_Efimchik on 10.09.18.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T08_FIBB_H
+#define IFMO_CPP_PROGRAMMING_20180910_T08_FIBB_H
+
+
+int t08_fibb();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T08_FIBB_H
