@@ -85,4 +85,6 @@ PASSED: negative_result
 Summary: SUCCESS
 ```
 ## Command to run tests (use git bash on Windows):
+```bash
 ./run_tests.sh t01_quad t02_divisor t03_twos t04_sum t05_max t06_max_count t07_max_2 t08_fibb t09_row t10_max_local
+```
