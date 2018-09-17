@@ -1,0 +1,12 @@
+//
+// Created by Evgenii_Efimchik on 17.09.18.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T07_QUAD2_H
+#define IFMO_CPP_PROGRAMMING_20180910_T07_QUAD2_H
+
+
+int t07_quad2();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T07_QUAD2_H
