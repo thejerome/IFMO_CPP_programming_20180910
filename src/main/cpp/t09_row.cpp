@@ -23,5 +23,17 @@
 using namespace std;
 
 int t09_row() {
-
+    int max = 1, m= 1, l, s = 1;
+    cin >> l;
+    while (m != 0) {
+        cin >> m;
+        if (l == m) {
+            s++;
+            if (max < s)
+                max = s;
+        } else
+            s = 1;
+        l = m;
+    }
+    cout << max;
 };
