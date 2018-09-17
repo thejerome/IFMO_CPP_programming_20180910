@@ -86,4 +86,6 @@ Summary: SUCCESS
 ```
 
 ## Script to run tests (in Git Bash on Windows)
+```bash
 ./run_tests.sh t00_hello t01_squirrels t02_squirrels2 t03_last_number t04_first_number t05_tens_number t06_3digits t07_pies t08_watch t09_snail
+```
