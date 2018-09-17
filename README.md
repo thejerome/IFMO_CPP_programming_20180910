@@ -1,10 +1,6 @@
 # IFMO_CPP_programming_20180910
 [![from_flaxo with_♥](https://img.shields.io/badge/from_flaxo-with_♥-blue.svg)](https://github.com/tcibinan/flaxo)
 
-# Simple C++ project with io-tests
-
-[![Build Status](https://travis-ci.org/tcibinan/simple-cpp-project.svg?branch=master)](https://travis-ci.org/tcibinan/simple-cpp-project)
-
 ## Configuration
 
 Source structure should be the following. All `.cpp` scripts should be located under `src/main/cpp` directory.
