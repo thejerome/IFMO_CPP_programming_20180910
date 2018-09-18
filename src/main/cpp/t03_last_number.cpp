@@ -22,6 +22,11 @@
 
 using namespace std;
 
-int t03_last_number() {
+int t03_last_number() 
+{
+	int input;
+	cin >> input;
+	cout << input % 10;
 
+	return 0;
 };
