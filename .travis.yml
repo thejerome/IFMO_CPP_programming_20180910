@@ -2,3 +2,8 @@ script:
   - chmod +x run_test.sh
   - chmod +x run_tests.sh
   - ./run_tests.sh t01_quad t02_divisor t03_twos t04_sum t05_max t06_max_count t07_max_2 t08_fibb t09_row t10_max_local
+
+# disabling email notifications
+notifications:
+  email: false
+  webhooks: http://83.243.70.130:8080/rest/travis/hook
