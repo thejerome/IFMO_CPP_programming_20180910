@@ -1,1 +1,4 @@
-script: ./run_tests.sh t01_frac t02_frac_2 t03_triangle t04_deposit t05_ave t06_quad t07_quad2
+script: 
+  - chmod +x run_test.sh
+  - chmod +x run_tests.sh
+  - ./run_tests.sh t01_frac t02_frac_2 t03_triangle t04_deposit t05_ave t06_quad t07_quad2
