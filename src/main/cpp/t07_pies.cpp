@@ -35,7 +35,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t07_pies() {
     int a, b, n, price, sum ;
     cin >> a >> b >> n;

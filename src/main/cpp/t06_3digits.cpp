@@ -21,7 +21,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t06_3digits() {
     int N;
     cin >> N;

@@ -21,7 +21,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t04_first_number() {
     int N;
     cin >> N;

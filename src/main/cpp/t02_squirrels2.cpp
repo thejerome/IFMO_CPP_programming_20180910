@@ -22,7 +22,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t02_squirrels2() {
     int N, K;
     cin >> N >> K;

@@ -25,7 +25,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t09_snail() {
     int h,a,b,m,d;
     cin >> h >> a >> b;
