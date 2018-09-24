@@ -19,9 +19,15 @@
 
 #include "t03_twos.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t03_twos() {
-
+    int n;
+    cin >> n;
+    for (int i=1; pow(2,i)<=n; i++)
+        if (pow(2,i)==n) {cout << "YES"; n=0; break;}
+    if (n) cout << "NO";
+    return 0;
 };
