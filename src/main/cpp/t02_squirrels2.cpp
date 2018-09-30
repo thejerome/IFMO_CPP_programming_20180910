@@ -27,5 +27,5 @@ int t02_squirrels2() {
     int n, k;
     cin >> n >> k;
 
-    cout << k % n;
+    cout << k % n << endl;
 };
