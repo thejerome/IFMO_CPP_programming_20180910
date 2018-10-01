@@ -35,5 +35,26 @@
 using namespace std;
 
 int t08_watch() {
+    int seconds, hours, minutes, seconds_1;
+    cin >> seconds;
+    hours = seconds / 3600 % 24;
+    minutes = seconds / 60 % 60;
+    seconds_1 = seconds % 60;
+    if (minutes > 9 and seconds_1 > 9) {
+        cout << hours << ':' << minutes << ':' << seconds_1;
+    }
+    else{
+        if (minutes < 10 and seconds_1 < 10){
+            cout << hours << ':' << '0' << minutes << ':' << '0' << seconds_1;
+        }
+        else{
+            if (minutes < 10){
+                cout << hours << ':'<< '0' << minutes << ':' << seconds_1;
+            }
+            else{
+                cout << hours << ':' << minutes << ':'<< '0' << seconds_1;
+            }
+        }
 
-};
+    }
+}

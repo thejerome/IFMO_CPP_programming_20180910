@@ -27,5 +27,18 @@
 using namespace std;
 
 int t09_snail() {
+    int h, a, b, distance, day;
+    cin >> h >> a >> b;
+    distance = 0;
+    day = 0;
+    while (distance < h){
+        distance += a;
+        day += 1;
+        if (h == distance or distance > h){
+            break;
+        }
+        distance -= b;
 
+    }
+    cout << day;
 };
