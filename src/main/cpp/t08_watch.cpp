@@ -35,5 +35,7 @@
 using namespace std;
 
 int t08_watch() {
-
+int s;
+cin >> s;
+cout <<s/3600%24 << ":" << s%60/60/10 << s/60%60%10 << ":" << s%60%60/10 << s%60%60%10;
 };
