@@ -23,5 +23,16 @@
 using namespace std;
 
 int t04_first_number() {
-
+    int num;
+    cin >> num;
+    if ( (num >= 10) && (num <= 99) && (typeid(num) == typeid(int)) )
+    {
+        int result = num / 10;
+        cout << result;
+    }
+    else
+    {
+        cout << "Please enter a double digit";
+    }
+    return 0;
 };
