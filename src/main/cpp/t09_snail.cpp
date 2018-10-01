@@ -27,5 +27,15 @@
 using namespace std;
 
 int t09_snail() {
-
+    int h,a,b;
+    cin >> h >> a >> b;
+    int h_now=0,day=0;
+    while (1) {
+        day++;
+        h_now += a;
+        if (h_now > h) break;
+        h_now -= b;
+        if (h_now < 0) h_now = 0;
+    }
+    cout << day;
 };
