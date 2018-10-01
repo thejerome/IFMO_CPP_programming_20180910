@@ -33,7 +33,7 @@ int t09_snail() {
     while (1) {
         day++;
         h_now += a;
-        if (h_now > h) break;
+        if (h_now >= h) break;
         h_now -= b;
         if (h_now < 0) h_now = 0;
     }
