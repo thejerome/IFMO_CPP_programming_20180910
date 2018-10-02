@@ -35,5 +35,20 @@
 using namespace std;
 
 int t08_watch() {
+	int N;
+	cin>>N;
+	int Seced = (N % 60) % 10;
+	int Secdes = (N % 60) / 10;
 
+	N = N / 60;
+
+	int Mined = (N % 60) % 10;
+	int Mindes = (N % 60) / 10;
+
+	N = N / 60;
+
+	int Hour = N % 24;
+	cout <<Hour<<":"<<Mindes<<Mined<<":"<<Secdes<<Seced;
+    
+  return 0;
 };
