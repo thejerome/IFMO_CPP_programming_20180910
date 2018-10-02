@@ -30,15 +30,9 @@ int t09_snail() {
     int H, A, B;
     cin >> H >> A >> B;
     int result;
-    result =( H - A ) / ( A - B );
-    if ( ( H - A ) % ( A -B ) == 0 )
-    {
-        cout << result + 1;
+    result = (int)(( H - A - 1 ) / ( A - B )) + 2;
+    cout << result;
 
-    }
-    else{
-        cout << result + 2;
-    }
     return 0;
 
 };
