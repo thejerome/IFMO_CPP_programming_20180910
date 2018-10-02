@@ -22,6 +22,10 @@
 
 using namespace std;
 
-int t04_first_number() {
-
+int t04_first_number() 
+{
+	int in;
+	cin >> in;
+	cout << in / 10;
+	return 0;
 };
