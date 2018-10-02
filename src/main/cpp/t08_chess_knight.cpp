@@ -28,6 +28,12 @@
 
 using namespace std;
 
-int t08_chess_knight() {
-
+int t08_chess_knight() 
+{
+	int A, B, C, D;
+	cin >> A >> B >> C >> D;
+	if (((A + 2 == C || A - 2 == C) && (B + 1 == D || B - 1 == D)) || ((B + 2 == D || B - 2 == D) && (A + 1 == C || A - 1 == C)))
+		cout << "YES";
+	else
+		cout << "NO";
 };

@@ -26,6 +26,14 @@
 
 using namespace std;
 
-int t09_choco() {
-
+int t09_choco() 
+{
+	int A, B, C;
+	cin >> A >> B >> C;
+	C = A * B - C;
+	if ((A * B > C) && (C % A == 0 || C % B == 0))
+		cout << "YES";
+	else
+		cout << "NO";
 };
+
