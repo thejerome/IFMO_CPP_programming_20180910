@@ -29,9 +29,8 @@ int t09_snail() {
     int h,a,b,m,d;
     cin >> h >> a >> b;
     m=a-b;
-    d=0;
-    while (m < h && a < h) {
-        d++; h-=m;
-    } d++;
+    d=(h-a)/m+1;
+    d=1+d+(h-(d*m+a))/m;
+
     cout << d;
 };

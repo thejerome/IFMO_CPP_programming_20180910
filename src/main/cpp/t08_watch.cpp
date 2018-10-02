@@ -38,13 +38,9 @@ int t08_watch() {
     cin >> n;
     h = n / 3600;
     n = n-h*3600;
-    if (h > 23) h=h % 24;
+    h=h % 24;
     m=n/60;
     n=n-m*60;
     s=n;
-    cout << h << ':';
-    if (m>=0 && m < 10) cout << '0' << m << ':';
-                        else cout << m << ':';
-    if (s>=0 && s < 10) cout << '0' << s ;
-                        else cout << s ;
+    cout << h << ':' << m/10 << m%10 << ':' << s/10 << s%10;
 };
