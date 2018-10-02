@@ -23,6 +23,10 @@
 
 using namespace std;
 
-int t02_squirrels2() {
-
+int t02_squirrels2() 
+{
+	int Sq, Nt;
+	cin >> Sq >> Nt;
+	cout << Nt % Sq;
+	return 0;
 };
