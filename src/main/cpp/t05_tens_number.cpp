@@ -23,5 +23,8 @@
 using namespace std;
 
 int t05_tens_number() {
-
+	int N;
+	cin >> N >> endl;
+	int res = (N / 10) % 10;
+	cout << res << endl;
 };
