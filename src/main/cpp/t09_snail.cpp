@@ -27,5 +27,7 @@
 using namespace std;
 
 int t09_snail() {
-
+    int height, up, down;
+    cin >> height >> up >> down;
+    cout << (height - down) / (up - down);
 };
