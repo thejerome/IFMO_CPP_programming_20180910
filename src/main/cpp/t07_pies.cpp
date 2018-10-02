@@ -37,5 +37,12 @@
 using namespace std;
 
 int t07_pies() {
+    int A, B, N;
+    cin >> A >> B >> N;
+    int Ruble, Kopeck;
+    Kopeck = B * N % 100;
+    Ruble = A * N + B * N / 100;
+    cout << Ruble << " " << Kopeck;
 
+    return 0;
 };
