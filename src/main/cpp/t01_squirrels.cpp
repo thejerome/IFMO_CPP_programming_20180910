@@ -25,4 +25,8 @@ using namespace std;
 
 int t01_squirrels() {
 
+  int sq, pean;
+  cin >> sq >> pean;
+  int result = pean/sq;
+  cout << result ;
 };
