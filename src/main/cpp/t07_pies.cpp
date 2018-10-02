@@ -36,10 +36,6 @@
 
 using namespace std;
 
-int t07_pies() 
-{
-	int Rub, sRub, Num;
-	cin >> Rub >> sRub >> Num;
-	cout << (((Rub * 100) + sRub) * Num / 100) << " " << ((Rub * 100) + sRub) * Num % 100;
-	return 0;
+int t07_pies() {
+
 };

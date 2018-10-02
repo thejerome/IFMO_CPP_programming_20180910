@@ -22,10 +22,6 @@
 
 using namespace std;
 
-int t06_3digits() 
-{
-	int in;
-	cin >> in;
-	cout << (in / 100) + (in % 100 / 10) + (in % 10);
-	return 0;
+int t06_3digits() {
+
 };

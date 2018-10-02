@@ -23,14 +23,9 @@
 
 #include "t09_snail.h"
 #include <iostream>
-#include <math.h>
 
 using namespace std;
 
-int t09_snail() 
-{
-	int H, Up, Down;
-	cin >> H >> Up >> Down;
-	cout << ((H-Down)+(Up-Down)-1)/(Up-Down);
-	return 0;
+int t09_snail() {
+
 };
