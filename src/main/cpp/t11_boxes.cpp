@@ -35,7 +35,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t11_boxes() {
     int a1,b1,c1,a2,b2,c2;
     bool writing=false;

@@ -31,5 +31,6 @@ int t09_choco() {
     if ((k%n == 0) && (k/n <= m)) cout << "YES";
         else if ((k%m == 0) && (k/m <= n)) cout << "YES";
             else cout << "NO";
-return 0;
+
+            return 0;
 };

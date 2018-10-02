@@ -17,7 +17,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t02_triangle() {
     int a,b,c;
     cin >> a >> b >> c;
