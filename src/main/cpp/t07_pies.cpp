@@ -35,7 +35,11 @@
 #include <iostream>
 
 using namespace std;
-
 int t07_pies() {
-
+    int a, b, n, price, sum ;
+    cin >> a >> b >> n;
+    price = a*100 + b;
+    sum = price * n;
+    a=sum / 100; b=sum-a*100;
+    cout << a << " " << b;
 };
