@@ -28,18 +28,8 @@ using namespace std;
 int t09_choco() {
     int m,n,k,s;
     cin >> n >> m >> k;
-    s=0;
-    for (int i=1; i<=n; i++){
-        s+=m;
-        if (k==s) {cout << "YES"; break;}
-    }
-    if (k!=s) {
-        s=0;
-        for (int i=1; i<=m; i++){
-            s+=n;
-            if (k==s) {cout << "YES"; break;}
-        }
-    }
-    if (k!=s) cout << "NO";
+    if ((k%n == 0) && (k/n <= m)) cout << "YES";
+        else if ((k%m == 0) && (k/m <= n)) cout << "YES";
+            else cout << "NO";
 return 0;
 };
