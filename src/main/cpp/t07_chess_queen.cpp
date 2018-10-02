@@ -23,11 +23,17 @@
 //
 //NO
 
-#include "t07_chess_queen.h"
+#include"t07_chess_queen.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t07_chess_queen() {
-
+    int x1,x2,y1,y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    if ( x1 != x2 && y1 != y2) {
+        if (abs(x2 - x1) == abs(y2 - y1)) cout << "YES";
+        else cout << "NO";
+    } else cout << "YES";
 };
