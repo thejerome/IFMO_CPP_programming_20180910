@@ -33,7 +33,6 @@ int t06_3digits() {
     n /= 10;
 
     sum += n % 10;
-    n /= 10;
 
     cout << sum;
 };
