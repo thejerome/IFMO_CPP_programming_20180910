@@ -20,5 +20,9 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
+	int X1,Y1,X2,Y2;
+	cin>>X1>>Y1>>X2>>Y2;
+		if ((abs(X2 - X1))==(abs(Y2-Y1))) {cout<< "YES";}
+		else {cout<< "NO";}
+return 0;
 };
