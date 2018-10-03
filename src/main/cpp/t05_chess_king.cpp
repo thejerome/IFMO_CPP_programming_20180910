@@ -20,5 +20,12 @@
 using namespace std;
 
 int t05_chess_king() {
-
+	int X1,Y1,X2,Y2,K;
+	cin>>X1>>Y1>>X2>>Y2;     K=0;
+	if ((X2 == X1+1) or (X2 == X1) or (X2 == X1-1)) {
+						if ((Y2 == Y1+1) or (Y2 == Y1) or (Y2 == Y1-1)) {cout<<"YES"; K=K+1;}
+						else {cout<< "NO"; K=K+1;}
+													}
+		if (K == 0) {cout<< "NO";}											
+return 0;
 };
