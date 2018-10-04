@@ -19,9 +19,11 @@
 
 #include "t03_twos.h"
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 int t03_twos() {
-
+    int n; cin >> n;
+    float lg = log2(n);
+    cout << ((lg - int(lg) == 0)?"YES":"NO");
 };
