@@ -47,11 +47,5 @@ int t08_watch() {
 
     int s = n;
 
-    cout << h << ':';
-    if (m < 10)
-        cout << 0;
-    cout << m << ':';
-    if (s < 10)
-        cout << 0;
-    cout << s << endl;
+    cout << h << ':' << m / 10 << m % 10 << ':' << s / 10 << s % 10 << endl;
 };

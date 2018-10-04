@@ -23,13 +23,8 @@
 using namespace std;
 
 int t06_3digits() {
-    int n, res = 0;
+    int n;
     cin >> n;
 
-    for (int i = 0; i < 3; i++) {
-        res += n % 10;
-        n /= 10;
-    }
-
-    cout << res << endl;
+    cout << n % 10 + n / 100 + (n / 10 % 10) << endl;
 };
