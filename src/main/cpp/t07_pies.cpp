@@ -37,5 +37,9 @@
 using namespace std;
 
 int t07_pies() {
-
+	int A, B, N;
+	cin >> A >> B >> N;
+	int cost = (100 * A + B)*N;
+	cout << cost / 100 << " " << cost % 100;
+	return 0;
 };
