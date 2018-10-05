@@ -20,5 +20,8 @@
 using namespace std;
 
 int t06_chess_bishop() {
-
+	int xn, yn, xf, yf;
+	cin >> xn >> yn >> xf >> yf;
+	if (xn - xf == yn - yf || xn - xf == yf - yn && !(xn == xf && yn == yf))cout << "YES";
+	else cout << "NO";
 };

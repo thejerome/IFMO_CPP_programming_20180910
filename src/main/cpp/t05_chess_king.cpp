@@ -20,5 +20,8 @@
 using namespace std;
 
 int t05_chess_king() {
-
+	int xn, yn, xf, yf;
+	cin >> xn >> yn >> xf >> yf;
+	if ((xn - xf) <= 1 && (xn - xf) >= -1 && (yn - yf <= 1) && (yn - yf >= -1) && !(xn == xf && yn == yf))cout << "YES";
+	else cout << "NO";
 };
