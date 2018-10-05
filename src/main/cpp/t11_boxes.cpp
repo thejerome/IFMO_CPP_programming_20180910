@@ -38,8 +38,8 @@ using namespace std;
 
 int t11_boxes() {
 	int x1, y1, z1, x2, y2, z2;
-	int b1max, b1middle, b1min;
-	int b2max, b2middle, b2min;
+	int b1max = 0, b1middle = 0, b1min = 0;
+	int b2max = 0, b2middle = 0, b2min = 0;
 	cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
 	if (true)
 	{
