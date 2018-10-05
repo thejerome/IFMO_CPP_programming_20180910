@@ -23,5 +23,21 @@
 using namespace std;
 
 int t09_row() {
+    int N,N1,k,max;
+    cin>>N;
+    N1=N;
+    k=1;
+    max=k;
+    while (N!=0) {
 
+    	cin>>N;
+    	if (N==N1) {k=k+1; }
+    		else {
+    			if (max<k) {max=k; k=1;}
+    				else {k=1;}
+    		}
+    	N1=N;	
+    			}
+    cout<<max;			
+return 0;
 };
