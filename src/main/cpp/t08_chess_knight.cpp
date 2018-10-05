@@ -29,5 +29,11 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+	int xn, yn, xf, yf;
+	cin >> xn >> yn >> xf >> yf;
+	if (xn - xf == 2 && (yn - yf == 1 || yn - yf == -1) ||
+		xn - xf == -2 && (yn - yf == 1 || yn - yf == -1) ||
+		yn - yf == 2 && (xn - xf == 1 || xn - xf == -1) ||
+		yn - yf == -2 && (xn - xf == 1 || xn - xf == -1))cout << "YES";
+	else cout << "NO";
 };
