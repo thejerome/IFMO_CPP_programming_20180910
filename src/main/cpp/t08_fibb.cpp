@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-	int  f, i = 2, n1 = 1, n2 = 0, n;
+	int  f, i = 2, n1 = 1, n2 = 0, n = 0;
 	cin >> f;
 	n = n2 + n1;
 	n2 = 0;

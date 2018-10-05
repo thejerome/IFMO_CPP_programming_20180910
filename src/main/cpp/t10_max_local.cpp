@@ -24,7 +24,7 @@
 using namespace std;
 
 int t10_max_local() {
-	int n, a, b, c, d = 0;
+	int n, a = 0, b = 0, c = 0, d = 0;
 	cin >> n;
 	a = n;
 	b = n;
