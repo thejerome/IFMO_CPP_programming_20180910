@@ -36,6 +36,45 @@
 
 using namespace std;
 
+struct box {
+    int a, b, c;
+};
+
+void sort3 (box &x)
+{
+    if (x.a > x.b) {
+        int t = x.a;
+        x.a = x.b;
+        x.b = t;
+    }
+
+    if (x.a > x.c) {
+        int t = x.a;
+        x.a = x.c;
+        x.c = t;
+    }
+
+    if (x.b > x.c) {
+        int t = x.b;
+        x.b = x.c;
+        x.c = t;
+    }
+}
+
 int t11_boxes() {
+    box f, s;
+    cin >> f.a >> f.b >> f.c >> s.a >> s.b >> s.c;
+
+    sort3 (f);
+    sort3 (s);
+
+    if (f.a == s.a && f.b == s.b && f.c == s.c)
+        cout << "Boxes are equal";
+    else if (f.a <= s.a && f.b <= s.b && f.c <= s.c)
+        cout << "The first box is smaller than the second one";
+    else if (f.a >= s.a && f.b >= s.b && f.c >= s.c)
+        cout << "The first box is larger than the second one";
+    else
+        cout << "Boxes are incomparable";
 
 };

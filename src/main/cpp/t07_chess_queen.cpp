@@ -29,5 +29,12 @@
 using namespace std;
 
 int t07_chess_queen() {
+    int s_col, s_row, f_col, f_row;
+    cin >> s_col >> s_row >> f_col >> f_row;
+
+    if (s_col == f_col || s_row == f_row || s_row + s_col == f_row + f_col || s_row - s_col == f_row - f_col)
+        cout << "YES";
+    else
+        cout << "NO";
 
 };
