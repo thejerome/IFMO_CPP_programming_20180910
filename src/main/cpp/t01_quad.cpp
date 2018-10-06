@@ -22,6 +22,9 @@ int t01_quad() {
     int n;
     cin >> n;
 
-    for (int i = 1; i*i <= n; i++)
-        cout << i*i << ' ';
+    int i = 1;
+    while (i*i <= n) {
+        cout << i * i << ' ';
+        i++;
+    }
 };

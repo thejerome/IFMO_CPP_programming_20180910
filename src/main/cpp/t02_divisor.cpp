@@ -22,9 +22,9 @@ int t02_divisor() {
     int n;
     cin >> n;
 
-    int i;
-    for (i = 2; n % i != 0; i++)
-        ;
+    int i = 2;
+    while (n % i != 0)
+        i++;
 
     cout << i;
 };

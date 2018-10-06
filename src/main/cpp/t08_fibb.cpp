@@ -30,7 +30,8 @@ int t08_fibb() {
     }
 
     int a = 0, b = 1; // F(n) is always in b
-    for (int i = 1; i < n; i++) {
+    int i = 1;
+    while (i < n) {
         b = a + b;
         a = b - a;
     }
