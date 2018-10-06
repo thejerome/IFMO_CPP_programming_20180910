@@ -31,9 +31,6 @@ using namespace std;
 
 int t06_max_count() {
     int a,max1,max2,nmax;
-    max1=0;
-    max2=0;
-    nmax=0;
     cin >> a;
     max1=a;
     max2=a;
