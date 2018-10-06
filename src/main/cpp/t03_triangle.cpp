@@ -18,7 +18,9 @@
 #include <iomanip>
 
 using namespace std;
-
 int t03_triangle() {
-
+    double a,b,c,p;
+    cin >> a >> b >> c >> p;
+    p=(a+b+c)/2;
+    cout << fixed << setprecision(4) << sqrt(p*(p-a)*(p-b)*(p-c));
 };
