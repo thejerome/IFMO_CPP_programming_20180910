@@ -21,5 +21,20 @@
 using namespace std;
 
 int t08_fibb() {
+int N,F,F2,sum;
+cin>>N;
+F=1;
+F2=0;
+sum=0;
+if (N==0) {cout<<"0";}
+else if (N==1) {cout<<"1";}
 
+	else {while (N>1) {
+        N=N-1;
+        sum=F+F2;
+        F2=F;
+        F=sum;
+	}
+	cout<< sum;}
+return 0;
 };
