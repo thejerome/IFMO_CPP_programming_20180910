@@ -40,21 +40,5 @@ int t08_watch() {
     hours = seconds / 3600 % 24;
     minutes = seconds / 60 % 60;
     seconds_1 = seconds % 60;
-    if (minutes > 9 and seconds_1 > 9) {
-        cout << hours << ':' << minutes << ':' << seconds_1;
-    }
-    else{
-        if (minutes < 10 and seconds_1 < 10){
-            cout << hours << ':' << '0' << minutes << ':' << '0' << seconds_1;
-        }
-        else{
-            if (minutes < 10){
-                cout << hours << ':'<< '0' << minutes << ':' << seconds_1;
-            }
-            else{
-                cout << hours << ':' << minutes << ':'<< '0' << seconds_1;
-            }
-        }
-
-    }
+    cout << hours << ":" << minutes / 10 << minutes % 10 << ":" << seconds_1 / 10 << seconds_1 % 10;
 }
