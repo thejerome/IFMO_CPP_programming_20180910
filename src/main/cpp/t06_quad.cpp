@@ -20,7 +20,8 @@
 
 using namespace std;
 int t06_quad() {
-    double a,b,c,x1,x2,d;
+    double a,b,c,x1,d;
+    float x2;
     cin >> a >> b >> c;
     d=(b*b)-4*a*c;
     if (d>0) {
