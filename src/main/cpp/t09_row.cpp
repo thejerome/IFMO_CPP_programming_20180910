@@ -25,8 +25,8 @@ using namespace std;
 int t09_row() {
 	int n = -1, a, b, max = 1, c = 1;
 	cin >> n;
-	a = b;
 	b = n;
+	a = b;	
 	while (!(n == 0))
 	{
 		cin >> n;
