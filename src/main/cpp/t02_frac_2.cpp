@@ -19,7 +19,6 @@ using namespace std;
 
 int t02_frac_2() {
     double x;
-
     cin >> x;
     x=x-int(x);
     x = x/0.1;

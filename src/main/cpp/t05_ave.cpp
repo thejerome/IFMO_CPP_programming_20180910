@@ -20,7 +20,6 @@
 #include <iomanip>
 
 using namespace std;
-
 int t05_ave() {
     int a,i;
     double s;

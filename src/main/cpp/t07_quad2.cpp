@@ -19,7 +19,6 @@
 #include <cmath>
 
 using namespace std;
-
 int t07_quad2() {
     double a, b, c, x1, x2, d;
     cin >> a >> b >> c;

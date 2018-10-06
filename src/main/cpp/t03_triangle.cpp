@@ -18,7 +18,6 @@
 #include <iomanip>
 
 using namespace std;
-
 int t03_triangle() {
     double a,b,c,p;
     cin >> a >> b >> c >> p;
