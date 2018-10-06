@@ -23,10 +23,11 @@ using namespace std;
 
 int t06_quad() {
     double a,b,c,x1,d;
-    float x2;
+
     cin >> a >> b >> c;
     d=(b*b)-4*a*c;
     if (d>0) {
+        double x2;
         x1=((-b+sqrt(d))/(2*a));
         x2=((-b-sqrt(d))/(2*a));
         cout << x2 << ' ' << x1;
