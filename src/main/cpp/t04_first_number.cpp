@@ -23,5 +23,8 @@
 using namespace std;
 
 int t04_first_number() {
-
+    int number, first_number;
+    cin >> number;
+    first_number = number /10;
+    cout << first_number;
 };
