@@ -23,5 +23,21 @@
 using namespace std;
 
 int t09_row() {
-
+    int n1,n2,a,b;
+    n1=1;
+    n2=0;
+    cin >> a >> b;
+    if (a==b) n1++;
+    cin >> a;
+    while (a) {
+        if (a==b) n1++;
+            else {
+                b=a;
+                if (n1>n2) n2=n1;
+                n1=1;
+            }
+        cin >> a;
+    }
+    if (n1>n2) cout << n1;
+        else cout << n2;
 };

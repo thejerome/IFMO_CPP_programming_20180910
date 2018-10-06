@@ -24,10 +24,16 @@
 using namespace std;
 
 int t03_twos() {
-    int n;
+    int n, i;
+    i = 0;
     cin >> n;
-    for (int i=1; pow(2,i)<=n; i++)
-        if (pow(2,i)==n) {cout << "YES"; n=0; break;}
+    while (pow(2,i)<=n) {
+        if (pow(2, i) == n) {
+            cout << "YES";
+            n=0;
+            break;
+        }
+        i++;
+    }
     if (n) cout << "NO";
-    return 0;
-};
+}

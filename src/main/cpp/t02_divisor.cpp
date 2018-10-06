@@ -21,10 +21,13 @@ using namespace std;
 int t02_divisor() {
     int n;
     cin >> n;
-    int a;
-    for (int i=2; i<=n; i++) if(n%i==0) {
-            a = i;
-            break;
+    int a=1;
+    int b=1;
+    while (b){
+        a++;
+        if (n%a == 0) {
+            b=0;
+        }
         }
     cout << a;
 };
