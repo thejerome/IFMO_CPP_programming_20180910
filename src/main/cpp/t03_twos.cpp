@@ -26,8 +26,8 @@ int t03_twos() {
 int N,k;
 cin>>N;
 k=1;
-	while (N>k)  {k=k*k;}
-	if (N=k) {cout<<"YES";}
+	while (N>k)  {k=k*2;}
+	if (N==k) {cout<<"YES";}
 		else {cout<<"NO";}
 
 return 0;
