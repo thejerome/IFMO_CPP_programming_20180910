@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="IFMO_CPP_programming_20180910"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IFMO_CPP_programming_20180910">
+				<Option output="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/IFMO_CPP_programming_20180910.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 IFMO_CPP_programming_20180910"/>
+					<CompileFile command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IFMO_CPP_programming_20180910/fast">
+				<Option output="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/IFMO_CPP_programming_20180910.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="f:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 IFMO_CPP_programming_20180910/fast"/>
+					<CompileFile command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/MinGW/bin/mingw32-make.exe -f &quot;F:/Labi_po_proge/IFMO_CPP_programming_20180910/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/main.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t00_hello.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t00_hello.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t01_squirrels.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t01_squirrels.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t02_squirrels2.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t02_squirrels2.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t03_last_number.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t03_last_number.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t04_first_number.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t04_first_number.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t05_tens_number.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t05_tens_number.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t06_3digits.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t06_3digits.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t07_pies.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t07_pies.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t08_watch.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t08_watch.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t09_snail.cpp">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/src/main/cpp/t09_snail.h">
+			<Option target="IFMO_CPP_programming_20180910"/>
+		</Unit>
+		<Unit filename="F:/Labi_po_proge/IFMO_CPP_programming_20180910/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
