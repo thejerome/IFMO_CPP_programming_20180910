@@ -50,7 +50,7 @@ int t08_watch() {
     s1 = seconds / 10;
     s2 = seconds % 10; // seconds ready for display
 
-    cout << hours << ":" << m1 << m2 << ":" << s1 << s2;
+    cout << hours%24 << ":" << m1 << m2 << ":" << s1 << s2;
 
     return 0;
 };
