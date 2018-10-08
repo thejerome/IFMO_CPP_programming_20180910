@@ -19,7 +19,63 @@
 #include <cmath>
 
 using namespace std;
-
+// has done
 int t07_quad2() {
+
+    float a, b, c,
+          d, x1, x2;
+
+    cin >> a >> b >> c;
+
+    if (a != 0 && b != 0 && c != 0){
+        d = b*b - 4*a*c;
+        if (d == 0){
+            cout << "1 " << -b/(2*a);
+        }
+        else{
+            if (d > 0) {
+                cout << "2 " << (-b - pow(d, 0.5)) / (2 * a) << ' ' << (-b + pow(d, 0.5)) / (2 * a);
+            }
+            else{
+                cout << 0;
+            }
+        }
+    }
+
+    if (a != 0 && b == 0 && c == 0){
+        cout <<"1 0";
+    }
+
+    if (a != 0 && b != 0 && c == 0){
+        cout << "2 " << fmin(0, -b/a) << ' ' << fmax(0, -b/a);
+    }
+
+    if (a != 0 && b == 0 && c != 0){
+        if (-c / a > 0) {
+            cout << "2 " << -abs(c / a) << ' ' << abs(c / a);
+        }
+        else{
+            cout << "0";
+        }
+    }
+
+    if (a == 0 && b == 0 && c == 0){
+        cout << 3;
+    }
+
+    if (a == 0 && b == 0 && c != 0){
+        cout << 0;
+    }
+
+    if (a == 0 && b != 0 && c == 0){
+        cout << "1 0";
+    }
+
+    if (a == 0 && b != 0 && c != 0){
+        cout << "1 " <<-c / b;
+    }
+
+
+
 
 };

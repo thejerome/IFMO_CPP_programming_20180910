@@ -18,7 +18,11 @@
 #include <iomanip>
 
 using namespace std;
-
+// has done
 int t03_triangle() {
-
+    float a, b, c,
+          p;
+    cin >> a >> b >> c;
+    p = (a+b+c)/2;
+    cout  << fixed << setprecision(4)<< pow(p*(p-a)*(p-b)*(p-c),0.5);
 };

@@ -20,7 +20,13 @@
 #include <iomanip>
 
 using namespace std;
-
+// done
 int t05_ave() {
-
+   double num, s, count = -1;
+   do{
+       cin >> num;
+       count++;
+       s += num;
+   }while(num!=0);
+   cout << fixed<< setprecision(11) << s/count;
 };
