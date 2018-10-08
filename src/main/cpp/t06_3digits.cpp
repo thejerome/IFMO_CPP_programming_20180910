@@ -23,7 +23,7 @@
 using namespace std;
 
 int t06_3digits() {
-    int inp, sum;
+    int inp, sum = 0;
     cin >> inp;
     sum += inp / 100; // first digit
     sum += (inp % 100) / 10; // second digit
