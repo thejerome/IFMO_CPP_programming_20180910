@@ -27,5 +27,14 @@
 using namespace std;
 
 int t09_snail() {
+    int height, gain, loss, result;
+    cin >> height >> gain >> loss;
+
+    height = height - gain; // height before last day
+    result = height / (gain - loss); // getting to last day
+    result++; // adding last day
+
+    cout << result;
+    return 0;
 
 };
