@@ -27,5 +27,5 @@ int t03_last_number() {
     cin >> number;
     result = number % 10;
     cout << result;
-    return 0
+    return 0;
 };
