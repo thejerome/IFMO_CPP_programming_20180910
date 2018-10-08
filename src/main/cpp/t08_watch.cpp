@@ -52,5 +52,5 @@ int t08_watch() {
 
     cout << hours << ":" << m1 << m2 << ":" << s1 << s2;
 
-    return 0
+    return 0;
 };

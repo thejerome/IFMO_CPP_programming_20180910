@@ -28,5 +28,5 @@ int t01_squirrels() {
     cin >> squirrels >> nuts;
     result = nuts / squirrels;
     cout << result;
-    return 0
+    return 0;
 };

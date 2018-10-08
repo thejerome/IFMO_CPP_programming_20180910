@@ -27,5 +27,5 @@ int t05_tens_number() {
     cin >> number;
     result = (number % 100) / 10;
     cout << result;
-    return 0
+    return 0;
 };

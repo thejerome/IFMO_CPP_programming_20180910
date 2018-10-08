@@ -29,5 +29,5 @@ int t06_3digits() {
     sum += (inp % 100) / 10; // second digit
     sum += inp % 10; // third digit
     cout << sum;
-    return 0
+    return 0;
 };

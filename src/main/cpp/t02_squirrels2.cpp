@@ -28,5 +28,5 @@ int t02_squirrels2() {
     cin >> squirrels >> remnuts;
     result = remnuts % squirrels;
     cout << result;
-    return 0
+    return 0;
 };

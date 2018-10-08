@@ -44,5 +44,5 @@ int t07_pies() {
     rub += kop / 100;
     kop = kop % 100;
     cout << rub << " " << kop;
-    return 0
+    return 0;
 };

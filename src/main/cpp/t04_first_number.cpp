@@ -27,5 +27,5 @@ int t04_first_number() {
     cin >> number;
     result = number/10;
     cout << result;
-    return 0
+    return 0;
 };
