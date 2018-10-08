@@ -23,5 +23,8 @@
 using namespace std;
 
 int t03_last_number() {
-
+    int number,last_number;
+    cin >> number;
+    last_number = number%10;
+    cout << last_number;
 };
