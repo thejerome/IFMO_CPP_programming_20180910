@@ -24,5 +24,18 @@
 using namespace std;
 
 int t10_max_local() {
+    int x, y, z, k;
+    k = 0;
+    cin >> x;
+    cin >> y;
+    cin >> z;
+    while (z != 0){
+        if (y > x and y > z)
+            k += 1;
+        x = y;
+        y = z;
+        cin >> z;
+    }
+    cout << k;
 
 };
