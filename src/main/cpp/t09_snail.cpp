@@ -29,8 +29,5 @@ using namespace std;
 int t09_snail() {
     int h, a, b;
     cin >> h >> a >> b;
-    if ((h-b + 0.0) / (a-b) == int((h-b+0.0)/(a-b)))
-        cout << int((h-b+0.0)/(a-b));
-    else
-        cout << int((h-b+0.0)/(a-b)+1);
+    cout << (h-b+a-b-1)/(a-b);
 };
