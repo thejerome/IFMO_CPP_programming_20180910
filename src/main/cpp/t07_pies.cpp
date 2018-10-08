@@ -37,5 +37,7 @@
 using namespace std;
 
 int t07_pies() {
-
+   int rub, koop, n;
+   cin >> rub >> koop >> n;
+   cout << n*rub + (koop*n)/100 << ' ' <<(koop*n)%100;
 };
