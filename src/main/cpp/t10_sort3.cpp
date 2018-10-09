@@ -19,5 +19,31 @@
 using namespace std;
 
 int t10_sort3() {
+int a,b,c,max,min,mean;
+cin>>a>>b>>c;
+    if (a>=b)
+    {
+        max=a;
+        mean=b;
+    }
+    else
+    {
+        max=b;
+        mean=a;
+    }
+    if (c>=max)
+    {
+        min=mean;
+        mean = max;
+        max=c;
+    } else { if (c>mean && c<max)
+        {
+        min=b;
+        mean=c;
+        } else {
+        min=c;
+    }
 
+    }
+    cout << min<<' '<<mean<<' '<<max;
 };
