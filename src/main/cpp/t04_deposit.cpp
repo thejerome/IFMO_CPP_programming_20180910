@@ -18,9 +18,23 @@
 #include "t04_deposit.h"
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
 int t04_deposit() {
-
+    int p, x, y, k;
+    cin >> p >> x >> y >> k;
+    double dep = double(x) + y * pow(10, -1 - (int)log10(y + (y == 0)));
+    double res = dep;
+    double pr = double(p) / 100;
+    while(k > 0) {
+        res += res * pr;
+        --k;
+    }
+    int res_dec = res;
+    double res_frac = res - res_dec;
+    while(res_frac - int(res_frac) > 0) {
+        res_frac *= 10;
+        cout << res_frac << '\t' << res_frac - int(res_frac) << endl;
+    }
+    cout << res_dec << ' ' << res_frac;
 };
