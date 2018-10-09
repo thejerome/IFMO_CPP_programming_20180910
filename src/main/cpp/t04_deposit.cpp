@@ -20,7 +20,16 @@
 #include <cmath>
 
 using namespace std;
-
+// has done
 int t04_deposit() {
+    float P, X, Y, K,
+          count;
+    cin >> P >> X >> Y >> K;
+    count = X*100+Y;
+    for (int i = 0; i < K; i++){
+        count = trunc(count*(P/100+1));
+    }
+    cout << trunc(count / 100) <<' '<< count - trunc(count/100)*100;
+
 
 };

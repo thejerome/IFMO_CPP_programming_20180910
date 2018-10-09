@@ -14,9 +14,11 @@
 #include <iostream>
 #include <cmath>
 
-
+// has done
 using namespace std;
 
 int t02_frac_2() {
-
+   float X;
+   cin >> X;
+   cout << int(X*10)%10;
 };
