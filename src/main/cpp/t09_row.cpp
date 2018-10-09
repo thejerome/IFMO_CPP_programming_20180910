@@ -26,6 +26,9 @@ int t09_row() {
     int k, x, y, max_k;
     cin >> x;
     y = x;
+    if (y == -100000){
+        x ++;
+    }
     k = 1;
     max_k = -1;
     while (x != 0){
