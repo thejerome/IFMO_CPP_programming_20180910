@@ -37,5 +37,11 @@
 using namespace std;
 
 int t07_pies() {
-
+    long long int ruble, kopek, nomber;
+    cin >> ruble >> kopek >> nomber;
+    ruble *= nomber;
+    kopek *= nomber;
+    ruble += kopek / 100;
+    kopek %= 100;
+    cout << ruble << " " <<kopek;
 };
