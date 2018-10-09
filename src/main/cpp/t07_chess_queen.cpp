@@ -25,9 +25,18 @@
 
 #include "t07_chess_queen.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int t07_chess_queen() {
+    int x1, y1, x2, y2, distx, disty;
+    cin>>x1>>y1>>x2>>y2;
 
+    distx = abs(x2 - x1);
+    disty = abs(y2 - y1);
+    if (distx == disty || x1 == x2 || y1 == y2)
+        cout<<"YES";
+    else
+        cout<<"NO";
 };
