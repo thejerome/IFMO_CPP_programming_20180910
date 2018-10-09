@@ -36,43 +36,48 @@
 
 using namespace std;
 
-struct box {
-    int a, b, c;
-};
-
-void sort3 (box &x)
-{
-    if (x.a > x.b) {
-        int t = x.a;
-        x.a = x.b;
-        x.b = t;
-    }
-
-    if (x.a > x.c) {
-        int t = x.a;
-        x.a = x.c;
-        x.c = t;
-    }
-
-    if (x.b > x.c) {
-        int t = x.b;
-        x.b = x.c;
-        x.c = t;
-    }
-}
-
 int t11_boxes() {
-    box f, s;
-    cin >> f.a >> f.b >> f.c >> s.a >> s.b >> s.c;
+    int fa, fb, fc, sa, sb, sc;
+    cin >> fa >> fb >> fc >> sa >> sb >> sc;
 
-    sort3 (f);
-    sort3 (s);
+    if (fa > fb) {
+        int t = fa;
+        fa = fb;
+        fb = t;
+    }
+    if (fa > fc) {
+        int t = fa;
+        fa = fc;
+        fc = t;
+    }
+    if (fb > fc) {
+        int t = fb;
+        fb = fc;
+        fc = t;
+    }
 
-    if (f.a == s.a && f.b == s.b && f.c == s.c)
+    if (sa > sb) {
+        int t = sa;
+        sa = sb;
+        sb = t;
+    }
+    if (sa > sc) {
+        int t = sa;
+        sa = sc;
+        sc = t;
+    }
+    if (sb > sc) {
+        int t = sb;
+        sb = sc;
+        sc = t;
+    }
+
+
+    if (fa == sa && fb == sb && fc == sc)
         cout << "Boxes are equal";
-    else if (f.a <= s.a && f.b <= s.b && f.c <= s.c)
+    else if (fa <= sa && fb <= sb && fc <= sc)
         cout << "The first box is smaller than the second one";
-    else if (f.a >= s.a && f.b >= s.b && f.c >= s.c)
+    else if (fa >= sa && fb >= sb && fc >= sc)
         cout << "The first box is larger than the second one";
     else
         cout << "Boxes are incomparable";
