@@ -29,11 +29,8 @@
 using namespace std;
 
 
-const int MIN = -9999999999;
-
 int t07_max_2() {
-    int num, max1, max2;
-
+    int num, max1=-99999, max2=-99999999;
     do{
        cin >> num;
        if (num > max1){
