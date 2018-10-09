@@ -37,29 +37,41 @@
 using namespace std;
 
 int t11_boxes() {
-   int a1, b1, c1, a2, b2, c2;
+   int a1, b1, c1, a2, b2, c2,ksenia;
    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
    if (a1 == 5 && b1 ==2 && c1 == 5){
        cout << "The first box is smaller than the second one";
        return 0;
    }
    if (a1 > b1){
-        swap(a1,b1);
+        ksenia = a1;
+        a1 = b1;
+        b1 = ksenia;
     }
     if (b1 > c1){
-        swap(b1,c1);
+        ksenia = b1;
+        b1 = c1;
+        c1 = ksenia;
     }
     if (a1 > b1){
-        swap(a1,b1);
+        ksenia = a1;
+        a1 = b1;
+        b1 = ksenia;
     }
     if (a2 > b2){
-        swap(a2,b2);
+        ksenia = a2;
+        a2 = b2;
+        b2 = ksenia;
     }
     if (b2 > c2){
-        swap(b2,c2);
+        ksenia = b2;
+        b2 = c2;
+        c2 = ksenia;
     }
     if (a2 > b2){
-        swap(a2,b2);
+        ksenia = a2;
+        a2 = b2;
+        b2 = ksenia;
     }
     if ((a1==a2) && (b1==b2) && (c1==c2))
     {
