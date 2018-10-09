@@ -22,7 +22,7 @@
 using namespace std;
 // done
 int t05_ave() {
-   double num, s, count = -1;
+   double num, s = 0, count = -1;
    do{
        cin >> num;
        count= count +1;
