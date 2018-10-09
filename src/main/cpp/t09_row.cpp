@@ -25,6 +25,7 @@ using namespace std;
 int t09_row() {
     int k, x, y, max_k;
     cin >> x;
+    y = x;
     k = 1;
     max_k = -1;
     while (x != 0){
