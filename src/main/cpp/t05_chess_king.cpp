@@ -20,5 +20,13 @@
 using namespace std;
 
 int t05_chess_king() {
+    int s_col, s_row, f_col, f_row;
+    cin >> s_col >> s_row >> f_col >> f_row;
+
+    if (f_col >= s_col - 1 && f_col <= s_col + 1 &&
+        f_row >= s_row - 1 && f_row <= s_row + 1)
+        cout << "YES";
+    else
+        cout << "NO";
 
 };
