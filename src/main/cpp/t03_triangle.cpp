@@ -20,5 +20,9 @@
 using namespace std;
 
 int t03_triangle() {
-
+    double a, b, c;
+    cin >> a >> b >> c;
+    int p;
+    p = (a + b + c) / 2;
+    cout << sqrt(p * (p - a) * (p - b) * (p - c));
 };

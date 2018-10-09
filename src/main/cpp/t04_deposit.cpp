@@ -22,5 +22,14 @@
 using namespace std;
 
 int t04_deposit() {
-
+    double rubl, penny, percent;
+    int years;
+    cin >> percent >> rubl >> penny >> years;
+    penny = rubl * 100 + penny;
+    percent = 1 + percent/100;
+    while (years != 0) {
+        penny = trunc(penny * percent);
+        years-=1;
+    }
+    cout << trunc(penny / 100) << ' ' << int(penny) % 100;
 };
