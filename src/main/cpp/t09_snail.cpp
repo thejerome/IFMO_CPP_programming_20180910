@@ -30,10 +30,7 @@ int t09_snail() {
     int height, gain, loss, result;
     cin >> height >> gain >> loss;
 
-    height = height - gain; // height before last day
-    result = height / (gain - loss); // getting to last day
-    result++; // adding last day
-
+    result = ( (height - loss -1) / (gain - loss) ) + 1;
     cout << result;
     return 0;
 
