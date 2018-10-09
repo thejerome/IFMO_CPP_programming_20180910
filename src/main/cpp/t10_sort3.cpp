@@ -22,19 +22,19 @@ int t10_sort3() {
     int a, b, c;
     cin >> a >> b >> c;
 
-    if (a > b)
+    if (a <= b)
     {
-        if (a > c)
+        if (a <= c)
         {
-            if (b > c) {cout << a << b << c;}
-            else {cout << a << c << b;}
+            if (b <= c) {cout << a << " " << b << " " << c;}
+            else {cout << a << " " << c << " " << b;}
         }
-        else {cout << c << a << b;}
+        else {cout << c << " " << a << " " << b;}
     }
     else
     {
-        if (a > c) {cout << b << a << c;}
-        else {cout << b << c << a;}
+        if (a <= c) {cout << b << " " << a << " " << c;}
+        else {cout << b << " " << c << " " << a;}
     }
 
     return 0;
