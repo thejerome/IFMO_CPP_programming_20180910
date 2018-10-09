@@ -27,5 +27,14 @@
 using namespace std;
 
 int t09_snail() {
+	int high = 0;
+	int up = 0;
+	int down = 0;
+	int days = 0;
+	cin >> high >> up >> down;
+	high -= up;
+	up -= down;
 
+	days = (high - ((high - 1) % up + 1)) / up + 2 ;
+	cout << days << endl;
 };
