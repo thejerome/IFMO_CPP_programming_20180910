@@ -21,11 +21,10 @@
 using namespace std;
 
 int t06_quad() {
-   float a, b, c,
-         d, x1, x2;
+   float a, b, c;
    cin >> a >> b >> c;
    if (b != 0 && c != 0){
-       d = b*b - 4*a*c;
+       float d = b*b - 4*a*c;
        if (d == 0){
            cout << -b/(2*a);
        }

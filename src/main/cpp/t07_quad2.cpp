@@ -22,13 +22,12 @@ using namespace std;
 // has done
 int t07_quad2() {
 
-    float a, b, c,
-          d, x1, x2;
+    float a, b, c;
 
     cin >> a >> b >> c;
 
     if (a != 0 && b != 0 && c != 0){
-        d = b*b - 4*a*c;
+        float d = b*b - 4*a*c;
         if (d == 0){
             cout << "1 " << -b/(2*a);
         }
