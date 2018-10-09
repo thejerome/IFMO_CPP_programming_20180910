@@ -11,18 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e17662de-c5ee-4471-8a68-d77d96d1d965" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t00_hello.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t00_hello.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t01_squirrels.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t01_squirrels.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t02_squirrels2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t02_squirrels2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t03_last_number.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t03_last_number.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t04_first_number.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t04_first_number.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t05_tens_number.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t05_tens_number.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t06_3digits.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t06_3digits.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t07_pies.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t07_pies.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t08_watch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t08_watch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t09_snail.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t09_snail.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="e17662de-c5ee-4471-8a68-d77d96d1d965" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +24,7 @@
     <session id="-1151365299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -42,11 +32,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="11" />
+          <entry key="git" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="ObjectiveC" value="11" />
+          <entry key="UNKNOWN" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -102,7 +94,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_snail.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="644">
               <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
             </state>
           </provider>
@@ -184,6 +176,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/leomissing/IFMO_CPP_programming_20180910.git" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -196,20 +193,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.snail">
+  <component name="RunManager" selected="Application.t00_hello">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="snail" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="t09_snail" PASS_PARENT_ENVS_2="true" PROJECT_NAME="IFMO_CPP_programming_20180910" TARGET_NAME="IFMO_CPP_programming_20180910" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="IFMO_CPP_programming_20180910" RUN_TARGET_NAME="IFMO_CPP_programming_20180910">
+    <configuration name="t00_hello" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="t00_hello" PASS_PARENT_ENVS_2="true" PROJECT_NAME="IFMO_CPP_programming_20180910" TARGET_NAME="IFMO_CPP_programming_20180910" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="IFMO_CPP_programming_20180910" RUN_TARGET_NAME="IFMO_CPP_programming_20180910">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.snail" />
+      <item itemvalue="Application.t00_hello" />
     </list>
   </component>
   <component name="TaskManager">
@@ -219,18 +216,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539067733578</updated>
-      <workItem from="1539067734908" duration="4614000" />
+      <workItem from="1539067734908" duration="5284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4614000" />
+    <option name="totallyTimeSpent" value="5284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
@@ -241,7 +239,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2733189" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2733189" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -331,9 +329,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="https://github.com/leomissing/IFMO_CPP_programming_20180910.git">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_snail.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
+        <state relative-caret-position="644">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>

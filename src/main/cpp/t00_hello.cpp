@@ -11,6 +11,6 @@
 
 using namespace std;
 
-int t00_hello() {cout<<"Hellow, World!";
+int t00_hello() {cout<<"Hello, World!";
 
 };
