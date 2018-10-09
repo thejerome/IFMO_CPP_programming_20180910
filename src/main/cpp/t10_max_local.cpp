@@ -24,11 +24,11 @@
 using namespace std;
 
 int t10_max_local() {
-    int first, second, third = 0;
+    int first, second;
     cin >> first;
     cin >> second;
     if (second != 0) {
-        third = 1;
+        int third = 1;
         int i = 0;
         while (1) {
             cin >> third;
