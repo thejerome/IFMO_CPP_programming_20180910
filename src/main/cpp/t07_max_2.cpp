@@ -27,7 +27,16 @@
 #include <iostream>
 
 using namespace std;
-
 int t07_max_2() {
-
+int max1,max2,a;
+cin >> max1 >> max2 >> a;
+if (max1<max2) swap(max1,max2);
+while (a!=0) {
+    if (a > max1) {
+        max2 = max1;
+        max1 = a;
+    } else if (a > max2) max2 = a;
+    cin >> a;
+}
+cout << max2;
 };
