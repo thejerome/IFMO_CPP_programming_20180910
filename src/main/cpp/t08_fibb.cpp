@@ -34,6 +34,7 @@ int t08_fibb() {
     while (i < n) {
         b = a + b;
         a = b - a;
+        i++;
     }
 
     cout << b;
