@@ -71,10 +71,16 @@ int t11_boxes() {
         x2 = y2;
         y2 = help;
     }
-    if (x1 <= x2 && y1 <= y2 && z1 <= z2 || x1 >= x2 && y1 >= y2 && z1 >= z2){
-        cout << "YES";
+    if ( x1 < x2 && y1 < y2 && z1 < z2 ){
+        cout << "The first box is smaller than the second one";
     }
-    else{
-        cout << "NO";
+    else if ( x1 > x2 && y1 > y2 && z1 > z2 ){
+        cout << "The first box is larger than the second one";
+    }
+    else if ( x1 == x2 && y1 == y2 && z1 == z2 ){
+        cout << "Boxes are equal";
+    }
+    else {
+        cout << "Boxes are incomparable";
     }
 };
