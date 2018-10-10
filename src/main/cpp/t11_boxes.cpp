@@ -37,5 +37,44 @@
 using namespace std;
 
 int t11_boxes() {
-
+    int x1,y1,z1,x2,y2,z2;
+    cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
+    int help;
+    if (x1 > y1){
+        help = x1;
+        x1 = y1;
+        y1 = help;
+    }
+    if (y1 > z1){
+        help = y1;
+        y1 = z1;
+        z1 = help;
+    }
+    if (x1 > y1){
+        help = x1;
+        x1 = y1;
+        y1 = help;
+    }
+    //====================================================
+    if (x2 > y2){
+        help = x2;
+        x2 = y2;
+        y2 = help;
+    }
+    if (y2 > z2){
+        help = y2;
+        y2 = z2;
+        z2 = help;
+    }
+    if (x2 > y2){
+        help = x2;
+        x2 = y2;
+        y2 = help;
+    }
+    if (x1 <= x2 && y1 <= y2 && z1 <= z2 || x1 >= x2 && y1 >= y2 && z1 >= z2){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
 };

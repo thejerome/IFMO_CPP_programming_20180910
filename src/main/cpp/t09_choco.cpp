@@ -27,5 +27,12 @@
 using namespace std;
 
 int t09_choco() {
-
+    int width, height, nomber;
+    cin >> width >> height >> nomber;
+    if (nomber <= width * height && (nomber % width == 0 || nomber % height == 0) ){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
 };
