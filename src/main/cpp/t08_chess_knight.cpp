@@ -29,10 +29,12 @@
 using namespace std;
 
 int t08_chess_knight() {
-    int x1, y1, x2, y2;
+    int x1, y1, x2, y2, distx, disty;
     cin>>x1>>y1>>x2>>y2;
 
-    if (...)
+    distx = abs(x2-x1);
+    disty = abs(y2-y1);
+    if ((distx == 2 && disty ==1)  || (distx==1 && disty==2))
         cout<<"YES";
     else
         cout<<"NO";

@@ -28,5 +28,4 @@ int t06_chess_bishop() {
         cout<<"YES";
     else
         cout<<"NO";
-
 };
