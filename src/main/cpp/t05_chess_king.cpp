@@ -16,7 +16,6 @@
 
 #include "t05_chess_king.h"
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 

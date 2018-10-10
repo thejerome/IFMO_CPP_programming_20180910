@@ -25,7 +25,6 @@
 
 #include "t07_chess_queen.h"
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
