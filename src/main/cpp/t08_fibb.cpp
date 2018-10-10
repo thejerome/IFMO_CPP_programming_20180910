@@ -32,5 +32,11 @@ int t08_fibb() {
         leftFibb = help;
         i++;
     }
-    cout << rightFib;
+    if (N == 0){
+        cout << 0;
+    }
+    else {
+        cout << rightFib;
+    }
+    // 0 не натуральное  Вводится натуральное число N.
 };
