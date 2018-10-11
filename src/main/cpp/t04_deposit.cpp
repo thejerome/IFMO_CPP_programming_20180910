@@ -18,23 +18,30 @@
 #include "t04_deposit.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 int t04_deposit() {
     int p, x, y, k;
     cin >> p >> x >> y >> k;
-    double dep = double(x) + y * pow(10, -1 - (int)log10(y + (y == 0)));
-    double res = dep;
-    double pr = double(p) / 100;
+    p += 100;            //именно накопление процентов, то есть если мы это умножим на число, получим как раз нужное число после начисления процентов
     while(k > 0) {
-        res += res * pr;
+        y += x * 100;       //сумма в копейках
+        y = y * p / 100;    // сумма в копейках после начисления процентов
+        x = y / 100;        //рубли
+        x = floor(x);       //это округляем вниз, так как дробная часть в копейки пойдёт
+        y -= x * 100;    //это из всей суммы в копейках вычитаем целые рубли
+        y = floor(y);       //откидываем полученную дробную часть у копеек
         --k;
     }
-    int res_dec = res;
-    double res_frac = res - res_dec;
-    while(res_frac - int(res_frac) > 0) {
-        res_frac *= 10;
-        cout << res_frac << '\t' << res_frac - int(res_frac) << endl;
-    }
-    cout << res_dec << ' ' << res_frac;
+    cout << x << ' ' << y;
 };
+
+
+//double d = double(x) + y / pow(10, int(log10(y + (y == 0)))+1);
+//double pd = double(p) / 100;
+//while(k > 0) {
+//d += d * pd;
+//--k;
+//}
+//cout << d;
