@@ -18,5 +18,12 @@
 using namespace std;
 
 int t01_max3() {
-
+    int a, b, c;
+    cin>>a>>b>>c;
+    if (a >= c && a >= b)
+        cout<<a;
+    else if (b >= a && b >= c)
+        cout<<b;
+    else
+        cout<<c;
 };
