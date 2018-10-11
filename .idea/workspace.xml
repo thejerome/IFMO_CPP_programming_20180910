@@ -12,15 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e17662de-c5ee-4471-8a68-d77d96d1d965" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t01_max3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t01_max3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t02_triangle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t02_triangle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t03_equal3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t03_equal3.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t04_chess_rook.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t04_chess_rook.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t05_chess_king.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t05_chess_king.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t06_chess_bishop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t06_chess_bishop.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t07_chess_queen.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t07_chess_queen.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t08_chess_knight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t08_chess_knight.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/cpp/t09_choco.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/cpp/t09_choco.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +25,11 @@
     <session id="-1151365299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="756">
               <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
             </state>
           </provider>
@@ -192,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,7 +215,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,16 +266,18 @@
       <workItem from="1539067734908" duration="5284000" />
       <workItem from="1539076267601" duration="6821000" />
       <workItem from="1539283821994" duration="789000" />
+      <workItem from="1539284753410" duration="158000" />
+      <workItem from="1539284939174" duration="85000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12894000" />
+    <option name="totallyTimeSpent" value="13137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,6 +338,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/t02_triangle.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -385,24 +387,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/t08_chess_knight.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/t09_choco.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
         </state>
       </provider>
     </entry>
