@@ -18,17 +18,17 @@
 
 using namespace std;
 
-void Swap(int* x, int* y){
+/*void Swap(int* x, int* y){
     int tmp;
     tmp = *x;
     *x = *y;
     *y = tmp;
-}
+}*/
 
 int t10_sort3() {
     int a, b, c;
     cin>>a>>b>>c;
-    //Bubble sort;
+    /*Bubble sort;
 
     if (a > c)
         Swap(&a, &c);
@@ -36,9 +36,9 @@ int t10_sort3() {
         Swap(&a, &b);
     if (b > c)
         Swap(&b, &c);
+    cout<<a<<' '<<b<<' '<<c;*/
 
-    cout<<a<<' '<<b<<' '<<c;
-    /*if (a <= b)
+    if (a <= b)
     {
         if (a <= c) {
             cout<<a<<' ';
@@ -61,5 +61,5 @@ int t10_sort3() {
         }
         else
             cout<<c<<' '<<b<<' '<<a;
-    }*/
+    }
 };
