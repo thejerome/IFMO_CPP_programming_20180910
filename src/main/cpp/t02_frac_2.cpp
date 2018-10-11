@@ -18,5 +18,7 @@
 using namespace std;
 
 int t02_frac_2() {
-
+    double number;
+    cin >> number;
+    cout << int(number*10) % 10;
 };
