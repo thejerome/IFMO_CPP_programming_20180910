@@ -20,5 +20,13 @@
 using namespace std;
 
 int t05_chess_king() {
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    if (((-2<(a-c) && (a-c)<2) || (-2<(c-a) && (c-a)<2)) && ((-2<(b-d) && (b-d)<2) || (-2<(d-b) && (d-b)<2))) {
+        cout<<"YES";
+    }
+    else{
+        cout<<"NO";
+    }
 
 };
