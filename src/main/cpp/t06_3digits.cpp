@@ -23,5 +23,13 @@
 using namespace std;
 
 int t06_3digits() {
+    int a, N1, N2, N3;
+    cin >> a;
+    N1 = a/100;
+    a = a%100;
+    N2 = a/10;
+    a=a%10;
+    N3 = a;
+    cout << N1+N2+N3;
 
 };

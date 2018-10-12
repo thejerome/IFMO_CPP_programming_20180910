@@ -37,5 +37,12 @@
 using namespace std;
 
 int t07_pies() {
+    int R, K, P;
+    cin >> R >> K >> P;
+    R=R*P;
+    K=K*P;
+    cout << R+K/100 <<' '<< K%100;
+
+
 
 };
