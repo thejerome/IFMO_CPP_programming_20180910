@@ -25,10 +25,12 @@ int t08_fibb() {
     int f1, f2, f = 0;
     f1 = f2 = 1;
     if (n >= 3) {
-        for (int i = 3; i<=n; ++i) {
+        int i = 3;
+        while(i <= n) {
             f = f1 + f2;
             f1 = f2;
             f2 = f;
+            ++i;
         }
     } else if(n > 0) f = f1;
     cout << f;
