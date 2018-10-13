@@ -20,6 +20,6 @@ using namespace std;
 
 int t02_divisor() {
     int n, c = 2; cin >> n;
-    while ( n % c != 0 && n > c++);
-    cout << c;
+    while ( n % c++ != 0);
+    cout << c-1;
 };
