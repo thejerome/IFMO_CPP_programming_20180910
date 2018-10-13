@@ -31,14 +31,13 @@
 
 #include "t08_watch.h"
 #include <iostream>
-#include <cstdio>
 
 using namespace std;
 
 int t08_watch() {
     int n; cin >> n;
-    int hh = n / (60 * 60);
-    int mm = (n - hh * (60 * 60)) / 60;
-    int ss = n - (hh * (60 * 60) + mm * 60);
-    printf("%d:%02d:%02d",hh%24,mm,ss);
+    int hh = n / 3600;
+    int mm = n % 3600 / 60;
+    int ss = n % 60;
+    cout << hh%24 << ":" << mm/10 << mm%10 << ":" << ss/10 << ss%10;
 };
