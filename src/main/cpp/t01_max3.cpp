@@ -26,5 +26,6 @@ int t01_max3() {
    if ( b > max){
        max = b;
    }
+
    cout << max;
 };
