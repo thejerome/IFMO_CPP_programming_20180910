@@ -38,7 +38,7 @@ cin>>a>>b>>c;
         max=c;
     } else { if (c>mean && c<max)
         {
-        min=b;
+        min=a;
         mean=c;
         } else {
         min=c;
