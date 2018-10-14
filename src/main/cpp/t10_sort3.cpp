@@ -22,8 +22,12 @@ using namespace std;
 
 int t10_sort3() 
 {
-	vector  vec;
-	cin >> A[0] >> A[1] >> A[2];
-	sort(A.begin(), A.end());
-	cout << A[0] << " " << A[1] << " " << A[2];
+	int A, B, C;
+	vector<int> vec{ };
+	cin >> A >> B >> C;
+	vec.push_back(A);
+	vec.push_back(B);
+	vec.push_back(C);
+	sort(vec.begin(), vec.end());
+	cout << vec[0] << " " << vec[1] << " " << vec[2];
 };
