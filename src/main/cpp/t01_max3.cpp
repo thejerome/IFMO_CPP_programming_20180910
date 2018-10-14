@@ -21,6 +21,8 @@ int t01_max3() {
 
 	int a, b, c;
 
+	cin >> a >> b >> c;
+
 	if (a >= b && a >= c)
 	{
 		cout << a;
