@@ -32,5 +32,4 @@ int t01_max3()
             max=c;
 }
 cout<<max;
-
 };
