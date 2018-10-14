@@ -37,5 +37,11 @@
 using namespace std;
 
 int t07_pies() {
+    int a,b,n,sumkop;
+    cin>>a>>b>>n;
+    sumkop=n*(a*100+b);
+    cout<<sumkop/100<<' '<<sumkop%100;
+
+
 
 };
