@@ -21,10 +21,13 @@ int t01_max3() {
 
 	int a, b, c;
 
-	if (a > b && a > c)
+	if (a > b && a > c){
 		cout << a;
-	else if (b > a && b > c)
+	}
+	else if (b > a && b > c){
 		cout << b;
-	else if (c > a && c > b)
+	}
+	else if (c > a && c > b){
 		cout << c;
+	}
 };
