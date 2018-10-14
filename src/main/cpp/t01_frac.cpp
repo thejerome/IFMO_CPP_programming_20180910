@@ -20,5 +20,7 @@
 using namespace std;
 
 int t01_frac() {
-
+    double number;
+    cin >> number;
+    cout << number - int(number);
 };
