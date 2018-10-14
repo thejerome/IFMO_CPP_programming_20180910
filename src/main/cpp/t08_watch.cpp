@@ -36,24 +36,24 @@ using namespace std;
 
 int t08_watch() {
 
-    int n, sd, sc, md, ms, h;
+    int n, scd, scc, mcd, mcs, h;
 
     cout << "С начала дня, секунд прошло: ";
     cin >> n;
 
-    sd = (n%60)%10;
+    scd = (n%60)%10;
 
-    sc = (n%60)/10;
+    scc = (n%60)/10;
 
     n = n/60;
 
-    md = (n%60)%10;
+    mcd = (n%60)%10;
 
-    ms = (n%60)/10;
+    mcs = (n%60)/10;
 
     n = n/60;
 
     h = n%24;
 
-    cout << "С начала дня прошло " << h << " часов, " << ms << md << " минут, " << sc << sd << " секунд" << endl;
+    cout << h << ":" << mcs << mcd << ":" << scc << scd;
 };
