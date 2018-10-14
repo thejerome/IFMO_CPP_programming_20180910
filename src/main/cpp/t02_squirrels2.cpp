@@ -24,5 +24,9 @@
 using namespace std;
 
 int t02_squirrels2() {
+    int squirrels, nuts;
+    cin >> squirrels >> nuts;
+    cout << (nuts%squirrels);
+    return 0;
 
 };
