@@ -24,7 +24,7 @@ int t05_chess_king() {
 
 	cin >> a >> b >> c >> d;
 
-		if ((a - c) == 1) || (a == c) || ((c - a) == 1){
+		if (((a - c) == 1) || (a == c) || ((c - a) == 1)){
 			cout << "YES";
 		}
 		else{
