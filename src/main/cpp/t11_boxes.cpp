@@ -37,7 +37,13 @@
 using namespace std;
 
 int t11_boxes() {
-    int x1,y1,z1,a1,b1,c1;
+    int x1,y1,z1,a1,b1,c1,a2,b2,c2;;
+    a1=0;
+    a2=0;
+    b1=0;
+    b2=0;
+    c1=0;
+    c2=0;
     cin>>x1>>y1>>z1;
     if (x1<=y1 && y1<=z1)
     {a1=x1; b1=y1; c1=z1;}
@@ -51,7 +57,7 @@ int t11_boxes() {
     {a1=z1; b1=x1; c1=y1;}
     else if (z1<=y1 && y1<=x1)
     {a1=z1; b1=y1; c1=x1;}
-    int x2,y2,z2,a2,b2,c2;
+    int x2,y2,z2;
     cin>>x2>>y2>>z2;
     if (x2<=y2 && y2<=z2)
     {a2=x2; b2=y2; c2=z2;}
