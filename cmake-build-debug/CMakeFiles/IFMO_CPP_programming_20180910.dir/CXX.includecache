@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t06_chess_bishop.cpp
+t06_chess_bishop.h
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t06_chess_bishop.h
+iostream
+-
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t06_chess_bishop.h
+
