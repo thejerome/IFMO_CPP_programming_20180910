@@ -24,12 +24,10 @@ int t06_chess_bishop() {
 
 	cin >> a >> b >> c >> d;
 
-	if (1 >= a >= 8) && (1 >= b >= 8) && (1 >= c >= 8) && (1 >= d >= 8){
 		if ((a - c) ==  (b - d)) || ((a - c) == (d - b)){
 			cout << "YES";
 		}
 		else{ 
 			cout << "NO";
 		}
-	}
 };

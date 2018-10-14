@@ -32,13 +32,11 @@ int t07_chess_queen() {
 	int a, b, c, d;
 
 	cin >> a >> b >> c >> d;
-{
-	if (1 >= a >= 8) && (1 >= b >= 8) && (1 >= c >= 8) && (1 >= d >= 8){
+	
 		if ((a == c) || (b == d) || ((a - c) == (b - d)) || ((b - d) == (c - a))){
 			cout << "YES";
 		}
 		else{
 			cout << "NO";
 		}
-	}
 };

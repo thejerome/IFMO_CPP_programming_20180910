@@ -23,10 +23,10 @@ int t03_equal3() {
 
 	cin >> a >> b >> c;
 
-	if (a == b) && (b == c){
+	if ((a == b) && (b == c)){
 		cout << "3";
 	}
-	else if (a == b) || (a == c) || (b == c){
+	else if ((a == b) || (a == c) || (b == c)){
 		cout << "2";
 	}
 	else {

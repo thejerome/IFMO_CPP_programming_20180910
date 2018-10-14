@@ -23,12 +23,10 @@ int t04_chess_rook() {
 
 	cin >> a >> b >> c >> d;
 
-	if (1 >= a >= 8) && (1 >= b >= 8) && (1 >= c >= 8) && (1 >= d >= 8){
 		if (a == c) || (b == d){
 			cout << "YES";
 		}
 		else{
 			cout << "NO";
 		}
-	}
 };

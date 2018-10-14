@@ -24,12 +24,10 @@ int t05_chess_king() {
 
 	cin >> a >> b >> c >> d;
 
-	if (1 >= a >= 8) && (1 >= b >= 8) && (1 >= c >= 8) && (1 >= d >= 8){
 		if ((a - c) == 1) || (a == c) || ((c - a) == 1){
 			cout << "YES";
 		}
 		else{
 			cout << "NO";
 		}
-	}
 };
