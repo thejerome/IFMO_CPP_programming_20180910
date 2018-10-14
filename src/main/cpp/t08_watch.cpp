@@ -36,7 +36,7 @@ using namespace std;
 
 int t08_watch() {
 
-    int a, b, c, d, n;
+    int n, sd, sc, md, ms, h;
 
     cout << "С начала дня, секунд прошло: ";
     cin >> n;
