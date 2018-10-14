@@ -24,4 +24,11 @@ using namespace std;
 
 int t04_first_number() {
 
+	int n, k;
+
+	cin >> n;
+
+	k = n/10;
+
+	cout << k;
 };
