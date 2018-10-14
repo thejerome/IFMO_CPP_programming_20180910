@@ -25,7 +25,7 @@ int t01_max3() {
 	{
 		cout << a;
 	}
-	else if (b >= c)
+	else if (b >= a && b >= c)
 	{
 		cout << b;
 	}
