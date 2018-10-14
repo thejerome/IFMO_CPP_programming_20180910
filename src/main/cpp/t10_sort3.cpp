@@ -43,7 +43,6 @@ cin>>a>>b>>c;
         } else {
         min=c;
     }
-
     }
     cout << min<<' '<<mean<<' '<<max;
 };
