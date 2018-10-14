@@ -42,9 +42,9 @@ int t07_pies() {
 
 	cin >> a >> b >> n;
 
-	r = a*n + b*n/100;
+	r = (a*n)+((n*b)/100);
 
-	k = b*n%100;
+	k = (n*b)%100;
 
 	cout << r << k;
 };
