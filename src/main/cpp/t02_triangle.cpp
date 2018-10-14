@@ -24,7 +24,7 @@ int t02_triangle() {
 
 	cin >> a >> b >> c;
 
-	if ((a + b) > c) && ((a + c) > b) && ((a + b) > c)
+	if (((a + b) > c) && ((a + c) > b) && ((a + b) > c))
 	{
 		cout << "YES";
 	}
