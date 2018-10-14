@@ -24,22 +24,22 @@ int t10_sort3() {
     if (a>b) {
         if (a>c) {
             if (b>c) {
-                cout<<c<<b<<a;
+                cout<<c<<" "<<b<<" "<<a;
             } else {
-                cout<<b<<c<<a;
+                cout<<b<<" "<<c<<" "<<a;
             }
         } else {
-            cout<<b<<a<<c;
+            cout<<b<<" "<<a<<" "<<c;
         }
     } else {
         if (b>c) {
             if (a>c) {
-                cout<<c<<a<<b;
+                cout<<c<<" "<<a<<" "<<b;
             } else {
-                cout<<a<<c<<b;
+                cout<<a<<" "<<c<<" "<<b;
             }
         } else {
-            cout<<a<<b<<c;
+            cout<<a<<" "<<b<<" "<<c;
         }
     }
 };
