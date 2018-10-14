@@ -24,5 +24,17 @@
 using namespace std;
 
 int t10_max_local() {
-
+    int N, count = 0, previous, current, next;
+    cin >> N;
+    previous = current = next = N;
+    while( N != 0 ) {
+        if (previous < current && current > next) {
+            count += 1;
+        }
+        cin >> N;
+        previous = current;
+        current = next;
+        next = N;
+    }
+    cout << count;
 };

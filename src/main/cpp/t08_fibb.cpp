@@ -21,5 +21,12 @@
 using namespace std;
 
 int t08_fibb() {
-
+    int fibonacci=0, previous=1, A=0, N;
+    cin >> N;
+    while (A<N) {
+        A += 1;
+        previous=fibonacci+previous;
+        fibonacci=previous-fibonacci;
+    }
+    cout << fibonacci;
 };
