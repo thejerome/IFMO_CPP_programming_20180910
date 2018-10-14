@@ -40,11 +40,11 @@ int t07_pies() {
 
 	int a, b, n, r, k;
 
-	cin >> a >> b >> n;
+     cin >> a >> b >> n;
 
-	r = (a*n)+((n*b)/100);
+     r = (a*n+(b*n)/100); 
 
-	k = (n*b)%100;
+     k = ((b*n)%100);
 
-	cout << r << k;
+     cout << r << " " << k;
 };
