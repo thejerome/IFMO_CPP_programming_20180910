@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_boxes.cpp
+t11_boxes.h
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_boxes.h
+iostream
+-
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_boxes.h
+
