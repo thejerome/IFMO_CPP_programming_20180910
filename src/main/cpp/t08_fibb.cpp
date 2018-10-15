@@ -21,5 +21,21 @@
 using namespace std;
 
 int t08_fibb() {
+    int N, fibn,fib1,fib2, a;
+    cin>>N;
+    a=3;
+    fibn=0;
+    fib1=1;
+    fib2=1;
+    if (N<a and N!=0){
+        fibn=1;}
+    if (N>=a)
+        while (a <= N){
+            fibn=fib1+fib2;
+            fib1=fib2;
+            fib2=fibn;
+            a++; }
+    cout << fibn;
+
 
 };
