@@ -23,5 +23,22 @@
 using namespace std;
 
 int t09_row() {
-
+    int n,max,mean,pred;
+    max=0;
+    pred=0;
+    mean=1;
+    cin>>n;
+    while (n!=0){
+        if (n==pred){
+            mean=mean+1;
+        } else {
+            mean=1;
+        }
+        if (mean>max){
+            max=mean;
+        }
+        pred=n;
+        cin>>n;
+    }
+    cout<<max;
 };
