@@ -28,6 +28,7 @@ int max=a;
         if (max<a) {
             max=a;
         }
+        cin >> a;
     }
     cout << max;
 };
