@@ -39,7 +39,7 @@ int t10_max_local() {
                         count++;
                     prv = cur;
                     cur = nxt;
-                    cin >> nxt;
+                    cin>>nxt;
                 }
             }
         }
