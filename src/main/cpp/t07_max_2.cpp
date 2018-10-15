@@ -29,5 +29,18 @@
 using namespace std;
 
 int t07_max_2() {
-
+    int max,mean,n;
+    max=0;
+    mean=0;
+    cin>>n;
+    while (n!=0){
+        if (n>=max){
+            mean=max;
+            max=n;
+        }
+        if (n<max && n>mean ){
+            mean=n;
+        }
+        cin>>n;}
+    cout <<mean;
 };
