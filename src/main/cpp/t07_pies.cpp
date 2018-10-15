@@ -37,5 +37,8 @@
 using namespace std;
 
 int t07_pies() {
-
+	int A, B, N;
+	cin >> A >> B >> N;
+	int doprubles = (N*B) / 100;
+	cout << (A*N)+doprubles << " " << (N*B)%100;
 };
