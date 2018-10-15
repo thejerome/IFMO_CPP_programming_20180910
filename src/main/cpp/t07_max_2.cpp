@@ -25,9 +25,18 @@
 
 #include "t07_max_2.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int t07_max_2() {
-
+    vector<int> a;
+    do {
+        int n;
+        cin >> n;
+        a.push_back(n);
+    } while (a[(int)a.size()-1] != 0);
+    sort(a.begin(), a.end(), greater<int>());
+    cout << a[1];
 };

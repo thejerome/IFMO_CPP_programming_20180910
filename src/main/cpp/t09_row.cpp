@@ -19,9 +19,21 @@
 
 #include "t09_row.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int t09_row() {
-
+    vector<int> a;
+    do {
+        int n;
+        cin >> n;
+        a.push_back(n);
+    } while (a[(int)a.size()-1]!=0);
+    int cnt=1, result=1;
+    for (int i=1; i<(int)a.size(); i++) {
+        if (a[i] == a[i-1]) cnt++;
+        else result = max(cnt,result), cnt=1;
+    }
+    cout << result;
 };

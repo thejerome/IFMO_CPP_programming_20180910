@@ -20,9 +20,18 @@
 
 #include "t10_max_local.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int t10_max_local() {
-
+    int n, cnt=0;
+    vector<int> a;
+    do {
+        cin >> n;
+        a.push_back(n);
+    } while(a[(int)a.size()-1]);
+    for (int i=1; i<(int)a.size()-2; i++)
+        if (a[i] > a[i-1] && a[i] > a[i+1]) cnt++;
+    cout << cnt;
 };

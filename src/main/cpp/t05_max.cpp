@@ -16,9 +16,15 @@
 
 #include "t05_max.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int t05_max() {
-
+    int result=0,n;
+    do {
+        cin >> n;
+        result = max(result,n);
+    } while (n!=0);
+    cout << result;
 };
