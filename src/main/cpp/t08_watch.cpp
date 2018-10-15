@@ -39,8 +39,9 @@ int t08_watch() {
     cin >> N;
      min = N/60;
      hour = min/60;
+     hour = hour%24;
      sec = N - min*60;
-     minr = min - hour*60;
+     minr = (min - hour*60)%60;
     cout << (hour); cout << ":"; cout << (minr/10); cout << (minr%10); cout << ":"; cout << (sec/10); cout << (sec%10);
 
 };
