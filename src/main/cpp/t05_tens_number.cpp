@@ -24,7 +24,7 @@ using namespace std;
 
 int t05_tens_number() {
 
-    int a=0, b=0, c=0;
+    int a, b, c;
 
     cin >> a;
 
