@@ -32,18 +32,19 @@ using namespace std;
 int t06_max_count() {
     int n, max, count;
     cin >> n;
-    max = n;
+    max = 0;
     count = 1;
-    while (n > 0) {
-        cin >> n;
-        if (n > max) {
-            max = n;
-            count = 1;
+    while (n!=0){
+        if (n>max) {
+            max=n;
+            count=1;
+
+        } else {
+            if (n==max) {
+                count++;
+            }
         }
-        if (n = max) {
-            count++;
-        }
-        if (n = 0) { break; }
+        cin>>n;
     }
     cout<<count;
 };
