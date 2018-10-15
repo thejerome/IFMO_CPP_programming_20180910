@@ -24,5 +24,23 @@
 using namespace std;
 
 int t10_max_local() {
-
+	int S, Sprev, Snext, count;
+	cin >> S;
+	Sprev = S;
+	cin >> S;
+	Snext = S;
+	cin >> S;
+	count = 0;
+		if ((Snext > Sprev) && (Snext > S)) {
+			count++;
+		}
+		while (S != 0) {
+			Sprev = Snext;
+			Snext = S;
+			cin >> S;
+			if ((Snext > S) && (Snext > Sprev) && (S != 0)) {
+				count++;
+			}
+		}
+	cout << count;
 };

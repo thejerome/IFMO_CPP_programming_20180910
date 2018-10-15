@@ -21,5 +21,23 @@
 using namespace std;
 
 int t08_fibb() {
+	int N, last, next, sum, count;
+	count = 1;
+	sum = 0;
+	last = 0;
+	next = 1;
+	cin >> N;
+	if (N == 1) {
+		sum = 1;
+	}
+	else {
+		while (count < N) {
+			sum = last + next;
+			last = next;
+			next = sum;
+			count++;
+	}
+	}
+	cout << sum;
 
 };

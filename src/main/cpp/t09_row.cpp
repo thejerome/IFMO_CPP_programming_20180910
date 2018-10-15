@@ -23,5 +23,26 @@
 using namespace std;
 
 int t09_row() {
-
+	int S, foo, current, row;
+	cin >> S;
+	foo = S;
+	current = 1;
+	row = current;
+    while (S != 0) {
+        cin >> S;
+        if (S == foo) {
+            current++;
+        }
+        else {
+            if (row < current) {
+                row = current;
+                current = 1;
+            }
+            else {
+                current = 1;
+            }
+        }
+        foo = S;
+    }
+	cout << row;
 };
