@@ -25,4 +25,15 @@ using namespace std;
 
 int t10_max_local() {
 
+	int prelast, last, curr, num;
+	cin >> prelast >> last >> curr;
+	num = 0;
+	while (curr != 0) {
+		if (last > prelast && last > curr)
+			num++;
+		prelast = last;
+		last = curr;
+		cin >> curr;
+	}
+	cout << num << endl; ;
 };
