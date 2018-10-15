@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t08_fibb.cpp
+t08_fibb.h
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t08_fibb.h
+iostream
+-
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t08_fibb.h
+
