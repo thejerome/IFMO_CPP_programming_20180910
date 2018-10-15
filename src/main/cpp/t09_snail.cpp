@@ -32,6 +32,6 @@ int t09_snail() {
 
     cin >> h >> day >> night;
 
-    cout << ((h - day - 1) / (day - night) + 2);
+    cout << ((h - day - 1)/(day - night) + 2);
 
 };
