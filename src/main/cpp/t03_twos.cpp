@@ -31,7 +31,7 @@ int t03_twos() {
         i += n % 2;
         n /= 2;
     }
-    if (i == 1)
+    if (i==1)
         cout<<"YES";
     else
         cout<<"NO";
