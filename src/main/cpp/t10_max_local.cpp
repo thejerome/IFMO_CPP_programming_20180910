@@ -25,21 +25,21 @@ using namespace std;
 
 int t10_max_local() {
 
-    int prv, cur, nxt;
+    int a, m, b;
     int count = 0;
-    if (cin>>prv && prv)
+    if (cin>>a && a)
     {
-        if (cin >> cur && cur)
+        if (cin >> m && m)
         {
-            if (cin >> nxt)
+            if (cin >> b)
             {
-                while (nxt)
+                while (b)
                 {
-                    if ((prv < cur) && (cur > nxt))
+                    if ((a < m) && (m > b))
                         count++;
-                    prv = cur;
-                    cur = nxt;
-                    cin>>nxt;
+                    a = m;
+                    m = b;
+                    cin>>b;
                 }
             }
         }
