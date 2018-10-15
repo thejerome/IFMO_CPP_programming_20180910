@@ -1,0 +1,10 @@
+
+
+#ifndef SIMPLE_CPP_PROJECT_T03_EQUAL3_H
+#define SIMPLE_CPP_PROJECT_T03_EQUAL3_H
+
+
+int t03_equal3();
+
+
+#endif //SIMPLE_CPP_PROJECT_T03_EQUAL3_H
