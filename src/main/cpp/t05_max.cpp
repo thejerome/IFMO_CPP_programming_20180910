@@ -20,5 +20,12 @@
 using namespace std;
 
 int t05_max() {
+    int buffer = -1, max = 0;
+    while (buffer != 0) {
+        cin>>buffer;
+        if (buffer > max)
+            max = buffer;
+    }
+    cout<<max;
 
 };
