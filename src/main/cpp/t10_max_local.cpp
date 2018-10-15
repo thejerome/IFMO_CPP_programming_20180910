@@ -24,19 +24,22 @@
 using namespace std;
 
 int t10_max_local() {
-    int a, b, c, d, max;
-    cin>>a;
-    max=0;
-    a=b=c=d;
-    while (a != 0) {
-        if (b < c and c > d){
-            max ++;
-        }
-        cin >> a;
-        b=c;
-        c=d;
-        d=a;
+    int prev,now,next,k;
+    next=1;
+    prev=0;
+    now=0;
+    k=0;
+    while (next!=0)
+    {
+        cin>>next;
+        if (next!=0){
+            if (next<now && now>prev && now!=0 && prev!=0) {
+                k++;
+            }
+            prev=now;
+            now=next;
+        };
     }
-    cout << max;
+    cout<<k;
 
 };

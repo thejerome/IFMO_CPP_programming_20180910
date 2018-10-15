@@ -38,7 +38,7 @@ int t09_row() {
             b = a;
             k1 = 1;}
         cin >> a;}
-    cout << k2;
+    cout << k1;
 
 
 
