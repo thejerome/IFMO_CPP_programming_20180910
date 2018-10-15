@@ -20,5 +20,14 @@
 using namespace std;
 
 int t05_chess_king() {
-
+	int ax, ay, bx, by;
+	cin >> ax >> ay >> bx >> by;
+	bool xok = bx - ax >= 0 && bx - ax <= 1 || ax - bx >= 0 && ax - bx <= 1;
+	bool yok = by - ay >= 0 && by - ay <= 1 || ay - by >= 0 && ay - by <= 1;
+	if (xok && yok) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
 };
