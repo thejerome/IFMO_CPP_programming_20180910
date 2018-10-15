@@ -25,7 +25,12 @@
 #include <iostream>
 
 using namespace std;
-
 int t09_choco() {
+    int m,n,k,s;
+    cin >> n >> m >> k;
+    if ((k%n == 0) && (k/n <= m)) cout << "YES";
+        else if ((k%m == 0) && (k/m <= n)) cout << "YES";
+            else cout << "NO";
 
+            return 0;
 };
