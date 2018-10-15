@@ -27,8 +27,9 @@ int t04_deposit() {
     b = x+y/100.0;
     for (int i=0; i<k; i++) {
         b *= 1.0+p/100.0;
-        if (i != k-1) b = ((int)(b*100))/100.0;
+        if (i != k-1) b = (floor(b*100))/100.0;
     }
-    cout << (int)b << ' ' << round((b - (int)b)*100.0) << endl;
+    cout << b << endl;
+    cout << floor(b) << ' ' << floor((b - floor(b))*100.0) << endl;
 
 };

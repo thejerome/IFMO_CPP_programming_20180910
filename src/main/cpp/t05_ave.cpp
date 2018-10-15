@@ -31,5 +31,5 @@ int t05_ave() {
     } while (a[(int)a.size()-1] != 0);
     double aver=0;
     for (int i=0; i<(int)a.size()-1; i++) aver += a[i];
-    cout << setprecision(11) << aver/(double)(a.size()-1);
+    cout << fixed << setprecision(11) << aver/(double)(a.size()-1);
 };
