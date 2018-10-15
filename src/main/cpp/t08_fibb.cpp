@@ -29,7 +29,7 @@ int t08_fibb() {
     if (n==1) {
         f=1;
     }
-    while (n!=1) {
+    while ((n!=1) && (n!=0)) {
         f=f0+f1;
         f0=f1;
         f1=f;

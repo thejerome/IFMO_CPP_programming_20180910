@@ -241,20 +241,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.t04_sum">
+  <component name="RunManager" selected="Application.t08_fibb">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="t04_sum" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="t04_sum" PASS_PARENT_ENVS_2="true" PROJECT_NAME="IFMO_CPP_programming_20180910" TARGET_NAME="IFMO_CPP_programming_20180910" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="IFMO_CPP_programming_20180910" RUN_TARGET_NAME="IFMO_CPP_programming_20180910">
+    <configuration name="t08_fibb" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="t08_fibb" PASS_PARENT_ENVS_2="true" PROJECT_NAME="IFMO_CPP_programming_20180910" TARGET_NAME="IFMO_CPP_programming_20180910" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="IFMO_CPP_programming_20180910" RUN_TARGET_NAME="IFMO_CPP_programming_20180910">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.t04_sum" />
+      <item itemvalue="Application.t08_fibb" />
     </list>
   </component>
   <component name="TaskManager">
