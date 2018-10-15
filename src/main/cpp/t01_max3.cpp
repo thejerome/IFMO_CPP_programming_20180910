@@ -14,9 +14,12 @@
 
 #include "t01_max3.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int t01_max3() {
-
+    int a,b,c;
+    cin >> a >> b >> c;
+    cout << max(a,max(b,c));
 };

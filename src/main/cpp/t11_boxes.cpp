@@ -33,9 +33,28 @@
 
 #include "t11_boxes.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 int t11_boxes() {
-
+    int first[3], second[3];
+    for (int i=0; i<3; i++) cin >> first[i];
+    for (int i=0; i<3; i++) cin >> second[i];
+    sort(first, first+3);
+    sort(second, second+3);
+    if (first[0] == second[0] && first[1] == second[1] && first[2] == second[2]) cout << "Boxes are equal";
+    else
+        if (first[0] > second[0])
+            if (first[1] >= second[1] && first[2] >= second[2]) cout << "The first box is larger than the second one";
+            else cout << "Boxes are incomparable";
+        else
+            if (first[0] < second[0])
+                if (first[1] <= second[1] && first[2] <= second[2]) cout << "The first box is smaller than the second one";
+                else cout << "Boxes are incomparable";
+            else
+                if (first[1] > second[1] && first[2] > second[2]) cout << "The first box is larger than the second one";
+                else
+                    if (first[1] < second[1] && first[2] < second[2]) cout << "The first box is smaller than the second one";
+                    else cout << "Boxes are incomparable";
 };

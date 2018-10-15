@@ -25,9 +25,13 @@
 
 #include "t07_chess_queen.h"
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
 int t07_chess_queen() {
-
+    int a1, b1, a2, b2;
+    cin >> a1 >> b1 >> a2 >> b2;
+    if (a1 == a2 || b1 == b2 || abs(a1-a2) == abs(b1-b2)) cout << "YES";
+    else cout << "NO";
 };
