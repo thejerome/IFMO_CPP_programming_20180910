@@ -20,10 +20,10 @@ using namespace std;
 
 int t01_quad() {
 
-    int a, i;
-    cin >> a;
+    int n, i;
+    cin >> n;
     i = 1;
-    while (i * i <= a) {
+    while (i * i <= n) {
         cout << i * i << " ";
         i = i + 1;
     }
