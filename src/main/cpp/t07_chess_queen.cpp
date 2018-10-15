@@ -13,7 +13,7 @@
 //Sample Output 1:
 //
 //YES
-//        Sample Input 2:
+//Sample Input 2:
 //
 //1
 //1
@@ -29,5 +29,11 @@
 using namespace std;
 
 int t07_chess_queen() {
+	int x1, y1, x2, y2;
+	cin >> x1 >> y1>> x2 >> y2;
+	if ((x1 == x2) or (y1 == y2) or abs(x1 - x2) == abs(y1 - y2))
+		cout << "YES";
+	else
+		cout << "NO";
 
 };
