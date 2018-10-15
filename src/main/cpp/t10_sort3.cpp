@@ -25,5 +25,4 @@ int t10_sort3() {
     if (c>b) {o=b; b=c; c=o;}
     if (b>a) {o=a; a=b; b=o;}
     cout<<c<<" "<<b<<" "<<a;
-
 };
