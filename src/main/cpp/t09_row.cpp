@@ -23,5 +23,23 @@
 using namespace std;
 
 int t09_row() {
+    int inp, max_length=0, cur_length=0, symbol=0;
 
+    cin >> inp;
+    while (inp != 0)
+    {
+        if (inp == symbol)
+        {
+            cur_length++;
+            if (cur_length > max_length) {max_length = cur_length;}
+        }
+        else
+        {
+            symbol = inp;
+            cur_length = 0;
+        }
+        cin >> inp;
+    }
+    cout << max_length+1;
+    return 0;
 };
