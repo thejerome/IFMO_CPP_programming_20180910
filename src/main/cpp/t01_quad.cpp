@@ -19,15 +19,16 @@
 using namespace std;
 
 int t01_quad() {
-	int n, q = 1;
 
-	cin >> n;
+	int N;
+    int c = 1;
 
-	while (q^2 < n)
-	{
-		int q2;
-		q2 = q^2;
-		q++;
-		cout << " " << q2;
-	}
+    cin >> N ;
+
+    while (c * c <= N)
+    {
+        cout << c * c << " ";
+        
+        c++;
+    }
 };
