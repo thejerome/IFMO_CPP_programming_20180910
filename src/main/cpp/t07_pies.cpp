@@ -37,7 +37,7 @@
 using namespace std;
 
 int t07_pies() {
-int rub=0,penny=0,pies=0;
+int rub= 0,penny=0,pies=0;
 cin>>rub>>penny>>pies;
 cout<<(rub*pies)+((penny*pies)/100)<<" "<<(penny*pies)%100;
 };

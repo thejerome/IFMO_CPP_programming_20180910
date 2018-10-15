@@ -22,7 +22,7 @@
 
 using namespace std;
 
-int t05_tens_number() {
+int  t05_tens_number() {
 int num=0;
 cin>>num;
 cout<<num%100/10;

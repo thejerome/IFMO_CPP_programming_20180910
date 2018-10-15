@@ -22,7 +22,7 @@
 
 using namespace std;
 
-int t04_first_number() {
+int  t04_first_number() {
 int num=0;
 cin>>num;
 cout<<num/10;

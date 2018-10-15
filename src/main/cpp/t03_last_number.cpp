@@ -24,6 +24,6 @@ using namespace std;
 
 int t03_last_number() {
 int num=0;
-cin>>num;
+cin >>num;
 cout<<num%10;
 };
