@@ -29,5 +29,20 @@
 using namespace std;
 
 int t07_max_2() {
-
+int	n=1;
+int	max=0;
+int	pmax=0;
+while	(n!=0){
+cin	>>	n;
+if(n==0){
+break;
+}
+if(max<n){
+pmax=max;
+max=n;
+}	else	if(n>pmax){
+pmax=n;
+}
+}
+cout<<	pmax;
 };
