@@ -23,6 +23,7 @@
 using namespace std;
 
 int t05_tens_number() {
+
     int n;
     cin >> n;
     n /= 10;

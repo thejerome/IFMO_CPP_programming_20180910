@@ -27,6 +27,7 @@
 using namespace std;
 
 int t09_snail() {
+
     int h,a,b;
     cin >> h >> a >> b;
     int h_now=0,day=0;

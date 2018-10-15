@@ -23,6 +23,7 @@
 using namespace std;
 
 int t06_3digits() {
+
     int n, sum=0;
     cin >> n;
     for (int i=0; i<3; i++) {sum += n%10; n /= 10;}
