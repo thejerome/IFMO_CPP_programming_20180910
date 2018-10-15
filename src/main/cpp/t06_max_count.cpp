@@ -31,7 +31,7 @@ using namespace std;
 
 int t06_max_count() {
 
-    int x, count = 0;
+    int x, m = 0;
     cin >> x;
     int max = x;
     while (x)
@@ -39,13 +39,13 @@ int t06_max_count() {
         if (x > max)
         {
             max = x;
-            count = 1;
+            m = 1;
         }
         else
         if (x == max)
-            count++;
+            m++;
         cin >> x;
     }
-    cout << count;
+    cout << m;
 
 };
