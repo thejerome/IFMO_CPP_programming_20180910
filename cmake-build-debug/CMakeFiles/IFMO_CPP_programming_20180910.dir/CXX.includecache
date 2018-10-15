@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t10_max_local.cpp
+t10_max_local.h
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t10_max_local.h
+iostream
+-
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t10_max_local.h
+
