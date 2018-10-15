@@ -27,14 +27,13 @@
 using namespace std;
 
 int t09_choco() {
-    int N, M, K;
-    cin N >> M >> K;
+    int n, m, k;
 
-    if ((n*m > k) && ((k % n == 0) || (k % m == 0)) {
-        cout "YES";
-    }
+    cin >> n >> m >> k;
 
-    else {
-        cout "NO";
+    if ((n*m > k) && (k % n == 0) || (k % m == 0)) {
+        cout << "YES";
+    } else {
+        cout << "NO";
     }
 };
