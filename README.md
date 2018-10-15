@@ -79,4 +79,3 @@ PASSED: positive_numbers
 PASSED: negative_result
 
 Summary: SUCCESS
-```
