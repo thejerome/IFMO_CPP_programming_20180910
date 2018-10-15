@@ -38,4 +38,37 @@ using namespace std;
 
 int t11_boxes() {
 
+    int a,s,d,f,g,h;
+    cin >> a >> s >> d >> f >> g >> h;
+    if((a==h && s==g && d==f) || (a==h && s==f && d==g)){
+        cout << "Boxes are equal";
+    }
+    else
+    if((a==f && s==g && d==h)|| (a==f && s==h && d==g)){
+        cout << "Boxes are equal";
+    }
+    else
+    if((a==g && s==h && d==f)|| (a==g && s==f && d==h)){
+        cout << "Boxes are equal";
+    }
+    else
+    if((a>=f && s>=g && d>=h) || (a>=f && s>=h && d>=g) || (a>=g && s>=f && d>=h) || (a>=g && s>=h && d>=f)){
+        cout << "The first box is larger than the second one";
+    }
+    else
+    if((a>=h && s>=g && d>=f) || (a>=h && s>=f && d>=g)){
+        cout << "The first box is larger than the second one";
+    }
+    else
+    if((a<=f && s<=g && d<=h) || (a<=f && s<=h && d<=g) || (a<=g && s<=f && d<=h) || (a<=g && s<=h && d<f)){
+        cout << "The first box is smaller than the second one";
+    }
+    else
+    if((a<=h && s<=g && d<f) || (a<=h && s<=f && d<=g)){
+        cout << "The first box is smaller than the second one";
+    }
+    else{
+        cout << "Boxes are incomparable";
+    }
+
 };

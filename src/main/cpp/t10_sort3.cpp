@@ -20,4 +20,10 @@ using namespace std;
 
 int t10_sort3() {
 
+    int a, b, c;
+    cin >> a >> b >> c;
+    int maxmax = max(max(a, b), c);
+    int minmin = min(min(a, b), c);
+    cout << minmin << " " << a+b+c-minmin-maxmax << " " << maxmax;
+
 };
