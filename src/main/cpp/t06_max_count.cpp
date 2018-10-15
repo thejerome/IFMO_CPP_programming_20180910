@@ -30,5 +30,15 @@
 using namespace std;
 
 int t06_max_count() {
-
+    int buffer = -2, count = 0, max = 0;
+    while (buffer != 0) {
+        cin>>buffer;
+        if (buffer > max) {
+            max = buffer;
+            count = 1;
+        }
+        else if (max == buffer)
+            count++;
+    }
+    cout<<count;
 };
