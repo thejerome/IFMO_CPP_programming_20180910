@@ -18,5 +18,13 @@
 using namespace std;
 
 int t01_max3() {
-
+int a,b,c;
+cin>>a>>b>>c;
+if(a>b){
+    b=a;
+}
+if(b>c){
+    c=b;
+}
+cout<<c;
 };

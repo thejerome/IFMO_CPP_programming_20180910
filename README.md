@@ -79,9 +79,3 @@ PASSED: positive_numbers
 PASSED: negative_result
 
 Summary: SUCCESS
-```
-
-## Script to run tests (in Git Bash on Windows)
-```bash
-./run_tests.sh t01_max3 t02_triangle t03_equal3 t04_chess_rook t05_chess_king t06_chess_bishop t07_chess_queen t08_chess_knight t09_choco t10_sort3 t11_boxes
-```
