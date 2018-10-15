@@ -41,8 +41,8 @@ max=i;
             else {
                 i=1;
             }
-            a1=a;
         }
-        cout << max;
+        a1=a;
     }
+    cout << max;
 };
