@@ -32,7 +32,7 @@ int t09_choco() {
     if ((K%N==0)or(K%M==0)){
         cout<<"YES";
     }else {
-        cout<<"No";
+        cout<<"NO";
     }
 
 };

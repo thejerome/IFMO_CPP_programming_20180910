@@ -39,19 +39,15 @@ using namespace std;
 int t11_boxes() {
     int a1,b1,c1,a2,b2,c2;
     cin>>a1 >>b1>>c1>>a2>>b2>>c2;
-    if ((((a1==a2)and(b1==b2))or((a1==b2)and(b1==a2)))and(c1==c2)){
-        cout<<"Boxes are equal";
-
-    }else {
-        if((((a1<a2)and(b1<b2))or((a1<b2)and(b1<a2)))and(c1<c2)){
-            cout<< "The first box is smaller than the second one";
-        }else {
-            if ((((a1>a2)and(b1>b2))or((a1>b2)and(b1>a2)))and(c1>c2)){
-                cout<<"The first box is larger than the second one";
-            }else {
-                cout<<"Boxes are incomparable";
-            }
-        }
-    }
+   if ((a1*b1*c1)==(a2*b2*c2))
+       cout<<"Boxes are equal";
+   else
+       if ((((a1>=a2) and (b1>=b2) and (c1>=c2))or((a1>=b2) and (b1>=a2) and (c1>=c2))or((a1>=a2) and (b1>=c2) and (c1>=b2))or((a1>=c2) and (b1>=b2) and (c1>=a2)))and(a1*b1*c1>a2*b2*c2))
+    cout << "The first box is larger than the second one";
+       else
+           if ((((a2>=a1) and (b2>=b1) and (c2>=c1))or((a2>=b1) and (b2>=a1) and (c2>=c1))or((a2>=c1) and (b2>=b1) and (c2>=a1))or((a2>=a1) and (b2>=c1) and (c2>=b1)))and(a1*b1*c1<a2*b2*c2))
+           cout << "The first box is smaller than the second one";
+       else
+           cout << "Boxes are incomparable";
 
 };
