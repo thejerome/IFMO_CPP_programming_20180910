@@ -19,5 +19,12 @@
 using namespace std;
 
 int t04_chess_rook() {
+    int a,b,c,d;
+    cin >> a >> b >> c >> d;
+    //Где a,c - координаты осей 1 клеточки, b,d - координаты осей 2  клеточки.
+    if ((a == c) or (b == d))
+        cout << "YES";
+    else
+        cout << "NO";
 
 };
