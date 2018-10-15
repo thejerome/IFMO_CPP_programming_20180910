@@ -36,7 +36,7 @@ int t08_chess_knight() {
            else cout << "NO";
            else
     if (abs(y0-y1) == 2)
-        if (abs(y0-y1) == 1) cout << "YES";
+        if (abs(x0-x1) == 1) cout << "YES";
         else cout << "NO";
     else cout << "NO";
 
