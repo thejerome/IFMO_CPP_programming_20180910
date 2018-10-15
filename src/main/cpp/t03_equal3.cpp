@@ -19,5 +19,18 @@
 using namespace std;
 
 int t03_equal3() {
+    int a, b, c, match;
+    match = 0;
+    cin >> a >> b >> c;
 
+    if (a == b) {match++;}
+
+    if (a == c) {match++;}
+
+    if (b == c) {match++;}
+
+    if ( match == 1 ) {match++;}
+
+    cout << match;
+    return 0;
 };
