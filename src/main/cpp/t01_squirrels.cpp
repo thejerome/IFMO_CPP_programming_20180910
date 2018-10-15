@@ -1,4 +1,4 @@
-//Белочки и орешки - 1
+﻿//Белочки и орешки - 1
 //
 //N белочек нашли K орешков и решили разделить их поровну. Определите, сколько орешков достанется каждой белочке.
 //
@@ -24,5 +24,8 @@
 using namespace std;
 
 int t01_squirrels() {
+    int squirrels, nuts;
+    cin >> squirrels >> nuts;
+    cout << nuts/squirrels << endl;
 
 };
