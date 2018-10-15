@@ -35,5 +35,10 @@
 using namespace std;
 
 int t08_watch() {
-
+int time=0, hours=0, minutes=0, seconds=0;
+cin>>time;
+hours=time/3600%24;
+minutes=time%3600/60;
+seconds=time%3600%60;
+cout << hours<<":"<< minutes/10<<minutes%10<<":"<<seconds/10<<seconds%10;
 };
