@@ -40,5 +40,5 @@ int t08_watch() {
 	int hours = (n / 3600)%24;
 	int minutes = (n % 3600) / 60;
 	int seconds = (n % 3600) % 60;
-	cout << hours << ":" << (minutes > 9 ? "" : "0") << minutes << ":" << (seconds > 9 ? "" : "0") << seconds;
+	cout << hours << ":" << minutes/10 << minutes%10 << ":" << seconds/10 << seconds%10;
 };
