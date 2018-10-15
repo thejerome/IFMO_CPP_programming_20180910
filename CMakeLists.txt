@@ -3,10 +3,15 @@ project(IFMO_CPP_programming_20180910)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(.)
+include_directories(src)
+include_directories(src/main)
 include_directories(src/main/cpp)
+include_directories(src/test)
 
 add_executable(IFMO_CPP_programming_20180910
         src/main/cpp/main.cpp
+<<<<<<< Updated upstream
         src/main/cpp/t01_max3.cpp
         src/main/cpp/t01_max3.h
         src/main/cpp/t02_triangle.cpp
@@ -29,3 +34,175 @@ add_executable(IFMO_CPP_programming_20180910
         src/main/cpp/t10_sort3.h
         src/main/cpp/t11_boxes.cpp
         src/main/cpp/t11_boxes.h)
+=======
+        src/main/cpp/t00_hello.cpp
+        src/main/cpp/t00_hello.h
+        src/main/cpp/t01_squirrels.cpp
+        src/main/cpp/t01_squirrels.h
+        src/main/cpp/t02_squirrels2.cpp
+        src/main/cpp/t02_squirrels2.h
+        src/main/cpp/t03_last_number.cpp
+        src/main/cpp/t03_last_number.h
+        src/main/cpp/t04_first_number.cpp
+        src/main/cpp/t04_first_number.h
+        src/main/cpp/t05_tens_number.cpp
+        src/main/cpp/t05_tens_number.h
+        src/main/cpp/t06_3digits.cpp
+        src/main/cpp/t06_3digits.h
+        src/main/cpp/t07_pies.cpp
+        src/main/cpp/t07_pies.h
+        src/main/cpp/t08_watch.cpp
+        src/main/cpp/t08_watch.h
+        src/main/cpp/t09_snail.cpp
+        src/main/cpp/t09_snail.h
+        src/test/resources/t00_hello/hello/input.txt
+        src/test/resources/t00_hello/hello/output.txt
+        src/test/resources/t00_hello/hello_with_input/input.txt
+        src/test/resources/t00_hello/hello_with_input/output.txt
+        src/test/resources/t01_squirrels/test1/input.txt
+        src/test/resources/t01_squirrels/test1/output.txt
+        src/test/resources/t01_squirrels/test2/input.txt
+        src/test/resources/t01_squirrels/test2/output.txt
+        src/test/resources/t01_squirrels/test3/input.txt
+        src/test/resources/t01_squirrels/test3/output.txt
+        src/test/resources/t01_squirrels/test4/input.txt
+        src/test/resources/t01_squirrels/test4/output.txt
+        src/test/resources/t01_squirrels/test5/input.txt
+        src/test/resources/t01_squirrels/test5/output.txt
+        src/test/resources/t01_squirrels/test6/input.txt
+        src/test/resources/t01_squirrels/test6/output.txt
+        src/test/resources/t01_squirrels/test7/input.txt
+        src/test/resources/t01_squirrels/test7/output.txt
+        src/test/resources/t01_squirrels/test8/input.txt
+        src/test/resources/t01_squirrels/test8/output.txt
+        src/test/resources/t02_squirrels2/test1/input.txt
+        src/test/resources/t02_squirrels2/test1/output.txt
+        src/test/resources/t02_squirrels2/test2/input.txt
+        src/test/resources/t02_squirrels2/test2/output.txt
+        src/test/resources/t02_squirrels2/test3/input.txt
+        src/test/resources/t02_squirrels2/test3/output.txt
+        src/test/resources/t02_squirrels2/test4/input.txt
+        src/test/resources/t02_squirrels2/test4/output.txt
+        src/test/resources/t02_squirrels2/test5/input.txt
+        src/test/resources/t02_squirrels2/test5/output.txt
+        src/test/resources/t02_squirrels2/test6/input.txt
+        src/test/resources/t02_squirrels2/test6/output.txt
+        src/test/resources/t02_squirrels2/test7/input.txt
+        src/test/resources/t02_squirrels2/test7/output.txt
+        src/test/resources/t02_squirrels2/test8/input.txt
+        src/test/resources/t02_squirrels2/test8/output.txt
+        src/test/resources/t03_last_number/test1/input.txt
+        src/test/resources/t03_last_number/test1/output.txt
+        src/test/resources/t03_last_number/test2/input.txt
+        src/test/resources/t03_last_number/test2/output.txt
+        src/test/resources/t03_last_number/test3/input.txt
+        src/test/resources/t03_last_number/test3/output.txt
+        src/test/resources/t03_last_number/test4/input.txt
+        src/test/resources/t03_last_number/test4/output.txt
+        src/test/resources/t03_last_number/test5/input.txt
+        src/test/resources/t03_last_number/test5/output.txt
+        src/test/resources/t03_last_number/test6/input.txt
+        src/test/resources/t03_last_number/test6/output.txt
+        src/test/resources/t03_last_number/test7/input.txt
+        src/test/resources/t03_last_number/test7/output.txt
+        src/test/resources/t03_last_number/test8/input.txt
+        src/test/resources/t03_last_number/test8/output.txt
+        src/test/resources/t04_first_number/test1/input.txt
+        src/test/resources/t04_first_number/test1/output.txt
+        src/test/resources/t04_first_number/test2/input.txt
+        src/test/resources/t04_first_number/test2/output.txt
+        src/test/resources/t04_first_number/test3/input.txt
+        src/test/resources/t04_first_number/test3/output.txt
+        src/test/resources/t04_first_number/test4/input.txt
+        src/test/resources/t04_first_number/test4/output.txt
+        src/test/resources/t04_first_number/test5/input.txt
+        src/test/resources/t04_first_number/test5/output.txt
+        src/test/resources/t04_first_number/test6/input.txt
+        src/test/resources/t04_first_number/test6/output.txt
+        src/test/resources/t04_first_number/test7/input.txt
+        src/test/resources/t04_first_number/test7/output.txt
+        src/test/resources/t04_first_number/test8/input.txt
+        src/test/resources/t04_first_number/test8/output.txt
+        src/test/resources/t05_tens_number/test1/input.txt
+        src/test/resources/t05_tens_number/test1/output.txt
+        src/test/resources/t05_tens_number/test2/input.txt
+        src/test/resources/t05_tens_number/test2/output.txt
+        src/test/resources/t05_tens_number/test3/input.txt
+        src/test/resources/t05_tens_number/test3/output.txt
+        src/test/resources/t05_tens_number/test4/input.txt
+        src/test/resources/t05_tens_number/test4/output.txt
+        src/test/resources/t05_tens_number/test5/input.txt
+        src/test/resources/t05_tens_number/test5/output.txt
+        src/test/resources/t05_tens_number/test6/input.txt
+        src/test/resources/t05_tens_number/test6/output.txt
+        src/test/resources/t05_tens_number/test7/input.txt
+        src/test/resources/t05_tens_number/test7/output.txt
+        src/test/resources/t05_tens_number/test8/input.txt
+        src/test/resources/t05_tens_number/test8/output.txt
+        src/test/resources/t06_3digits/test1/input.txt
+        src/test/resources/t06_3digits/test1/output.txt
+        src/test/resources/t06_3digits/test2/input.txt
+        src/test/resources/t06_3digits/test2/output.txt
+        src/test/resources/t06_3digits/test3/input.txt
+        src/test/resources/t06_3digits/test3/output.txt
+        src/test/resources/t06_3digits/test4/input.txt
+        src/test/resources/t06_3digits/test4/output.txt
+        src/test/resources/t06_3digits/test5/input.txt
+        src/test/resources/t06_3digits/test5/output.txt
+        src/test/resources/t06_3digits/test6/input.txt
+        src/test/resources/t06_3digits/test6/output.txt
+        src/test/resources/t06_3digits/test7/input.txt
+        src/test/resources/t06_3digits/test7/output.txt
+        src/test/resources/t06_3digits/test8/input.txt
+        src/test/resources/t06_3digits/test8/output.txt
+        src/test/resources/t07_pies/test1/input.txt
+        src/test/resources/t07_pies/test1/output.txt
+        src/test/resources/t07_pies/test2/input.txt
+        src/test/resources/t07_pies/test2/output.txt
+        src/test/resources/t07_pies/test3/input.txt
+        src/test/resources/t07_pies/test3/output.txt
+        src/test/resources/t07_pies/test4/input.txt
+        src/test/resources/t07_pies/test4/output.txt
+        src/test/resources/t07_pies/test5/input.txt
+        src/test/resources/t07_pies/test5/output.txt
+        src/test/resources/t07_pies/test6/input.txt
+        src/test/resources/t07_pies/test6/output.txt
+        src/test/resources/t07_pies/test7/input.txt
+        src/test/resources/t07_pies/test7/output.txt
+        src/test/resources/t07_pies/test8/input.txt
+        src/test/resources/t07_pies/test8/output.txt
+        src/test/resources/t08_watch/test1/input.txt
+        src/test/resources/t08_watch/test1/output.txt
+        src/test/resources/t08_watch/test2/input.txt
+        src/test/resources/t08_watch/test2/output.txt
+        src/test/resources/t08_watch/test3/input.txt
+        src/test/resources/t08_watch/test3/output.txt
+        src/test/resources/t08_watch/test4/input.txt
+        src/test/resources/t08_watch/test4/output.txt
+        src/test/resources/t08_watch/test5/input.txt
+        src/test/resources/t08_watch/test5/output.txt
+        src/test/resources/t08_watch/test6/input.txt
+        src/test/resources/t08_watch/test6/output.txt
+        src/test/resources/t08_watch/test7/input.txt
+        src/test/resources/t08_watch/test7/output.txt
+        src/test/resources/t08_watch/test8/input.txt
+        src/test/resources/t08_watch/test8/output.txt
+        src/test/resources/t08_watch/test9/input.txt
+        src/test/resources/t08_watch/test9/output.txt
+        src/test/resources/t09_snail/test1/input.txt
+        src/test/resources/t09_snail/test1/output.txt
+        src/test/resources/t09_snail/test2/input.txt
+        src/test/resources/t09_snail/test2/output.txt
+        src/test/resources/t09_snail/test3/input.txt
+        src/test/resources/t09_snail/test3/output.txt
+        src/test/resources/t09_snail/test4/input.txt
+        src/test/resources/t09_snail/test4/output.txt
+        src/test/resources/t09_snail/test5/input.txt
+        src/test/resources/t09_snail/test5/output.txt
+        src/test/resources/t09_snail/test6/input.txt
+        src/test/resources/t09_snail/test6/output.txt
+        src/test/resources/t09_snail/test7/input.txt
+        src/test/resources/t09_snail/test7/output.txt
+        src/test/resources/t09_snail/test8/input.txt
+        src/test/resources/t09_snail/test8/output.txt)
+>>>>>>> Stashed changes
