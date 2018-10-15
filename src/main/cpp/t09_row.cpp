@@ -22,6 +22,23 @@
 
 using namespace std;
 
-int t09_row() {
-
+int t09_row()
+{
+	int a, b, c = 1, streak = 0;
+	while (a != 0)
+	{
+		cin >> a;
+		if (a == b)
+		{
+			c++;
+			b = a;
+		}
+		else if (b != a) {
+			if (streak < c)
+				streak = c;
+			c = 1;
+			b = a;
+		}
+	}
+	cout << streak;
 };
