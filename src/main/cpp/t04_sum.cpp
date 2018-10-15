@@ -21,17 +21,18 @@ using namespace std;
 
 int t04_sum() {
 
-	int s, w;
+	int w, s;
 
-	cin >> s;
+    cin >> w;
 
-	s = w;
+    s = w;
 
-	while (s != 0)
-	{
-		cin >> s;
+    while (w != 0) 
+    	{
+    		cin >> w;
 
-		w += s;
-	}
+    		s = s + w;
+    	}
 
+     cout << s;
 };
