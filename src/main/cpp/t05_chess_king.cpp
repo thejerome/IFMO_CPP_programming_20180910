@@ -23,11 +23,11 @@ int t05_chess_king() {
 
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    bool colComp (a-c <= 1 && a-c >= -1), strComp (b-d <= 1 && b-d >= -1);
+    bool lef (a-c <= 1 && a-c >= -1), rig (b-d <= 1 && b-d >= -1);
     if (a==c && b==d){
         cout << "NO";
     }
-    else if (colComp  && strComp){
+    else if (lef  && rig){
         cout << "YES";
     }
     else {cout << "NO";}
