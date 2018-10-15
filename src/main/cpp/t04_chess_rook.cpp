@@ -22,9 +22,9 @@ int t04_chess_rook() {
 int x1, x2, x3, x4;
 cin >> x1 >> x2 >> x3 >> x4;
 if (x1==x3 || x2==x4) {
-    cout << "yes";
+    cout << "YES";
 }
 else {
-    cout << "no";
+    cout << "NO";
 }
 };

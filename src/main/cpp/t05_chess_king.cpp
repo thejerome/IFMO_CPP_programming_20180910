@@ -22,10 +22,10 @@ using namespace std;
 int t05_chess_king() {
 int x, y, X, Y;
 cin >> x >> y >> X >> Y;
-    if (((abs(x - X) == 1) && (abs(y - Y) == 1)) || (abs(x - X) == 1) || (abs(y - Y) == 1)) {
-        cout << "yes";
+    if (((abs(x - X) == 1) && (abs(y - Y) == 1)) || ((abs(x - X) == 1) && (abs(y==Y))) || (((abs(y - Y) == 1)) && (abs(x==X)))) {
+        cout << "YES";
         }
         else {
-            cout << "no";
+            cout << "NO";
         }
 };
