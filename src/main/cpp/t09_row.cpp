@@ -24,20 +24,20 @@ using namespace std;
 
 int t09_row() {
 
-    int cur;
-    cin >> cur;
-    int base = cur, count = 0, count_max = 0;
-    while (cur)
+    int n;
+    cin >> n;
+    int m = n, count = 0, count_max = 0;
+    while (n)
     {
-        if (base == cur)
+        if (m == n)
             count++;
         else
         {
-            base = cur;
+            m = n;
             count = 1;
         }
         count_max = max(count_max, count);
-        cin >> cur;
+        cin >> n;
     }
     cout << count_max;
 
