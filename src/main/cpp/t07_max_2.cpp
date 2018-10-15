@@ -29,5 +29,23 @@
 using namespace std;
 
 int t07_max_2() {
+    int inp, max=0, semax=0;
 
+    cin>>inp;
+    while (inp != 0)
+    {
+        if (inp > semax)
+        {
+            if (inp > max)
+            {
+                semax = max;
+                max = inp;
+            }
+            else {semax = inp;}
+        }
+        cin >> inp;
+    }
+
+    cout << semax;
+    return 0;
 };
