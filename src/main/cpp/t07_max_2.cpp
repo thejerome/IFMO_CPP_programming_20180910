@@ -29,5 +29,16 @@
 using namespace std;
 
 int t07_max_2() {
+    int buffer = -1, premax = 0, max = 0;
+    while (buffer != 0) {
+        cin>>buffer;
+        if (buffer > premax)
+            premax = buffer;
+        if(buffer >= max) {
+            premax = max;
+            max = buffer;
+        }
+    }
+    cout<<premax;
 
 };
