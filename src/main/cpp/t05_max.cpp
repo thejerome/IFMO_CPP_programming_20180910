@@ -21,6 +21,7 @@
 using namespace std;
 
 int t05_max() {
+
     int result=0,n;
     do {
         cin >> n;

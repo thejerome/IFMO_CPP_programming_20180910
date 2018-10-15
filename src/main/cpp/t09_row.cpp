@@ -24,6 +24,7 @@
 using namespace std;
 
 int t09_row() {
+
     vector<int> a;
     do {
         int n;

@@ -25,6 +25,7 @@
 using namespace std;
 
 int t10_max_local() {
+
     int n, cnt=0;
     vector<int> a;
     do {

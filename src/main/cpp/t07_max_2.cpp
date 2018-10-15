@@ -31,6 +31,7 @@
 using namespace std;
 
 int t07_max_2() {
+
     vector<int> a;
     do {
         int n;
