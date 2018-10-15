@@ -28,4 +28,10 @@ using namespace std;
 
 int t09_snail() {
 
+    int h, day, night;
+
+    cin >> h >> day >> night;
+
+    cout << ((h - day - 1)/(day - night) + 2);
+
 };

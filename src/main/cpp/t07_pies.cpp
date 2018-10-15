@@ -38,4 +38,12 @@ using namespace std;
 
 int t07_pies() {
 
+    int rub, kop, pir;
+
+    cin >> rub >> kop >> pir;
+
+    int result = pir*(100*rub + kop);
+
+    cout << result/100 << " " << result%100;
+
 };

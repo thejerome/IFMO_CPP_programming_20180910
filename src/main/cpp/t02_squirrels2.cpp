@@ -25,4 +25,11 @@ using namespace std;
 
 int t02_squirrels2() {
 
+    int b,o;
+
+    cin >> b >> o;
+
+    int result = o%b;
+
+    cout << result;
 };
