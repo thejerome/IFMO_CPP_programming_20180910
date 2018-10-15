@@ -25,7 +25,7 @@ using namespace std;
 
 int t10_max_local() {
 int a,a1,a2,i;
-cin a;
+cin >> a;
 a1=a;
 cin >> a;
 a2=a;
