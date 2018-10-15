@@ -24,22 +24,28 @@
 using namespace std;
 
 int t10_max_local() {
-    int k=0,n=0,m=0,x,y,z;
-    cin>>x>>y>>z;
-    do
-    {
-        k++;
-        if((y>z)&&(x<y))
-        {
-            n++;
-            if((n>1)&&(n==2||n>2&&k<m)) {
-                m = k;
-            }
-            k=0;
+    int n, next, prev, max=0;
+    cin>>prev>>n;
+    if(n==0){
+        cout<<max;
+    }
+    cin>>next;
+    if(next==0){
+        cout<<max;
+    }
+    if((n>prev)&&(n>next)){
+        max+=1;
+    }
+    while(next!=0){
+        prev=n;
+        n=next;
+        cin>>next;
+        if(next==0){
+            break;
         }
-        x=y;
-        y=z;
-        cin>>z;}
-    while(z);
-    cout<<m;
+        if((n>prev)&&(n>next)){
+            max+=1;
+        }
+    }
+    cout << max;
 };
