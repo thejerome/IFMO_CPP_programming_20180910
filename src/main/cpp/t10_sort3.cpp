@@ -18,11 +18,12 @@
 
 using namespace std;
 int t10_sort3() {
-    int a,b,c;
+    int a,b,c,d;
+    d=0;
     cin >> a >> b >> c;
-    if (a>b) swap(a,b);
-    if (b>c) swap(b,c);
-    if (a>b) swap(a,b);
+    if (a>b) {d=b; b=a; a=d;};
+    if (b>c) {d=b; b=c; c=d;};
+    if (a>b) {d=b; b=a; a=d;};
     cout << a <<' ' <<b<< ' '<<c;
 return 0;
 };
