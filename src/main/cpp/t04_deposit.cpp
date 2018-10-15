@@ -29,7 +29,6 @@ int t04_deposit() {
         b *= 1.0+p/100.0;
         if (i != k-1) b = (floor(b*100))/100.0;
     }
-    cout << b << endl;
     cout << floor(b) << ' ' << floor((b - floor(b))*100.0) << endl;
 
 };
