@@ -24,4 +24,14 @@ using namespace std;
 
 int t05_tens_number() {
 
+    int a=0, b=0, c=0;
+
+    cin >> a;
+
+    c=a%100;
+
+    b=c/10;
+
+    cout << b;
+
 };
