@@ -19,5 +19,29 @@
 using namespace std;
 
 int t10_sort3() {
-
+    int a,b,c,m,mi,t;
+    cin>>a>>b>>c;
+    if (a>=b)
+    {
+        m=a;
+        t=b;
+    }
+    else
+    {
+        m=b;
+        t=a;
+    }
+    if (c>=m)
+    {
+        mi=t;
+        t =m;
+        m=c;
+    } else { if (c>t && c<m)
+        {
+            mi=a;
+            t=c;
+        } else
+            mi=c;
+    }
+    cout << mi<<' '<<t<<' '<<m;
 };
