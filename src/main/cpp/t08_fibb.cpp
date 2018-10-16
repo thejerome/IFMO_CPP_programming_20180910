@@ -23,9 +23,10 @@ using namespace std;
 int t08_fibb() {
     int n, f0=0, f1=1, x;
     cin >> n;
+    x = 0;
     if (n==0) cout << f0;
     if (n==1) cout << f1;
-    if (n>1)
+    if (n>1) {
         while (n>1) {
             --n;
             x = f0 + f1;
@@ -33,4 +34,5 @@ int t08_fibb() {
             f1 = x;
         }
     cout << x;
+    }
 };
