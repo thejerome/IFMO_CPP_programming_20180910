@@ -29,5 +29,14 @@
 using namespace std;
 
 int t07_chess_queen() {
-
+    int x0, y0, x1, y1, diff_x, diff_y, neg_diff_y;
+    cin >> x0 >> y0 >> x1 >> y1;
+    diff_x = x1 - x0;
+    diff_y = y1 - y0;
+    neg_diff_y = -1 * diff_y;
+    if (diff_x == diff_y || diff_x == neg_diff_y || diff_x == 0 || diff_y == 0) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 };

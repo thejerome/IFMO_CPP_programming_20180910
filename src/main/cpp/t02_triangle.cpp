@@ -19,5 +19,25 @@
 using namespace std;
 
 int t02_triangle() {
-
+    int A, B, C, sum;
+    bool exist;
+    cin >> A >> B >> C;
+    exist = true;
+    sum = A + B;
+    if (sum <= C) {
+    exist = false;
+    }
+    sum = A + C;
+    if (sum <= B) {
+    exist = false;
+    }
+    sum = C + B;
+    if (sum <= A) {
+    exist = false;
+    }
+    if (exist == true) {
+    cout << "YES";
+    } else {
+    cout << "NO";
+    }
 };

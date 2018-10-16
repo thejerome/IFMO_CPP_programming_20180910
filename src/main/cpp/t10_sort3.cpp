@@ -19,5 +19,19 @@
 using namespace std;
 
 int t10_sort3() {
-
+    int A, B, C;
+    cin >> A >> B >> C;
+    if (A <= B && A <= C  && B <= C) {
+    cout << A << " " << B << " " << C;
+    } else if (A <= B && A <= C  && B >= C) {
+    cout << A << " " << C << " " << B;
+   } else if (B <= A && B <= C  && A <= C) {
+    cout << B << " " << A << " " << C;
+   } else if (B <= A && B <= C  && A >= C) {
+    cout << B << " " << C << " " << A;
+   } else if (C <= A && C <= B  && A <= B) {
+    cout << C << " " << A << " " << B;
+   } else if (C <= A && C <= B  && A >= B) {
+    cout << C << " " << B << " " << A;
+    }
 };
