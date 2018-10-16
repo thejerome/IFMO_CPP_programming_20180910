@@ -24,12 +24,11 @@ using namespace std;
 
 int t09_row() {
 	int a;
-	int b;
 	int jmax=0;
 	int j=0;
 	cin >> a;
 	while (a != 0) {
-		b = a;
+		int b = a;
 		cin >> a;
 		if (b == a) {
 			j++;
