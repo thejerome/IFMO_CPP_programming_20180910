@@ -23,5 +23,17 @@
 using namespace std;
 
 int t09_row() {
-
+    int buffer, count = 1, max_count = 1, prev = -1;
+    do {
+        cin >> buffer;
+        if (buffer == prev) {
+            count ++;
+        }
+        else
+            count = 1;
+        prev = buffer;
+        if (count > max_count)
+            max_count = count;
+    } while (buffer != 0);
+    cout<<max_count;
 };
