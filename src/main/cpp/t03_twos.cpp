@@ -23,5 +23,17 @@
 using namespace std;
 
 int t03_twos() {
+    int inp, mod = 0;
+    cin >> inp;
 
+    while ( ((inp/2) > 0) && (mod==0) )
+    {
+        mod = inp%2;
+        inp = inp/2;
+    }
+
+    if ( (inp==1) && (mod==0)) {cout <<"YES";}
+    else {cout<<"NO";}
+
+    return 0;
 };

@@ -19,5 +19,9 @@
 using namespace std;
 
 int t02_divisor() {
-
+    int inp, div = 2;
+    cin >> inp;
+    while ( (inp%div) != 0 ) {div++;}
+    cout << div;
+    return 0;
 };

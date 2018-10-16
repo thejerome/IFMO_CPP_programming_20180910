@@ -21,5 +21,20 @@
 using namespace std;
 
 int t08_fibb() {
+    int a=0,b=1, inp, counter = 0;
 
+    cin >> inp;
+    while (counter < inp-1)
+    {
+        int result;
+        result = a + b;
+        a = result;
+        counter++;
+        result = a + b;
+        b = result;
+        counter++;
+    }
+    if (counter < inp) {cout<<b;}
+    else {cout<<a;}
+    return 0;
 };
