@@ -23,5 +23,22 @@
 using namespace std;
 
 int t09_row() {
-
+    int N, sum, max, k;
+    cin >> N;
+    sum=1;
+    max=1;
+    while (N!=0) {
+        if (k==N) {
+            sum=sum+1;
+        }
+        else {
+            k=N;
+            sum=1;
+        }
+        if (sum>max) {
+            max=sum;
+        }
+        cin >> N;
+    }
+    cout << max;
 };
