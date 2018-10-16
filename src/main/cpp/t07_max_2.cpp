@@ -30,6 +30,7 @@ using namespace std;
 
 int t07_max_2() {
 	int S, max1, max2;
+	S = 1;
 	max1 = -1;
 	max2 = -1;
 	while (S != 0) {

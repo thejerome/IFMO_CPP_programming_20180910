@@ -31,6 +31,7 @@ using namespace std;
 
 int t06_max_count() {
 	int S, max, count;
+	S = 1;
 	max = -1;
 	count = 0;
 	while (S != 0) {
