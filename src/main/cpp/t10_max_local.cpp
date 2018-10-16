@@ -24,7 +24,6 @@
 using namespace std;
 
 int t10_max_local() {
-    int N1, N2, N3, N, sum=0;
     int N1=0, N2=0, N3=0, N, sum=0;
     cin >> N;
     N1=N;
@@ -33,10 +32,9 @@ int t10_max_local() {
         N3=N2;
         N2=N1;
         N1=N;
-        if (((N1!=0)&&(N2!=0)&&(N3!=0))&&((N2>N1)&&(N2>N3))) {
         if (((N2!=0)&&(N3!=0))&&((N2>N1)&&(N2>N3))) {
             sum=sum+1;
         }
     }
     cout << sum;
-};};
+};
