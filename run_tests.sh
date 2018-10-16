@@ -7,6 +7,7 @@ executable=$output_dir/test
 
 echo "Compiling everything under $src_dir"
 mkdir -p $output_dir
+`cd $src_dir && D:/MinGW/mingw64/bin/g++ * -o $executable -std=c++11`
 
 if [ $? != 0 ]
 then
@@ -38,3 +39,4 @@ then
 else
     echo Summary: SUCCESS
     exit 0
+fi
