@@ -18,6 +18,12 @@
 
 using namespace std;
 
-int t01_quad() {
-
+int t01_quad()
+{
+	int b;
+	cin >> b;
+	for (int a = 1; a*a <= b; a++) 
+	{
+		cout << a * a << " ";
+	}
 };

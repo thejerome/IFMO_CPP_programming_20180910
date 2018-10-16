@@ -19,6 +19,14 @@
 
 using namespace std;
 
-int t04_sum() {
-
+int t04_sum() 
+{
+	int a, b = 0;
+	cin >> a;
+	while(a != 0)
+	{
+		b += a;
+		cin >> a;
+	}
+	cout << b;
 };

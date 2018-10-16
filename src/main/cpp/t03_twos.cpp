@@ -22,6 +22,19 @@
 
 using namespace std;
 
-int t03_twos() {
-
+int t03_twos()
+{
+	int a, b = 1;
+	cin >> a;
+	for (int i = 0; b <= a; ++i)
+	{
+		if (a == b)
+		{
+			cout << "YES";
+			return 0;
+		}
+		b *= 2;
+	}
+	cout << "NO";
+	return 0;
 };

@@ -28,6 +28,20 @@
 
 using namespace std;
 
-int t07_max_2() {
-
+int t07_max_2() 
+{
+	int a, b1 = 0, b2 = 0;
+	cin >> a;
+	while (a != 0)
+	{
+		if (a > b1) 
+		{
+			b2 = b1;
+			b1 = a;
+		}
+		else if (a > b2 && a <= b1)
+			b2 = a;
+		cin >> a;
+	}
+	cout << b2;
 };

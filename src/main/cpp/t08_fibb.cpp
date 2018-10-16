@@ -20,6 +20,15 @@
 
 using namespace std;
 
-int t08_fibb() {
-
+int t08_fibb() 
+{
+	int a = 0, b = 1, k;
+	cin >> k;
+	while (k != 0)
+	{
+		a = a + b;
+		b = a - b;
+		k --;
+	}
+	cout << a;
 };
