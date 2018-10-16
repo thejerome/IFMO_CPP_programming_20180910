@@ -25,13 +25,12 @@ int t08_fibb() {
     cin >> n;
     if (n==0) cout << f0;
     if (n==1) cout << f1;
-    if (n>1) {
+    if (n>1)
         while (n>1) {
             --n;
             x = f0 + f1;
             f0 = f1;
             f1 = x;
         }
-        cout << x;
-    }
+    cout << x;
 };
