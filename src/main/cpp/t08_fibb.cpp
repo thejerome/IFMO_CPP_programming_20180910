@@ -22,7 +22,6 @@ using namespace std;
 
 int t08_fibb() {
 	int N, last, next, sum, count;
-	count = 1;
 	sum = 0;
 	last = 0;
 	next = 1;
@@ -31,11 +30,11 @@ int t08_fibb() {
 		sum = 1;
 	}
 	else {
-		while (count < N) {
+		while ((N != 1) && (N != 0)) {
 			sum = last + next;
 			last = next;
 			next = sum;
-			count++;
+			N--;
 	}
 	}
 	cout << sum;
