@@ -22,10 +22,11 @@ using namespace std;
 int t04_sum() 
 {
 	int a, b = 0;
+	cin >> a;
 	while(a != 0)
 	{
-		cin >> a;
 		b += a;
+		cin >> a;
 	}
 	cout << b;
 };
