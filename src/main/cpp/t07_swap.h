@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-16.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T07_SWAP_H
+#define IFMO_CPP_PROGRAMMING_20180910_T07_SWAP_H
+
+
+int t07_swap();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T07_SWAP_H
