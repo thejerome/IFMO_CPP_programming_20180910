@@ -19,5 +19,24 @@
 using namespace std;
 
 int t03_equal3() {
-
-};
+    int A, B, C, counter;
+    counter = 0;
+    cin >> A >> B >> C;
+    if (A == B) {
+        counter = 2;
+        if (A == C) {
+            counter  = counter + 1;
+        }
+    } else if (A == C) {
+        counter = 2;
+        if (A == B) {
+            counter = counter + 1;
+        }
+    } else if (B == C) {
+        counter = 2;
+        if (B == A) {
+            counter = counter + 1;
+        }
+    }
+    cout << counter;
+}

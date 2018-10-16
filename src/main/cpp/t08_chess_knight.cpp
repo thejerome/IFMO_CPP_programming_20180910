@@ -29,5 +29,23 @@
 using namespace std;
 
 int t08_chess_knight() {
-
+    int x0, y0, x1, y1, diff_x, diff_y;
+    cin >> x0 >> y0 >> x1 >> y1;
+    diff_x = x1 - x0;
+    diff_y = y1 - y0;
+    if (diff_x == 2 || diff_x == -2) {
+        if (diff_y == 1 || diff_y == -1) {
+            cout << "YES";
+        } else {
+            cout << "NO";
+        }
+    } else if (diff_y == 2 || diff_y == -2) {
+        if (diff_x == 1 || diff_x == -1) {
+            cout << "YES";
+        } else {
+            cout << "NO";
+        }
+    } else {
+        cout << "NO";
+    }
 };
