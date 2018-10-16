@@ -34,7 +34,7 @@ int t09_row() {
             if(S2<S){
                 S2 =S;
             }}
-        else if (M != N){
+        else if (M < N || M > N){
             M = N;
             S = 1;}
         cin >> N;}
