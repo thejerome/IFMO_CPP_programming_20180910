@@ -21,5 +21,14 @@
 using namespace std;
 
 int t06_quad() {
-
+    int a, b, c;
+    cin >> a >> b >> c;
+    int d = b * b - 4 * a * c;
+    if (d == 0) {
+        cout << ((double)-b + (double)sqrt(d)) / ((double)2 * a);
+    }
+    else
+    if (d > 0) {
+        cout << ((double)-b - (double)sqrt(d)) / ((double)2 * a) << " " << ((double)-b + (double)sqrt(d)) / ((double)2 * a);
+    }
 };

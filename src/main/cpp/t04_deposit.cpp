@@ -22,5 +22,21 @@
 using namespace std;
 
 int t04_deposit() {
+    int p_i, x_i, y_i, k_i, cnt;
+    cin >> p_i >> x_i >> y_i >> k_i;
+    double p = 1 + ((double)p_i / 100), x = x_i, y = y_i, k = k_i;
+    double epsi = 1e-5;
+    while (k--) {
+        x *= p;
+        y *= p;
+        y += abs(x - trunc(x)) * 100;
 
+        cnt = trunc(y / 100);
+        x += cnt;
+        y -= cnt * 100;
+
+        y = trunc(y + epsi);
+        x = trunc(x + epsi);
+    }
+    cout << (int)x << " " << (int)y;
 };
