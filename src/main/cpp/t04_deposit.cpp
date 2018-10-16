@@ -22,5 +22,16 @@
 using namespace std;
 
 int t04_deposit() {
-
+	double x, y, k;
+	double p;
+	cin >> p;
+	cin >> x >> y >> k;
+	while (k > 0)
+	{
+		double rublesTemp = (x*p / 100);
+		x = x + floor(rublesTemp);
+		y = y + floor((y*p / 100)+0.001) + (rublesTemp-trunc(rublesTemp))*100;
+		k--;
+	}
+	cout << trunc(x + y/100) << " "<< ((x + y / 100) - trunc(x + y / 100))*100;
 };

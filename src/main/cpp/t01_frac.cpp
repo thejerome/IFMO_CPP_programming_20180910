@@ -20,5 +20,7 @@
 using namespace std;
 
 int t01_frac() {
-
+	double f;
+	cin >> f;
+	cout << f-trunc(f);
 };
