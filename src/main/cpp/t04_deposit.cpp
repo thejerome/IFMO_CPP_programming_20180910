@@ -25,11 +25,12 @@ int t04_deposit() {
     double P, X, Y, K, S;
     cin >> P >> X >> Y >> K;
     P=1+(P/100);
-    S=X+(Y/100);
     while (K) {
         --K;
+        S=X+(Y/100);
         S=S*P;
+        X=floor(S);
+        Y=floor(((S - X) * 100) + 0.0001);
     }
-    Y=modf(S,&X);
-    cout << X << " " << floor(Y*100);
+    cout << X << " " << Y;
 };
