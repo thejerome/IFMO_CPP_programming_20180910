@@ -34,8 +34,7 @@ int t08_fibb() {
             --N;
             x = F0 + F1;
             F0 = F1;
-            F1 = x;
         }
-        cout << x;
+        cout << F1;
     }
 };
