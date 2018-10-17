@@ -23,5 +23,23 @@
 using namespace std;
 
 int t03_twos() {
+	int n;
+	cin >> n;
+	int two = 2;
+	for (int i = 2; i <= n; i++)
+	{
+		two = two * 2;
+		if (two == n||n==1||n==2)
+		{
+			cout << "YES";
+			break;
+		}
+		if (two > n)
+		{
+			cout << "NO";
+			break;
+		}
+	}
 
+	return 0;
 };

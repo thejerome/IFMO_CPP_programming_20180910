@@ -30,4 +30,30 @@ using namespace std;
 
 int t07_max_2() {
 
+	int n;
+	cin >> n;
+
+	int max = n;
+	int premax = -1;
+	while (n)
+	{
+		cin >> n;
+		if (n > max)
+		{
+			premax = max;
+			max = n;
+		}
+		else
+		{
+			if (n > premax)
+			{
+				premax = n;
+			}
+		}
+			
+			
+	}
+	cout << premax;
+
+	return 0;
 };
