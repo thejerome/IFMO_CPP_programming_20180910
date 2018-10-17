@@ -24,16 +24,15 @@
 using namespace std;
 
 int t10_max_local() {
-    int N1, N2=0, N3=0, N, sum=0;
-    while (N1!=0) {
-        cin >> N;
+   int N1=0, N2=0, N3=0, N, sum=0;
+    while (N!=0) {
+        cin>>N;
         N3=N2;
         N2=N1;
         N1=N;
-        if (N!=0) {
-            if(N2>N1&&N2>N3){
-            sum=sum+1;}
+        if (N2>N1&&N2>N3&&N3!=0) {
+            sum=sum+1;
         }
     }
-    cout << sum-1;
+    cout << sum;
 };
