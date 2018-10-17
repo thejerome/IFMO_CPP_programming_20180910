@@ -30,7 +30,7 @@ int t10_max_local() {
         N3=N2;
         N2=N1;
         N1=N;
-        if (N2>N1&&N2>N3&&N3!=0) {
+        if (N2>N1&&N2>N3&&N3!=0&&N1!=0) {
             sum=sum+1;
         }
     }
