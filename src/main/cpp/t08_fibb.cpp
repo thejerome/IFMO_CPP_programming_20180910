@@ -25,6 +25,7 @@ int t08_fibb() {
     cin >> N;
     F0=0;
     F1=1;
+    F=0;
     if (N>1) {
         while (N>1) {
             --N;
