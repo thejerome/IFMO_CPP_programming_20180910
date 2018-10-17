@@ -24,14 +24,14 @@ using namespace std;
 int t05_ave() {
     double K,SUM,N,Ave;
     K=0;
-    SUM=0;
+    cin>>N;
     
     while (N!=0)    {
-        cin>>N;
         SUM=SUM+N;
         K=K+1;
+        cin>>N;
     }
-    Ave=(SUM/(K-1));
+    Ave=(SUM/(K));
     cout<<setprecision(11)<<fixed<<Ave;
     
     return 0;
