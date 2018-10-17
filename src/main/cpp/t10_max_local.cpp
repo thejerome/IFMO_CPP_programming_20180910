@@ -24,7 +24,7 @@
 using namespace std;
 
 int t10_max_local() {
-    int N1=0, N2=0, N3=0, N, sum=0;
+    int N1=0, N2=0, N3=0, N=100, sum=0;
     while (N!=0) {
         cin>>N;
         N3=N2;
