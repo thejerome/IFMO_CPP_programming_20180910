@@ -23,7 +23,7 @@ int t05_max() {
     int n = 1, d = 0;
     while (n != 0) {
         cin >> n;
-        while (d < n)
+        if (d < n)
             d = n;
     }
     cout << d;
