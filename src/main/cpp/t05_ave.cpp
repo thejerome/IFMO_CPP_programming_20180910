@@ -24,7 +24,7 @@ using namespace std;
 int t05_ave() {
 int x,k=1;
 cin >> x;
-    double s;
+    double s=0;
     s+=x;
 if (x!=0)
     while (x!=0){
