@@ -20,5 +20,24 @@
 using namespace std;
 
 int t04_sum() {
+    //int check = 1;
+    //int i = 1;
+    //int sum = 0;
+    //while (check==1) {
+    //    int a[i];
+    //    cin>>a[i];
+    //    sum = sum + a[i];
+    //    if (a[i] == 0) check = 0;
+    //        //cout <<sum;
+    //    i++;
+    //}
+    //cout<<sum;
+    int a=1;
+    int sum = 0;
+    while (a!=0){
+        cin>>a;
+        sum = sum + a;
+    }
+    cout<<sum-1;
 
 };
