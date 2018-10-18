@@ -21,7 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
-    int N, F0=0, F1=1, x=0;
+    int N, F0=0, F1=1, F=0;
     cin >> N;
     if (N==0) {
         cout << F0;
@@ -32,10 +32,10 @@ int t08_fibb() {
     if (N>1) {
         while (N>1) {
             --N;
-            x = F0 + F1;
+            F = F0 + F1;
             F0 = F1;
-            F1 = x;
+            F1 = F;
         }
-        cout << F1;
+        cout << F;
     }
 };
