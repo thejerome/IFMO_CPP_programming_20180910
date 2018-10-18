@@ -29,8 +29,23 @@
 using namespace std;
 
 int t07_max_2() {
-    int a=1;
-    int b=a;
+    int m1=0,m2=0,a=1;
+    while(a!=0){
+        cin>>a;
+        if(a>=m2){
+            if(a>=m1){
+                m2=m1;
+                m1=a;
+            }
+            else m2=a;
+        }
+    }
+    cout<<m2;
+    return 0;
+    /**
+    int a,b;
+    cin>>a;
+    b=a;
     int count=1;
     int max2=b;
     while (a != 0) {
@@ -46,5 +61,5 @@ int t07_max_2() {
     }
     else cout<<b;
     return 0;
-
+**/
 };
