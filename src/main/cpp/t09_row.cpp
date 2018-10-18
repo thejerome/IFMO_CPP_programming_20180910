@@ -23,5 +23,15 @@
 using namespace std;
 
 int t09_row() {
-
+    int a1=0,a2=1,c=1,count=1;
+    while (a2!=0){
+        cin>>a2;
+        if(a2 == a1){
+            count = count + 1;
+            if (count > c) c = count;
+        }
+        else count = 1;
+        a1 = a2;
+    }
+    cout<<c;
 };
