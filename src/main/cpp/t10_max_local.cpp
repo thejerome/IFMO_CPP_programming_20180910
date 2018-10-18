@@ -24,5 +24,19 @@
 using namespace std;
 
 int t10_max_local() {
-
+    int i = 1;
+    int left = 0, centre = 0, rigth = 0;
+    int ans = 0;
+    while (i != 0){
+        cin >> i;
+        if (left != 0){
+            if (centre > left && centre > rigth){
+                ans++;
+            }
+        }
+        left = centre;
+        centre = rigth;
+        rigth = i;
+    }
+    cout << ans;
 };

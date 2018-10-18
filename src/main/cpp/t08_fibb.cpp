@@ -21,5 +21,19 @@
 using namespace std;
 
 int t08_fibb() {
-
+    int N;
+    cin >> N;
+    int i = 2;
+    int leftFibb = 0, rightFib = 1;
+    while (i <= N){
+        rightFib += leftFibb;
+        leftFibb = rightFib - leftFibb;
+        i++;
+    }
+    if (N == 0){
+        cout << 0;
+    }
+    else {
+        cout << rightFib;
+    }
 };

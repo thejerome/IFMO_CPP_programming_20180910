@@ -23,5 +23,19 @@
 using namespace std;
 
 int t09_row() {
-
+    int i = 1;
+    int last = 0;
+    int length = 1, maxlength = 0;
+    while (i != 0){
+        cin >> i;
+        if (i == last){
+            length++;
+        }
+        else{
+            if (maxlength < length) maxlength = length;
+            length = 1;
+            last = i;
+        }
+    }
+    cout << maxlength;
 };
