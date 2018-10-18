@@ -25,11 +25,9 @@ int t08_fibb() {
     cin >> N;
     int i = 2;
     int leftFibb = 0, rightFib = 1;
-    int help;
     while (i <= N){
-        help = rightFib;
         rightFib += leftFibb;
-        leftFibb = help;
+        leftFibb = rightFib - leftFibb;
         i++;
     }
     if (N == 0){
