@@ -22,11 +22,9 @@ using namespace std;
 
 int t08_fibb() {
     int N, F0, F1, F;
-
-
     F0 = 0;
     F1 = 1;
-
+    F = 0;
     cin >> N;
     if (N==0) {
         cout << F0;
