@@ -25,12 +25,14 @@ using namespace std;
 
 int t10_max_local() {
 
-    int a, m, b;
+    int a;
     int count = 0;
     if (cin>>a && a)
     {
+        int m;
         if (cin >> m && m)
         {
+            int b;
             if (cin >> b)
             {
                 while (b)
