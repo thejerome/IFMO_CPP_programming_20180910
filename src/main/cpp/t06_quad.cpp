@@ -21,5 +21,13 @@
 using namespace std;
 
 int t06_quad() {
-
+    double a, b, c, x1, x2;
+    cin>>a>>b>>c;
+    x1 = ((-1)*b - sqrt(b*b - 4*a*c)) / (2*a);
+    x2 = ((-1)*b + sqrt(b*b - 4*a*c) / (2*a));
+    //check if the roots are nan
+    if (x1 == x1)
+        cout<<x1<<' ';
+    if (x2 == x2)
+        cout<<x2;
 };
