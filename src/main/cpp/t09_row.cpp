@@ -14,7 +14,7 @@
 //1
 //0
 //Sample Output:
-//
+//1 1 1 3 3
 //2
 
 #include "t09_row.h"
@@ -23,5 +23,26 @@
 using namespace std;
 
 int t09_row() {
-
+    int N, m;
+    int l = 1;
+    bool t = 0;
+    int maxL = l;
+    cin >> N;
+    if (N != 0)
+        m = N;
+    while (N != 0) {
+        cin >> N;
+        t = 0;
+        if (N != m)
+            t = 1;
+        if (t == 0)
+            l++;
+        else{
+            if (l > maxL)
+                maxL = l;
+            l = 1;
+        }
+        m = N;
+    }
+    cout << maxL;
 };
