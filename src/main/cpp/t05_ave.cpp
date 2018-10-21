@@ -22,5 +22,14 @@
 using namespace std;
 
 int t05_ave() {
-
+    int N, count=0;
+    double mean=0;
+    cin >> N;
+    while (N != 0) {
+      count +=1;
+      mean += N;
+      cin >> N;
+    }
+    mean = mean/count;
+    cout << fixed << setprecision(11) << mean;
 };
