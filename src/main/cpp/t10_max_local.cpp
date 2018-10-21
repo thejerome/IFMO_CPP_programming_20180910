@@ -25,9 +25,8 @@ using namespace std;
 
 int t10_max_local() {
     int max = 0, n = 1, p, k = 0;
-    cin >> n;
+    cin >> p;
     while (n != 0) {
-        p = n;
         cin >> n;
         if (p < n)
             k++;
@@ -36,6 +35,7 @@ int t10_max_local() {
             k = 0;
         } else
             k = 0;
+        p = n;
     }
     cout << max;
 };
