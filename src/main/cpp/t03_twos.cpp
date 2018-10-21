@@ -23,5 +23,20 @@
 using namespace std;
 
 int t03_twos() {
+    int N;
+    cin >> N;
+    int t = 1;
+    bool k = 0;
+    if(N % 2 == 0){
+        while(t < N){
+            t = t * 2;
+             if(t == N){
+                 cout << "YES";
+                 k = 1;
+             }
 
+        }
+    }
+    if(!k)
+        cout << "NO";
 };
