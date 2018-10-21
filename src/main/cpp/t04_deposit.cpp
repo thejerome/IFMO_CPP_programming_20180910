@@ -22,5 +22,14 @@
 using namespace std;
 
 int t04_deposit() {
-
+    int p, x, y, years;
+    cin>>p>>x>>y>>years;
+    int i = 0, s = 100 * x + y;
+    while (i < years) {
+        s *= 1 + 0.01 * p;
+        i++;
+    }
+    x = s / 100;
+    y = s % 100;
+    cout<<x<<' '<<y;
 };
