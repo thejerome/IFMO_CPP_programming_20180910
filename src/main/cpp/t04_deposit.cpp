@@ -22,10 +22,25 @@
 using namespace std;
 
 int t04_deposit() {
-    float percentage, X, Y;
-    int years, i=0;
+    int  X, Y, years, i=0;
+    double percentage;
     cin >> percentage >> X >> Y >> years;
     while (i < years){
-        dY
+        double dY, dX;
+        dY = Y * (percentage/100);
+        dX = X * (percentage/100);
+        dY+= (dX - floor(dX))*100;
+        dX = floor(dX);
+        dX += floor(dY)/100;
+        dY = floor(dY) - (int(floor(dY))/100)*100;
+        dX = floor(dX);
+        X+= dX;
+        Y+= dY;
+        X+= Y/100;
+        Y = Y%100;
+        i++;
+
     }
+    cout << X << " "<< Y;
+    return 0;
 };
