@@ -26,13 +26,13 @@ double D, x1, x2;
 cin >> a >> b >> c;
 D=b*b-4*a*c;
 if (D>0) {
-    x1=((b*(-1))+sqrt(D))/(2*a);
-    x2=((b*(-1))-sqrt(D))/(2*a);
-    cout << x2 << " " << x1;
+    x1=((b*(-1)) - sqrt(D))/(2*a);
+    x2=((b*(-1)) + sqrt(D))/(2*a);
+    cout << x1 << " " << x2;
 }
 else {
     if (D==0) {
-        x1=((b*(-1))/(2*a));
+        x1=(b*(-1))/(2*a);
         cout << x1;
     }
 }
