@@ -22,5 +22,10 @@
 using namespace std;
 
 int t04_deposit() {
-
+    float percentage, X, Y;
+    int years, i=0;
+    cin >> percentage >> X >> Y >> years;
+    while (i < years){
+        dY
+    }
 };
