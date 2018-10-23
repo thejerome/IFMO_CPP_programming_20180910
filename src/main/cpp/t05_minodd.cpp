@@ -28,5 +28,17 @@
 using namespace std;
 
 int t05_minodd() {
+    int n;
+    cin >> n;
 
+    int min_odd = 0;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+
+        if (x % 2 != 0 && (min_odd == 0 || x < min_odd))
+                min_odd = x;
+    }
+
+    cout << min_odd;
 }
