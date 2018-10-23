@@ -20,7 +20,5 @@
 using namespace std;
 
 int t01_frac() {
-    float n;
-    cin>>n;
-    cout<<(n - int(n));
+
 };
