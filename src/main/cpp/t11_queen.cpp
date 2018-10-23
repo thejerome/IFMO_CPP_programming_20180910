@@ -39,5 +39,19 @@
 using namespace std;
 
 int t11_queen() {
+    const int SIZE = 8;
 
+    int row[SIZE], col[SIZE];
+    for (int i = 0; i < SIZE; i++)
+        cin >> row[i] >> col[i];
+
+    for (int i = 0; i < SIZE - 1; i++)
+        for (int j = i + 1; j < SIZE; j++)
+            if (row[i] == row[j] || col[i] == col[j] ||
+                    row[i] + col[i] == row[j] + col[j] || row[i] - col[i] == row[j] - col[j]) {
+                cout << "YES";
+                return 0;
+            }
+
+     cout << "NO";
 }
