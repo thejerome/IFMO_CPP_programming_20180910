@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-	int n, k = 0, j, coup = 0;
+	int n, k = 0, coup = 0;
 	cin >> n;
 	int a[n];
 
@@ -36,7 +36,7 @@ int t10_unique() {
 	k = 0;
 	while (!(k == n))
 	{
-		j = 0;
+		int j = 0;
 		while (!(j == n))
 		{
 			if (a[k] == a[j]) coup++;

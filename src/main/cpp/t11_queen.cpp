@@ -39,7 +39,7 @@
 using namespace std;
 
 int t11_queen() {
-	int k = 0, j, xcoup = 0, ycoup = 0;
+	int k = 0, xcoup = 0;
 	float x[8], y[8];
 	bool answer = false;
 	while (k < 8)
@@ -50,7 +50,7 @@ int t11_queen() {
 	k = 0;
 	while (!(k == 8))
 	{
-		j = 0;
+		int j = 0;
 		while (!(j == 8))
 		{
 			if (x[k] == x[j] || y[k] == y[j] || x[k] - x[j] == y[k] - y[j] || x[k] - x[j] == y[j] - y[k] && !(x[k] == x[j] && y[k] == y[j]))xcoup++;

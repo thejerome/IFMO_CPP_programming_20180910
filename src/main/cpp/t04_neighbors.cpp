@@ -19,10 +19,10 @@
 using namespace std;
 
 int t04_neighbors() {
-	int n, a = 0, aprev, k = 0;
+	int n, a = 0, k = 0;
 	cin >> n;
 	while (!(k == n)) {
-		aprev = a;
+		int aprev = a;
 		cin >> a;
 		if (a * aprev > 0) {
 			cout << aprev << " " << a;

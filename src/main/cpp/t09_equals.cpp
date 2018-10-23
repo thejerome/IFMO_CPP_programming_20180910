@@ -26,7 +26,7 @@
 using namespace std;
 
 int t09_equals() {
-	int n, k = 0, j, coup = 0;
+	int n, k = 0, coup = 0;
 	cin >> n;
 	int a[n];
 
@@ -37,7 +37,7 @@ int t09_equals() {
 	k = 0;
 	while (!(k == n))
 	{
-		j = k;
+		int j = k;
 		while (!(j == n))
 		{
 			if (a[k] == a[j]) coup++;
