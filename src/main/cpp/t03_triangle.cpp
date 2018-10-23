@@ -20,5 +20,11 @@
 using namespace std;
 
 int t03_triangle() {
+    double a, b, c;
+    cin >> a >> b >> c;
 
+    double ab_cos = (a*a + b*b - c*c) / (2 * a * b);
+    double ab_sin = sqrt(1 - ab_cos*ab_cos);
+
+    cout << std::fixed << std::setprecision(4) << 0.5 * a * b * ab_sin;
 };
