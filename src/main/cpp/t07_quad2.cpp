@@ -22,6 +22,9 @@ using namespace std;
 
 int t07_quad2() {
     double a,b,c,d,x1,x2,x,D;
+    x1=0;
+    x2=0;
+    x=0;
     cin>>a>>b>>c;
     d=b*b-4*a*c;
     D=b*b-4*c;
