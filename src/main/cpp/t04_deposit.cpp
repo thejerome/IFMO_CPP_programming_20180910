@@ -22,5 +22,18 @@
 using namespace std;
 
 int t04_deposit() {
+    int deltay,deltax,p,x,transfery,transferx,y,k;
+    cin>>p>>x>>y>>k;
+    while (k!=0) {
+        deltax=x*p/100;
+        transfery=x*p%100;
+        deltay=y*p/100;
+        y=y+deltay+transfery;
+        transferx=y/100;
+        x=x+deltax+transferx;
+        y=y%100;
+        k--;
+    }
+    cout<<x<<" "<<y;
 
 };
