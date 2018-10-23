@@ -37,7 +37,6 @@
 
 
 using namespace std;
-
 int t11_queen() {
     int x[9];
     int y[9];
