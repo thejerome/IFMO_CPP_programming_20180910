@@ -13,10 +13,14 @@
 #include "t02_frac_2.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 
 using namespace std;
 
 int t02_frac_2() {
+    double x;
+    cin >> x;
 
+    cout << std::fixed << std::setprecision(0) << floor((x - floor(x)) * 10);
 };
