@@ -28,5 +28,26 @@
 using namespace std;
 
 int t05_minodd() {
+    int n;
+    cin >> n;
+    int mas[n];
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> mas[i];
+        if (abs(mas[i]) % 2 == 1) {
+            k = mas[i];
+        }
+    }
+    if (k == 0) {
+        cout << 0;
+    } else {
+        for (int i = 0; i < n; i++) {
+            if (mas[i] < k && abs(mas[i]) % 2 == 1) {
+                k = mas[i];
+            }
+
+        }
+        cout << k;
+    }
 
 }
