@@ -28,5 +28,13 @@
 using namespace std;
 
 int t05_minodd() {
-
+	int n, a, min = 1000000, k = 0;
+	cin >> n;
+	while (!(k == n)) {
+		cin >> a;
+		if (a < min && a % 2 == 1 || a % 2 == -1) min = a;
+		k++;
+	}
+	if (!(min == 1000000)) cout << min;
+	else cout << 0;
 }

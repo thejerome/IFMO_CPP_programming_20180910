@@ -19,5 +19,12 @@
 using namespace std;
 
 int t03_bigger() {
-
+	int n, aprev, a = 10000000, k = 0;
+	cin >> n;
+	while (!(k == n)) {
+		aprev = a;
+		cin >> a;
+		if (a > aprev) cout << a << " ";
+		k++;
+	}
 }

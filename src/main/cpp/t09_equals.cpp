@@ -26,5 +26,25 @@
 using namespace std;
 
 int t09_equals() {
+	int n, k = 0, j, coup = 0;
+	cin >> n;
+	int a[n];
+
+	while (!(k == n)) {
+		cin >> a[k];
+		k++;
+	}
+	k = 0;
+	while (!(k == n))
+	{
+		j = k;
+		while (!(j == n))
+		{
+			if (a[k] == a[j]) coup++;
+			j++;
+		}
+		k++;
+	}
+	cout << coup - n;
 
 }
