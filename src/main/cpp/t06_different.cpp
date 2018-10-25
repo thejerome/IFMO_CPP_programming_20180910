@@ -19,5 +19,13 @@
 using namespace std;
 
 int t06_different() {
-
+	int n, a = 10000000, adif = 0, k = 0;
+	cin >> n;
+	while (!(k == n)) {
+		int aprev = a;
+		cin >> a;
+		if (!(a == aprev)) adif++;
+		k++;
+	}
+	cout << adif;
 }

@@ -39,5 +39,26 @@
 using namespace std;
 
 int t11_queen() {
-
+	int k = 0, xcoup = 0;
+	float x[8], y[8];
+	bool answer = false;
+	while (k < 8)
+	{
+		cin >> x[k] >> y[k];
+		k++;
+	}
+	k = 0;
+	while (!(k == 8))
+	{
+		int j = 0;
+		while (!(j == 8))
+		{
+			if (x[k] == x[j] || y[k] == y[j] || x[k] - x[j] == y[k] - y[j] || x[k] - x[j] == y[j] - y[k] && !(x[k] == x[j] && y[k] == y[j]))xcoup++;
+			j++;
+		}
+		if (xcoup > 1 && !answer) { cout << "YES"; answer = true; }
+		xcoup = 0;
+		k++;
+	}
+	if (!answer)cout << "NO";
 }
