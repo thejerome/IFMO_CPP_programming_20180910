@@ -29,7 +29,6 @@ using namespace std;
 
 int t05_minodd() {
     int n=0;
-    int m=0;
     int min=0;
     cin >> n;
     int a[n];
