@@ -37,7 +37,22 @@
 
 
 using namespace std;
-
 int t11_queen() {
-
+    int x[9];
+    int y[9];
+    bool a=false;
+    for(int i=1; i<=8; i++){
+        cin >> x[i] >> y[i];
+    }
+    for(int i=1; i<=8; i++){
+        for(int j=1; j<=8; j++){
+            if (j==i) continue;
+            if (((abs(x[i]-x[j])==abs(y[i]-y[j])) || (y[i]==y[j]) || (x[i]==x[j]) ) && !a) {
+                cout << "YES";
+                a=true;
+            }
+        }
+        if (a) break;
+    }
+    if (!a) cout << "NO";
 }
