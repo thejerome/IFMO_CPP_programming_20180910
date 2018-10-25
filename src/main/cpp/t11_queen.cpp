@@ -39,5 +39,23 @@
 using namespace std;
 
 int t11_queen() {
-
+    int n=9;
+    int row[n], line[n];
+    int test=0;
+    for (int i=1; i<n; i++) {
+        cin >> row[i] >> line[i];
+    }
+    for (int i=1; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+            if (row[i] == row[j] || line[i] == line[j] || abs(row[i]-row[j])==abs(line[i]-line[j])){
+                test++;
+            }
+        }
+    }
+    if (test > 0) {
+        cout << "YES";
+    }
+    else {
+        cout << "NO";
+    }
 }
