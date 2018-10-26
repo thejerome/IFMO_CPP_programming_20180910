@@ -37,7 +37,29 @@
 
 
 using namespace std;
-
+// Done
 int t11_queen() {
+   int mas[100][2],
+       i, j;
+   bool flag = true;
+
+   for (i = 0; i < 8; i++){
+       cin >> mas[i][0] >> mas[i][1];
+   }
+
+   for (i = 0; (i < 7) && (flag); i++){
+        for (j = 0; (j < 8) && (flag); j++){
+             if ( (i != j) && ((mas[i][0] == mas[j][0]) || (mas[i][1] == mas[j][1]) || (abs(mas[i][0]-mas[j][0]) == abs(mas[i][1]-mas[j][1])))){
+                 flag = false;
+             }
+        }
+   }
+
+   if (flag){
+       cout << "NO";
+   }
+   else{
+       cout << "YES";
+   }
 
 }

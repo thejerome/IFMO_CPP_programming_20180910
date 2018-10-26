@@ -17,7 +17,24 @@
 
 
 using namespace std;
-
+//Done
 int t07_swap() {
+    int mas[100],
+            i, n, c;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 0; i < n-1; i+=2){
+        c = mas[i];
+        mas[i] = mas[i+1];
+        mas[i+1] = c;
+    }
+
+    for (i = 0 ; i < n; i++){
+        cout << mas[i] << ' ';
+    }
 }

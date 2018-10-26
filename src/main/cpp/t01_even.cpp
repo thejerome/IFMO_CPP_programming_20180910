@@ -17,7 +17,18 @@
 
 
 using namespace std;
-
+// Done
 int t01_even() {
+   int mas[100],
+       i, n;
 
+   cin >> n;
+
+   for (i = 0; i < n; i++){
+       cin >> mas[i];
+   }
+
+   for (i = 0; i < n; i+=2){
+       cout << mas[i] << ' ';
+   }
 }

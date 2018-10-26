@@ -17,7 +17,20 @@
 
 
 using namespace std;
-
+//Done
 int t02_even2() {
+    int mas[100],
+            i, n;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 0; i < n; i++){
+        if (mas[i] % 2 == 0){
+            cout << mas[i] << ' ';
+        }
+    }
 }
