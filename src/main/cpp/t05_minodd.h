@@ -10,3 +10,4 @@ int t05_minodd();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T05_MINODD_H
+

@@ -10,3 +10,4 @@ int t11_queen();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T11_QUEEN_H
+

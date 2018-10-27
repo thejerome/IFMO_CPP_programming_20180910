@@ -27,3 +27,4 @@ int t02_even2() {
         if (!(ai%2)) cout << ai << ' ';
     }
 }
+

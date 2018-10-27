@@ -10,3 +10,4 @@ int t08_cycleswap();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T08_CYCLESWAP_H
+
