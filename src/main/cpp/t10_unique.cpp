@@ -23,7 +23,26 @@
 #include <iostream>
 
 using namespace std;
-
+// Done
 int t10_unique() {
+    int mas[100],
+            i, j, n;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 0 ; i < n; i++){
+        bool flag = true;
+        for (j = 0 ; (j < n) && (flag); j++){
+            if ((mas[i] == mas[j]) && (i != j)){
+                flag = false;
+            }
+        }
+        if (flag){
+            cout << mas[i] << ' ';
+        }
+    }
 }

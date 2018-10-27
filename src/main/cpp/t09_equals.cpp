@@ -24,7 +24,39 @@
 
 
 using namespace std;
-
+// Done
 int t09_equals() {
+    int mas[100],
+            i, j, n, c = 0, count = 1, anw = 0;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 0; i < n-1; i++){
+        for (j = i+1; j < n; j++){
+            if (mas[i] > mas[j]){
+                c = mas[i];
+                mas[i] = mas[j];
+                mas[j] = c;
+            }
+        }
+    }
+
+    c = mas[0];
+
+    for (i = 1; i < n; i++){
+        if (mas[i] != c){
+            anw += (count)*(count-1)/2;
+            count = 1;
+        }
+        else{
+            count++;
+        }
+        c = mas[i];
+    }
+    anw += (count)*(count-1)/2;
+    cout << anw;
 }

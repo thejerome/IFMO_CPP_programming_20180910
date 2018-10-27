@@ -19,7 +19,22 @@
 
 
 using namespace std;
-
+// Done
 int t04_neighbors() {
+    int mas[100],
+            i, n;
+    bool flag = true;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 1; (i < n) && (flag); i++){
+        if (mas[i]*mas[i-1] > 0){
+            cout << mas[i-1] << ' ' << mas[i];
+            flag = false;
+        }
+    }
 }

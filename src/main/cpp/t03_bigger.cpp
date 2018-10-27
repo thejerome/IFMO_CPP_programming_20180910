@@ -17,7 +17,20 @@
 
 
 using namespace std;
-
+//Done
 int t03_bigger() {
+    int mas[100],
+            i, n;
 
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        cin >> mas[i];
+    }
+
+    for (i = 1; i < n; i++){
+        if (mas[i] > mas[i-1]){
+            cout << mas[i] << ' ';
+        }
+    }
 }
