@@ -19,5 +19,11 @@
 using namespace std;
 
 int t02_even2() {
-
+    int n;
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int ai;
+        cin >> ai;
+        if (!(ai%2)) cout << ai << ' ';
+    }
 }

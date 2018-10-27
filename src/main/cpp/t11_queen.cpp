@@ -38,6 +38,34 @@
 
 using namespace std;
 
-int t11_queen() {
+bool a[9][9]={false};
 
+bool check(int x, int y, int xi, int yi) {
+    while (x > 0 && y > 0 && x < 9 && y < 9) {
+        if (a[x][y]) return false;
+        x += xi;
+        y += yi;
+    }
+    return true;
+}
+
+int t11_queen() {
+    for (int i=0; i<8; i++) {
+        int x,y;
+        cin >> x >> y;
+        a[x][y]=true;
+    }
+    for (int i=1; i<9; i++)
+        for (int j=1; j<9; j++)
+            if (a[i][j]) {
+                if (!check(i,j+1,0,1)) {cout << "YES"; return 0;}
+                if (!check(i,j-1,0,-1)) {cout << "YES"; return 0;}
+                if (!check(i+1,j,1,0)) {cout << "YES"; return 0;}
+                if (!check(i-1,j,-1,0)) {cout << "YES"; return 0;}
+                if (!check(i-1,j+1,-1,1)) {cout << "YES"; return 0;}
+                if (!check(i+1,j+1,1,1)) {cout << "YES"; return 0;}
+                if (!check(i-1,j-1,-1,-1)) {cout << "YES"; return 0;}
+                if (!check(i+1,j-1,1,-1)) {cout << "YES"; return 0;}
+            }
+    cout << "NO";
 }

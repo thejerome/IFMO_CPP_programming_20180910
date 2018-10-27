@@ -20,7 +20,8 @@ using namespace std;
 
 int t01_even() {
     int n;
-    for (int i=0; i<5; i++) {
+    cin >> n;
+    for (int i=0; i<n; i++) {
         int ai;
         cin >> ai;
         if (ai%2) cout << ai << ' ';

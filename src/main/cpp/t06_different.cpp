@@ -14,10 +14,18 @@
 
 #include "t06_different.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
 
 int t06_different() {
-
+    int n, pre, result=1;
+    cin >> n >> pre;
+    for (int i=1; i<n; i++) {
+        int a;
+        cin >> a;
+        if (pre != a) result++;
+        pre = a;
+    }
+    cout << result;
 }
