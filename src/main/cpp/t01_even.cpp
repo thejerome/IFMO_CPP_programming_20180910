@@ -24,6 +24,6 @@ int t01_even() {
     for (int i=0; i<n; i++) {
         int ai;
         cin >> ai;
-        if (ai%2) cout << ai << ' ';
+        if (i%2) cout << ai << ' ';
     }
 }
