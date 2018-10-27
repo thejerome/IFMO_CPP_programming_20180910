@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-16.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T11_QUEEN_H
+#define IFMO_CPP_PROGRAMMING_20180910_T11_QUEEN_H
+
+
+int t11_queen();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T11_QUEEN_H

@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-16.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T01_EVEN_H
+#define IFMO_CPP_PROGRAMMING_20180910_T01_EVEN_H
+
+
+int t01_even();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T01_EVEN_H
