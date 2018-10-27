@@ -22,5 +22,13 @@
 using namespace std;
 
 int t04_deposit() {
+    double rubli,kopeiki,procent,goda;
+    cin>>procent>>rubli>>kopeiki>>goda;
+    kopeiki=rubli*100+kopeiki;
+    while (goda!=0)
+    {kopeiki=floor((1+(procent/100))*kopeiki);
+        goda--;}
+    cout<<int(kopeiki/100)<<" "<<kopeiki-int(kopeiki/100)*100;
+    return 0;
 
 };
