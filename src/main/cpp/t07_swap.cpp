@@ -30,3 +30,4 @@ int t07_swap() {
         }
         else cout << a[i+1] << ' ' << a[i] << ' ';
 }
+

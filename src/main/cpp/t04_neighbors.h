@@ -10,3 +10,4 @@ int t04_neighbors();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T04_NEIGHBORS_H
+

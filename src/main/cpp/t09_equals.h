@@ -10,3 +10,4 @@ int t09_equals();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T09_EQUALS_H
+

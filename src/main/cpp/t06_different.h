@@ -10,3 +10,4 @@ int t06_different();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T06_DIFFERENT_H
+
