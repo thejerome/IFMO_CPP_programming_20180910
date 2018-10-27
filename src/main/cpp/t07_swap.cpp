@@ -20,7 +20,7 @@ using namespace std;
 //Done
 int t07_swap() {
     int mas[100],
-            i, n, c;
+            i, n;
 
     cin >> n;
 
@@ -29,7 +29,7 @@ int t07_swap() {
     }
 
     for (i = 0; i < n-1; i+=2){
-        c = mas[i];
+        int c = mas[i];
         mas[i] = mas[i+1];
         mas[i+1] = c;
     }
