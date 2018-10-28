@@ -21,7 +21,7 @@ using namespace std;
 int t01_even() {
     int n;
     cin >> n;
-    for (int i=0; i<n; i++) {
+    for (int i=1; i<=n; i++) {
         int ai;
         cin >> ai;
         if (i%2) cout << ai << ' ';
