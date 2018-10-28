@@ -18,5 +18,10 @@
 using namespace std;
 
 int t02_frac_2() {
-
+ float n;
+ cin>>n;
+ int div = n;
+ n=(n-div)*10;
+ div=n;
+ cout<<div;
 };
