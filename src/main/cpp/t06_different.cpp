@@ -26,7 +26,7 @@ int t06_different() {
     for (int i = 0; i < n; i ++) {
         cin >> a[i];
     }
-    for (int i = 0; i < n-1; i ++){
+    for (int i = 0; i < n - 1; i ++){
         if (a[i] != a[i+1]){
             k += 1;
         }

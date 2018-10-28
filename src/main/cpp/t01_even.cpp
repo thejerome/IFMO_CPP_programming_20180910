@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int t01_even() {
+int t01_even(){
     int n;
     cin >> n;
     int a[n];

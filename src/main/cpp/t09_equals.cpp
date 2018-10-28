@@ -25,7 +25,7 @@
 
 using namespace std;
 
-int t09_equals() {
+int t09_equals(){
     int n, k;
     cin >> n;
     int a[n];

@@ -24,7 +24,7 @@
 
 using namespace std;
 
-int t10_unique() {
+int t10_unique(){
     int n;
     cin >> n;
     int a[n];

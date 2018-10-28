@@ -38,7 +38,7 @@
 
 using namespace std;
 
-int t11_queen() {
+int t11_queen(){
     int n = 8;
     int a[n][2], b1;
     b1 = 0;

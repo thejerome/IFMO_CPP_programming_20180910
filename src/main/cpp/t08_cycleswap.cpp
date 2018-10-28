@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int t08_cycleswap() {
+int t08_cycleswap(){
     int n, tmp;
     cin >> n;
     int a[n];

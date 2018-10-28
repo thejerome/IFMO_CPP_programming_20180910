@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int t03_bigger() {
+int t03_bigger(){
     int n;
     cin >> n;
     int a[n];

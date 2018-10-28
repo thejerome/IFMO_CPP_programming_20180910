@@ -20,7 +20,7 @@
 
 using namespace std;
 
-int t04_neighbors() {
+int t04_neighbors(){
     int n;
     cin >> n;
     int a[n];

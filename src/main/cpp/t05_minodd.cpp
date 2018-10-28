@@ -32,7 +32,7 @@ int t05_minodd() {
     min_odd_number = 9999;
     cin >> n;
     int a[n];
-    for (int i = 0; i < n; i ++) {
+    for (int i = 0; i < n; i ++){
         cin >> a[i];
         if (a[i] < min_odd_number and a[i] % 2 != 0){
             min_odd_number = a[i];

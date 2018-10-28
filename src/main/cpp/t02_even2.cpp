@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int t02_even2() {
+int t02_even2(){
     int n;
     cin >> n;
     int a[n];

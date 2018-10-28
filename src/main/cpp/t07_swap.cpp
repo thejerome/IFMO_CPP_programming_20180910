@@ -18,7 +18,7 @@
 
 using namespace std;
 
-int t07_swap() {
+int t07_swap(){
     int n;
     cin >> n;
     int a[n];
