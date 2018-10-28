@@ -31,4 +31,5 @@ int t04_deposit() {
 		i++;
 	}
 	cout << depo / 100 << ' ' << depo % 100;
+	return 0;
 };
