@@ -31,5 +31,4 @@ int t05_ave() {
 		n++;
 	} while (x != 0);
 	cout << fixed << setprecision(11) << sum / (n - 1);
-	return 0;
 };

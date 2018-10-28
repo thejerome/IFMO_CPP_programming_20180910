@@ -31,5 +31,4 @@ int t06_quad() {
 		cout << -b / (2 * a);
 	else
 		cout << (-b - sqrt(D)) / (2 * a) << ' ' << (-b + sqrt(D)) / (2 * a);
-	return 0;
 };

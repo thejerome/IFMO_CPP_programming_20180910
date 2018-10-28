@@ -39,5 +39,4 @@ int t07_quad2() {
 		cout << 1 << ' ' << -b / (2 * a);
 	else
 		cout << 2 << ' ' << (-b - sqrt(D)) / (2 * a) << ' ' << (-b + sqrt(D)) / (2 * a);
-	return 0;
 };

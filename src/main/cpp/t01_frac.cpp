@@ -23,5 +23,5 @@ int t01_frac() {
 	
 	double x;
 	cin >> x;
-	cout << (x - floor(x));
+	cout << (x - floor(x) );
 };
