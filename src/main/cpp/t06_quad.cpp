@@ -21,5 +21,22 @@
 using namespace std;
 
 int t06_quad() {
+    double a,b,c,d,sqr,x1, x2;
+    cin >> a>> b>> c;
+    d = b*b- 4 *a*c;
+    sqr= sqrt(d);
+    if (d==0){
+        x1= b*(-1)/(2*a);
+        cout << x1;
+    } else if (d>0){
+        x1=( b*(-1)+sqr)/(2*a);
+        x2 = (b*(-1)-sqr)/(2*a);
+        if (x1>x2){
+            cout << x2<< " "<< x1;
+        }
+        else {
 
+            cout << x1<< " "<< x2;
+        }
+    }
 };
