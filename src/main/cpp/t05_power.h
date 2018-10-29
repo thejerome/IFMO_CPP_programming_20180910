@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-30.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T05_POWER_H
+#define IFMO_CPP_PROGRAMMING_20180910_T05_POWER_H
+
+
+int t05_power();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T05_POWER_H

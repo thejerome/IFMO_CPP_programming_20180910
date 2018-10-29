@@ -4,4 +4,4 @@ project(IFMO_CPP_programming_20180910)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(IFMO_CPP_programming_20180910
-        src/main/cpp/main.cpp src/main/cpp/t01_even.cpp src/main/cpp/t01_even.h src/main/cpp/t02_even2.cpp src/main/cpp/t02_even2.h src/main/cpp/t03_bigger.cpp src/main/cpp/t03_bigger.h src/main/cpp/t04_neighbors.cpp src/main/cpp/t04_neighbors.h src/main/cpp/t05_minodd.cpp src/main/cpp/t05_minodd.h src/main/cpp/t06_different.cpp src/main/cpp/t06_different.h src/main/cpp/t07_swap.cpp src/main/cpp/t07_swap.h src/main/cpp/t08_cycleswap.cpp src/main/cpp/t08_cycleswap.h src/main/cpp/t09_equals.cpp src/main/cpp/t09_equals.h src/main/cpp/t10_unique.cpp src/main/cpp/t10_unique.h src/main/cpp/t11_queen.cpp src/main/cpp/t11_queen.h)
+        src/main/cpp/main.cpp src/main/cpp/t01_min.cpp src/main/cpp/t01_min.h src/main/cpp/t02_dist.cpp src/main/cpp/t02_dist.h src/main/cpp/t03_circle.cpp src/main/cpp/t03_circle.h src/main/cpp/t04_area.cpp src/main/cpp/t04_area.h src/main/cpp/t05_power.cpp src/main/cpp/t05_power.h src/main/cpp/t06_sum.cpp src/main/cpp/t06_sum.h src/main/cpp/t07_fib.cpp src/main/cpp/t07_fib.h src/main/cpp/t08_queen.cpp src/main/cpp/t08_queen.h)

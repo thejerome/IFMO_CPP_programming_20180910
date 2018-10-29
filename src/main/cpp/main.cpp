@@ -2,17 +2,15 @@
 #include <map>
 #include <functional>
 #include <cstring>
-#include "t01_even.h"
-#include "t02_even2.h"
-#include "t03_bigger.h"
-#include "t04_neighbors.h"
-#include "t05_minodd.h"
-#include "t06_different.h"
-#include "t07_swap.h"
-#include "t08_cycleswap.h"
-#include "t09_equals.h"
-#include "t10_unique.h"
-#include "t11_queen.h"
+
+#include "t01_min.h"
+#include "t02_dist.h"
+#include "t03_circle.h"
+#include "t04_area.h"
+#include "t05_power.h"
+#include "t06_sum.h"
+#include "t07_fib.h"
+#include "t08_queen.h"
 
 using namespace std;
 
@@ -23,20 +21,16 @@ int main(int argc, char **argv) {
     }
     char *functionName = argv[1];
 
-    std::map <std::string, std::function<int()>> funcMap =
+    std::map<std::string, std::function<int()>> funcMap =
             {
-                    {"t01_even", t01_even},
-                    {"t02_even2", t02_even2},
-                    {"t03_bigger", t03_bigger},
-                    {"t04_neighbors", t04_neighbors},
-                    {"t05_minodd", t05_minodd},
-                    {"t06_different", t06_different},
-                    {"t07_swap", t07_swap},
-                    {"t08_cycleswap", t08_cycleswap},
-                    {"t09_equals", t09_equals},
-                    {"t10_unique", t10_unique},
-                    {"t11_queen", t11_queen}
-
+                    {"t01_min",    t01_min},
+                    {"t02_dist",   t02_dist},
+                    {"t03_circle", t03_circle},
+                    {"t04_area",   t04_area},
+                    {"t05_power",  t05_power},
+                    {"t06_sum",    t06_sum},
+                    {"t07_fib",    t07_fib},
+                    {"t08_queen",  t08_queen}
             };
 
     funcMap[functionName]();
