@@ -20,5 +20,10 @@
 using namespace std;
 
 int t01_frac() {
-
+    double inp, whole;
+    cin >> inp;
+    whole = floor(inp);
+    inp = inp - whole;
+    cout << inp;
+    return 0;
 };

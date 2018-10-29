@@ -18,5 +18,14 @@
 using namespace std;
 
 int t02_frac_2() {
+    float inp, whole;
+    int result;
+    cin >> inp;
+    whole = floor(inp);
+    inp = inp - whole;
+    inp = inp * 10;
+    result = inp;
+    cout << result;
+    return 0;
 
 };

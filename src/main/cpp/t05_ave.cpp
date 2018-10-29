@@ -22,5 +22,13 @@
 using namespace std;
 
 int t05_ave() {
-
+    long double average=0;
+    int inp = -1, num = -1;
+    while (inp != 0){
+        cin >> inp;
+        num++;
+        average+=inp;
+    }
+    average = average/num;
+    cout << std::setprecision(11)<< std::fixed << average;
 };
