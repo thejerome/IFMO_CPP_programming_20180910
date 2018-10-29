@@ -20,5 +20,11 @@
 using namespace std;
 
 int t01_frac() {
+    float N;
+    cin >> N;
+    float result = N - int(N);
+    cout << result;
+
+    return 0;
 
 };
