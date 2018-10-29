@@ -22,5 +22,11 @@
 using namespace std;
 
 int t04_deposit() {
-
+    double p,x,y,k,d,i;
+    int all;
+    cin>>p>>x>>y>>k;
+    i=0;
+    all= x*100+y;
+    while ( i !=k ) { all=(all*( (p/100)) )+all ;i=i+1  ;};
+    cout << all/100 <<" "<< all % 100 ;
 };
