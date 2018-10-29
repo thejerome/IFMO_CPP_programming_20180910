@@ -23,6 +23,6 @@ int t01_frac() {
     float I_P;
     int a;
     cin>>I_P;
-    a=trunc(I_P);
+    a=(int)I_P;
     cout<<I_P-a;
 };
