@@ -29,5 +29,6 @@ int t05_ave() {
         s += a;
         n++;
     }
-    cout << s / double(n);
+    cout.setf(ios :: fixed);
+    cout << setprecision(11) << s / double(n);
 };

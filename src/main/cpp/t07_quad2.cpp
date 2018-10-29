@@ -39,6 +39,9 @@ int t07_quad2() {
     else if (b != 0){
         cout << "1 " << -c / b;
     }
+    else if (c != 0){
+        cout << "0";
+    }
     else {
         cout << "3";
     }
