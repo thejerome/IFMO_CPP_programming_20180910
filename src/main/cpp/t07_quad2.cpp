@@ -23,13 +23,15 @@
 using namespace std;
 
 int t07_quad2() {
-	int a,b,c;
-	double D,x1,x2;
+	double a,b,c,D,x1,x2;
 	cin >> a >> b >> c;
 	if (a==0 && b==0 && c==0) {
 		cout << 3;
 	}
 	else {
+	    if (a==0 && b!=0) {
+	        cout << 1 << " " << -c/b;
+	    }
 		if (a!=0) {
 			D = pow(b, 2)-4*a*c;
 			if (D == 0) {
@@ -40,6 +42,9 @@ int t07_quad2() {
 				x1 = (-b+sqrt(D))/(2*a);
 				x2 = (-b-sqrt(D))/(2*a);
 				cout << 2 << " " << x2 << " " << x1;
+			}
+			if (D < 0) {
+			    cout << 0;
 			}
 		}
 		else {
