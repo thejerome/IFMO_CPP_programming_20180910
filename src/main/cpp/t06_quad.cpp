@@ -22,17 +22,13 @@
 using namespace std;
 
 int t06_quad() {
-	int a,b,c;
-	double D,x1,x2;
+	int a,b,c,D;
 	cin >> a >> b >> c;
 	D = pow(b, 2)-4*a*c;
 	if (D == 0) {
-		x1 = x2 = -b/(2*a);
-		cout << x1;
+		cout << -b/(2*a);
 	}
 	if (D > 0) {
-		x1 = (-b+sqrt(D))/(2*a);
-		x2 = (-b-sqrt(D))/(2*a);
-		cout << x2 << " " << x1;
+		cout << (-b-sqrt(D))/(2*a) << " " << (-b+sqrt(D))/(2*a);
 	}
 };
