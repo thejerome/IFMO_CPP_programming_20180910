@@ -31,6 +31,6 @@ int t05_ave() {
 
     }
     m=c/a;
-    cout    <<    fixed    <<  setprecision(10);
+    cout    <<    fixed    <<  setprecision(11);
     cout    <<    m;
 };
