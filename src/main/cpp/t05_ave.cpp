@@ -23,4 +23,17 @@ using namespace std;
 
 int t05_ave() {
 
+    double X = 1, Ave = 0, num = 0;
+
+    while (X != 0)
+    {
+        cin >> X;
+        if (X == 0) break;
+        num = num + 1;
+        Ave = Ave + X;
+    }
+
+    cout << fixed << setprecision (11);
+    cout << (double) Ave / num;
+
 };
