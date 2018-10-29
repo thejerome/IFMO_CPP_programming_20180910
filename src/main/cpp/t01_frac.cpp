@@ -20,7 +20,7 @@
 using namespace std;
 
 int t01_frac() {
-    float inp, whole;
+    double inp, whole;
     cin >> inp;
     whole = floor(inp);
     inp = inp - whole;
