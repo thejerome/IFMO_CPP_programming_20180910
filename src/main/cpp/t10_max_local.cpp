@@ -27,9 +27,9 @@ int t10_max_local() {
     int count = 0;
     int i = 0;
     int N = 1;
-    int temp1 = 1;
-    int temp2 = 1;
-    while (N != 0) { 
+    int temp1 = 0;
+    int temp2;
+    while (N != 0) {
 	temp2 = temp1;
 	temp1 = N;
         cin >> N;
