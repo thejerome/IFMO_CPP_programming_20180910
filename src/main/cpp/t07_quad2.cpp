@@ -23,13 +23,14 @@ using namespace std;
 int t07_quad2() {
     float a, b, c;
     cin >> a >> b >> c;
-    if (b*b-4*a*c>0){
+    if ((a!=0) && (b*b-4*a*c>0)){
         cout << "2" << " " << (-b - sqrt(b*b-4*a*c))/(2*a) << " " << (-b + sqrt(b*b-4*a*c))/(2*a);
-
     }
-    else if (b*b-4*a*c==0){
+    else if ((a!=0) && (b*b-4*a*c==0)){
         cout << "1" << " " << -b/(2*a);
     }
+    else if ((a==0) && (b!=0)) cout << "1" << " " << -c/b;
+    else if ((a==0) && (b==0) && (c==0)) cout << "3";
     else cout << "0";
     return 0;
 

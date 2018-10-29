@@ -20,9 +20,9 @@
 using namespace std;
 
 int t01_frac() {
-    float N;
+    double N;
     cin >> N;
-    float result = N - int(N);
+    double result = N - (int(N*10))/10;
     cout << result;
 
     return 0;

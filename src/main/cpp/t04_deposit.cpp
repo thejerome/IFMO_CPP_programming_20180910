@@ -22,13 +22,13 @@
 using namespace std;
 
 int t04_deposit() {
-    int X, Y, K;
+    float X, Y, K;
     float P;
     float result1;
     float result2;
     cin >> P >> X >> Y >> K;
     result1 = X+Y/100;
-
+    //cout << result1;
     while (K>0){
         result1 = float((int(result1*((100+P)/100)*100)))/100;
         result2 = result1*100-int(result1)*100;
