@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-23.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T01_MAX_H
+#define IFMO_CPP_PROGRAMMING_20180910_T01_MAX_H
+
+
+int t01_max();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T01_MAX_H

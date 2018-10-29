@@ -84,5 +84,6 @@ Summary: SUCCESS
 Command to tun tests
 
 ```bash
-./run_tests.sh t01_even t02_even2 t03_bigger t04_neighbors t05_minodd t06_different t07_swap t08_cycleswap t09_equals t10_unique t11_queen
+./run_tests.sh t01_max t02_star t03_diag t04_swap t05_kdiag t06_cinema t07_snake t08_chess t09_spiral
+
 ```
