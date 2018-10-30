@@ -17,7 +17,23 @@
 #include <iostream>
 
 using namespace std;
-
 int t10_sort3() {
-
+    int a, b, c, count = 0;
+    cin >> a >> b >> c;
+    if (a > b) {
+        int t = a;
+        a = b;
+        b = t;
+    }
+    if (c < b) {
+        int t = b;
+        b = c;
+        c = t;
+    }
+    if (a > b) {
+        int t = a;
+        a = b;
+        b = t;
+    }
+    cout << a << " " << b << " " << c;
 };
