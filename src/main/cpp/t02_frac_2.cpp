@@ -19,12 +19,9 @@ using namespace std;
 
 int t02_frac_2() {
 
-	double x;
+ 	double x;
 
-	int d;
+ 	cin >> x;
 
-	x -= floor(x);
-	d = x * 10;
-
-	cout << d;
+ 	cout << trunc(modf(x, &x) * 10);
 };
