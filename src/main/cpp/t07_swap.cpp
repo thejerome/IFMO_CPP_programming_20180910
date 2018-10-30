@@ -8,7 +8,7 @@
 //
 //5
 //1 2 3 4 5
-//Sample Output:
+//S, Sample Output:
 //
 //2 1 4 3 5
 
@@ -19,5 +19,19 @@
 using namespace std;
 
 int t07_swap() {
-
-}
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    for (int i = 0; 2 * i < n - 1; i++) {
+        int k;
+        k = arr[2 * i];
+        arr[2 * i] = arr[2 * i + 1];
+        arr[2 * i + 1] = k;
+        }
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+};
