@@ -19,4 +19,12 @@ using namespace std;
 
 int t02_frac_2() {
 
+	double x;
+
+	int d;
+
+	x -= floor(x);
+	d = x * 10;
+
+	cout << d;
 };
