@@ -17,7 +17,6 @@
 #include <iostream>
 
 using namespace std;
-
 int t10_sort3() {
     int a, b, c, count = 0;
     cin >> a >> b >> c;
