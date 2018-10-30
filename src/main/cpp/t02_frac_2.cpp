@@ -18,5 +18,13 @@
 using namespace std;
 
 int t02_frac_2() {
+double x;
+int d;
+
+cin >> x;
+
+    d=(floor(((x-floor(x))*10)));
+
+cout << d;
 
 };
