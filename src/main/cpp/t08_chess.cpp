@@ -24,6 +24,26 @@
 using namespace std;
 
 int t08_chess() {
-    
-    return 0;
+	int n, m, count = 2, k = -1;
+	cin >> n >> m;
+	int a[n][m];
+	for (int i = 0; i < n; i++)
+	{
+
+		for (int j = 0; j < m; j++)
+		{
+			if (count % 2 == 0)  a[i][j] = count++ / 2;
+			else
+			{
+				a[i][j] = 0; count++;
+			}
+			cout.width(4);
+			cout << a[i][j];
+		}
+		if (m % 2 == 0) {
+			count += k;
+			k = -k;
+		}
+		cout << endl;
+	}
 }
