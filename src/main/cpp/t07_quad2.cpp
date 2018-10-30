@@ -59,7 +59,7 @@ int t07_quad2() {
         if (c == 0) cout << 0;
         else
             {
-            X1 = -c / b;
+            X1 = -c/b;
             cout << X1;
             }
         }
