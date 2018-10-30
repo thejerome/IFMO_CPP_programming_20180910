@@ -24,22 +24,22 @@
 using namespace std;
 
 int t08_chess() {
-    int m,n,N,M;
+    int m,n,M;
     cin >> n >> m;
-    int a[m][n];
-    N=0;
+    int a[n][m];
+
     M=1;
         for (int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                if (N%2==0) {
+                if ((i+j) % 2==0) {
                     a[i][j]=M;
                     M++;
                 } else {
                     a[i][j]=0;
                 }
-                N++;
             }
         }
+    cout << endl;
     cout.setf(ios::left);
     for(int i=0;i<n; i++){
         for(int j=0;j<m;j++){
