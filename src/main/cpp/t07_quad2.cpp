@@ -23,29 +23,27 @@ using namespace std;
 
 int t07_quad2() {
 
-    double a, b, c, X1, X2, Discr, Null;
-    cout << setprecision(6) << fixed;
-    Null = 1.0e-7;
+    double a, b, c, X1, X2, D;
     cin >> a >> b >> c;
-    if (fabs (a) <= Null && fabs (b) <= Null && fabs (c) <= Null)
+    if (a == 0 && b == 0 && c == 0)
     {
         cout << 3;
     }
-    else if (not fabs (a) <= Null)
+    else if (not a == 0)
     {
-        Discr = b * b - 4 * a * c;
-        if (Discr > Null)
+        D = b*b - 4*a*c;
+        if (D > 0)
         {
             cout << 2 << " ";
-            X1 = (-b - sqrt (Discr)) / (2 * a);
-            X2 = (-b + sqrt (Discr)) / (2 * a);
+            X1 = (-b - sqrt (D)) / (2 * a);
+            X2 = (-b + sqrt (D)) / (2 * a);
             if (X1 < X2) cout << X1 << " " << X2;
             else cout << X2 << " " << X1;
         }
-        else if (fabs (Discr) <= Null)
+        else if (D == 0)
         {
             cout << 1 << " ";
-            if (fabs (b) <= Null) cout << 0;
+            if (b == 0) cout << 0;
             else
                 {
                 X1 = -b / (2 * a);
@@ -54,11 +52,11 @@ int t07_quad2() {
         }
         else cout << 0;
     }
-    else if (fabs (b) <= Null) cout << 0;
+    else if (b == 0) cout << 0;
     else
         {
         cout << 1 << " ";
-        if (fabs (c) <= Null) cout << 0;
+        if (c == 0) cout << 0;
         else
             {
             X1 = -c / b;
