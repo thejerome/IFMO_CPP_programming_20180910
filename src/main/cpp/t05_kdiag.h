@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-23.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T05_KDIAG_H
+#define IFMO_CPP_PROGRAMMING_20180910_T05_KDIAG_H
+
+
+int t05_kdiag();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T05_KDIAG_H
