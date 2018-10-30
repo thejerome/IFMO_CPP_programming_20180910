@@ -27,6 +27,17 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n, m, a, mx = 0, mxRow = 0, mxCol = 0;
+    cin >> n >> m;
+    for (int i = 0; i < n; i++)
+        for (int j = 0;j < m; j++) {
+            cin >> a;
+            if (a > mx) {
+                mx = a;
+                mxRow = i;
+                mxCol = j;
+            }
+        }
+    cout << mxRow << " " << mxCol;
     return 0;
 }
