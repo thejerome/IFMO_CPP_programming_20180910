@@ -23,7 +23,7 @@ using namespace std;
 int t06_quad() {
     double a,b,c,k1,k2,dis,x;
     cin >> a >> b >> c ;
-
+    x=0;
     dis = b*b - 4 * a * c ;
 
     if (dis==0){x=-b/(2*a); cout<<x;}
