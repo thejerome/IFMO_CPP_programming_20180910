@@ -22,7 +22,7 @@
 using namespace std;
 
 int t05_ave() {
-    float k,n,s;
+    long double k,n,s;
     cin>>n;
     k=0;
     s=n;
@@ -32,5 +32,5 @@ int t05_ave() {
         k++;
     }
     s=s/k;
-    cout<<s;
+    cout<<fixed<<setprecision(11)<<s;
 };
