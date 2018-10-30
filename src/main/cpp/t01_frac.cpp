@@ -19,6 +19,9 @@
 
 using namespace std;
 
-int t01_frac() {
-
+int t01_frac() 
+{
+	double A;
+	cin >> A;
+	cout << modf(A, &A);
 };

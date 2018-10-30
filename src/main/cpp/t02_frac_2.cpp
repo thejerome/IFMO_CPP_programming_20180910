@@ -17,6 +17,9 @@
 
 using namespace std;
 
-int t02_frac_2() {
-
-};
+int t02_frac_2()
+{
+	double A;
+	cin >> A;
+	cout << trunc(modf(A, &A) * 10);
+}
