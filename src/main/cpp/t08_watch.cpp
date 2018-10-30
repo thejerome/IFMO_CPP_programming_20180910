@@ -35,5 +35,12 @@
 using namespace std;
 
 int t08_watch() {
+    int h,mm,ss;
+    cin >> ss;
+    h = ss/3600;
+    ss%=3600;
+    mm = ss/60;
+    ss%=60;
+    printf ("%d:%02d:%02d", h%24, mm, ss);
 
 };
