@@ -23,6 +23,8 @@ using namespace std;
 int t07_quad2() {
     double a,b,c,dis,DIS,k1,k2,x;
     cin >>a>>b>>c;
+    k1=0;
+    k2=0;
     dis = b*b - 4 * a * c ;
     DIS=b*b-4*c;
     if ( dis==0 && a!=0 ){
