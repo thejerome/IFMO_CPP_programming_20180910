@@ -24,19 +24,19 @@
 using namespace std;
 
 int t10_max_local() {
-    int count = 0;
-    int i = 0;
-    int N = 1;
-    int temp1 = 0;
-    int temp2;
+    int N, temp1, temp2, count;
+    cin >> temp2 >> temp1 >> N;
+    count = 0;
+    if (temp1 > N && temp1 > temp2){
+	count = count + 1;
+    }
     while (N != 0) {
 	temp2 = temp1;
 	temp1 = N;
         cin >> N;
-	if (i > 1 && N != 0 && temp1 > temp2 && temp1 > N) {
+	if (N != 0 && temp1 > temp2 && temp1 > N) {
 	    count = count + 1;
-	}
-	i = i + 1;
+        }
     }
     cout << count;
 };
