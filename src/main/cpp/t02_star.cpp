@@ -22,8 +22,34 @@
 
 
 using namespace std;
-
+// Done
 int t02_star() {
+    char mas[15][15];
+    int j, i, n;
+
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            mas[i][j] = '.';
+        }
+    }
+
+    for (i = 0; i < n; i++){
+            mas[n/2][i] = '*';
+            mas[i][n/2] = '*';
+            mas[i][i] = '*';
+            mas[i][n-i-1] = '*';
+    }
+
+    for (i = 0; i < n; i++){
+        cout << endl;
+        for (j = 0; j < n; j++){
+            cout << mas[i][j] << ' ';
+        }
+    }
+
+
 
     return 0;
 }

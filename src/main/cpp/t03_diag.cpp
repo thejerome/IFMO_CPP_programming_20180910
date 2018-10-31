@@ -20,8 +20,29 @@
 
 
 using namespace std;
-
+// Done;
 int t03_diag() {
-    
+
+    int n, i, j,
+        mas[100][100];
+
+    cin >> n;
+
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n-i; j++){
+            mas[i+j][j] = i;
+            mas[j][i+j] = i;
+        }
+    }
+
+    for (i = 0; i < n; i++){
+        cout << endl;
+        for (j = 0; j < n; j++){
+            cout << mas[i][j] << ' ';
+        }
+    }
+
+
     return 0;
 }

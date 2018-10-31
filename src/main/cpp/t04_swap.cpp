@@ -23,8 +23,35 @@
 
 
 using namespace std;
-
+// Done
 int t04_swap() {
-    
+    int mas[100][100],
+        i, j, n, m,
+        column1, column2;
+
+    cin >> n >> m;
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+            cin >> mas[i][j];
+        }
+    }
+
+    cin >> column1 >> column2;
+
+    for (i = 0; i < n; i++){
+        int tmp = mas[i][column1];
+        mas[i][column1] = mas[i][column2];
+        mas[i][column2] = tmp;
+    }
+
+    for (i = 0; i < n; i++){
+        cout << endl;
+        for (j = 0; j < m; j++){
+            cout << mas[i][j] << ' ';
+        }
+    }
+
+
     return 0;
 }

@@ -38,6 +38,31 @@
 using namespace std;
 
 int t05_kdiag() {
-    
+    int mas[100][100],
+            i, j, n, k;
+
+    cin >> n;
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            cin >> mas[i][j];
+        }
+    }
+
+    cin >> k;
+
+
+    if (k < 0){
+        k*=-1;
+        for (i = 0; i < n - k; i++){
+            cout << mas[i][i+k] << ' ';
+        }
+    }
+    else{
+        for (i = 0; i < n - k; i++){
+            cout << mas[i+k][i] << ' ';
+        }
+    }
+
     return 0;
 }
