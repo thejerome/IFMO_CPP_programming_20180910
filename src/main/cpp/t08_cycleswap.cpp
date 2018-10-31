@@ -19,5 +19,20 @@
 using namespace std;
 
 int t08_cycleswap() {
+    int n;
+    cin>>n;
+    int a[n];
+    for (int i=0; i < n; i++) {
+        cin>>a[i];
+    }
+    int last = a[n-1];
+    for (int i=1, prev = a[0]; i < n; i++) {
+        int tmp = a[i];
+        a[i] = prev;
+        prev = tmp;
+    }
+    a[0] = last;
 
+    for (int i=0; i < n; i++)
+        cout<<a[i]<<' ';
 }
