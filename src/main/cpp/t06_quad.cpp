@@ -21,7 +21,7 @@
 using namespace std;
 
 int t06_quad() {
-	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0, discr = 0;
+	double a = 0, b = 0, c = 0, x1 = 0, discr = 0;
 	cin >> a >> b >> c;
 	discr = b * b - 4 * a*c;
 	if (discr == 0) {
@@ -30,10 +30,9 @@ int t06_quad() {
 	}
 	if (discr > 0) {
 		x1 = (-b + sqrt(discr)) / (2 * a);
-		x2 = (-b - sqrt(discr)) / (2 * a);
 		if (a < 0)
-			cout << x1 << " " << x2 << endl;
+			cout << x1 << " " << x1-(sqrt(discr)/a) << endl;
 		if (a > 0)
-			cout << x2 << " " << x1 << endl;
+			cout << x1-(sqrt(discr)/a) << " " << x1 << endl;
 	}
 };
