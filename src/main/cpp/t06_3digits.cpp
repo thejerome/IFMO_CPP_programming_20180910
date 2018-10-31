@@ -23,5 +23,12 @@
 using namespace std;
 
 int t06_3digits() {
-
+int n, ans;
+ans = 0;
+cin>>n;
+for(int i=0; i<3; i++) {
+    ans += n % 10;
+    n /= 10;
+}
+cout<<ans;
 };

@@ -27,5 +27,8 @@
 using namespace std;
 
 int t09_snail() {
-
+int h,a,b, l;
+cin>>h>>a>>b;
+l = (h-a)%(a-b) >0 ? 1:0;
+cout<<(h-a)/(a-b)+1+l;
 };
