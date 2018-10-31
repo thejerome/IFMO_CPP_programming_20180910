@@ -22,5 +22,14 @@
 using namespace std;
 
 int t04_deposit() {
-
+    int P, X, Y, K;
+    cin >> P >> X >> Y >> K;
+    while(K){
+        double buff;
+	buff = (X * 100 + Y) * (1.0 + (double)P / 100);
+	X = buff / 100;
+        Y = int(buff) % 100;
+        K = K - 1;
+    }
+    cout << X << " " << Y;
 };
