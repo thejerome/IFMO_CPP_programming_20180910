@@ -23,4 +23,19 @@ using namespace std;
 
 int t04_deposit() {
 
+    int P, X, Y, K, year = 0;
+    cin >> P >> X >> Y >> K;
+
+    while (year < K)
+    {
+        int V = X * P % 100;
+        X = X + X * P / 100;
+        Y = Y + Y * P / 100 + V;
+        X = X + Y / 100;
+        Y = Y % 100;
+        year = year + 1;
+    }
+
+    cout << X << " " << Y;
+
 };
