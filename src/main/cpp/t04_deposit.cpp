@@ -22,5 +22,15 @@
 using namespace std;
 
 int t04_deposit() {
-
+	int procent, x, years;
+	double money;
+	cin >> procent >> x >> money >> years;
+	money += 100 * x;
+	while (years > 0) {
+		money += (money / 100)*procent;
+		money = trunc(money);
+		years--;
+	}
+	
+	cout << int (money) / 100 << " " << int (money) % 100 << endl;
 };
