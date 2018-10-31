@@ -25,6 +25,7 @@ int t05_ave() {
     double counter, sum, buff;
     cin >> buff;
     counter = 0;
+    sum = 0;
     while(buff != 0){
         sum = sum + buff;
 	cin >> buff;
