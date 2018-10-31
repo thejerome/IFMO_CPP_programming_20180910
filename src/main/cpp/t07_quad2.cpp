@@ -21,7 +21,7 @@
 using namespace std;
 
 int t07_quad2() {
-	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0, discr = 0;
+	double a = 0, b = 0, c = 0, x1 = 0, discr = 0;
 	cin >> a >> b >> c;
 	if (a != 0) {
 		discr = b * b - 4 * a*c;
@@ -33,11 +33,11 @@ int t07_quad2() {
 		}
 		if (discr > 0) {
 			x1 = (-b + sqrt(discr)) / (2 * a);
-			x2 = (-b - sqrt(discr)) / (2 * a);
+			
 			if (a < 0)
-				cout << 2 << " " << x1 << " " << x2 << endl;
+				cout << 2 << " " << x1 << " " << x1-(sqrt(discr)/a) << endl;
 			if (a > 0)
-				cout << 2 << " " << x2 << " " << x1 << endl;
+				cout << 2 << " " << x1-(sqrt(discr)/a) << " " << x1 << endl;
 		}
 	}
 	else {
