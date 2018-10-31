@@ -23,5 +23,7 @@
 using namespace std;
 
 int t04_first_number() {
-
+int n;
+cin>>n;
+cout<<n/10;
 };
