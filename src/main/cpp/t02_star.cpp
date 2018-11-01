@@ -19,11 +19,23 @@
 
 #include "t02_star.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t02_star() {
-
+int n;
+cin >> n;
+string a[n][n];
+for (int i=0;i<n;i++)
+    for (int j=0;j<n;j++){
+        a[i][j]='.';
+        if ((i==j) or (i==n/2) or (j==n/2) or (j+i+1==n)) a[i][j] = '*';
+    }
+for (int i=0;i<n;i++) {
+    for (int j = 0; j < n; j++)
+        cout << a[i][j] << " ";
+    cout << endl;
+}
     return 0;
 }

@@ -20,8 +20,28 @@
 
 
 using namespace std;
-
 int t07_snake() {
-    
+    int n,m,l=1;
+    cin >> n >> m;
+    int a[n][m];
+    int k = 1;
+    for (int i=0;i<n;i++){
+        cout.setf(ios::right);
+        for (int j=0;j<m;j++){
+            a[i][j]=k;
+            k+=l;
+            cout.width(4);
+            cout << a[i][j];
+        }
+        if ((1+i)%2==1) {
+            k += m-1;
+            l = -1;
+        }
+        else{ l*=-1;
+            k+=m+1;
+        }
+        cout << endl;
+    }
     return 0;
 }
+
