@@ -22,6 +22,74 @@
 using namespace std;
 
 int t09_spiral() {
-    
+    int n, m;
+    cin >> n >> m;
+    int a[n][m], x, y, znac, b, c, d, e;
+    for (int i = 0; i < n; i ++){
+        for (int j = 0; j < m; j ++){
+            a[i][j] = 0;
+        }
+    }
+    x = 0;
+    y = 0;
+    znac = 1;
+    b = m;
+    d = 0;
+    c = -1;
+    e = n;
+    while (znac != n * m+1){
+        while (y != b){
+            a[x][y] = znac;
+            znac += 1;
+            y += 1;
+        }
+        x += 1;
+        y -= 1;
+        if (znac >= n * m+1){
+            break;
+        }
+        while (x != e){
+            a[x][y] = znac;
+            znac += 1;
+            x += 1;
+        }
+        x -= 1;
+        y -= 1;
+        if (znac >= n * m+1){
+            break;
+        }
+        while (y != c){
+            a[x][y] = znac;
+            y -= 1;
+            znac += 1;
+        }
+        x -= 1;
+        y += 1;
+        if (znac >= n*m+1){
+            break;
+        }
+        while (x != d){
+            a[x][y] = znac;
+            x -= 1;
+            znac += 1;
+        }
+        x += 1;
+        y += 1;
+        b -= 1;
+        c += 1;
+        d += 1;
+        e -= 1;
+        if (znac >= n * m+1){
+            break;
+        }
+    }
+    cout.setf(ios::left);
+    for (int i = 0; i < n; i ++){
+        for (int j = 0; j < m; j ++){
+            cout.width(4);
+            cout << a[i][j];
+        }
+        cout << endl;
+    }
     return 0;
 }

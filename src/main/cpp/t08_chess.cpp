@@ -24,6 +24,41 @@
 using namespace std;
 
 int t08_chess() {
-    
+    int n, m, num;
+    cin >> n >> m;
+    int a[n][m];
+    num = 1;
+    for (int i = 0; i < n; i ++){
+        if (i % 2 == 0){
+            for (int j = 0; j < m; j ++){
+                if (j % 2 == 1){
+                    a[i][j] = 0;
+                }
+                else{
+                    a[i][j] = num;
+                    num += 1;
+                }
+            }
+        }
+        else {
+            for (int j = 0; j < m; j ++){
+                if (j % 2 == 0){
+                    a[i][j] = 0;
+                }
+                else{
+                    a[i][j] = num;
+                    num += 1;
+                }
+            }
+        }
+    }
+    cout.setf(ios::left);
+    for (int i = 0; i < n; i ++){
+        for (int j = 0; j < m; j ++) {
+            cout.width(4);
+            cout << a[i][j];
+        }
+        cout << endl;
+    }
     return 0;
 }

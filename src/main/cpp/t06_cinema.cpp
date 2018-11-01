@@ -29,6 +29,35 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n, m, k, realk;
+    cin >> n >> m;
+    int a[n][m];
+    for (int i = 0; i < n; i ++){
+        for (int j = 0; j < m; j ++){
+            cin >> a[i][j];
+        }
+    }
+    cin >> k;
+    realk = 0;
+    for (int i = 0; i < n; i ++){
+        for (int j = 0; j < n; j ++){
+            if (realk == k){
+                break;
+            }
+            else if (a[i][j] == 0){
+                realk += 1;
+            }
+            else{
+                realk = 0;
+            }
+        }
+        if (realk == k){
+            cout << i+1;
+            break;
+        }
+    }
+    if (realk == 0){
+        cout << 0;
+    }
     return 0;
 }
