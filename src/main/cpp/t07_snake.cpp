@@ -22,6 +22,30 @@
 using namespace std;
 
 int t07_snake() {
-    
+    int n, m;
+    cin>>n>>m;
+    int a[n][m];
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        if (i%2 == 1)
+            k = m * (i+1);
+        else
+            k = m * i + 1;
+        for (int j = 0; j < m; j++) {
+            a[i][j] = k;
+            if (i % 2 == 1)
+                k--;
+            else
+                k++;
+        }
+    }
+
+    for (int l = 0; l < n; ++l) {
+        for (int i = 0; i < m; ++i) {
+            cout.width(4);
+            cout<<a[l][i];
+        }
+        cout<<endl;
+    }
     return 0;
 }
