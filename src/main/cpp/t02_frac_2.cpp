@@ -19,4 +19,10 @@ using namespace std;
 
 int t02_frac_2() {
 
+	double n;
+	cin >> n;
+	n = n * 10;
+	n = int(n) % 10;
+	cout << n;
+	return 0;
 };

@@ -23,4 +23,16 @@ using namespace std;
 
 int t04_deposit() {
 
+	int p, x, y, k, i, s;
+	cin >> p >> x >> y >> k;
+	i = 0, s = 100 * x + y;
+	while (i < k)
+	{
+		s *= 1 + 0.01*p;
+		i++;
+	}
+	x = s / 100;
+	x  = s % 100;
+	cout << x << ' ' << y;
+	return 0;
 };

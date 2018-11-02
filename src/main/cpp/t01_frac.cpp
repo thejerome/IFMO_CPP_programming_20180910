@@ -20,5 +20,11 @@
 using namespace std;
 
 int t01_frac() {
+	double n;
+	double uselessshit;
+	cin >> n;
+	n = modf(n, &uselessshit);
+	cout << n;
+	return 0;
 
 };
