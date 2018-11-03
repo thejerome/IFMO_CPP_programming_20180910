@@ -24,5 +24,5 @@ int t03_triangle() {
     cin >> a >> b >> c;
     double p = (a + b + c) / 2;
     cout.setf(ios :: fixed);
-    cout << setprecision(4) << round(sqrt(p * (p - a) * (p - b) * (p - c)) * 100000) / 100000;
+    cout << setprecision(4) << sqrt(p * (p - a) * (p - b) * (p - c));
 };
