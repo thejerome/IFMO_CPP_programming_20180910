@@ -27,8 +27,48 @@
 
 
 using namespace std;
-
+// Done
 int t06_cinema() {
-    
+
+    int n, m, i, j, k, count, line = 0;
+    bool mas[100][100],
+            flag = false;
+
+    cin >> n >> m;
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            cin >> mas[i][j];
+        }
+    }
+
+
+    cin >> k;
+
+    for (i = 0; (i < n) && (!flag); i++) {
+        if (count >= k) {
+            flag = true;
+            line = i - 1;
+        }
+        count = 0;
+        for (j = 0; (j < m) && (!flag); j++) {
+            if (!mas[i][j]) {
+                count++;
+            } else {
+                if (count >= k) {
+                    flag = true;
+                    line = i;
+                }
+                count = 0;
+            }
+        }
+    }
+
+    if (flag){
+        cout << line + 1;
+    }
+    else{
+        cout << 0;
+    }
     return 0;
 }

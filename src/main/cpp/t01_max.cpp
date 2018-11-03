@@ -25,8 +25,31 @@
 
 
 using namespace std;
-
+// Done
 int t01_max() {
-    
+    int n, m, i, j, max = -999999,
+        mas[100][100];
+
+    cin >> n >> m;
+
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+             cin >> mas[i][j];
+             if (mas[i][j] > max){
+                 max = mas[i][j];
+             }
+        }
+    }
+
+    bool flag = true;
+
+    for (i = 0; (i < n) && (flag); i++){
+        for (j = 0; (j < m) && (flag); j++){
+            if (mas[i][j] == max){
+                cout << i << ' ' << j;
+                flag = false;
+            }
+        }
+    }
     return 0;
 }
