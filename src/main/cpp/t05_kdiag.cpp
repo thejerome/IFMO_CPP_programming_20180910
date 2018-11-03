@@ -42,7 +42,7 @@ int t05_kdiag() {
             i, j, n, k;
 
     cin >> n;
-
+ 
     for (i = 0; i < n; i++){
         for (j = 0; j < n; j++){
             cin >> mas[i][j];

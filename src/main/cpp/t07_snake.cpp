@@ -24,7 +24,7 @@ using namespace std;
 int t07_snake() {
 
 
-    int n, m, count = 1, i, j, i0, j0,
+    int n, m, i, j,
         mas[30][30];
 
     cin >> n >> m;
