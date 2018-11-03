@@ -19,11 +19,36 @@
 
 #include "t08_chess.h"
 #include <iostream>
-
-
+// Done
 using namespace std;
 
 int t08_chess() {
-    
+
+    int n, m, i, j, count = 1,
+        mas[100][100];
+
+    cin >> n >> m;
+
+
+    for (i = 0; i < n ; i++){
+        for (j = 0; j < m; j++){
+            if ((i+j) % 2 == 0){
+                mas[i][j] = count;
+                count++;
+            }
+            else{
+                mas[i][j] = 0;
+            }
+        }
+    }
+
+    for (i = 0; i < n; i++){
+        cout << endl;
+        for (j = 0; j < m; j++){
+            cout.width(4);
+            cout << mas[i][j] << ' ';
+        }
+    }
+
     return 0;
 }

@@ -36,7 +36,7 @@
 
 
 using namespace std;
-
+// Done
 int t05_kdiag() {
     int mas[100][100],
             i, j, n, k;

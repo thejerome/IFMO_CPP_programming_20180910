@@ -20,8 +20,38 @@
 
 
 using namespace std;
-
+//Done
 int t07_snake() {
-    
+
+
+    int n, m, count = 1, i, j, i0, j0,
+        mas[30][30];
+
+    cin >> n >> m;
+
+    for (i = 0; i < n; i+=2){
+        for (j = 0; j < m; j++){
+            mas[i][j] = i*m+j+1;
+        }
+    }
+
+    for (i = 1; i < n; i+=2){
+        for (j = m-1; j >= 0; j--){
+            mas[i][j] = (i+1)*m-j;
+        }
+    }
+
+
+
+
+    for (i = 0; i < n; i++){
+        cout << endl;
+        for (j = 0; j < m; j++){
+            cout.width(4);
+            cout << mas[i][j] << ' ';
+        }
+    }
+
+
     return 0;
 }
