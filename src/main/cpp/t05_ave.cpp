@@ -23,11 +23,11 @@ using namespace std;
 
 int t05_ave()
 {
-	double x, Count, Sum;
+	double x, Count = 0, Sum = 0;
 	do 
 	{
 		cin >> x;
-		Sum += x;
+		Sum += x;хуй
 		Count++;
 	} while (x != 0);
 	cout << fixed << setprecision(11) << Sum / (Count - 1);
