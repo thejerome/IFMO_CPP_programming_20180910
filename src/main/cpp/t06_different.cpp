@@ -22,10 +22,10 @@ int t06_different() {
     int n;
     cin >> n;
     int ans = 1;
-    int a,b;
+    int a;
     cin >> a;
     for (int i = 1; i < n; i++){
-        b = a;
+        int b = a;
         cin >> a;
         if (a > b){
             ans++;

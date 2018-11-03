@@ -26,9 +26,9 @@ int t08_cycleswap() {
     for (int i = 0; i < n; i++){
         cin >> a[i];
     }
-    int lastitem = a[0], newitem;
+    int lastitem = a[0];
     for (int i = 0; i < n - 1; i++){
-        newitem = a[i + 1];
+        int newitem = a[i + 1];
         a[i + 1] = lastitem;
         lastitem = newitem;
     }

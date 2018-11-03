@@ -21,11 +21,11 @@ using namespace std;
 int t03_bigger() {
     int n;
     cin >> n;
-    int a,b;
+    int a;
 
     cin >> a;
     for (int i = 1; i < n; i++){
-        b = a;
+        int b = a;
         cin >> a;
         if (a > b){
             cout << a << ' ';
