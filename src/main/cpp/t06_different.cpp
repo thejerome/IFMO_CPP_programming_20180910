@@ -21,7 +21,7 @@ using namespace std;
 int t06_different() {
 
     int a;
-    cin >> a;
+    cin >>a;
 
     int arr[a];
 
