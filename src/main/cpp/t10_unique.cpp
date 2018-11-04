@@ -25,5 +25,24 @@
 using namespace std;
 
 int t10_unique() {
-
-}
+    int N, i, j, tail, gold;
+    cin >> N;
+    int A[N];
+    for (i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+    for (i = 0; i < N; i++) {
+        tail = A[i];
+        gold = 0;
+        for (j = 0; j < N; j++) {
+            if (i != j) {
+                if (tail == A[j]) {
+                    gold++;
+                }
+            }
+        }
+        if (gold == 0) {
+            cout << tail << " ";
+        }
+    }
+};

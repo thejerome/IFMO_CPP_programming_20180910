@@ -28,5 +28,19 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int i=0, N, c=10001;
+    cin >> N;
+    int A[N];
+    for (i; i < N; i++) {
+        cin >> A[i];
+    }
+    for (i=0; i < N; i++) {
+        if (((A[i]%2==1)||(A[i]%2==-1)) && (c > A[i])) {
+            c=A[i];
+        }
+    };
+    if (c==10001) {
+        c=0;
+    }
+    cout << c;
 }
