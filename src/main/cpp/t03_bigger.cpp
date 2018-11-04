@@ -20,4 +20,18 @@ using namespace std;
 
 int t03_bigger() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+    for (int j = 1; j < a; j++) {
+        if (arr[j] > arr[j - 1]) {
+            cout << arr[j] << " ";
+        };
+    }
+
 }

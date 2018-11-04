@@ -29,4 +29,23 @@ using namespace std;
 
 int t05_minodd() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+
+    int min = 2147483647;
+
+    for (int i = 0; i < a; i++) {
+        if (arr[i] % 2 != 0 && arr[i] < min)
+            min = arr[i];
+    }
+
+    if (min == 2147483647)
+        min = 0;
+    cout << min;
+
 }

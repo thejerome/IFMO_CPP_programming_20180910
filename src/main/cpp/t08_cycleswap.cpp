@@ -20,4 +20,22 @@ using namespace std;
 
 int t08_cycleswap() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+
+    int last = arr[a - 1];
+    for (int i = 1, f = arr[0]; i < a; i++) {
+        int t = arr[i];
+        arr[i] = f;
+        f = t;
+    }
+    arr[0] = last;
+    for (int i = 0; i < a; i++)
+        cout << arr[i] << ' ';
+
 }

@@ -20,4 +20,18 @@ using namespace std;
 
 int t07_swap() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+
+    for (int j = 1; j < a; j += 2)
+        arr[j - 1] ^= arr[j] ^= arr[j - 1] ^= arr[j];
+    for (int i = 0; i < a; i++)
+
+        cout << arr[i] << ' ';
+
 }
