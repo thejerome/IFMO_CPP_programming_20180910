@@ -27,6 +27,14 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n, m, x, y, maxe = -1;
+    cin >> n >> m;
+    for (int i=0; i<n; i++)
+        for (int j=0; j<m; j++) {
+            int e;
+            cin >> e;
+            if (e > maxe) maxe = e, x = i, y = j;
+        }
+    cout << x << ' ' << y;
     return 0;
 }

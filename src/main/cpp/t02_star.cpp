@@ -22,8 +22,33 @@
 
 
 using namespace std;
+int n;
+char a[15][15];
+
+void tick(int x, int y, int xi, int yi) {
+    while (x > -1 && y > -1 && x < n && y < n) {
+        a[x][y] = '*';
+        x += xi;
+        y += yi;
+    }
+}
 
 int t02_star() {
-
+    cin >> n;
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++) a[i][j]='.';
+    a[n/2][n/2]='*';
+    tick(n/2,n/2+1,0,1);
+    tick(n/2,n/2-1,0,-1);
+    tick(n/2+1,n/2,1,0);
+    tick(n/2+1,n/2+1,1,1);
+    tick(n/2+1,n/2-1,1,-1);
+    tick(n/2-1,n/2,-1,0);
+    tick(n/2-1,n/2+1,-1,1);
+    tick(n/2-1,n/2-1,-1,-1);
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) cout << a[i][j] << ' ';
+        cout << endl;
+    }
     return 0;
 }
