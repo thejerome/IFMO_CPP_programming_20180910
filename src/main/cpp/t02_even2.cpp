@@ -20,4 +20,17 @@ using namespace std;
 
 int t02_even2() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+
+    for (int j = 0; j < a; j++) {
+        if (arr[j] % 2 == 0)
+            cout << arr[j] << ' ';
+    }
+
 }

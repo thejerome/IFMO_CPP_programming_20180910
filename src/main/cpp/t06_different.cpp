@@ -20,4 +20,25 @@ using namespace std;
 
 int t06_different() {
 
+    int a;
+    cin >>a;
+
+    int arr[a];
+
+    int dif = 0;
+
+    for (int i=0; i < a; i++) {
+        cin >> arr[i];
+    }
+    for (int j = 0; j < a; j++) {
+        int count = 0;
+        for (int k = j; k < a; k++) {
+            if (arr[j] == arr[k])
+                count++;
+        }
+        if (count == 1)
+            dif++;
+    }
+    cout << dif;
+
 }

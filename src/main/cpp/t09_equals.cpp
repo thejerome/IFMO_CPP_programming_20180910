@@ -27,4 +27,22 @@ using namespace std;
 
 int t09_equals() {
 
+    int a;
+    cin >> a;
+
+    int arr[a];
+    for (int i = 0; i < a; i++) {
+        cin >> arr[i];
+    }
+
+    int count = 0;
+
+    for (int i = 0; i < a; i++) {
+        for (int j = i + 1; j < a; j++) {
+            if (arr[i] == arr[j])
+                count++;
+        }
+    }
+    cout << count;
+
 }
