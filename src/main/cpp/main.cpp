@@ -1,7 +1,10 @@
-#include <iostream>
+@@ -1,9 +1,18 @@
+ #include <iostream>
 #include <map>
 #include <functional>
 #include <cstring>
+#include "plus.h"
+#include "minus.h"
 #include "t01_even.h"
 #include "t02_even2.h"
 #include "t03_bigger.h"
@@ -13,18 +16,17 @@
 #include "t09_equals.h"
 #include "t10_unique.h"
 #include "t11_queen.h"
-
-using namespace std;
-
-int main(int argc, char **argv) {
-    if (argc != 2) {
-        cout << "You should specify a name of a single function to run\n";
-        return -1;
-    }
-    char *functionName = argv[1];
-
-    std::map <std::string, std::function<int()>> funcMap =
+ using namespace std;
+  int main(int argc, char **argv) {
+     if (argc != 2) {
+         cout << "You should specify a name of a single function to run\n";
+         return -1;
+     }
+     char *functionName = argv[1];
+     std::map <std::string, std::function<int()>> funcMap =
             {
+                    {"plus", plus_task},
+                    {"minus",  minus_task}
                     {"t01_even", t01_even},
                     {"t02_even2", t02_even2},
                     {"t03_bigger", t03_bigger},
@@ -36,10 +38,8 @@ int main(int argc, char **argv) {
                     {"t09_equals", t09_equals},
                     {"t10_unique", t10_unique},
                     {"t11_queen", t11_queen}
+             };
+     funcMap[functionName]();
 
-            };
-
-    funcMap[functionName]();
-
-    return 0;
-}
+     return 0;
+ }
