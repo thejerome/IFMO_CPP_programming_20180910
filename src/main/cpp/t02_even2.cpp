@@ -28,7 +28,7 @@ int t02_even2() {
         cin >> arr[i];
     }
 
-    for (int j = 0; j < a; j++) {
+    for (int j = 0; j < a; j++){
         if (arr[j] % 2 == 0)
             cout << arr[j] << ' ';
     }
