@@ -39,56 +39,19 @@
 using namespace std;
 
 int t11_queen() {
-    int board[8][8];
-    for (int y = 0; y < 8; y++) {
-        for (int x = 0; x < 8; x++) {
-            board[x][y] = 0;
-        }
+    int posx[8],posy[8];
+    for(int i = 0; i < 8; i++){
+        cin >> posx[i] >> posy[i];
     }
-    int x, y;
-    for (int i = 0; i < 8; i++) {
-        cin >> x >> y;
-        board[x - 1][y - 1] = 1;
-
-    }
-
     bool ans = true;
-    for (int y = 0; y < 8; y++) {
-        for (int x = 0; x < 8; x++) {
-            if (board[x][y] == 1){
-                int chek = 0;
-                for (int nx = 0; nx < 8; nx++){
-                    if (nx != x && board[nx][y] == 1){
-                        chek++;
-                    }
-                }
-                for (int ny = 0; ny < 8; ny++){
-                    if (ny != y && board[x][ny] == 1){
-                        chek++;
-                    }
-                }
-                for (int i = 0; i < 8 - abs(x - y); i++){
-                    int ny = y - min(x,y) + i, nx = x - min(x,y) + i;
-                    if ( (ny != y || nx != x) && board[nx][ny] == 1){
-                        chek++;
-                    }
-                }
-                for (int i = 0; i < 8 - abs(7 - (x + y)); i++){
-                    int ny, nx;
-                    if (x + y < 7){
-                        ny = 7 - abs(7 - (x + y)) - i;
-                        nx = i;
-                    }else{
-                        ny = abs(7 - (x + y)) + i;
-                        nx = 7 - i;
-                    }
-                    if ( (ny != y || nx != x) && board[nx][ny] == 1){
-                        chek++;
-                    }
-                }
-                if (chek != 0){
-                    ans = false;
-                }
+    for (int i = 0; i < 8; i++){
+        for (int j = 0; j < 8; j++){
+            if ((posx[i] == posx[j]
+            || posy[i] == posy[j]
+            || posx[i] + posy[i] == posx[j] + posy[j]
+            || posx[i] - posy[i] == posx[j] - posy[j])
+            && j != i){
+                ans = false;
             }
         }
     }
