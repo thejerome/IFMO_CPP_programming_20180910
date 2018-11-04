@@ -39,5 +39,26 @@
 using namespace std;
 
 int t11_queen() {
-
+    int posx[8],posy[8];
+    for(int i = 0; i < 8; i++){
+        cin >> posx[i] >> posy[i];
+    }
+    bool ans = true;
+    for (int i = 0; i < 8; i++){
+        for (int j = 0; j < 8; j++){
+            if ((posx[i] == posx[j]
+            || posy[i] == posy[j]
+            || posx[i] + posy[i] == posx[j] + posy[j]
+            || posx[i] - posy[i] == posx[j] - posy[j])
+            && j != i){
+                ans = false;
+            }
+        }
+    }
+    if (ans){
+        cout << "NO";
+    }
+    else{
+        cout << "YES";
+    }
 }

@@ -19,5 +19,16 @@
 using namespace std;
 
 int t03_bigger() {
+    int n;
+    cin >> n;
+    int a;
 
+    cin >> a;
+    for (int i = 1; i < n; i++){
+        int b = a;
+        cin >> a;
+        if (a > b){
+            cout << a << ' ';
+        }
+    }
 }
