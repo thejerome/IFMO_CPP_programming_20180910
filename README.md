@@ -80,3 +80,9 @@ PASSED: negative_result
 
 Summary: SUCCESS
 ```
+
+Command to tun tests
+
+```bash
+./run_tests.sh t01_even t02_even2 t03_bigger t04_neighbors t05_minodd t06_different t07_swap t08_cycleswap t09_equals t10_unique t11_queen
+```
