@@ -43,7 +43,7 @@ int a, b, i, n, c;
 c = 0; 
 n = 16; 
 int arr[n]; 
-for (i = 1;i <= n;i++){
+for (i = 0;i < n;i++){
 cin >> a;
 arr[i] = a;
 } 
