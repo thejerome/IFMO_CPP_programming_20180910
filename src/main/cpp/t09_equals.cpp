@@ -24,7 +24,19 @@
 
 
 using namespace std;
-
 int t09_equals() {
-
+    int i=0, N, j=0, k=0;
+    cin >> N;
+    int A[N];
+    for (i; i < N; i++) {
+        cin >> A[i];
+    }
+    for (i=0; i < N; i++) {
+        for (j=i+1; j < N; j++) {
+            if ((A[i]==A[j]) && (i!=j)) {
+                k=k+1;
+            }
+        }
+    }
+    cout << k;
 }
