@@ -19,5 +19,9 @@
 using namespace std;
 
 int t01_quad() {
-
+int n;
+cin>>n;
+for (int z=1; z*z<=n; z++){
+    cout<<z*z<<' ';
+}
 };
