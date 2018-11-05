@@ -26,5 +26,25 @@
 using namespace std;
 
 int t09_equals() {
+	int n = 0;
+	cin >> n;
+	int M[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> M[i];
+	}
 
+	int fin = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (i != j) {
+				if (M[i] == M[j]) {
+					fin++;
+				}
+			}
+		}
+	}
+	cout << fin/2;
 }

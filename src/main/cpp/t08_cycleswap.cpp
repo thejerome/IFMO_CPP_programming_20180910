@@ -19,5 +19,20 @@
 using namespace std;
 
 int t08_cycleswap() {
+	int n = 0;
+	cin >> n;
+	int M[n];
+	for (int i = 0; i < n; i++)
+	{
+		int finindex = i+1;
+		if (finindex >= n) {
+			finindex = 0;
+		}
+		cin >> M[finindex];
+	}
 
+	for (int i = 0; i < n; i++)
+	{
+		cout << M[i] << " ";
+	}
 }

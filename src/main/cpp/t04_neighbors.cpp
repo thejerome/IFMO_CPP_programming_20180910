@@ -21,5 +21,19 @@
 using namespace std;
 
 int t04_neighbors() {
+	int n = 0;
+	cin >> n;
+	int M[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> M[i];
+	}
 
+	for (int i = 1; i < n; i++)
+	{
+		if (M[i] * M[i-1] > 0) {
+			cout << M[i-1] << " " << M[i];
+			break;
+		}
+	}
 }
