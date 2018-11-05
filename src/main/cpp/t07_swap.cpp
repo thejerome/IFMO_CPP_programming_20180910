@@ -19,5 +19,30 @@
 using namespace std;
 
 int t07_swap() {
+    int a , n , i , d;
+    cin >> n;
+    int Arr[n];
 
+    for ( i = 1 ; i <= n ; i++)
+    {cin>>a;
+        Arr[i]=a;
+    }if (n%2==0){
+    for (i=1;i<=n; i+=2){
+        d=Arr[i];
+        Arr[i]=Arr[i+1];
+        Arr[i+1]=d;
+
+    }}
+     if (n%2==1) {
+        n=n-1;
+    {for (i=1;i<=n; i+=2){
+            d=Arr[i];
+            Arr[i]=Arr[i+1];
+            Arr[i+1]=d;}
+            n=n+1;
+    }}
+
+
+    for ( i = 1 ; i <= n ; i++)
+    {cout<<Arr[i]<<" ";}
 }
