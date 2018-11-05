@@ -25,7 +25,7 @@
 using namespace std;
 
 int t10_unique() {
-    int N, i, j, tail, gold;
+    int N, i, j, tail = 0, gold;
     cin >> N;
     int A[N];
     for (i = 0; i < N; i++) {
