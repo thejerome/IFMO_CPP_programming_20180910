@@ -25,5 +25,20 @@
 using namespace std;
 
 int t10_unique() {
+    int a,b,i,n,t;
+    cin>>n;
 
-}
+    t=1;
+   int ar[n];
+   for (i=1;i<=n;i++){
+       cin>>a;
+       ar[i]=a;
+   }
+   for (i=1;i<=n;i++) {
+       for (b=1;b<=n;b++){
+           if((ar[i]==ar[b])&&(i!=b)){t= 0;}}
+       if (t==1) {cout<<ar[i]<< " ";}
+       t=1;}
+   }
+
+

@@ -19,5 +19,10 @@
 using namespace std;
 
 int t03_bigger() {
-
+    int n, i ,w,k ;
+    cin >> n ;
+    cin>>k;
+    for (i=2 ; i <= n ; i++){cin>>w;
+        if (w>k) {cout<<w<<" ";}
+        k=w;}
 }

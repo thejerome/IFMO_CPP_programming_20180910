@@ -28,5 +28,13 @@
 using namespace std;
 
 int t05_minodd() {
-
+int a , b , n ;
+cin >> n ;
+b=12343;
+for (int i = 0 ; i < n ; i ++) {
+    cin >> a ;
+    if (((a % 2 == 1) ||(a%2==-1)) && ( a < b )) { b=a ;} ;
+}
+if ( b!=12343 ) { cout << b ; }
+    else { cout << 0 ;}
 }
