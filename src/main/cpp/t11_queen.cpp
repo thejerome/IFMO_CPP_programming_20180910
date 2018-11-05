@@ -39,13 +39,15 @@
 using namespace std;
 
 int t11_queen() {
-    int a,b,i,t;
-    t=0;
-    int ar[16];
-    for (i=1;i<=16;i++){cin>>a; ar[i]=a;}
-    for (i=1;i<=16;i+=2){
-        for(b=i+2;b<=16;b+=2)
-      {if ((abs(ar[i]-ar[b])==abs(ar[i+1]-ar[b+1]))||(ar[i]==ar[b]||ar[i+1]==ar[b+1])){t=1;}}}
-if (t==1) {cout<<"YES";}
+    int a,b,i,n,t; 
+t=0; 
+n=16; 
+int arr[n]; 
+for (i=1;i<=n;i++){cin>>a; arr[i]=a;} 
+for (i=1;i<=n;i=i+2){ 
+for(b=i+2;b<=n;b+=2) 
+{if (((abs(arr[i]-arr[b]))==(abs(arr[i+1]-arr[b+1]))) || (arr[i]==arr[b]||arr[i+1]==arr[b+1])) {t=1;}} 
+} 
+if (t==1) {cout<<"YES";} 
 else {cout<<"NO";}
 }
