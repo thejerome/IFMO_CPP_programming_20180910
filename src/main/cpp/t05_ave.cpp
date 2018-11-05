@@ -27,7 +27,7 @@ int t05_ave()
 	do 
 	{
 		cin >> x;
-		Sum += x;хуй
+		Sum += x;
 		Count++;
 	} while (x != 0);
 	cout << fixed << setprecision(11) << Sum / (Count - 1);
