@@ -21,5 +21,14 @@
 using namespace std;
 
 int t08_fibb() {
-
+int n, first, second, now;
+first = second = 1;
+cin >> n;
+if(n==0) {cout<<0; return 0;}
+ if (n==1||n==2) {cout<<1; return 0;} else
+     for(int z=3; z<=n;z++){
+         now = first+second;
+         first = second; second = now;
+     }
+     cout<<now;
 };
