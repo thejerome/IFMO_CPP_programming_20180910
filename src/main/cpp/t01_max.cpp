@@ -27,6 +27,21 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n, m;
+    cin >> n >> m;
+
+    int a[n][m], row_max = 0, col_max = 0;
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+
+            if (a[i][j] > a[row_max][col_max]) {
+                row_max = i;
+                col_max = j;
+            }
+        }
+
+    cout << row_max << ' ' << col_max;
     return 0;
 }
