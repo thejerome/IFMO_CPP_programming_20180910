@@ -21,5 +21,13 @@
 using namespace std;
 
 int t04_neighbors() {
+    int n,i,w,k,r;
+   r=0;
+    cin >> n ;
+    cin>>k;
+    for (i=2 ; i <= n ; i++){cin>>w;
+    if ( r==0 ){
+        if (((w>=0)&&(k>=0))||((w<0)&&(k<0))) {cout<<k<<" "<<w; r=1;}}
+        k=w;}
 
 }

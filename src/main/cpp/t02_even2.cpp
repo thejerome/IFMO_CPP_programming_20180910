@@ -19,5 +19,8 @@
 using namespace std;
 
 int t02_even2() {
-
+    int n, i ,w ;
+    cin >> n ;
+    for (i=1 ; i <= n ; i++){cin>>w;
+        if (w%2==0){cout<<w<<" ";}}
 }
