@@ -22,5 +22,15 @@
 using namespace std;
 
 int t04_deposit() {
+double p,x,y, temp;
+int k, ans;
+cin>>p>>x>>y>>k;
+temp = x*100+y;
+for (int z=0; z<k; z++){
+    temp*=(1+p/100);
+    temp = floor(temp);
+}
+ans = (int) floor(temp);
+cout<<ans/100<<' '<<ans%100;
 
 };

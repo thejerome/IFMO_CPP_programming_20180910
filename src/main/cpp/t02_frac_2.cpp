@@ -13,10 +13,15 @@
 #include "t02_frac_2.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 
 using namespace std;
 
 int t02_frac_2() {
+double n;
+cin>>n;
+//cout<<(n-floor(n)-(n*10-(floor(n*10)))/10)*10;
+cout<<((int) floor(n*10)) % 10;
 
 };
