@@ -25,5 +25,18 @@
 using namespace std;
 
 int t10_unique() {
+    int n;
+    cin>>n;
+    int A[n];
+    for(int i=0; i<n; i++){
+        cin>>A[i];}
+    for(int i=0; i<n; i++){
+        int p=0;
+        for (int k=0; k<n; k++){
+            if (A[i]==A[k])
+                p++;}
+        if (p==1)
+            cout<<A[i]<<' ';}
+    return 0;
 
 }
