@@ -32,7 +32,7 @@ int a[n];
     {
         cin >> a[i];
     }
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n; i++)
     {
         int p=0;
         for (int j=0; j<n; j++)
@@ -42,7 +42,7 @@ int a[n];
                 p++;
             }
         }
-        if (p=1)
+        if (p==1)
         {
             cout << a[i] << " ";
         }

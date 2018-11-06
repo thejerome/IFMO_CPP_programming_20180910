@@ -28,12 +28,14 @@ int a[n];
     {
         cin >> a[i];
     }
-    for(int i=0; i<n; i++)
+    for(int i=1; i<n; i++)
     {
-        if(a[i]*a[i+1]>0)
+        if(a[i]*a[i-1]>0)
         {
-            cout << a[i] << " ";
+            cout << a[i-1] << " " << a[i];
+
+            break;
         }
-        break;
+
     }
 }
