@@ -19,5 +19,19 @@
 using namespace std;
 
 int t06_different() {
-
+int n, now, count;
+cin>>n;
+count = 1;
+int m[n];
+for(int z=0; z<n; z++){
+    cin>>m[z];
+}
+now = m[0];
+for(int z=1; z<n; z++){
+    if(m[z]!=now){
+        count++;
+        now=m[z];
+    }
+}
+cout<<count;
 }

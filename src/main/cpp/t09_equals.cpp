@@ -26,5 +26,17 @@
 using namespace std;
 
 int t09_equals() {
-
+int n, counter;
+cin>>n;
+int m[n];
+for (int z=0; z<n; z++){
+    cin>>m[z];
+}
+counter = 0;
+for (int z=0; z<n-1; z++){
+    for (int i=z+1; i<n; i++){
+        if(m[z]==m[i]) counter++;
+    }
+}
+cout<<counter;
 }

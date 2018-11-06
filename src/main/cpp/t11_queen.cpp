@@ -39,5 +39,27 @@
 using namespace std;
 
 int t11_queen() {
+struct pos{
+    int x,y;
+};
+int x,y;
 
+pos m[8];
+for(int z=0; z<8; z++){
+    cin>>m[z].x>>m[z].y;
+}
+
+for(int z=0; z<8; z++){
+    for (int i=0; i<8; i++){
+        if(i!=z) {
+            if (m[z].x == m[i].x ||
+                m[z].y == m[i].y ||
+                abs(m[z].y - m[i].y) == abs(m[z].x - m[i].x)) {
+                cout << "YES";
+                return 0;
+            }
+        }
+    }
+}
+ cout<<"NO";
 }
