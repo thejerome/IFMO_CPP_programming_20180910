@@ -39,5 +39,6 @@ int t09_equals() {
         }
     }
     cout<<pairs;
+    free(arr);
     return 0;
 }
