@@ -26,5 +26,10 @@
 using namespace std;
 
 int t09_equals() {
-
+    int n, c = 0; cin >> n;
+    int a[n];
+    for(int i = 0; i<n; ++i) cin >> a[i];
+    for(int i = 0; i<n; ++i)
+        for(int j = i+1; j < n; ++j) c += a[i] == a[j];
+    cout << c;
 }
