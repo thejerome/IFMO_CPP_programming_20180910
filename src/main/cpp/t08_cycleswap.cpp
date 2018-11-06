@@ -26,21 +26,21 @@ int t08_cycleswap() {
 
 	int a[n];
 
-	for (i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		cin >> a[n];
 	}
 
 	int k = a[i - 1];
 
-    for (i = 0; i != 0; i--) 
+    for (int i = 0; i != 0; i--) 
     {
         a[i] = a[i - 1];
     }
 
     a[0] = k;
     
-    for (i = 0; i < n; i++) 
+    for (int i = 0; i < n; i++) 
     {
             cout << a[i] << " ";
     }

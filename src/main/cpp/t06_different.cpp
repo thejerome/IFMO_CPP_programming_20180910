@@ -26,11 +26,11 @@ int t06_different() {
 
 	int a[n];
 
+	int c = 0;
+
 	for (int i = 0; i < n; i++)
 		{
 			cin >> a[i];
-
-			int c = 0;
 
 			if (a[i + 1] != a[i])
 			{

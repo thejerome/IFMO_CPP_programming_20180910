@@ -27,7 +27,7 @@ using namespace std;
 
 int t09_equals() {
 
-	int n;
+	int n, k = 0;
 
 	cin >> n;
 
@@ -40,7 +40,8 @@ int t09_equals() {
 
 	for (int i = 0; i < n; i++) 
 	{
-         for (j = i + 1; j < n; j++) {
+         for (j = i + 1; j < n; j++) 
+         {
              if ((a[i] == a[j]) && (i != j)) 
              {
                  k += 1;
