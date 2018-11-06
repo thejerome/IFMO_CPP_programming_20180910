@@ -26,5 +26,18 @@
 using namespace std;
 
 int t09_equals() {
-
+    int *arr, len, cur, pairs=0;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    for (int i = 0; i < len; i++){
+        cin >> arr[i];
+    }
+    for(int i = 0; i < len-1; i++){
+        cur = arr[i];
+        for(int j = i+1; j < len; j++ ){
+            if (cur==arr[j]){pairs++;}
+        }
+    }
+    cout<<pairs;
+    return 0;
 }
