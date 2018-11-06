@@ -39,5 +39,21 @@
 using namespace std;
 
 int t11_queen() {
-
+    //int N;
+    //cin >> N;
+    int A[8][2];
+    int count=0;
+    for (int i=0; i<8; i++){
+        cin >> A[i][0];
+        cin >> A[i][1];
+        for (int j = 0; j < i; j++) {
+            if (A[j][0] == A[i][0] || A[j][1] == A[i][1] || (A[j][0] - A[i][0]) == (A[j][1] - A[i][1]) || (A[j][0] - A[i][0]) == (A[i][1] - A[j][1])) count++;
+            //cout << (A[j][0] - A[i][0]) << " " << (A[j][1] - A[i][1])<< endl;
+        }
+        //cout << A[i][0] << " " << A[i][1] << endl;
+        //cout <<count << endl;
+    }
+    if (count > 0) cout << "YES";
+    else cout << "NO";
+    return 0;
 }
