@@ -43,5 +43,6 @@ int t05_minodd() {
     else {
         cout << minodd;
     }
+    free(arr);
     return 0;
 }
