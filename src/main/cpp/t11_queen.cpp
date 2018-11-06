@@ -37,7 +37,22 @@
 
 
 using namespace std;
-
+struct Coordinates {
+    int x,y;
+};
 int t11_queen() {
-
+    Coordinates c[8];
+    for (auto &i:c)
+        cin >> i.x >> i.y;
+    bool result=false;
+    for (int i=0;i<8;i++) {
+        for (int j=i+1;j<8;j++)
+            if(c[i].x==c[j].x||c[i].y==c[j].y||
+               abs(c[i].x-c[j].x)==abs(c[i].y-c[j].y))
+                result=true;
+    }
+    if (result)
+        cout << "YES";
+    else
+        cout << "NO";
 }
