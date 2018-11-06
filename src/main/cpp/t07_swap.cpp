@@ -20,4 +20,27 @@ using namespace std;
 
 int t07_swap() {
 
+	int n;
+
+	cin >> n;
+
+	int a[n];
+
+	for (int i = 0; i < n; i++)
+	{
+		int f = 1 - i + (i / 2) * 4;
+
+ 		if (f >= n) 
+ 		{
+ 			f = i;
+ 		}
+
+ 		cin >> a[f];
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << a[i] << " "; 
+	}
+
 }
