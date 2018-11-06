@@ -16,9 +16,13 @@
 #include "t01_frac.h"
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
 int t01_frac() {
+double n;
+cin>>n;
 
+cout<<n-floor(n);
 };

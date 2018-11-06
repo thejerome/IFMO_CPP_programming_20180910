@@ -22,5 +22,16 @@
 using namespace std;
 
 int t05_ave() {
-
+int sum, n, count;
+double ans;
+n=-1;
+count = 0;
+while(n){
+    cin>>n;
+    if(n){
+        count++;
+        ans+=n;
+    }
+}
+cout<<fixed<<setprecision(11)<<(ans/count);
 };
