@@ -19,5 +19,19 @@
 using namespace std;
 
 int t07_swap() {
-
+    int *arr, len, swp;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    for (int i=0; i < len; i++){
+        cin >> arr[i];
+    }
+    for (int i = 0; i < len-1; i+=2){
+        swp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = swp;
+    }
+    for (int i = 0; i < len; i++){
+        cout << arr[i] << " ";
+    }
+    return 0;
 }
