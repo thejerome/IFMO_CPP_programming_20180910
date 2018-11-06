@@ -25,5 +25,31 @@
 using namespace std;
 
 int t10_unique() {
-
+	int n;
+	cin >> n;
+	int a[n];
+	bool b[n];
+	int f = 0;
+	for (int i = 0; i < n; i++)
+	{
+		int m;
+		cin >> m;
+		a[i] = m;
+		b[i] = false;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (a[i] == a[j] && i != j)
+				b[i] = true;
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (b[i] == false)
+			cout << a[i]<< " ";
+	}
+	
+	return 0;
 }
