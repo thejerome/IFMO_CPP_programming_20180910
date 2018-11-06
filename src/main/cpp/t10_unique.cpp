@@ -25,5 +25,28 @@
 using namespace std;
 
 int t10_unique() {
-
+    int *arr, cur;
+    unsigned int len;
+    bool *uar;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    uar = (bool*) calloc(len, sizeof(bool));
+    for(int i = 0; i < len; i++){
+        cin >> arr[i];
+    }
+    for(int i = 0; i < len; i++){
+        cur = arr[i];
+        for(int j = i+1; j < len; j++){
+            if (arr[j] == cur){
+                uar[i]=true;
+                uar[j]=true;
+            }
+        }
+    }
+    for (int i = 0; i < len; i++){
+        if (!uar[i]){
+            cout<<arr[i]<<" ";
+        }
+    }
+    return 0;
 }
