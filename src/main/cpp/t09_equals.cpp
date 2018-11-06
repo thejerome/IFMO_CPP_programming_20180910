@@ -26,5 +26,22 @@
 using namespace std;
 
 int t09_equals() {
+    int n,t=0;
+    cin	>>	n;
+    int v[n];
+    for	(int m=0;m<n;m++){
+        cin	>>	v[m];
 
+    }
+
+    for	(int	m=0;m<n;m++){
+        for    (int    i=m+1;i<n;i++){
+            if    (v[m]==v[i]){
+                t++;
+            }
+
+        }
+    }
+
+    cout	<<	t;
 }
