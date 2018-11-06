@@ -28,5 +28,6 @@ int t01_even() {
             cout << arr[i]<< " ";
         }
     }
+    free(arr);
     return 0;
 }
