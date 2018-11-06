@@ -20,13 +20,11 @@ using namespace std;
 
 int t06_different() {
 
-	int n;
+	int n, c = 0;
 
 	cin >> n;
 
 	int a[n];
-
-	int c = 0;
 
 	for (int i = 0; i < n; i++)
 		{
@@ -37,6 +35,7 @@ int t06_different() {
 				c += 1; 
 			}
 		}
-		cout << c;
+
+	cout << c;
 
 }

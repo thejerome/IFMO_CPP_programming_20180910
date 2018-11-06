@@ -47,6 +47,10 @@ int t05_minodd() {
 			{
 				cout << a[i] << " ";
 			}
+			else
+			{
+				cout << "0";
+			}
 		}
 	}
 

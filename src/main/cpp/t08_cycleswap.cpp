@@ -20,7 +20,7 @@ using namespace std;
 
 int t08_cycleswap() {
 
-	int n, i;
+	int n, i, k;
 
 	cin >> n;
 
@@ -31,7 +31,7 @@ int t08_cycleswap() {
 		cin >> a[n];
 	}
 
-	int k = a[i - 1];
+	k = a[i - 1];
 
     for (i = 0; i != 0; i--) 
     {

@@ -30,7 +30,7 @@ int t01_even() {
 	{
 		cin >> a[i];
 
-		if ((i%2) != 0)
+		if ((i%2) == 0)
 		{
 			cout << a[i] << " ";
 		}

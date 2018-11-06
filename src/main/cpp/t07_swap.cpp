@@ -30,13 +30,23 @@ int t07_swap() {
 	{
 		cin >> a[i];
 
-		int k = 0;
+		
+
+		cout << a[i] << " ";
+	}
+
+	for (int i = 1; i < n; i += 2)
+	{
+		int k = -1;
 
 		k = a[i];
 		a[i] = a[i + 1];
 		a[i + 1] = k;
+	}
 
-		cout << a[i] << " ";
+	for (int i = 0; i < n; i++)
+	{
+		cout << a[i] << " "; 
 	}
 
 }
