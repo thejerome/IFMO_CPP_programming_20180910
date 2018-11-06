@@ -65,6 +65,5 @@ int t11_queen() {
 
     }
     cout << "NO";
-    free(arr);
     return 0;
 }
