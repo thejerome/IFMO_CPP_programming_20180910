@@ -26,7 +26,7 @@ using namespace std;
 
 int t10_unique() {
     int n; cin >> n;
-    int *a = new int[n];
+    int a[n];
     for(int i = 0; i<n; ++i) cin >> a[i];
     for(int i = 0; i<n; ++i) {
         bool b = true;

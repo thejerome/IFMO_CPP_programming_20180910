@@ -20,7 +20,7 @@ using namespace std;
 
 int t03_bigger() {
     int n; cin >> n;
-    int *a = new int[n];
+    int a[n];
     cin >> a[0];
     for(int i = 1; i < n; ++i) {
         cin >> a[i];
