@@ -32,5 +32,6 @@ int t04_neighbors() {
             break;
         }
     }
+    free(arr);
     return  0;
 }
