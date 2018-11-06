@@ -32,7 +32,7 @@ int t05_minodd() {
 	cin >> n;
 	//int a[n];
 	bool check = false;
-	int min = INT_MAX;
+	int min = 99999999;
 	for (int i = 0; i < n; i++)
 	{
 		int m;
