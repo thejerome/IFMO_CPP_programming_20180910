@@ -19,5 +19,19 @@
 using namespace std;
 
 int t07_swap() {
+    int	i=0,n;
+    cin	>>	n;
+    int v[n];
+    for	(int m=0;m<n;m++){
+        cin	>>	v[m];
+    }
+    for	(int	m=1;m<n;m+=2){
+        i=v[m];
+        v[m]=v[m-1];
+        v[m-1]=i;
+    }
 
+    for	(int m=0;m<n;m++){
+        cout    <<	v[m]<<    " ";;
+    }
 }

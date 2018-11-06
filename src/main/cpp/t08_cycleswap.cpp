@@ -19,5 +19,21 @@
 using namespace std;
 
 int t08_cycleswap() {
+    int	i,n,last;
+    cin	>>	n;
+    int v[n];
+    for	(int m=0;m<n;m++){
+        cin	>>	v[m];
+    }
+    last=v[n-1];
+    for	(int	m=	n-1;m>0;m--){
+        i=v[m-1];
+        v[m-1]=v[m];
+        v[m]=i;
+    }
+    v[0]=last;
 
+    for    (auto now    :    v){
+        cout<<now<<" ";
+    }
 }
