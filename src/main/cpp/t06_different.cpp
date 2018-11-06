@@ -31,5 +31,6 @@ int t06_different() {
         }
     }
     cout << unique;
+    free(arr);
     return 0;
 }
