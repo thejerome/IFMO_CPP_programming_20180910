@@ -43,7 +43,7 @@ int t05_minodd() {
 		{	
 			if ((a[i] < minVal) || (minVal % 2 == 0)) 
 			{
- 				min = a[i];
+ 				minVal = a[i];
  			}
 		}
 	}
