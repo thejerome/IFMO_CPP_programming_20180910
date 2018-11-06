@@ -48,5 +48,6 @@ int t10_unique() {
             cout<<arr[i]<<" ";
         }
     }
+    free(arr);
     return 0;
 }
