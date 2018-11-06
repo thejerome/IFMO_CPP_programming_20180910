@@ -29,5 +29,6 @@ int t03_bigger() {
             cout << arr[i]<<" ";
         }
     }
+    free(arr);
     return 0;
 }
