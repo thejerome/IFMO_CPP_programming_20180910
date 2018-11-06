@@ -19,5 +19,15 @@
 using namespace std;
 
 int t03_bigger() {
-
+    int *arr, len;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    cin >> arr[0];
+    for (int i = 1; i < len; i++){
+        cin >> arr[i];
+        if (arr[i] > arr[i-1]){
+            cout << arr[i]<<" ";
+        }
+    }
+    return 0;
 }
