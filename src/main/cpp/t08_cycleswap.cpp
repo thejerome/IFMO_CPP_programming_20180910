@@ -20,27 +20,27 @@ using namespace std;
 
 int t08_cycleswap() {
 
-	int n;
+	int n, i;
 
 	cin >> n;
 
 	int a[n];
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		cin >> a[n];
 	}
 
 	int k = a[i - 1];
 
-    for (int i = 0; i != 0; i--) 
+    for (i = 0; i != 0; i--) 
     {
         a[i] = a[i - 1];
     }
 
     a[0] = k;
     
-    for (int i = 0; i < n; i++) 
+    for (i = 0; i < n; i++) 
     {
             cout << a[i] << " ";
     }
