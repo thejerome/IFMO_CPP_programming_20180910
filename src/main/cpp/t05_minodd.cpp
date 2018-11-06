@@ -28,5 +28,20 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int *arr, len, minodd=INT16_MAX;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    for (int i = 0; i < len; i++){
+        cin >> arr[i];
+        if ((arr[i]%2!=0)&&(arr[i]<minodd)){
+            minodd = arr[i];
+        }
+    }
+    if (minodd == INT16_MAX){
+        cout << "0";
+    }
+    else {
+        cout << minodd;
+    }
+    return 0;
 }
