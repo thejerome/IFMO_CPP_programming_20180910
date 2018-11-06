@@ -27,6 +27,18 @@
 using namespace std;
 
 int t01_max() {
-    
+    int *arr, n, m, max=0, maxind=-1;
+    cin >> n >> m;
+    arr = (int*) malloc(sizeof(int)*n*m);
+    for(int i = 0; i<m*n; i++){
+        cin >> arr[i];
+    }
+    for (int i = 0; i < m*n; i++){
+        if (arr[i] > max){
+            max = arr[i];
+            maxind = i;
+        }
+    }
+    cout << maxind/m <<" "<< maxind%m;
     return 0;
 }
