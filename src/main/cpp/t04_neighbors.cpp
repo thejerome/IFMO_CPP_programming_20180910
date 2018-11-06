@@ -21,5 +21,17 @@
 using namespace std;
 
 int t04_neighbors() {
-
+    int *arr, len;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    cin >> arr[0];
+    for (int i = 1; i < len; i++){
+        cin >> arr[i];
+        if ( (arr[i] * arr [i-1]) >= 0){
+            cout << arr[i-1] << " " << arr[i];
+            break;
+        }
+    }
+    free(arr);
+    return  0;
 }

@@ -19,5 +19,18 @@
 using namespace std;
 
 int t06_different() {
-
+    int *arr, len, unique;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    cin >> arr[0];
+    unique = 1;
+    for (int i = 1; i < len; i++){
+        cin >> arr[i];
+        if (arr[i]!=arr[i-1]){
+            unique++;
+        }
+    }
+    cout << unique;
+    free(arr);
+    return 0;
 }

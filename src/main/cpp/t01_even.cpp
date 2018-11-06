@@ -19,5 +19,15 @@
 using namespace std;
 
 int t01_even() {
-
+    int *arr, len;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    for (int i = 0; i < len; i++){
+        cin >> arr[i];
+        if (i%2 == 0){
+            cout << arr[i]<< " ";
+        }
+    }
+    free(arr);
+    return 0;
 }

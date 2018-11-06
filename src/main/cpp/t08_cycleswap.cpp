@@ -19,5 +19,22 @@
 using namespace std;
 
 int t08_cycleswap() {
-
+    int *arr, len, prv;
+    cin >> len;
+    arr = (int*) malloc(sizeof(int)*len);
+    for(int i = 0; i < len; i++){
+        cin >> arr[i];
+    }
+    prv = arr[0];
+    for (int i = 1; i < len; i++){
+        int swp = arr[i];
+        arr[i] = prv;
+        prv = swp;
+    }
+    arr[0] = prv;
+    for (int i = 0; i < len; i++){
+        cout<<arr[i]<<" ";
+    }
+    free(arr);
+    return 0;
 }
