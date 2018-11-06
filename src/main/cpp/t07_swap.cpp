@@ -28,20 +28,14 @@ int t07_swap() {
 
 	for (int i = 0; i < n; i++)
 	{
-		cin >> a[i];
+		int f = 1 - i + (i / 2) * 4;
 
-		
+ 		if (f >= n) 
+ 		{
+ 			f = i;
+ 		}
 
-		cout << a[i] << " ";
-	}
-
-	for (int i = 1; i < n; i += 2)
-	{
-		int k = -1;
-
-		k = a[i];
-		a[i] = a[i + 1];
-		a[i + 1] = k;
+ 		cin >> a[f];
 	}
 
 	for (int i = 0; i < n; i++)

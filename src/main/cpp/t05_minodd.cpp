@@ -33,7 +33,7 @@ int t05_minodd() {
 
 	cin >> n;
 
-	int a[n];
+	int a[n], minVal = 0;
 
 	for (int i = 0; i < n; i++)
 	{
@@ -41,17 +41,20 @@ int t05_minodd() {
 
 		if ((a[i] % 2) != 0)
 		{	
-			int minVal = a[0];
-
-			if (a[i] < minVal)
+			if ((a[i] < minVal) || (minVal % 2 == 0)) 
 			{
-				cout << a[i] << " ";
-			}
-			else
-			{
-				cout << "0";
-			}
+ 				min = M[i];
+ 			}
 		}
 	}
+
+	if ((minVal % 2) != 0) 
+	{
+ 		cout << minVal;
+ 	}
+ 	else
+ 	{
+ 		cout << 0;
+ 	}
 
 }

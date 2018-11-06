@@ -20,7 +20,7 @@ using namespace std;
 
 int t06_different() {
 
-	int n, c = 0;
+	int n, c = 1;
 
 	cin >> n;
 
@@ -29,12 +29,15 @@ int t06_different() {
 	for (int i = 0; i < n; i++)
 		{
 			cin >> a[i];
-
-			if (a[i + 1] != a[i])
-			{
-				c += 1; 
-			}
 		}
+
+	for (int i = 1; i < n; i++)
+	{
+		if (a[i] != a[i - 1])
+		{
+			c++;
+		}
+	}
 
 	cout << c;
 
