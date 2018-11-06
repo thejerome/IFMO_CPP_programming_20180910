@@ -29,6 +29,29 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n, m, k;
+    cin >> n >> m;
+    int mat[n][m];
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) cin >> mat[i][j];
+    }
+    cin >> k;
+
+    int row_if_possible = 0, c = 0;
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            c = 0;
+            while(j < m && !mat[i][j]) {
+                c++;
+                j = (c == k) ? m : j + 1;
+            }
+        }
+        if(c == k) {
+            row_if_possible = i + 1;
+            i = n + 1;
+        }
+    }
+
+    cout << row_if_possible;
     return 0;
 }

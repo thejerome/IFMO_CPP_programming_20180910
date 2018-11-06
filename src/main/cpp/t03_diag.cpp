@@ -22,6 +22,19 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n; cin >> n;
+    int mat[n][n];
+    for(int i = 0; i < n; ++i)
+        for(int j = 0; j < n; ++j) mat[i][j] = 0;
+//    for(int i = 0; i<n; ++i) mat[i] = new int[n]{0};
+
+    for(int i = 0; i < n; ++i)
+        for(int j = i + 1; j < n; ++j) mat[i][j] = j - i;
+    for(int i = n-1; i >= 0; --i)
+        for(int j = i-1; j >= 0; --j) mat[i][j] = i - j;
+
+    for(int i = 0; i < n; ++i)
+        for(int j = 0; j < n; ++j)
+            cout << mat[i][j] << ' ';
     return 0;
 }

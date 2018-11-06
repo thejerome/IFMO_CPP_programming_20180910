@@ -25,6 +25,18 @@
 using namespace std;
 
 int t04_swap() {
-    
+    short n, m, ix, jx; cin >> n >> m;
+    int mat[n][m];
+    for(int i = 0; i < n; ++i)
+        for(int j = 0; j < m; ++j) cin >> mat[i][j];
+    cin >> ix >> jx;
+
+    for(int i = 0; i < n; ++i)
+        mat[i][ix] ^= mat[i][jx] ^= mat[i][ix] ^= mat[i][jx];
+
+    for(int i = 0; i < n; ++i)
+        for(int j = 0; j < m; ++j)
+            cout << mat[i][j] << ' ';
+
     return 0;
 }
