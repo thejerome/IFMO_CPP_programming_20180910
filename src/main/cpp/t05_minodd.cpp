@@ -27,6 +27,24 @@
 
 using namespace std;
 
-int t05_minodd() {
-
+int t05_minodd()
+{
+	int A, m = 0;
+	bool k = false;
+	cin >> A;
+	int Arr[A];
+	for (int i = 0; i < A; i++)
+		cin >> Arr[i];
+	for (int i = 0; i < A; i++)
+	{
+		if ((abs(Arr[i]) % 2 == 1) && ((Arr[i] < m) || (m == 0))) 
+		{
+			k = true;
+			m = Arr[i];
+		}
+	}
+	if (k == false)
+		cout << 0;
+	else
+		cout << m;
 }

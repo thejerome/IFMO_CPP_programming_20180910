@@ -18,6 +18,16 @@
 
 using namespace std;
 
-int t01_even() {
-
+int t01_even()
+{
+	int A;
+	cin >> A;
+	int Arr[A];
+	for (int i = 0; i < A; i++)
+		cin >> Arr[i];
+	for (int i = 0; i < A; i++)
+	{
+		if (i % 2 == 0)
+			cout << Arr[i] << " ";
+	}
 }

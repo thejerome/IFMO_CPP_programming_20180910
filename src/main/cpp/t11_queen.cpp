@@ -38,6 +38,18 @@
 
 using namespace std;
 
-int t11_queen() {
-
+int t11_queen()
+{
+	int N = 8, K = 0;
+	int Arr1[N], Arr2[N];
+	for (int i = 0; i < N; i++)
+		cin >> Arr1[i] >> Arr2[i];
+	for (int i = 0; i < N - 1; i++)
+		for (int j = i + 1; j < N; j++)
+			if ((Arr1[i] == Arr1[j]) || (Arr2[i] == Arr2[j]) || (abs(Arr1[i] - Arr1[j]) == abs(Arr2[i] - Arr2[j])))
+				K = 1;
+	if (K == 1)
+		cout << "YES";
+	else
+		cout << "NO";
 }
