@@ -28,5 +28,13 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int n; cin >> n;
+    int *a = new int[n];
+    for(int i = 0; i < n; ++i) cin >> a[i];
+    int min = 0;
+    for(int i = 0; i < n; ++i) {
+        if(a[i]%2 && !min) min = a[i];
+        if(a[i]%2 && a[i] < min) min = a[i];
+    }
+    cout << min;
 }
