@@ -19,5 +19,12 @@
 using namespace std;
 
 int t01_even() {
-
+int n;
+cin>>n;
+int m[n];
+for(int z=0; z<n; z++){
+    cin>>m[z];
+}
+for(int z=0; z<n; z+=2)
+    cout<<m[z]<<' ';
 }

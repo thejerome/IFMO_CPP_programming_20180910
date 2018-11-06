@@ -25,5 +25,22 @@
 using namespace std;
 
 int t10_unique() {
+int n;
+bool found = false;
+cin>>n;
+int m[n];
+for (int z=0; z<n; z++){
+    cin>>m[z];
+}
+for(int z=0; z<n; z++){
+    found=false;
+    for(int i=0; i<n; i++){
+        if(m[z]==m[i]&&z!=i){
+            found = true;
+            break;
+        }
+    }
+    if(!found) cout<<m[z]<<' ';
+}
 
 }
