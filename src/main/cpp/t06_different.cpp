@@ -23,8 +23,8 @@ int t06_different() {
     cin>>n;
     int a[n];
     cin>>a[0];
-    k=0;
-    for(int i=0;i<n;i++) { cin>>a[i]; if (a[i]!=a[i-1]) {k++;} }
+    k=1;
+    for(int i=1;i<n;i++) { cin>>a[i]; if (a[i]!=a[i-1]) {k++;} }
     cout<<k;
     
 }
