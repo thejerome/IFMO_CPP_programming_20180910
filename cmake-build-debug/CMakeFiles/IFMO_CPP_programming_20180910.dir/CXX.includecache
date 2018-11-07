@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_queen.cpp
+t11_queen.h
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_queen.h
+iostream
+-
+cmath
+-
+
+C:/Users/dzyat/Documents/GitHub/IFMO_CPP_programming_20180910/src/main/cpp/t11_queen.h
+
