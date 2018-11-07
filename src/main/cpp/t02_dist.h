@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-30.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T02_DIST_H
+#define IFMO_CPP_PROGRAMMING_20180910_T02_DIST_H
+
+
+int t02_dist();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T02_DIST_H
