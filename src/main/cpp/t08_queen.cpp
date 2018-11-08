@@ -79,4 +79,5 @@ void recursion(bool *horizont, bool *vertical, bool *main_diag, bool *secondary_
     }
     return;
 
+
 }
