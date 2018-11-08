@@ -19,9 +19,35 @@
 #include <iostream>
 
 
+
 using namespace std;
 
 int t07_snake() {
-    
-    return 0;
+	int n, m, count = 1;
+	cin >> n >> m;
+	int a[n][m];
+	for (int i = 0; i < n; i++)
+	{
+		if (i % 2 == 0) {
+			for (int j = 0; j < m; j++)
+			{
+				a[i][j] = count++;
+			}
+		}
+		else
+			for (int j = m - 1; j > -1; j--)
+			{
+				a[i][j] = count++;
+			}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout.width(4);
+			cout << a[i][j];
+		}
+		cout << endl;
+	}
+	return 0;
 }
