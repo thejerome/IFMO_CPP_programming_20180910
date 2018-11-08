@@ -22,10 +22,11 @@
 using namespace std;
 
 int t09_spiral() {
-	int n, m, count = 1, k = 0, g = 0;
+	int n, m, k = 0, g = 0;
 	cin >> n >> m;
 	int a[n][m];
 	if (!(n == 1 && m == 1)) {
+		int count = 1;
 		while (count < n*m) {
 			for (int j = k; j < m - g; j++)
 			{
