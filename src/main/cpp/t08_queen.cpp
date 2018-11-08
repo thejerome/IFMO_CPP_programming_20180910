@@ -64,7 +64,7 @@ void recursion(bool *horizont, bool *vertical, bool *main_diag, bool *secondary_
         for (int i = i0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if ((!horizont[i]) && (!vertical[j]) && (!main_diag[i + j]) && (!secondary_diag[i + (N - 1 - j)])) {
-K
+
                     horizont[i] = true; vertical[j] = true;
                     main_diag[i + j] = true; secondary_diag[i + (N - 1 - j)] = true;
 
