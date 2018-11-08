@@ -24,13 +24,14 @@
 using namespace std;
 
 int t02_star() {
-	int n, m, nmax = 101, mmax = 101, N = 0;
+	int n, m;
 	cin >> n;
-	string a[n][n];
+
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
+			string a[n][n];
 			a[i][j] = ".";
 			if (i == j || i == n - j - 1 || i == n / 2 && n % 2 == 1 || j == n / 2 && n % 2 == 1)
 			{
