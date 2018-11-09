@@ -1,0 +1,9 @@
+script:
+- chmod +x run_test.sh
+- chmod +x run_tests.sh
+- ./run_tests.sh ./run_tests.sh t01_min t02_dist t03_circle t04_area t05_power t06_sum t07_fib t08_queen
+
+# disabling email notifications
+notifications:
+  email: false
+  webhooks: http://83.243.70.130:8080/rest/travis/hook
