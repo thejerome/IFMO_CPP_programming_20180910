@@ -22,25 +22,25 @@
 using namespace std;
 
 int t03_diag() {
-    int n;
-    cin>>n;
-    int a[100][100];
-    for(int i=0;i<n;++i){
-        for(int j=0;j<n;++j){
+    int    n;
+    cin    >>    n;
+    int    a[100][100];
+    for    (int    i = 0 ; i<n ; i++){
+        for    (int    j = 0; j<n ; j++){
             if(i==j){
                 a[i][j]=n-n;
-            }else if(i<j){
-                a[i][j]=j-1;
-            }else if(i>j){
+            }else   if(i < j) {
+                a[i][j]=j-i;
+            }else    if(i > j){
                 a[i][j]=i-j;
             }
         }
     }
-    for(int i=0;i<n;++i){
-        for(int j=0;j<n;++j){
-            cout<<a[i][j];
+    for    (int    i = 0 ; i<n ; i++){
+        for    (int    j = 0; j<n ; j++){
+            cout    <<    a[i][j] <<    " ";
         }
-        cout<<endl;
+        cout    << endl;
     }
     return 0;
 }
