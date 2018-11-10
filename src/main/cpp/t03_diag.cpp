@@ -33,6 +33,5 @@ int t03_diag() {
 		cout << endl;
 	}
 
-	return 0;
     return 0;
 }
