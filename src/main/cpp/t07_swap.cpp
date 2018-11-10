@@ -19,5 +19,16 @@
 using namespace std;
 
 int t07_swap() {
-
+    int n, dop;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    for(int k=0; k<n-1; k=k+2){
+        dop=arr[k+1];
+        arr[k+1]=arr[k];
+        arr[k]=dop;
+        cout<<arr[k]<<" "<<arr[k+1]<<" ";
+    }if(n%2==1)cout<<arr[n-1];
 }
