@@ -26,5 +26,21 @@
 using namespace std;
 
 int t09_equals() {
-
+	int number, a[100], pairs = 0, quantaty;
+	cin >> number;
+	for (int i = 0; i < number; i++)
+		cin >> a[i];
+	for (int i = 0; i < number - 1; i++) {
+		if (a[i] == 0)
+			continue;
+		quantaty = 1;
+		for (int j = i + 1; j < number; j++) {
+			if (a[i] == a[j]) {
+				quantaty++;
+				a[j] = 0;
+			}
+		}
+		pairs += quantaty * (quantaty - 1) / 2;
+	}
+	cout << pairs << endl;
 }

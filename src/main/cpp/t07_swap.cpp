@@ -19,5 +19,12 @@
 using namespace std;
 
 int t07_swap() {
-
+	int a[100], n = 0;
+	cin >> n;
+	for (int i = 1; i < n ; i=i -(i % 2) + 3*((i+1) % 2))
+		cin >> a[i];
+	if (n % 2 == 1)
+		cin >> a[n - 1];
+	for (int i = 0; i < n; i++)
+		cout << a[i] << " ";
 }
