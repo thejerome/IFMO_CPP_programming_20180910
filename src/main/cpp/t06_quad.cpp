@@ -28,5 +28,5 @@ int t06_quad() { double a,b,c,d,x1,x2,x;
     d=b*b-4*a*c;
     if (d==0){x=-b/(2*a); cout<<x;}
     if (d>0){x1=(-b+sqrt(d))/(2*a); x2=(-b-sqrt(d))/(2*a); cout<<x2<<" "<<x1;}
-
+    return 0;
 };

@@ -50,5 +50,5 @@ int t07_quad2() {double a, b, c, x1, x2, d;
     else
     { cout << x2 << " " << x1; }
     return 0;
-
+    return 0;
 };

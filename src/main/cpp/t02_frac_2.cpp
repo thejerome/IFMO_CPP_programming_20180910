@@ -21,5 +21,5 @@ int t02_frac_2() {float a;
     cin>>a;
     a=a*10;
     cout<<int(a)%10;
-
+    return 0;
 };

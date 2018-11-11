@@ -32,5 +32,5 @@ int t05_ave() { long double k,n,s;
     }
     s=s/k;
     cout<<fixed<<setprecision(11)<<s;
-
+    return 0;
 };
