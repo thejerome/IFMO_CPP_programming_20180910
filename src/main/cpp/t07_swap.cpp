@@ -22,14 +22,14 @@ int t07_swap() {
     int N;
     cin >> N;
     int arr[N];
-    int m=-1;
+    int z=0;
     for ( int i = 0; i < N; i++) {
         cin >> arr[i];
     }
     for ( int i = 0; i < N-1; i=i+2) {
-        m=arr[i];
+        z=arr[i];
         arr[i] = arr[i+1];
-        cout << arr[i] << " "<< m <<" ";
+        cout << arr[i] << " "<< z <<" ";
     }
     if (N%2==1){
          cout << arr[N-1];
