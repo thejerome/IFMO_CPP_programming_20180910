@@ -33,7 +33,7 @@ int t07_snake() {
         if(i+1 < n)
             for(int j = m-1; j >= 0; --j) mat[i+1][j] = c++;
     }
-
+    cout.width(4);
     for(int i = 0; i < n; ++i)
         for(int j = 0; j < m; ++j)
             cout << mat[i][j] << ' ';
