@@ -19,17 +19,18 @@
 using namespace std;
 
 int t01_even() {
-    int i,k;
-    cin>>i;
+    int i, k;
+    cin >> i;
     i--;
     int a[i];
-    k=0;
-    while (k<=i) {
-        cin>>a[k];
+    k = 0;
+    while (k <= i) {
+        cin >> a[k];
         k++;
     }
-    k=0;
-    while (k<=i) {
-        cout<<a[k]<<' ';
-        k=k+2;
+    k = 0;
+    while (k <= i) {
+        cout << a[k] << ' ';
+        k = k + 2;
+    }
 }
