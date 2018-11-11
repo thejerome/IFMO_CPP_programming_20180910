@@ -39,4 +39,5 @@ int t05_minodd() {
     if (min==17000000)
         min=0;
     cout<<min;
+    return 0;
 }

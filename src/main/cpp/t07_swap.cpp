@@ -44,4 +44,5 @@ int t07_swap() {
             cout<<a[j]<<' ';
         }
     }
+    return 0;
 }

@@ -36,4 +36,5 @@ int t09_equals() {
             if(A[i]==A[k])
                 b++;
     cout<<b;
+    return 0;
 }

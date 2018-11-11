@@ -33,4 +33,5 @@ int t01_even() {
         cout << a[k] << ' ';
         k = k + 2;
     }
+    return 0;
 }

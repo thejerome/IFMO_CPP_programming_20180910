@@ -31,4 +31,5 @@ int t06_different() {
         n=m;
     }
     cout<<count;
+    return 0;
 }

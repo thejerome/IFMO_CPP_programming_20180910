@@ -38,4 +38,5 @@ int t10_unique() {
             }}
         if (b==0){cout<<arr[i]<<' ';}
     }
+    return 0;
 }

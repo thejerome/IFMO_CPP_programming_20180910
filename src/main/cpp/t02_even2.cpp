@@ -30,4 +30,5 @@ int t02_even2() {
             cout << a[k]<<' ';
         }
     }
+    return 0;
 }
