@@ -40,7 +40,6 @@ using namespace std;
 int t05_kdiag() {
 	int n, i, j, k;
     
-    cout << ": ";
     cin >> n;
     
     int a[n][n];
@@ -59,7 +58,6 @@ int t05_kdiag() {
                 cout << a[i][j] << " ";
             }
         }
-        cout << endl;
     }
     
     return 0;

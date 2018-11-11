@@ -29,18 +29,15 @@ using namespace std;
 int t01_max() {
     int n, m, i, j, maxI, maxJ, maxVal, c;
     
-    cin >> n;
-    
-    cout << ": ";
-    cin >> m;
+    cin >> n >> m;
     
     int a[n][m];
     
     for (i = 0; i < n; i++){
         for (j = 0; j < m; j++){
             cin >> a[i][j];
-            }
         }
+    }
     
     maxVal = a[0][0];
     maxI = 0;
@@ -67,13 +64,6 @@ int t01_max() {
         }
     }
     
-    for (i = 0; i < n; i++){
-        for (j = 0; j < m; j++){
-            cout << a[i][j] << " ";
-        }
-        cout << endl;
-    }
-        
     cout << maxI << " " << maxJ << " ";
     
     return 0;

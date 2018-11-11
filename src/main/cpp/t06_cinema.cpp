@@ -55,11 +55,17 @@ int t06_cinema() {
                 c = 0;
             }
         }
-        if (min == (n + 1)){
-            min = 0;
+        if ((c >= k) && (i++ < min)){
+            min = i++;
         }
-        cout << min;
+        c = 0;
     }
+
+    if (min = (n + 1)){
+        min = 0;
+    }
+
+    cout << min;
     
     return 0;
 }
