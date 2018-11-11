@@ -29,6 +29,37 @@
 using namespace std;
 
 int t06_cinema() {
+    int n, m, i, j, k, c = 0;
+    
+    cin >> n >> m;
+    
+    int a[n][m];
+    int min = n + 1;
+    
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; i++){
+            cin >> a[i][j];
+        }
+    }
+    
+    cin >> k;
+    
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+            if (a[i][j] == 0){
+                c++;
+            }else{
+                if ((c >= k) && (i++ < min)){
+                    min = i++;
+                }
+                c = 0;
+            }
+        }
+        if (min == (n + 1)){
+            min = 0;
+        }
+        cout << min;
+    }
     
     return 0;
 }

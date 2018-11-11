@@ -1,0 +1,3 @@
+/Users/user/Documents/IFMO_CPP_programming_20180910/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/user/Documents/IFMO_CPP_programming_20180910/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/user/Documents/IFMO_CPP_programming_20180910/cmake-build-debug/CMakeFiles/IFMO_CPP_programming_20180910.dir
