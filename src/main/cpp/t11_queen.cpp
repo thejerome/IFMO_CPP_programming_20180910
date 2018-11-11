@@ -39,5 +39,19 @@
 using namespace std;
 
 int t11_queen() {
-
+    int arr[8][2];
+    int X=0;
+    for (int i=0; i<8; i++){
+        cin >> arr[i][0];
+        cin >> arr[i][1];
+        for (int k = 0; k < i; k++) {
+            if (arr[k][1]==arr[i][1] || (arr[k][0]==arr[i][0])  || (arr[k][0] - arr[i][0])==(arr[i][1] - arr[k][1]) || (arr[k][0] - arr[i][0])==(arr[k][1] - arr[i][1])) X++;
+        }
+    }
+    if (X > 0){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
 }

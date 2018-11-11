@@ -19,5 +19,17 @@
 using namespace std;
 
 int t06_different() {
-
+    int n, diffscore;
+    diffscore=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    for(int k=0; k<n; k++){
+        if(arr[k]!=arr[k+1]){
+            diffscore++;
+        }
+    }
+    cout<<diffscore<<" ";
 }

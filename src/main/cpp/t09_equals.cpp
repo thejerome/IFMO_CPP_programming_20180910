@@ -26,5 +26,16 @@
 using namespace std;
 
 int t09_equals() {
-
+    int n, X;
+    X = 0;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        for (int k = 0; k < i; k++) {
+            if (arr[k] == arr[i]) {
+                X = X + 1;
+            }
+        }
+    }cout<<X;
 }
