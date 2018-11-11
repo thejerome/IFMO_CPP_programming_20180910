@@ -21,5 +21,15 @@
 using namespace std;
 
 int t06_quad() {
-
+    float k,n,s;
+    cin>>n;
+    k=0;
+    s=n;
+    while (n!=0) {
+        cin>>n;
+        s=s+n;
+        k++;
+    }
+    s=s/k;
+    cout<<s;
 };
