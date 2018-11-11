@@ -28,8 +28,9 @@ int t05_ave() {
         sum+=p;
         m++;
         cin>>p;}
-    double result= double(sum)/m;
+    double  result= double(sum)/m;
     cout<<fixed<<setprecision(11)<<result;
+
     return 0;
 
 };

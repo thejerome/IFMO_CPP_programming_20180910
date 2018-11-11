@@ -24,6 +24,7 @@ using namespace std;
 int t04_deposit() {
     int P,X,Y,K,n,m;
     cin>>P>>X>>Y>>K;
+
     n=0, m=100*X+Y;
     while(n<K){
         m*=1+0.01*P;
@@ -31,6 +32,7 @@ int t04_deposit() {
     X = m/100;
     Y = m%100;
     cout<<X<<' '<<Y;
+
     return 0;
 
 };

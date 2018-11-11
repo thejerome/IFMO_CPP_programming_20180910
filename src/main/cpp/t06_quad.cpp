@@ -23,7 +23,8 @@ using namespace std;
 int t06_quad() {
     double A,B,C;
     cin>>A>>B>>C;
-     double D=B*B-4*A*C;
+
+    double D=B*B-4*A*C;
      if (D==0)
 
          cout<<(-B)/(2*A);
