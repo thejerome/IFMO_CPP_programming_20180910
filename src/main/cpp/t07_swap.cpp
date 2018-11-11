@@ -19,10 +19,9 @@
 using namespace std;
 
 int t07_swap() {
-    int N;
+    int N, z;
     cin >> N;
     int arr[N];
-    int z=0;
     for ( int i = 0; i < N; i++) {
         cin >> arr[i];
     }
