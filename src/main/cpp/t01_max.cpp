@@ -27,6 +27,26 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n, m;
+    cin >> n >> m;
+    int mat[n][m];
+    for(int i = 0; i < n; ++i)
+        for(int j = 0; j < m; ++j)
+            cin >> mat[i][j];
+
+    int max = mat[0][0], idx = -1, jdx = -1;
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            if(max < mat[i][j]) {
+                idx = i;
+                jdx = j;
+                max = mat[i][j];
+            }
+        }
+    }
+
+    if(max != mat[0][0]) cout << idx << ' ' << jdx;
+    else cout << 0 << ' ' << 0;
+
     return 0;
 }
