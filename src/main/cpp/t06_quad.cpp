@@ -26,6 +26,7 @@ int t06_quad() {
      double D=B*B-4*A*C;
      if (D==0)
 
+
          cout<<(-B)/(2*A);
     if (D>0)
         cout<< ((-B) - sqrt(D))/(2*A) << " "<< ((-B)+sqrt(D))/(2*A);

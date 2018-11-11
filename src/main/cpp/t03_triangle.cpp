@@ -23,6 +23,7 @@ int t03_triangle() {
     double A,B,C;
     cin >> A>>B>>C;
    double p=(A+B+C)/2;
+
     double S=sqrt(p*(p-A)*(p-B)*(p-C));
     cout<<fixed<<setprecision(4)<<S;
     return 0;
