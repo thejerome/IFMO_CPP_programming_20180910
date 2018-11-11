@@ -22,7 +22,7 @@ int t07_swap() {
     int N;
     cin >> N;
     int arr[N];
-    int m;
+    int m=-1;
     for ( int i = 0; i < N; i++) {
         cin >> arr[i];
     }
