@@ -22,6 +22,22 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n;
+	cin >> n;
+	int arr[n][n];
+	for (int k=0; k<n; k++) {
+		for (int i=0; i<n; i++) {
+			for (int j=0; j<n; j++) {
+				if ((i==j+k) || (i==j-k)) {
+					arr[i][j]=k;
+				}
+			}
+		}
+	}
+	for (int i=0; i<n; i++) {
+		for (int j=0; j<n; j++) {
+			cout << arr[i][j] << " ";
+		}
+	}
     return 0;
 }

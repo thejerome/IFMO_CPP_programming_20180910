@@ -23,10 +23,25 @@
 #include "t01_max.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t01_max() {
-    
+    int n,m, 
+    	maxX = -1, 
+    	maxY = -1, 
+        maxArr = 0;
+    cin >> n >> m;
+    int arr[n][m];
+    for (int i=0; i<n; i++) {
+    	for (int j=0; j<m; j++) {
+    		cin >> arr[i][j];
+    		if (arr[i][j]>maxArr && (maxX<i || maxY<j)) {
+    			maxArr = arr[i][j];
+    			maxX = i;
+    			maxY = j; 
+    		}
+    	}
+    }
+    cout << maxX << " " << maxY;
     return 0;
 }

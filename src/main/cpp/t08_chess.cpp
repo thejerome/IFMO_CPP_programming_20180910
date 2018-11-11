@@ -20,10 +20,27 @@
 #include "t08_chess.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t08_chess() {
-    
+    int n,m,
+    	k = 1;
+    cin >> n >> m;
+    int arr[n][m];
+    for (int i=0; i<n; i++) {
+    	for (int j=0; j<m; j++) {
+    		if ((i%2==0 && j%2==0) || (i%2!=0 && j%2!=0)) {
+    			arr [i][j] = k++;
+    		}
+    		else {
+    			arr[i][j] = 0;
+    		}
+    	}
+    }
+    for (int i=0; i<n; i++) {
+    	for (int j=0; j<m; j++) {
+    		cout << arr[i][j] << " ";
+    	}
+    }
     return 0;
 }

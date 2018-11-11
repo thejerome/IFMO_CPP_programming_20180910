@@ -18,10 +18,29 @@
 #include "t07_snake.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t07_snake() {
-    
+    int n,m;
+    cin >> n >> m;
+    int arr[n][m],
+        k = 1;
+    for (int i=0; i<n; i++) {
+    	if (i%2==0) {
+    		for (int j=0; j<m; j++) {
+    			arr[i][j] = k++;
+    		}
+    	}
+    	else {
+    		for (int j=m-1; j>=0; j--) {
+    			arr[i][j] = k++;
+    		}
+    	}
+    }
+    for (int i=0; i<n; i++) {
+    	for (int j=0; j<m; j++) {
+    		cout << arr[i][j] << " ";
+    	}
+    }
     return 0;
 }
