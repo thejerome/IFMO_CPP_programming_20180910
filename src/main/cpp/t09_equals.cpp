@@ -26,5 +26,21 @@
 using namespace std;
 
 int t09_equals() {
+    int N;
+    cin >> N;
+    int arr[N];
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];
+    }
+    int sch = 0;
+    for (int i = 0; i < N; i++) {
+        for (int m = i+1; m < N; m++) {
+            if (arr[i] == arr[m])
+                sch++;
 
+
+        }
+
+    }
+    cout << sch;
 }
