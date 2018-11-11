@@ -28,5 +28,15 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int k,y,min;
+    cin>>k;
+    min=17000000;
+    for (int i = 0; i < k; ++i) {
+        cin>>y;
+        if ((y<min) && (y%2!=0))
+            min=y;
+    }
+    if (min==17000000)
+        min=0;
+    cout<<min;
 }
