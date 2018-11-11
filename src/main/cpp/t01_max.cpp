@@ -27,7 +27,7 @@
 using namespace std;
 
 int t01_max() {
-    int n, m, i, j, maxI, maxJ, maxVal, c;
+    int n, m, i, j, maxI, maxJ, maxVal;
     
     cin >> n >> m;
     
@@ -42,7 +42,6 @@ int t01_max() {
     maxVal = a[0][0];
     maxI = 0;
     maxJ = 0;
-    c = 0;
     
     for (i = 0; i < n; i++){
         for (j = 0; j < m; j++){
