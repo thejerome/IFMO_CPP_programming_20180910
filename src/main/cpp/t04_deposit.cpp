@@ -31,5 +31,3 @@ int t04_deposit() {   double P,X,Y,K,B;
     }
     cout<<trunc(B/100)<<" "<<(B/100-trunc(B/100))*100;
 };
-return 0;
-};
