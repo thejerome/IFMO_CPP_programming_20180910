@@ -39,5 +39,22 @@
 using namespace std;
 
 int t11_queen() {
+    int arr[8], karr[8];
+    int rofl = 0;
+    for (int i = 0; i < 8; i++) {
+        cin >> arr[i] >> karr[i];
+    }
+    for (int i = 0; i < 8; i++) {
+        for (int k = i + 1; k < 7; k++) {
+            if (arr[i] == arr[k] || karr[i] == karr[k] || abs(arr[i] - arr[k]) == abs(karr[i] - karr[k])) {
+                rofl = 1;
+            }
 
+        }
+    }
+    if (rofl == 1) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 }
