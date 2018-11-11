@@ -50,20 +50,10 @@ int t01_max() {
                 maxVal = a[i][j];
                 maxI = i;
                 maxJ = j;
-                
-                if (c != 1){
-                    c++;
-                    
-                    if (maxI > i){
-                        maxI = i;
-                    }else if (maxI){
-                        cout << maxI << " " << maxJ << " ";
-                    }
-                }
             }
         }
     }
-    
+
     cout << maxI << " " << maxJ << " ";
     
     return 0;
