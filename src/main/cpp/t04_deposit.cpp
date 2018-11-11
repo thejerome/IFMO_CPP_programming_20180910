@@ -21,6 +21,13 @@
 
 using namespace std;
 
-int t04_deposit() {
-
+int t04_deposit() {   double P,X,Y,K,B;
+    cin>>P>>X>>Y>>K;
+    B=X*100+Y;
+    while(K!=0){
+        --K;
+        B=B*(1+P/100);
+        modf(B,&B);
+    }
+    cout<<trunc(B/100)<<" "<<(B/100-trunc(B/100))*100;
 };
