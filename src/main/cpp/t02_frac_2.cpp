@@ -23,5 +23,6 @@ int t02_frac_2() {
      n = N- int(N);
      n *=10;
     cout << int(n);
+    return 0;
 
 };

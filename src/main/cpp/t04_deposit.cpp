@@ -31,6 +31,6 @@ int t04_deposit() {
     X = m/100;
     Y = m%100;
     cout<<X<<' '<<Y;
-
+    return 0;
 
 };
