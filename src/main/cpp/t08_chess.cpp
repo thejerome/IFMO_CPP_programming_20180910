@@ -24,6 +24,32 @@
 using namespace std;
 
 int t08_chess() {
-    
+    int *arr, n, m, abss=1;
+    cin >> n >> m;
+    arr = (int*) calloc(sizeof(int), n*m);
+
+    for(int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            for (int j = 0; j < m; j += 2) {
+                arr[(m * i) + j] = abss;
+                abss++;
+            }
+        } else {
+            for (int j = 1; j < m; j += 2) {
+                arr[(m * i) + j] = abss;
+                abss++;
+            }
+        }
+    }
+
+    cout.width(4);
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout<<arr[(i*m)+j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    free(arr);
     return 0;
 }

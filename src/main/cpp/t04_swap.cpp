@@ -25,6 +25,28 @@
 using namespace std;
 
 int t04_swap() {
-    
+    int n, m, i, j, *arr;
+    int swp;
+    cin >> n >> m;
+    arr = (int*) malloc(sizeof(int)*n*m);
+    for(int a = 0; a < n*m; a++){
+        cin>>arr[a];
+    }
+    cin >> i >> j;
+
+    for(int a = 0; a < n; a++){
+        swp = arr[(a*m)+i];
+        arr[(a*m+i)] = arr[(a*m)+j];
+        arr[(a*m)+j] = swp;
+    }
+
+    for(int a = 0; a < n; a++){
+        for(int b = 0; b < m; b++){
+            cout<<arr[a*m+b]<<" ";
+        }
+        cout<<endl;
+    }
+
+    free(arr);
     return 0;
 }

@@ -29,6 +29,38 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int *arr, n, m, k;
+    int res = 0;
+    cin >> n >> m;
+    arr = (int*) malloc(sizeof(int)*n*m);
+    for(int i = 0; i < n*m; i++){
+        cin >> arr[i];
+    }
+    cin >> k;
+
+    for(int i = 0; i < n; i++){
+        int adj = 0;
+        int prev = 1;
+        for(int j = 0; j < m; j++){
+
+            if(arr[(m*i)+j] == 0) {
+                if (prev == 0) {
+                    adj++;
+                } else {
+                    adj = 1;
+                    prev = 0;
+                }
+            }
+
+            if((arr[(m*i)+j] == 1)&&(prev == 0)){
+                prev = 1;
+            }
+        }
+        if (adj >= k){ res = i+1; break;}
+    }
+
+        cout<<res;
+
+    free(arr);
     return 0;
 }

@@ -38,6 +38,35 @@
 using namespace std;
 
 int t05_kdiag() {
-    
+    int k, size, num = 0;
+    int *arr, *res;
+    cin >> size;
+    arr = (int*) malloc(sizeof(int)*size*size);
+    res = (int*) malloc(sizeof(int)*size*size);
+    for (int i = 0; i < size*size; i++){
+        cin >> arr[i];
+    }
+    cin >> k;
+
+    if (k < 0){
+        k = -k;
+        for(int i = 0; i+k < size; i++){
+            res[i] = arr[(i*size)+k+i];
+            num++;
+        }
+    }
+    else{
+        for (int i = 0; i+k < size; i++){
+            res[i] = arr[((k+i)*size)+i];
+            num++;
+        }
+    }
+
+    for (int i = 0; i < num; i++){
+        cout << res[i] << " ";
+    }
+
+    free(arr);
+    free(res);
     return 0;
 }

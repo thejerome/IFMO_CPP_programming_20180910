@@ -22,6 +22,42 @@
 using namespace std;
 
 int t09_spiral() {
-    
+
+    int *arr, n, m;
+    cin>>n>>m;
+    arr = (int*) calloc(sizeof(int), m*n);
+
+    int k = 1, i =0, j = -1;
+
+    if (n == 1 && m == 1)
+        arr[0] = 1;
+
+    while (k < n*m)
+    {
+        while ((j+1<m) && (arr[(i*m)+j+1]==0))
+        {
+            arr[(i*m)+(++j)] = k++;
+        }
+        while ((i+1<n) && (arr[((i+1)*m)+j]==0))
+        {
+            arr[((++i)*m)+j] = k++;
+        }
+        while ((j>0) && (arr[(i*m)+j-1]==0))
+        {
+            arr[(i*m)+(--j)] = k++;
+        }
+        while ((i>0) && (arr[((i-1)*m)+j]==0))
+        {
+            arr[((--i)*m)+j] = k++;
+        }
+    }
+
+    cout.width(4);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout<<arr[(i*m)+j]<<" ";
+        }
+        cout<<endl;
+    }
     return 0;
 }

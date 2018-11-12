@@ -22,6 +22,33 @@
 using namespace std;
 
 int t07_snake() {
-    
+    int *arr;
+    int n, m, abss=1;
+    cin >> n >> m;
+    arr = (int*) malloc(sizeof(int)*n*m);
+
+    for(int i = 0; i < n; i++){
+        if(i % 2 == 0){
+            for(int j = 0; j < m; j++){
+                arr[(i*m)+j]=abss;
+                abss++;
+            }
+        }
+        else{
+            for(int j = m-1; j >= 0; j--){
+                arr[(i*m)+j]=abss;
+                abss++;
+            }
+        }
+    }
+    cout.width(4);
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout<<fixed<<arr[(i*m)+j]<<" ";
+        }
+        cout<<endl;
+    }
+
+    free(arr);
     return 0;
 }
