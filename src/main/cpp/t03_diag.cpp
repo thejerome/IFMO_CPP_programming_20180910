@@ -22,6 +22,24 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n;
+    int *arr;
+    cin >> n;
+    arr = (int*) malloc(sizeof(int)*n*n);
+
+    for (int diag = 0; diag < n; diag++){ //proiti vse diagonali
+        for (int i = 0; i+diag < n; i++){
+            arr[(i * n) + diag + i] = diag;
+            arr[((diag + i) * n) + i] = diag;
+        }
+    }
+
+    for (int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << arr[(i*n)+j] << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }
