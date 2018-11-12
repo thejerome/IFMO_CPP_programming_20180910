@@ -22,6 +22,15 @@
 using namespace std;
 
 int t03_diag() {
-    
-    return 0;
+int n;
+cin>>n;
+int A[n][n];
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++)
+            for (int k=0; k<n; k++)
+                if (i==j+k||i==j-k){
+                A[i][j] = k;
+                cout<<A[i][j]<<' ';}
+return 0;
+
 }
