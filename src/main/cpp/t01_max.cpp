@@ -1,4 +1,4 @@
-//Найдите индексы первого вхождения максимального элемента.
+﻿//Найдите индексы первого вхождения максимального элемента.
 //
 //Формат входных данных
 //        Программа получает на вход размеры массива n и m, 
@@ -27,6 +27,33 @@
 using namespace std;
 
 int t01_max() {
-    
-    return 0;
+int q, w, max, qmax = 0, wmax=0;
+cin >> q >> w;
+int a[q][w];
+for (int i = 0; i < q; i++) {
+for (int j = 0; j < w; j++){
+cin >> a[i][j];
+}
+}
+max=a[0][0];
+for (int i = 0; i < q; i++) {
+for (int j = 0; j < w; j++) {
+if (a[i][j] > max) {
+qmax = i;
+wmax = j;
+max = a[i][j];
+}
+if (a[i][j] == max) {
+if (i < qmax) {
+qmax = i;
+wmax = j;
+}
+if (i == qmax && j < wmax) {
+wmax = j;
+}
+}
+}
+}
+cout << qmax << " " << wmax;
+return 0;
 }
