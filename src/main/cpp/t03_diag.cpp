@@ -41,5 +41,6 @@ int t03_diag() {
         cout << endl;
     }
 
+    free(arr);
     return 0;
 }

@@ -40,5 +40,7 @@ int t01_max() {
         }
     }
     cout << maxind/m <<" "<< maxind%m;
+
+    free(arr);
     return 0;
 }

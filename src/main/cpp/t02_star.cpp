@@ -48,5 +48,7 @@ int t02_star() {
         }
         cout<<endl;
     }
+
+    free(arr);
     return 0;
 }
