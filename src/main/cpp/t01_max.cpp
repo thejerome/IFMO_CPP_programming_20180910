@@ -33,18 +33,22 @@ int t01_max() {
     int max=arr[0][0],max_n=0,max_m=0;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            cin>>arr[i][j];
-            if(arr[i][j]>max) {
+            cin >> arr[i][j];
+        }
+    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(arr[i][j]>max){
                 max_n=i;
                 max_m=j;
                 max=arr[i][j];
             }
-            if(arr[i][j]==max) {
-                if(i<max_n) {
+            if(arr[i][j]==max){
+                if(i<max_n){
                     max_n=i;
                     max_m=j;
                 }
-                if(i==max_n&&j<max_m) {
+                if(i==max_n && j<max_m){
                     max_m=j;
                 }
             }
