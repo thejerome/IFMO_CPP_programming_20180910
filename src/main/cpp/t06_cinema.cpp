@@ -1,4 +1,4 @@
-//В кинотеатре n рядов по m мест в каждом (n и m не превосходят 20). 
+﻿//В кинотеатре n рядов по m мест в каждом (n и m не превосходят 20). 
 // В двумерном массиве хранится информация о проданных билетах, число 1 означает, 
 // что билет на данное место уже продан, число 0 означает, что место свободно. 
 // Поступил запрос на продажу k билетов на соседние места в одном ряду. 
@@ -29,6 +29,34 @@
 using namespace std;
 
 int t06_cinema() {
-    
-    return 0;
+int q, w, e, line1 = 0;
+bool result = true;
+cin >> q >> w;
+int a[q][w];
+for (int i = 0; i < q; i++) {
+for (int j = 0; j < w; j++) {
+cin >> a[i][j];
+}
+}
+cin >> e;
+for (int i = 0; i < q && result; i++) {
+int count=0, max=0;
+for ( int j = 0; j < q; j++) {
+if (a[i][j] == 0) {
+count++;
+}
+else {
+count = 0;
+}
+if (count > max) {
+max = count;
+}
+}
+if (max >= e) {
+line1 = i +1;
+result = false;
+}
+}
+cout << line1;   
+return 0;
 }
