@@ -34,7 +34,7 @@ for (int i=0; i<n; i++)
         a[i][j]=0;
     }
 }
-int x=1;
+int q=1;
 for (int i=0; i<n; i++)
 {
     for (int j=i%2; j<m; j+=2)
