@@ -27,6 +27,26 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n,m;
+    cin >> n >> m;
+    int maxx = n, maxy = m, maxel = 0;
+    for (int x = 0; x < n; x++){
+        for (int y = 0; y < m; y++){
+            int a;
+            cin >> a;
+            if ((x == 0 && y == 0) || a > maxel){
+                maxel = a;
+                maxx = x;
+                maxy = y;
+            }else if (a == maxel){
+                if (maxy + maxx * n > y + x * n) {
+                    maxel = a;
+                    maxx = x;
+                    maxy = y;
+                }
+            }
+        }
+    }
+    cout << maxx << ' ' << maxy;
     return 0;
 }
