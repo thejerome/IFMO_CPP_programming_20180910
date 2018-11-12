@@ -30,12 +30,12 @@ int t01_max() {
     int n,m;
     cin>>n>>m;
     int arr[n][m];
-    int max=arr[0][0],max_n=0,max_m=0;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cin >> arr[i][j];
         }
     }
+    int max=arr[0][0],max_n=0,max_m=0;
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             if(arr[i][j]>max){
