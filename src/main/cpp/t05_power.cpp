@@ -30,7 +30,9 @@ using namespace std;
 //function power
 double power(double a, int n) {
     double outp = 1.0;
+    if (n < 0) n*=-1;
     for (int i=0; i<n; i++) outp *= a;
+    if (n < 0) outp = 1/ outp;
     return outp;
 }
 
