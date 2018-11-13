@@ -39,5 +39,15 @@
 using namespace std;
 
 int t11_queen() {
-
+    int a,b,i,n,t;
+  t=0;
+    n=16;
+    int arr[n];
+    for (i=0;i<n;i++){cin>>a; arr[i]=a;}
+    for (i=1;i<=n;i=i+2){
+        for(b=i+2;b<=n;b+=2)
+        {if (((abs(arr[i]-arr[b]))==(abs(arr[i+1]-arr[b+1]))) || (arr[i]==arr[b]||arr[i+1]==arr[b+1])) {t=1;}}
+    }
+if (t==1) {cout<<"YES";}
+else {cout<<"NO";}
 }
