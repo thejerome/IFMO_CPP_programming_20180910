@@ -23,9 +23,9 @@
 using namespace std;
 
 int sum(int a){
-    int b=0;
     if (a==0) return(0);
     else {
+        int b=0;
         cin >> b ;
         return(sum(b)+a);}
     }
