@@ -19,13 +19,12 @@
 
 using namespace std;
 
-int t03_triangle() {
-    double A,B,C;
+int t03_triangle(){
+        double A,B,C;
+        cin >> A>>B>>C;
+        double p=(A+B+C)/2;
 
-    cin >> A>>B>>C;
-   double p=(A+B+C)/2;
-
-    double S=sqrt(p*(p-A)*(p-B)*(p-C));
-    cout<<fixed<<setprecision(4)<<S;
-    return 0;
+        double S=sqrt(p*(p-A)*(p-B)*(p-C));
+        cout<<fixed<<setprecision(4)<<S;
+        return 0;
 };
