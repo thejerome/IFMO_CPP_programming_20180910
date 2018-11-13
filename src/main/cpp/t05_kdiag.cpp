@@ -37,7 +37,19 @@
 
 using namespace std;
 
-int t05_kdiag() {
-    
+int t05_kdiag() 
+{
+	int N;
+	cin >> N;
+	int Arr[N][N];
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < N; j++) 
+			cin >> Arr[i][j];
+	int k;
+	cin >> k;
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < N; j++) 
+			if ((i == j + k) && (j + k <= N)) 
+				cout << Arr[i][j] << " ";
     return 0;
 }

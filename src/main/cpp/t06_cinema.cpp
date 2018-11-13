@@ -28,7 +28,36 @@
 
 using namespace std;
 
-int t06_cinema() {
-    
+int t06_cinema()
+{
+	int N, M;
+	cin >> N >> M;
+	int Arr[N][M];
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < M; j++) 
+			cin >> Arr[i][j];
+	int k, Set = 0;
+	cin >> k;
+	for (int i = 0; i < N; i++) 
+	{
+		int count = 0;
+		for (int j = 0; j < M; j++) 
+		{
+			if (Arr[i][j] == 0) 
+			{
+				count++;
+				if (count == k) 
+					break;
+			}
+			else 
+				count = 0;
+		}
+		if (count == k)
+		{
+			Set = i + 1;
+			break;
+		}
+	}
+	cout << Set;
     return 0;
 }
