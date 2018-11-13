@@ -22,62 +22,64 @@
 
 using namespace std;
 int cnt=0, n;
-bool a[10][10];
+int a[10][10];
 
 void tick(int x, int y) {
     int i=x, j=y;
     while (i<n && j<n) {
-        a[i][j]=true;
+        a[i][j]++;
         i+=1;
         j+=1;
     }
     i=x, j=y;
     while (i<n) {
-        a[i][j]=true;
+        a[i][j]++;
         i+=1;
     }
     i=x, j=y;
     while (i<n && j>=0) {
-        a[i][j]=true;
+        a[i][j]++;
         i+=1;
         j-=1;
     }
+    for (i=0; i<n; i++) a[x][i]++;
 }
 
 void untick(int x, int y) {
     int i=x, j=y;
     while (i<n && j<n) {
-        a[i][j]=false;
+        a[i][j]--;
         i+=1;
         j+=1;
     }
     i=x, j=y;
     while (i<n) {
-        a[i][j]=false;
+        a[i][j]--;
         i+=1;
     }
     i=x, j=y;
     while (i<n && j>=0) {
-        a[i][j]=false;
+        a[i][j]--;
         i+=1;
         j-=1;
     }
+    for (i=0; i<n; i++) a[x][i]--;
 }
 
 void deQuy(int nq) {
     if (nq == n) {cnt++; return;}
     for (int i=0; i<n; i++)
-        if (!a[nq][i]) {
+        if (a[nq][i] == 0) {
             tick(nq,i);
             deQuy(nq+1);
             untick(nq,i);
         }
 }
 
-int t08_queen() {
+int main() {
     cin >> n;
     for (int i=0; i<n; i++)
-        for (int j=0; j<n; j++) a[i][j]=false;
+        for (int j=0; j<n; j++) a[i][j]=0;
     deQuy(0);
     cout << cnt;
     return 0;
