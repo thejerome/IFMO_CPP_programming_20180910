@@ -76,7 +76,7 @@ void deQuy(int nq) {
         }
 }
 
-int main() {
+int t08_queen() {
     cin >> n;
     for (int i=0; i<n; i++)
         for (int j=0; j<n; j++) a[i][j]=0;
