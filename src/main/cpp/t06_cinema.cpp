@@ -29,6 +29,43 @@
 using namespace std;
 
 int t06_cinema() {
+    int k,n,m,count,max,r ;
+    bool x=0;
     
-    return 0;
-}
+    
+    
+    cin>>n ;
+    cin>>m ;
+    int a[n][m];
+    for (int i=0 ; i<n ;i++) {
+        for (int j=0; j<m; j++)
+        { cin>>a[i][j]; }
+        
+    }
+    max=0;
+    count=0;
+    r=0;
+    cin>>k ;
+    for (int i=0 ; i<n ;i++ ) {
+        
+        if (x == 0) {
+            for (int j=0; j<m; j++) {
+                
+                if (a[i][j] == 0) {
+                    
+                    count++;
+                    if (count > max) { max = count; }
+                    
+                }
+                else { count = 0; }
+            }
+            
+            if (max >= k) { x=1; r=i+1; }
+            else{r=0;};
+            
+        };
+    }
+    cout<<(r);
+    return 0;}
+
+
