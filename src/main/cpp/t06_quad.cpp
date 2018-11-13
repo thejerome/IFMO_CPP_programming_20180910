@@ -21,5 +21,15 @@
 using namespace std;
 
 int t06_quad() {
+        double A,B,C;
+        cin>>A>>B>>C;
+        double D=B*B-4*A*C;
+        if (D==0)
 
-};
+
+            cout<<(-B)/(2*A);
+        if (D>0)
+            cout<< ((-B) - sqrt(D))/(2*A) << " "<< ((-B)+sqrt(D))/(2*A);
+        return 0;
+
+    };
