@@ -38,7 +38,7 @@ int t02_star() {
     A [Control_number][Control_number] = '*';
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (i == Control_number || j == Control_number || (Control_number + Control_number == i + j) || (Control_number - Control_number == i - j)) {
+            if (i == Control_number || j == Control_number || (Control_number + Control_number == i + j) || ((Control_number == i) && (Control_number == j))) {
                 A[i][j] = '*';
             }
         }
