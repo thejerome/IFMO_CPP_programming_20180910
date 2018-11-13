@@ -25,6 +25,27 @@
 using namespace std;
 
 int t04_swap() {
-    
-    return 0;
+    int n, m, arre,arra;
+    cin >> n >> m;
+    int arr[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> arr[i][j];
+        }
+    }
+    cin >> arre >> arra;
+    for (int i = 0; i < n; i++) {
+        int g = arr[i][arra];
+        arr[i][arra] = arr[i][arre];
+        arr[i][arre] = g;
+    }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                cout << arr[i][j] << " ";
+            }
+        }
+
+
+            return 0;
+
 }
