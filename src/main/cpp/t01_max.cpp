@@ -25,7 +25,6 @@
 
 
 using namespace std;
-
 int t01_max() {
     int a,max,ind1,ind2,n,m,i,b;
     cin>>n>>m;
