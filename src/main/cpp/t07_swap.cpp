@@ -19,5 +19,17 @@
 using namespace std;
 
 int t07_swap() {
-
+	int A;
+	cin >> A;
+	int Arr[A];
+	for (int i = 0; i < A; i++)
+		cin >> Arr[i];
+	for (int i = 1; i < A; i += 2)
+	{
+		int Mem = Arr[i];
+		Arr[i] = Arr[i - 1];
+		Arr[i - 1] = Mem;
+	}
+	for (int i = 0; i < A; i++)
+		cout << Arr[i] << " ";
 }
