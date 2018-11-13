@@ -29,6 +29,36 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n, m, k, calculator = 0, minimalochka = 100001;
+    cin >> n >> m;
+    int a[n][m];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+        }
+    }
+    cin >> k;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++){
+            if (a[i][j] == 0){
+                calculator++;
+            }
+            else {
+                if ((calculator >= k) && (i++ < minimalochka)) {
+                    minimalochka = i++;
+                }
+                calculator = 0;
+            }
+        }
+        if ((calculator >= k) && (i++ < minimalochka)) {
+            minimalochka = i++;
+        }
+        calculator = 0;
+    }
+    if (minimalochka == 100001) {
+        minimalochka = 0;
+    }
+    cout << minimalochka;
+
     return 0;
 }
