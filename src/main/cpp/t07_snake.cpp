@@ -21,7 +21,22 @@
 
 using namespace std;
 
-int t07_snake() {
-    
+int t07_snake() 
+{
+	int N, M;
+	cin >> N >> M;
+	int Arr[N][M], k = 1;
+	for (int i = 0; i < N; i++) 
+	{
+		if (i % 2 == 0) 
+			for (int j = 0; j < M; j++) 
+				Arr[i][j] = k++;
+		else 
+			for (int j = M - 1; j >= 0; j--) 
+				Arr[i][j] = k++;
+	}
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < M; j++) 
+			cout << Arr[i][j] << " ";
     return 0;
 }

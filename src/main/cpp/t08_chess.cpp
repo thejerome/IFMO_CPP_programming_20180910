@@ -23,7 +23,23 @@
 
 using namespace std;
 
-int t08_chess() {
-    
+int t08_chess() 
+{
+	int N, M, k = 1;
+	cin >> N >> M;
+	int Arr[N][M];
+	for (int i = 0; i < N; i++) 
+	{
+		for (int j = 0; j < M; j++) 
+		{
+			if ((i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0)) 
+				Arr[i][j] = k++;
+			else 
+				Arr[i][j] = 0;
+		}
+	}
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < M; j++) 
+			cout << Arr[i][j] << " ";
     return 0;
 }

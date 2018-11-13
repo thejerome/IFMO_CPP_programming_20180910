@@ -21,7 +21,52 @@
 
 using namespace std;
 
-int t09_spiral() {
-    
+int t09_spiral() 
+{
+	int N, M;
+	cin >> N >> M;
+	int Arr[N][M], P = 1, K = 0, X = 0, Y = 0, m_max = M, n_max = N, m_min = 0, n_min = 0;
+	while (K < N*M) 
+	{
+		while (X < m_max && K < N*M)
+		{
+			Arr[Y][X] = P++;
+			X++;
+			K++;
+		}
+		X--;
+		Y++;
+		m_max--;
+		while (Y < n_max && K < N*M) 
+		{
+			Arr[Y][X] = P++;
+			Y++;
+			K++;
+		}
+		Y--;
+		X--;
+		n_min++;
+		while (X >= m_min && K < N*M) 
+		{
+			Arr[Y][X] = P++;
+			X--;
+			K++;
+		}
+		X++;
+		Y--;
+		m_min++;
+		while (Y >= n_min && K < N*M) 
+		{
+			Arr[Y][X] = P++;
+			Y--;
+			K++;
+		}
+		Y++;
+		X++;
+		n_max--;
+	}
+	for (int i = 0; i < N; i++) 
+		for (int j = 0; j < M; j++) 
+			cout << Arr[i][j] << " ";
     return 0;
 }
