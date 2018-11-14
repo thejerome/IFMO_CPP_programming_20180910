@@ -22,7 +22,7 @@
 using namespace std;
 
 int t09_spiral() {
-   int i,b,d,n,m,u,q,t,p,w,r,h,l,z;
+   int n,m,t,p,w,r,h,l,z;
     cin>>n>>m;
     int ar[n][m];
     h=n*m;
@@ -34,25 +34,25 @@ int t09_spiral() {
     if ((n%2)==1){l=((n/2)+1);}
    else {l=(n/2);}
 if(n*m!=1){
-    for (i=0;i<l;i++){
+    for (int i=0;i<l;i++){
         if(h>t){
             p++;
-        for(b=i;b<=z;b++){
+        for(int b=i;b<=z;b++){
             ar[i][b]=t;
             t++;
         }
         if(h>t){
-        for(d=(i+1);d<=w;d++) {
+        for( int d=(i+1);d<=w;d++) {
             ar[d][z]=t;
             t++;
         }}
         if(h>t){
-        for(u=(z-1);u>=r;u--){
+        for(int u=(z-1);u>=r;u--){
             ar[w][u]=t;
             t++;
         }}
         if(h>t){
-        for(q=(w-1);q>=p;q--){
+        for(int q=(w-1);q>=p;q--){
             ar[q][r]=t;
             t++;
         }}
@@ -60,8 +60,8 @@ if(n*m!=1){
         r++;
         z--;
     }}
-    for(i=0;i<n;i++){
-        for(b=0;b<m;b++){
+    for(int i=0;i<n;i++){
+        for(int b=0;b<m;b++){
             cout<<ar[i][b]<<" ";
         }
     }}
