@@ -18,12 +18,36 @@
 //   6   0   7   0   8
 
 #include "t08_chess.h"
+#include <iomanip>
 #include <iostream>
 
 
 using namespace std;
 
 int t08_chess() {
-    
+
+    int arr[100][100], n, m;
+
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if ((i * m + j) % 2 == (i % 2)*((m + 1) % 2))
+                arr[i][j] = (i * m + j + 2) / 2;
+
+            else
+                arr[i][j] = 0;
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << setw(4) << arr[i][j];
+        }
+
+        cout << endl;
+
+    }
+
     return 0;
 }
