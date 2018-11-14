@@ -24,6 +24,29 @@
 using namespace std;
 
 int t02_star() {
-
+    int n, Control_number;
+    double Variable;
+    cin >> n;
+    char A[n][n];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            A[i][j] = '.';
+        }
+    }
+    Variable = (n/2)+0,5;
+    Control_number = Variable;
+    A [Control_number][Control_number] = '*';
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == Control_number || j == Control_number || (Control_number + Control_number == i + j) || ((i - j == 0))) {
+                A[i][j] = '*';
+            }
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << A[i][j] << " ";
+        }
+    }
     return 0;
 }
