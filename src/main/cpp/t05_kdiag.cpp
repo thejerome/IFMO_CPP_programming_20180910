@@ -53,7 +53,7 @@ int t05_kdiag() {
             cout<<ar[i+k][i]<<" ";
         }
     }
-    else if(k<0){
+    else {
         for (i=0;i<(n-abs(k));i++){
             cout<<ar[i][i+abs(k)]<<" ";
         }
