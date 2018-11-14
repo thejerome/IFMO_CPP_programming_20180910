@@ -25,7 +25,7 @@
 using namespace std;
 
 int t04_swap() {
-    int n, m, d = -1, o, g;
+    int n, m, z = -1, o, g;
     cin >> n >> m;
     int A[n][m];
     for (int i = 0; i < n; i++) {
@@ -37,7 +37,7 @@ int t04_swap() {
     for (int i = 0; i < n; i++) {
         d = A[i][o];
         A[i][o] = A[i][g];
-        A[i][g] = d;
+        A[i][g] = z;
     }
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
