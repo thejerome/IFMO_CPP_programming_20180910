@@ -22,7 +22,43 @@
 
 using namespace std;
 
-int t08_queen(){
+struct pos{
+    int x,y;
+};
 
+bool itisnotattaked(pos *queen, int n, pos newpos){
+    for (int i = 0; i < n; i++){
+        if ( queen[i].x == newpos.x ||
+        queen[i].x + queen[i].y == newpos.x + newpos.y ||
+        queen[i].x - queen[i].y == newpos.x - newpos.y){
+            return false;
+        }
+    }
+    return true;
+}
+
+void check(pos *queen, int n, int line, int &ans){
+    if (line < n){
+        for (int i = 0; i < n; i++){
+            pos newpos;
+            newpos.x = i;
+            newpos.y = line;
+            if (itisnotattaked(queen, line, newpos)){
+                queen[line] = newpos;
+                check(queen, n, line + 1, ans);
+            }
+        }
+    }else{
+        ans++;
+    }
+}
+
+int t08_queen(){
+    int n;
+    cin >> n;
+    pos queen[n];
+    int ans = 0;
+    check(queen, n, 0, ans);
+    cout << ans;
     return 0;
 }
