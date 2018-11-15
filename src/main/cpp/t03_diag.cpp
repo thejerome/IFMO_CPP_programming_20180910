@@ -22,6 +22,18 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n,i,b,d;
+    cin>>n;
+    int ar[n][n];
+    for (i=0;i<n;i++){
+        for (d=0;d<n;d++){
+            ar[i][d]=abs(i-d);
+        }
+    }
+    for (i=0;i<n;i++){
+        for (d=0;d<n;d++){
+            cout<<ar[i][d]<<" ";
+        }
+    }
     return 0;
 }

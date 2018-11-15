@@ -28,5 +28,16 @@ using namespace std;
 
 int t01_max() {
     
+    int a,max,ind1,ind2,n,m,i,b;
+    cin>>n>>m;
+    max=-10000;
+    int ar[n][m];
+    for (i=0;i<n;i++){
+        for( b=0;b<m;b++)
+        {cin>>a; ar[i][b]=a; }}
+    for (i=0;i<n;i++){
+        for(b=0;b<m;b++)
+        {if (ar[i][b]>max){ind1=i;ind2=b; max=ar[i][b];} }}
+        cout<<ind1<<" "<<ind2;
     return 0;
 }
