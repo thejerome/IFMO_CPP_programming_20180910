@@ -22,50 +22,60 @@
 using namespace std;
 
 int t09_spiral() {
-   int n,m,t,p,w,r,h,l,z;
-   n=0;m=0;
+    int n,m,t,p,w,r,h,l,z;
     cin>>n>>m;
-    int ar[n][m];
     h=n*m;
     t=1;
     p=0;
     w=n-1;
     r=0;
     z=m-1;
-    if ((n%2)==1){l=((n/2)+1);}
-   else {l=(n/2);}
-if(n*m!=1){
-    for (int i=0;i<l;i++){
-        if(h>t){
-            p++;
-        for(int b=i;b<=z;b++){
-            ar[i][b]=t;
-            t++;
+    if ((n%2)==1){
+        l=((n/2)+1);
+    }
+    else {
+        l=(n/2);
+    }
+    if(n*m!=1){
+        int ar[n][m];
+        for (int i=0;i<l;i++){
+            if(h>t){
+                p++;
+                for(int b=i;b<=z;b++){
+                    ar[i][b]=t;
+                    t++;
+                }
+                if(h>t){
+                    for( int d=(i+1);d<=w;d++) {
+                        ar[d][z]=t;
+                        t++;
+                    }
+                }
+                if(h>t){
+                    for(int u=(z-1);u>=r;u--){
+                        ar[w][u]=t;
+                        t++;
+                    }
+                }
+                if(h>t){
+                    for(int q=(w-1);q>=p;q--){
+                        ar[q][r]=t;
+                        t++;
+                    }
+                }
+                w--;
+                r++;
+                z--;
+            }
         }
-        if(h>t){
-        for( int d=(i+1);d<=w;d++) {
-            ar[d][z]=t;
-            t++;
-        }}
-        if(h>t){
-        for(int u=(z-1);u>=r;u--){
-            ar[w][u]=t;
-            t++;
-        }}
-        if(h>t){
-        for(int q=(w-1);q>=p;q--){
-            ar[q][r]=t;
-            t++;
-        }}
-        w--;
-        r++;
-        z--;
-    }}
-    for(int i=0;i<n;i++){
-        for(int b=0;b<m;b++){
-            cout<<ar[i][b]<<" ";
+        for(int i=0;i<n;i++){
+            for(int b=0;b<m;b++){
+                cout<<ar[i][b]<<" ";
+            }
         }
-    }}
-    else{cout<<1;}
+    }
+    else{
+        cout<<1;
+    }
     return 0;
 }
