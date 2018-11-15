@@ -34,7 +34,8 @@ int t09_spiral() {
     else {l=(n/2);}
     if(n*m!=1){
         int ar[n][m];
-        for (int i=0;i<l;i++){
+        int i ;
+        for (i=0;i<l;i++){
             if(h>t){
                 p++;
                 for(b=i;b<=z;b++){
