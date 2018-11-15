@@ -23,6 +23,7 @@ using namespace std;
 
 int t09_spiral() {
    int n,m,t,p,w,r,h,l,z;
+   n=0;m=0;
     cin>>n>>m;
     int ar[n][m];
     h=n*m;
