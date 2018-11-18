@@ -38,8 +38,17 @@
 using namespace std;
 
 //function IsPointInCircle
-
+string IsPointInCircle(double x, double y, double xc, double yc, double r){
+    double d;
+    d = sqrt((x - xc)*(x - xc) + (y - yc)*(y - yc));
+    while((r == d) or ((r - d) + abs(r - d)) != 0){
+        return "YES";
+    }
+    return "NO";
+}
 int t03_circle() {
-
+    double x, y, xc, yc, r;
+    cin >> x >> y >> xc >> yc >> r;
+    cout << IsPointInCircle(x, y, xc, yc, r);
     return 0;
 }

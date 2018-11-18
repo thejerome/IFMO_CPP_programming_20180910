@@ -22,7 +22,60 @@
 
 using namespace std;
 
-int t08_queen(){
+bool if_i_can_put_here(int *positions, int size){
+    bool if_was_break = false;
+    for (int i = 0; i < size; i++){
+        for (int j = i+1; j < size; j ++){
+            if((abs(i - j) == abs(positions[i] - positions[j])) or (positions[i] == positions[j])){
+                if_was_break = true;
+                break;
+            }
+        }
+        if (if_was_break){
+            if_was_break = false;
+            return if_was_break;
+        }
+    }
+    return true;
 
+}
+
+
+bool system(int x, int number, int *new_field){
+    int position = x -1;
+    while(number >= x){
+        new_field[position] = number % x;
+        position -= 1;
+        number /= x;
+    }
+    new_field[position] = number;
+    return (if_i_can_put_here(new_field, x));
+    }
+
+
+int power(int x, int y){
+    int k = 1;
+    int rez = x;
+    while (k != y){
+        rez *= x;
+        k += 1;
+    }
+    return rez;
+}
+
+int t08_queen(){
+    int c = 0;
+    int n;
+    cin >> n;
+    int a[n];
+    for(int i = 0; i < n; i ++){
+        a[i] = 0;
+    }
+    for(int j = 0; j < power(n, n); j ++){
+        if (system(n, j, a)){
+            c += 1;
+        }
+    }
+    cout << c;
     return 0;
 }
