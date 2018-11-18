@@ -38,6 +38,25 @@
 using namespace std;
 
 int t05_kdiag() {
-    
+    int n,i,j,k,a;
+    cin>>n;
+    int ar[n][n];
+    for (i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            cin>>a;
+            ar[i][j]=a;
+        }
+    }
+    cin>>k;
+    if (k>=0){
+        for (i=0;i<(n-k);i++){
+            cout<<ar[i+k][i]<<" ";
+        }
+    }
+    else {
+        for (i=0;i<(n-abs(k));i++){
+            cout<<ar[i][i+abs(k)]<<" ";
+        }
+    }
     return 0;
 }
