@@ -24,6 +24,18 @@
 using namespace std;
 
 int t08_chess() {
+    int n,m,j,i,k=1;
+    cin>>n>>m;
+    int a[n][m];
+    for(int i=0; i<n; ++i){
+        for(int j=0; j<m; ++j)
+            a[i][j]=0;}
+    for(int i=0; i<n; ++i){
+        for(int j=0+(i&1); j<m; j+=2)
+            a[i][j] = k++;}
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++)
+            cout << a[i][j] << ' ';}
     
     return 0;
 }
