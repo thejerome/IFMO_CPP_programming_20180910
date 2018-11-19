@@ -22,60 +22,64 @@
 
 using namespace std;
 
-bool if_i_can_put_here(int *positions, int size){
+void swap(int *a, int i, int j)
+{
+    int s = a[i];
+    a[i] = a[j];
+    a[j] = s;
+}
+bool Permutations(int *a, int n)
+{
+    int j = n - 2;
+    while (j != -1 and a[j] >= a[j + 1]){
+        j--;
+    }
+    if (j == -1) {
+        return false;
+    }
+    int k = n - 1;
+    while (a[j] >= a[k]){
+        k--;
+    }
+    swap(a, j, k);
+    int l = j + 1, r = n - 1;
+    while (l<r) {
+        swap(a, l++, r--);
+    }
+    return true;
+}
+bool if_i_can_put_here(int *positions, int size) {
     bool if_was_break = false;
-    for (int i = 0; i < size; i++){
-        for (int j = i+1; j < size; j ++){
-            if((abs(i - j) == abs(positions[i] - positions[j])) or (positions[i] == positions[j])){
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if ((abs(i - j) == abs(positions[i] - positions[j])) or (positions[i] == positions[j])) {
                 if_was_break = true;
                 break;
             }
         }
-        if (if_was_break){
+        if (if_was_break) {
             if_was_break = false;
             return if_was_break;
         }
     }
     return true;
-
 }
 
-
-bool system(int x, int number, int *new_field){
-    int position = x -1;
-    while(number >= x){
-        new_field[position] = number % x;
-        position -= 1;
-        number /= x;
-    }
-    new_field[position] = number;
-    return (if_i_can_put_here(new_field, x));
-    }
-
-
-int power(int x, int y){
-    int k = 1;
-    int rez = x;
-    while (k != y){
-        rez *= x;
-        k += 1;
-    }
-    return rez;
-}
-
-int t08_queen(){
-    int c = 0;
-    int n;
+int t08_queen() {
+    int n, k;
     cin >> n;
     int a[n];
-    for(int i = 0; i < n; i ++){
-        a[i] = 0;
+    k = 0;
+    for (int i = 0; i < n; i++)
+        a[i] = i;
+    if(if_i_can_put_here(a, n)){
+        k += 1;
     }
-    for(int j = 0; j < power(n, n); j ++){
-        if (system(n, j, a)){
-            c += 1;
+    while (Permutations(a, n))
+        if (if_i_can_put_here(a, n)){
+            k += 1;
         }
-    }
-    cout << c;
+
+    cout << k;
     return 0;
 }
