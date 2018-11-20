@@ -28,5 +28,22 @@
 using namespace std;
 
 int t05_minodd() {
-
+    int i;
+    cin >> i;
+    int arr[i];
+    bool k = false;
+    int min = INT32_MAX;
+    for (int j = 0; j < i; j++) {
+        cin >> arr[j];
+    }
+    for (int j = 0; j < i; j++){
+        if ((arr[j] < min) && (arr[j] % 2 != 0)){
+            min = arr[j];
+            k = true;
+        }
+    }
+    if (!k)
+        cout << "0";
+    else
+        cout << min;
 }

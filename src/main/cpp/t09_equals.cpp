@@ -26,5 +26,19 @@
 using namespace std;
 
 int t09_equals() {
-
+    int length;
+    int counte = 0;
+    cin >> length;
+    int arr[length];
+    for (int j = 0; j < length; j++) {
+        cin >> arr[j];
+    }
+    for(int i = 0; i < length - 1; i++){
+        for(int j = i+1; j < length; j++){
+            if(arr[i] == arr[j]){
+                counte++;
+            }
+        }
+    }
+    cout << counte;
 }
