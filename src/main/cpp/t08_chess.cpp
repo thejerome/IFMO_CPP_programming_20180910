@@ -26,9 +26,9 @@ using namespace std;
 int t08_chess() {
     int n, m;
     cin >> n >> m;
-    int k = 1, t = 0;
+    int k = 1;
     for (int i = 0; i < n; i++) {
-        t = i % 2;
+        int t = i % 2;
         for (int j = 0; j < m; j++) {
             if (t % 2 == 0) {
                 cout << setw(4) << k;
