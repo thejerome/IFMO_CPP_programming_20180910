@@ -24,6 +24,24 @@
 using namespace std;
 
 int t08_chess() {
-    
+    int d,n,m,k;
+    k=0;
+    d=1;
+    cin>>n>>m;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            if (k==0){
+                cout.width(4);
+                cout<<d<<' ';
+                d++;
+                k=1;
+            }else {
+                cout.width(4);
+                cout<<'0'<<' ';
+                k=0;
+            }
+        }
+        cout<<endl;
+    }
     return 0;
 }
