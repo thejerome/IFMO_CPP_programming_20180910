@@ -30,7 +30,7 @@ int t04_neighbors() {
     }
     temp = Arr[0];
     for (i = 1; i < n; i++) {
-        if (( temp > 0 & Arr[i] > 0) || (temp < 0 & Arr[i] < 0)) {
+        if (( temp > 0 && Arr[i] > 0) || (temp < 0 & Arr[i] < 0)) {
 	    cout << temp << " " << Arr[i];
 	    break;
 	}

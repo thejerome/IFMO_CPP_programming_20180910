@@ -28,7 +28,7 @@
 using namespace std;
 
 int t05_minodd() {
-    int n, i, min;
+    int n, i;
     int*Arr;
     bool isodds = false;
     cin >> n;
@@ -42,7 +42,7 @@ int t05_minodd() {
     if (isodds == false) {
         cout << 0;
     } else {
-	min = 1000000;
+	int min = 1000000;
 	for (i = 0; i < n; i++) {
 	    if ((Arr[i] % 2 != 0) && (Arr[i] < min)) {
 	        min = Arr[i];
