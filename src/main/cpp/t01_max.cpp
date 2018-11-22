@@ -27,6 +27,24 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n,m;
+    cin>>n>>m;
+    int arr[n][m],max,n1,m1;
+    max=-999999;
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+            cin>>arr[i][j];
+        }
+    }
+    for (int k = 0; k < n; ++k) {
+        for (int i = 0; i < m; ++i) {
+            if (arr[k][i]>max) {
+                max=arr[k][i];
+                n1=k;
+                m1=i;
+            }
+        }
+    }
+    cout<<n1<<' '<<m1;
     return 0;
 }
