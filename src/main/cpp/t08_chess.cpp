@@ -24,22 +24,23 @@
 using namespace std;
 
 int t08_chess() {
-    int d,n,m,k;
-    k=0;
-    d=1;
+    int n,m,k;
+    k=1;
     cin>>n>>m;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            if (k==0){
-                cout.width(4);
-                cout<<d<<' ';
-                d++;
-                k=1;
-            }else {
-                cout.width(4);
-                cout<<'0'<<' ';
-                k=0;
-            }
+    int arr[n][m];
+    for (int i=0;i<n;i++){
+        if (i%2==0){for (int j=0;j<m;j+=2) {
+            arr[i][j]=k;k++;}
+            for (int j=1;j<m;j+=2) {
+                arr[i][j]=0;}}
+        if (i%2==1){for (int j=1;j<m;j+=2) {
+            arr[i][j]=k;k++;}
+            for (int j=0;j<m;j+=2) {
+                arr[i][j]=0;}}
+    }
+    for (int i=0;i<n;i++){
+        for (int j=0;j<m;j++) {
+            cout.width(4);cout<<arr[i][j]<<' ';
         }
         cout<<endl;
     }

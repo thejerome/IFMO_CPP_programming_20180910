@@ -27,7 +27,7 @@ int t07_snake() {
     cin>>n>>m;
     int arr[n][m];
     for (int i = 0; i < n; ++i) {
-        if (i%2!=0) {
+        if (i%2!=1) {
             for (int j = 0; j < m; ++j) {
                 arr[i][j]=k;
                 k++;
