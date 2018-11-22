@@ -53,9 +53,13 @@ int t06_cinema() {
                     prob=1;
                 }
             } else {
-                ans=l+1;
+                if (i!=1) {
+                ans=l+1;} else {
+                    ans=l-1;
+                }
             }
         }
+        count=0;
         if (ans!=0){
             break;
         }
