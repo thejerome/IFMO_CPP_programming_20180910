@@ -32,6 +32,7 @@ int t06_cinema() {
     int n,m,k,count,prob,ans;
     cin>>n>>m;
     count=0;
+    prob=0;
     int arr[n][m];
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
@@ -39,6 +40,7 @@ int t06_cinema() {
         }
     }
     cin>>k;
+    ans=0;
     for (int l = 0; l < n; ++l) {
         for (int i = 0; i < m; ++i) {
             if (prob==0) {
@@ -51,10 +53,16 @@ int t06_cinema() {
                     prob=1;
                 }
             } else {
-                ans=l;
+                ans=l+1;
             }
         }
+        if (ans!=0){
+            break;
+        }
     }
-    cout<<ans;
+    if (ans!=0) {
+    cout<<ans;} else {
+        cout<<'0';
+    }
     return 0;
 }
