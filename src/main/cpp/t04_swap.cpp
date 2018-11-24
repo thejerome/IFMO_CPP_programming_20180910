@@ -25,6 +25,28 @@
 using namespace std;
 
 int t04_swap() {
-    
+    int n,m,i,j;
+    cin >> n >> m;
+    int Matrix[n][m];
+    for (int x = 0; x < n; x++){
+        for (int y = 0; y < m; y++){
+	    cin >> Matrix[x][y];
+	}
+    }
+    cin >> i >> j;
+    for (int x = 0; x < n; x++){
+        for (int y = 0; y < m; y++){
+	    if (y == i){
+	        int buff = Matrix[x][i];
+		Matrix[x][i] = Matrix[x][j];
+		Matrix[x][j] = buff;
+	    }
+	}
+    }
+    for (int x = 0; x < n; x++){
+        for (int y = 0; y < m; y++){
+	    cout << Matrix[x][y] << " ";
+	}
+    }
     return 0;
 }

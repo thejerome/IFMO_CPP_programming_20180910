@@ -24,6 +24,26 @@
 using namespace std;
 
 int t02_star() {
-
+    int n;
+    cin >> n;
+    char Matrix[n][n];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+	    Matrix[i][j] = '.';
+	}
+    }
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+	    if ( (i == j) || ((i + j) == (n - 1)) || (i == (n / 2)) || (j == (n / 2))){
+                Matrix[i][j] = '*';
+	    }
+	}
+    }
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+	    cout << Matrix[i][j] << ' ';
+	}
+        cout << '\n';
+    }
     return 0;
 }

@@ -29,6 +29,38 @@
 using namespace std;
 
 int t06_cinema() {
-    
+    int n,m,k;
+    cin >> n >> m;
+    int Matrix[n][m];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+	    cin >> Matrix[i][j];
+	}
+    }
+    cin >> k;
+    bool trigger = false;
+    for (int i = 0; i < n; i++){
+	if (trigger == true){
+	    break;
+	}
+	for (int j = 0; j < m; j++){
+	    if (j >= (k - 1)){
+		bool isfree = true;
+	        for (int back = j;back > (j - k);back--){
+		    if (Matrix[i][back] == 1){
+		        isfree = false;
+		    }
+		}
+		if (isfree == true){
+		    cout << (i + 1);
+		    trigger = true;
+		    break;
+		}
+	    }
+	}
+    }
+    if (trigger == false){
+        cout << 0;
+    }
     return 0;
 }
