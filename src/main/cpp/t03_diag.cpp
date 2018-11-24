@@ -22,6 +22,14 @@
 using namespace std;
 
 int t03_diag() {
-    
+    int n;
+    cin >> n;
+    int Matrix[n][n];
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+	    Matrix[n][n] = abs(i - j);
+	    cout << Matrix[n][n] << " ";
+	}
+    }
     return 0;
 }

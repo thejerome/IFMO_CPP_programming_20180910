@@ -27,6 +27,34 @@
 using namespace std;
 
 int t01_max() {
-    
+    int n, m;
+    cin >> n >> m;
+    int Matrix[n][m];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++){
+	    cin >> Matrix[i][j];
+	}
+    }
+    int max = -10000;
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+	    if (Matrix[i][j] > max){
+	        max = Matrix[i][j];
+	    }
+	}
+    }
+    bool finish = false;
+    for (int i = 0; i < n; i++){
+	if (finish == true) {
+	    break;
+	}
+        for (int j = 0; j < m; j++){
+	    if (Matrix[i][j] == max){
+	        cout << i << " " << j;
+		finish = true;
+		break;
+	    }
+	}
+    }
     return 0;
 }

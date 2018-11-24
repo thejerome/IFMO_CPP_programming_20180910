@@ -22,6 +22,28 @@
 using namespace std;
 
 int t07_snake() {
-    
+    int n,m;
+    int counter = 1;
+    cin >> n >> m;
+    int Matrix[n][m];
+    for (int i = 0; i < n; i++){
+	if ((i % 2) == 0){
+            for (int j = 0; j < m; j++){
+	        Matrix[i][j] = counter;
+	        counter = counter + 1;	
+	    }
+	} else {
+            for (int j = (m - 1); j >=0; j--){
+	        Matrix[i][j] = counter;
+		counter = counter + 1;
+	    }
+	}
+    }
+    cout.width(4);
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+	    cout << Matrix[i][j] << " ";
+	}
+    }   
     return 0;
 }
