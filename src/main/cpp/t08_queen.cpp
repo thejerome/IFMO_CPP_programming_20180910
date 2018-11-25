@@ -22,7 +22,37 @@
 
 using namespace std;
 
-int t08_queen(){
+int desk[10];
 
+bool can_place(int i, int j, int k) {
+    if (k == i) {
+        return true;
+    }
+    else {
+        return ((desk[k] != j) && ((i - k) != (j - desk[k])) && ((i - k) != (desk[k] - j)) && (can_place(i, j, k + 1)));
+    }
+}
+
+int calc_pos(int n, int i, int j) {
+    if (i == n) {
+        return 1;
+    } else {
+        if (j < n) {
+            int counter = 0;
+            if (can_place(i, j, 0)) {
+                desk[i] = j;
+                counter = calc_pos(n, i + 1, 0);
+            }
+            return counter + calc_pos(n, i, j + 1);
+        } else {
+            return 0;
+	}
+    }
+}
+
+int t08_queen() {
+    int n;
+    cin >> n;
+    cout << calc_pos(n, 0, 0);
     return 0;
 }
