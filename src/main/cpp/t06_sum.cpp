@@ -23,7 +23,7 @@
 using namespace std;
 
 int sum(int n) {
-    int allsum, b;
+    int allsum = 0, b;
     if (n != 0) {
         cin >> b;
         allsum += n + sum(b);
