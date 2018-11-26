@@ -21,8 +21,59 @@
 #include <vector>
 
 using namespace std;
+const int size = 10;
+    int board[size] [size];
+    int counts_result = 0;
+    int attemptPlace(int a, int b)
+{
+    int i;
+    for (i = 0; i < a; ++i)
+    {
+        if (board[i][b])
+        {
+            return 0;
+        }
+    }
+    for (i = 1; i <= a && b-i >= 0; ++i)
+    {
+        if (board[a-i][b-i])
+        {
+            return 0;
+        }
+    }
+    for (i = 1; i <= a && b+i < size; ++i)
+    {
+        if (board[a-i][b+i])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+void attemptQueen(int a, int size)
+{
+    if (a == size)
+    {
+        ++counts_result;
+    }
+    int i;
+    for (i = 0; i < size; ++i)
+    {
+        if (
+                attemptPlace(a, i))
+        {
+            board[a][i] = 1;
+
+            attemptQueen(a+1,size);
+            board[a][i] = 0;
+        }
+    }
+}
 
 int t08_queen(){
-
+    int size2=0;
+    cin >> size2;
+    attemptQueen(0,size2);
+    cout << counts_result;
     return 0;
 }
