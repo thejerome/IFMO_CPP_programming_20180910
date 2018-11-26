@@ -28,8 +28,15 @@
 using namespace std;
 
 //function power
-
+float Power (float a, int n){
+  if (n>0) return Power(a,n-1)*a;
+  else if (n<0) return Power(a,n+1)/a;
+   else return 1;
+}
 int t05_power() {
-
+float a;
+int n;
+cin>>a>>n;
+cout<<Power(a,n);
     return 0;
 }
