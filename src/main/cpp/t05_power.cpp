@@ -29,7 +29,7 @@ using namespace std;
 
 //function power
 double power(double a, double n) {
-	if (!n) {
+	if (n == 0) {
 		return 1;
 	}
 	else {
@@ -44,11 +44,7 @@ double power(double a, double n) {
 int t05_power() {
 	double a, n;
 	cin >> a >> n;
-	if (n > 0) {
-		cout << power(a, n);
-	}
-	else {
-		cout << 1/power(a, n);
-	}
+	(n > 0) ? 
+	cout << power(a, n) : cout << 1/power(a, n);
     return 0;
 }

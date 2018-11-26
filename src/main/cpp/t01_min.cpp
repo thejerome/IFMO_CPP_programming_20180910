@@ -22,12 +22,7 @@ using namespace std;
 
 //function min 
 int min (int a, int b) {
-	if (a < b) {
-		return a;
-	}
-	else {
-		return b;
-	}
+		return (a < b) ? a : b;
 }
 //function min4 
 int min4 (int a, int b, int c, int d) {
