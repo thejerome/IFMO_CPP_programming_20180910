@@ -33,8 +33,23 @@
 using namespace std;
 
 //function IsPointInArea
-
+void IsPointInArea(){
+    double x,y;
+    cin>>x>>y;
+    bool RoundLeftLine = y>=2*x+2;
+    bool RoundRightLine = y>=-x;
+    bool CornerLeftLine = y<=2*x+2;
+    bool CornerRightLine = y<=-x;
+    bool InRound = abs(x+1)*abs(x+1) + abs(y-1)*abs(y-1) <= 4;
+    bool OnRoundLine = abs(x+1)*abs(x+1) + abs(y-1)*abs(y-1) == 4;
+    if ((InRound && RoundLeftLine && RoundRightLine)||
+    ((OnRoundLine || !InRound)&&CornerLeftLine&&CornerRightLine)){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
+}
 int t04_area() {
-
+    IsPointInArea();
     return 0;
 }

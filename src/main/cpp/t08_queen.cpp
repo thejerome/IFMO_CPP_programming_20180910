@@ -21,8 +21,38 @@
 #include <vector>
 
 using namespace std;
+int place[10];
+
+bool check(int i, int j, int k){
+    if (k == i){
+        return true;
+    }else{
+        return place[k] != j && (i - k) != (j - place[k]) &&
+        (i - k) != (place[k] - j) && check(i, j, k + 1);
+    }
+}
+
+int queen(int n, int i, int j){
+    if (i == n) {
+        return 1;
+    }else{
+        if(j < n){
+            int r = 0;
+            if (check(i, j, 0)) {
+                place[i] = j;
+                r = queen(n, i + 1, 0);
+            }
+            return r + queen(n, i, j + 1);
+        }else{
+            return 0;
+        }
+    }
+}
 
 int t08_queen(){
 
+    int n;
+    cin >> n;
+    cout << queen(n, 0, 0);
     return 0;
 }
