@@ -84,5 +84,5 @@ Summary: SUCCESS
 Command to tun tests
 
 ```bash
-./run_tests.sh t01_min t02_dist t03_circle t04_area t05_power t06_sum t07_fib t08_queen
+./run_tests.sh t01_char t02_up t03_toggle t04_count t05_palindrom t06_longest t07_ip
 ```

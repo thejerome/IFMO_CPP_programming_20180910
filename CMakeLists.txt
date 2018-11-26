@@ -4,4 +4,4 @@ project(IFMO_CPP_programming_20180910)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(IFMO_CPP_programming_20180910
-        src/main/cpp/main.cpp src/main/cpp/t01_min.cpp src/main/cpp/t01_min.h src/main/cpp/t02_dist.cpp src/main/cpp/t02_dist.h src/main/cpp/t03_circle.cpp src/main/cpp/t03_circle.h src/main/cpp/t04_area.cpp src/main/cpp/t04_area.h src/main/cpp/t05_power.cpp src/main/cpp/t05_power.h src/main/cpp/t06_sum.cpp src/main/cpp/t06_sum.h src/main/cpp/t07_fib.cpp src/main/cpp/t07_fib.h src/main/cpp/t08_queen.cpp src/main/cpp/t08_queen.h)
+        src/main/cpp/main.cpp src/main/cpp/t01_char.cpp src/main/cpp/t01_char.h src/main/cpp/t02_up.cpp src/main/cpp/t02_up.h src/main/cpp/t03_toggle.cpp src/main/cpp/t03_toggle.h src/main/cpp/t04_count.cpp src/main/cpp/t04_count.h src/main/cpp/t05_palindrom.cpp src/main/cpp/t05_palindrom.h src/main/cpp/t06_longest.cpp src/main/cpp/t06_longest.h src/main/cpp/t07_ip.cpp src/main/cpp/t07_ip.h)
