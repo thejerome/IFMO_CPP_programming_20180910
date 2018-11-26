@@ -20,12 +20,18 @@
 
 
 using namespace std;
+int min2(int a,int b){
+    if (a<b) return a;
+    else return b;
+}
 
-//function min 
-
-//function min4 
+int min4(int a,int a1, int a2, int a3){
+    return min2(min2(a,a1),min2(a2,a3));
+}
 
 int t01_min() {
-
+int a,b,c,d;
+cin >> a >> b >> c >> d;
+cout << min4(a,b,c,d);
     return 0;
 }
