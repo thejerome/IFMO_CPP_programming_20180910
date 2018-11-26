@@ -22,7 +22,23 @@
 
 using namespace std;
 
-int t06_sum() {
+void summator(int* summa)
+{
+    int dif;
+    cin >> dif;
 
+    if (dif == 0)
+    {
+        return;
+    }
+
+    *summa += dif;
+    summator(summa);
+}
+
+int t06_sum() {
+    int summa = 0;
+    summator(&summa);
+    cout << summa;
     return 0;
 }
