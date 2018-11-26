@@ -19,7 +19,7 @@
 //Sample Output 1:
 //
 //NO
-//        Sample Input 2:
+//Sample Input 2:
 //
 //-4
 //-3
@@ -33,8 +33,17 @@
 using namespace std;
 
 //function IsPointInArea
+bool IsPointInArea(double x, double y) {
+    double dis = sqrt(pow(x+1,2) + pow(y-1,2));
+    if (dis <= 2.0 && -y <= x && (y-2)/2 >= x) return true;
+    if (dis >= 2.0 && -y >= x && (y-2)/2 <= x) return true;
+    return false;
+}
 
 int t04_area() {
-
+    int x,y;
+    cin >> x >> y;
+    if (IsPointInArea(x,y)) cout << "YES";
+    else cout << "NO";
     return 0;
 }
