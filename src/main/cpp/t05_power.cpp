@@ -1,6 +1,6 @@
 //Дано действительное положительное число a и целоe число n.
 //
-//Вычислите an. Решение оформите в виде рекурсивной функции power(a, n).
+//Вычислите a^n. Решение оформите в виде рекурсивной функции power(a, n).
 //Не используйте циклы.
 //
 //Формат входных данных
@@ -28,8 +28,19 @@
 using namespace std;
 
 //function power
+double power (double a, int n) {
+    double pow = 1;
+    if (n > 0)
+        pow = a * power(a, n - 1);
+    if (n < 0)
+        pow /= a * power (a, -n - 1);
+    return pow;
+
+}
 
 int t05_power() {
-
-    return 0;
+    double a;
+    int n;
+    cin >> a >> n;
+    cout << power(a, n);
 }

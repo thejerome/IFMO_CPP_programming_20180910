@@ -22,7 +22,41 @@
 
 using namespace std;
 
-int t08_queen(){
+void queen(int x, int y, int* a, int n, int* ans) {
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (*(a + i * n + j) == 1) {
+                if ((x != i) && (y != j) && (abs(x - i) != abs(y - j)))
+                    k++;
+            }
+        }
+    }
 
-    return 0;
+    if (k == y) {
+        if (y == n - 1)
+            (*ans)++;
+
+        *(a + x * n + y) = 1;
+        if (y < n - 1) {
+            for (int i = 0; i < n; i++)
+                queen(i, y + 1, a, n, ans);
+        }
+        *(a + x * n + y) = 0;
+    }
+
+}
+
+int t08_queen(){
+    int n, ans = 0;
+    cin >> n;
+    int a[n][n];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a[i][j] = 0;
+
+    for (int i = 0; i < n; i++)
+        queen(i, 0, (int*) a, n, &ans);
+
+    cout << ans;
 }
