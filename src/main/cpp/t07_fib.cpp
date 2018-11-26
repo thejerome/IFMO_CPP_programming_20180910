@@ -17,9 +17,19 @@
 
 using namespace std;
 
-// function fib
+int fib(int prev1, int prev2, int n) {
+    if (n == 2)
+        return prev2;
+    return fib(prev2, prev1 + prev2, n - 1);
+}
 
 int t07_fib()
 {
+    int n;
+    cin>>n;
+    if (n == 1 || n == 2)
+        cout<<1;
+    else
+        cout<<fib(1, 1, n);
     return 0;
 }
