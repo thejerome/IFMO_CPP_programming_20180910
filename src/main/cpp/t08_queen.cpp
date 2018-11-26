@@ -19,10 +19,36 @@
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
-int t08_queen(){
+int chessboard[10]; // each position in an array represents a column, its value represents a row
 
+bool check_attack(int i, int j, int k)
+{
+    if (k == i) { return true; }
+    else return chessboard[k] != j 
+                && (i-k) != (j-chessboard[k]) 
+                && (i-k) != (chessboard[k]-j) 
+                && check_attack(i, j, k+1);
+}
+
+int place_queen(int n, int i, int j) {
+    if (i == n) { return 1; }
+        if (j < n) 
+        {
+            int pos = 0;
+            if (check_attack(i, j, 0)) {
+                chessboard[i] = j;
+                pos = place_queen(n, i + 1, 0); // try putting it into each row in this column
+            }
+            return pos + place_queen(n, i, j + 1);
+        } 
+        else return 0;
+}
+
+int t08_queen(){
+    int n;
+    cin >> n;
+    cout << place_queen(n , 0, 0);
     return 0;
 }
