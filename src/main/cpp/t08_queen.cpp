@@ -22,7 +22,59 @@
 
 using namespace std;
 
-int t08_queen(){
+const int SIZE=10;
+int board[SIZE][SIZE];
+int counts_result = 0;
 
+int tryPlace(int a, int b)
+{
+    int i;
+    for (i = 0; i < a; ++i)
+    {
+        if (board[i][b])
+        {
+            return 0;
+        }
+    }
+    for (i = 1; i <= a && b-i >= 0; ++i)
+    {
+        if (board[a-i][b-i])
+        {
+            return 0;
+        }
+    }
+    for (i = 1; i <= a && b+i < SIZE; ++i)
+    {
+        if (board[a-i][b+i])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+void tryQueen(int a, int size)
+{
+    if (a == size)
+    {
+        ++counts_result;
+    }
+    int i;
+    for (i = 0; i < size; ++i)
+    {
+        if(tryPlace(a, i))
+        {
+            board[a][i] = 1;
+            tryQueen(a+1,size);
+            board[a][i] = 0;
+        }
+    }
+}
+
+int t08_queen(){
+    int size=0;
+    cin >> size;
+    tryQueen(0,size);
+    cout << counts_result;
     return 0;
 }
