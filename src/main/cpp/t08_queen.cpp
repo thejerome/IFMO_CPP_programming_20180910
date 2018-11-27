@@ -21,8 +21,29 @@
 #include <vector>
 
 using namespace std;
+int count_arrangements(
+    int* queen_position,
+    int column_number,
+                       int board_size,){
 
+    if (board_size == column_number) {
+        return 1;
+    } int sum = 0;
+    for (int i=0; i<n;i++) {
+        if(queen_may_be_placed(queen_position,column_number,i)) {
+            queen_position[column_number] = i;
+    }
+        
+        sum+=count_arrangements(queen_position, column_number+1, board_size);
+}
+    return sum;
+}
+
+bool queen_may_be_placed(a,b,c){
 int t08_queen(){
-
+    int N;
+    cin>>N;
+    
+    cout<<count;
     return 0;
 }
