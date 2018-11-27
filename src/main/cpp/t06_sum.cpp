@@ -19,10 +19,20 @@
 
 #include <iostream>
 #include <cmath>
-
 using namespace std;
+//tests're done
+int recursive_add(){
+    int number;
+    cin >> number;
+    if (number != 0) {
+        return number + recursive_add();
+    } else {
+        return 0;
+    }
+}
 
 int t06_sum() {
 
+    cout << recursive_add();
     return 0;
 }

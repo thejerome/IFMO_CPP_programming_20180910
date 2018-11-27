@@ -24,12 +24,27 @@
 
 #include <iostream>
 #include <cmath>
-
+//tests're passed
 using namespace std;
 
 //function power
+double power(double const &a, double n){
+    if (n == 0){
+        return 1;
+    }
+    else if (n > 0){
+        return a*power(a, n-1);
+    }
+    else{
+        return 1/a*power(a, n+1);
+    }
 
+
+}
 int t05_power() {
+    double a, n;
+    cin >> a >> n;
 
+    cout << power(a, n);
     return 0;
 }

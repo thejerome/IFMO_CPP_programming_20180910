@@ -14,12 +14,22 @@
 
 #include <iostream>
 #include <cmath>
-
+//tests're passed
 using namespace std;
 
 // function fib
-
+int fib(int fib_number){
+    if (fib_number < 3){
+        return 1;
+    }
+    return fib(fib_number-1)+fib(fib_number-2);
+}
 int t07_fib()
 {
+    int fib_number;
+
+    cin >> fib_number;
+
+    cout << fib(fib_number);
     return 0;
 }
