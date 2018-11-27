@@ -21,6 +21,45 @@
 #include <vector>
 
 using namespace std;
+bool can_queen(int rowCurrent, int *&NQueen);
+void queen(int rowCurrent, int *&NQueen, int n, int &count);
+
+bool can_queen(int rowCurrent, int *&NQueen){
+    int i = 0;
+    while(i < rowCurrent){
+        if(NQueen[i] == NQueen[rowCurrent] || (abs(NQueen[i] - NQueen[rowCurrent]) == abs(i - rowCurrent))){
+            return false;
+        }
+        i++;
+    }
+    return true;
+}
+
+void queen(int rowCurrent, int *&NQueen, int n, int &count){
+    if(rowCurrent == n){
+        count++;
+    }
+    for(int i = 0; i < n; i++){
+        NQueen[rowCurrent] = i;
+        if(can_queen(rowCurrent,NQueen)){
+            queen(rowCurrent+1,NQueen,n,count);
+        }
+    }
+}
+
+int t08_queen(){
+    int n;
+    int count = 0;
+    cin >> n;
+    if(n < 4){
+        return 0;
+    }
+    int *NQueen = new int[n];
+    queen(0, NQueen, n, count);
+    cout << count;
+    return 0;
+}
+/**
 int N;
 bool can_queen(int row, int k);
 int queen(int row, int count);
@@ -58,3 +97,4 @@ bool can_queen(int row, int k){
     }
     return true;
 }
+ **/
