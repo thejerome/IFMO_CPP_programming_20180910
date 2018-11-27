@@ -37,9 +37,7 @@ int t06_longest() {
         }
         else
             k++;
-    if (k > ans) {
-        ans = k;
+    if (k > ans)
         ansString = s.substr(n - k, k);
-    }
     cout << ansString;
 }
