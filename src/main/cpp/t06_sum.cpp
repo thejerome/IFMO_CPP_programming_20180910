@@ -21,8 +21,17 @@
 #include <cmath>
 
 using namespace std;
-
+void add_until_0 (int &sum) {
+    int x;
+    cin>>x;
+    if (x != 0) {
+        sum += x;
+        add_until_0(sum);
+    }
+};
 int t06_sum() {
-
+    int sum = 0;
+    add_until_0 (sum);
+    cout<<sum;
     return 0;
 }
