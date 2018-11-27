@@ -22,7 +22,86 @@
 
 using namespace std;
 
-int t08_queen(){
+int board[10];
 
+bool check_if_queen_can_be_here(int i, int j, int k) {
+    if (k==i) return true;
+    else {
+        return (board[k] != j) &&
+               ((i-k) != (j - board[k])) &&
+               ((i-k) != (board[k] - j)) &&
+               check_if_queen_can_be_here (i,j,k+1);
+    }
+}
+
+int put_queen_if_you_can(int n, int i, int j) {
+    if (i == n) {
+        return 1;
+    } else {
+        if (j<n) {
+            int r = 0;
+            if (check_if_queen_can_be_here(i,j,0)) {
+                board[i]=j;
+                r = put_queen_if_you_can(n,i+1,0);
+            }
+            return r+put_queen_if_you_can(n,i,j+1);
+        }
+        else return 0;
+
+    }
+}
+int t08_queen(){
+    int n;
+    cin >> n;
+    cout << put_queen_if_you_can(n,0,0);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
