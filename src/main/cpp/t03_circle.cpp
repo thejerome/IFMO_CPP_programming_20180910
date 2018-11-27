@@ -1,4 +1,4 @@
-//Даны пять действительных чисел: x, y, xc, yc, r. 
+﻿//Даны пять действительных чисел: x, y, xc, yc, r. 
 // Проверьте, принадлежит ли точка (x, y) кругу с центром (xc, yc) и радиусом r. 
 // Если точка принадлежит кругу, выведите слово YES, иначе выведите слово NO.
 //Решение должно содержать функцию IsPointInCircle(x, y, xc, yc, r), 
@@ -36,10 +36,18 @@
 #include <cmath>
 
 using namespace std;
-
-//function IsPointInCircle
+bool IsPointInCircle(float x,float y, float xc, float yc, float r) {
+    return pow((xc - x),2) + pow((yc-y),2) <= pow(r,2);
+}
 
 int t03_circle() {
+    float x, y,xc,yc,r;
+    cin >> x >> y >> xc >> yc >> r;
+    if (IsPointInCircle(x,y,xc,yc,r)) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 
     return 0;
 }

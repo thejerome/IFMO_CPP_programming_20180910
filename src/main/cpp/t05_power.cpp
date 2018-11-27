@@ -1,4 +1,4 @@
-//Дано действительное положительное число a и целоe число n.
+﻿//Дано действительное положительное число a и целоe число n.
 //
 //Вычислите an. Решение оформите в виде рекурсивной функции power(a, n).
 //Не используйте циклы.
@@ -28,8 +28,23 @@
 using namespace std;
 
 //function power
+float power (float a, int x) {
+    if (x == 0) {
+        return 1;
+    }
+    return a * power(a,x - 1);
+}
 
 int t05_power() {
+    int x;
+    float a;
+    cin >> a >> x;
+    if (x > 0) {
+        cout << power (a,x);
+    } else {
+        cout << 1 / power(a, -x);
+    }
+
 
     return 0;
 }
