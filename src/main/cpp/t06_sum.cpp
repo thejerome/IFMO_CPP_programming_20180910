@@ -21,8 +21,19 @@
 #include <cmath>
 
 using namespace std;
-
-int t06_sum() {
-
+int n;
+int rec(int n,int sum) {
+    if (n==0){
+        return sum;
+    }
+    else{
+        sum+=n;
+        cin >> n;
+        return rec(n,sum);
+    }
+}
+int t06_sum(){
+    cin >> n;
+    cout << rec(n,0);
     return 0;
 }
