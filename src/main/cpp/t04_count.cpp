@@ -23,10 +23,17 @@
 
 #include "t04_count.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
 
 int t04_count() {
-
+    string s;
+    int ans = 1;
+    getline(cin, s);
+    for (int i = 0; i < (int)s.length(); i++)
+        if (s[i] == ' ')
+            ans++;
+    cout << ans;
 }
