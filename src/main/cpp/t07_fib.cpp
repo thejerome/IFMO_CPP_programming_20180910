@@ -17,9 +17,17 @@
 
 using namespace std;
 
-// function fib
+int fib(int first, int second, int now, int number) {
+    if (now == number) {
+        return second;
+    }
+    fib(second, second+first, now+1, number);
+}
 
 int t07_fib()
 {
+    int number;
+    cin >> number;
+    cout << fib (0,1,1,number);
     return 0;
 }
