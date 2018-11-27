@@ -25,7 +25,37 @@ using namespace std;
 
 //function min4 
 
-int t01_min() {
+int min (int a, int b)
+{
+    if (a<=b)
+    {
+        return a;
+    }
+    else
+        {
+        return b;
+        }
+}
+
+//function min4
+
+int min4 (int a, int b, int c, int d)
+{
+    if (min(a,b)<=min(c,d))
+    {
+        return min(a,b);
+    }
+    else
+    {
+        return min(c,d);
+    }
+}
+
+int t01_min()
+{
+    int a,b,c,d;
+    cin >> a >> b >> c >> d;
+    cout << min4(a,b,c,d);
 
     return 0;
 }
