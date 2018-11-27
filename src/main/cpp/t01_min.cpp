@@ -21,11 +21,28 @@
 
 using namespace std;
 
-//function min 
+//function min
+double min(double a, double b){
+    double result;
+    if (a < b) result = a;
+    else result = b;
+    return result;
+}
 
-//function min4 
+//function min4
+double min(double a, double b, double c, double d){
+    double result;
+    if (a<b && a<c && a<d) result = a;
+    else if (b<c && b<d) result = b;
+    else if (c<d) result = c;
+    else result = d;
+    return result;
+}
 
 int t01_min() {
+    double a, b, c, d;
+    cin >> a >> b >> c >> d;
+    cout << min(a,b,c,d);
 
     return 0;
 }
