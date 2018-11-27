@@ -1,4 +1,4 @@
-//Напишите функцию min(a, b), вычисляющую минимум двух чисел. 
+﻿//Напишите функцию min(a, b), вычисляющую минимум двух чисел. 
 // Затем напишите функцию min4(a, b, c, d), вычисляющую минимум 4 чисел с помощью функции min. 
 // Считайте четыре целых числа и выведите их минимум.
 //Формат входных данных
@@ -19,13 +19,26 @@
 #include <iostream>
 
 
-using namespace std;
+using namespace std; 
+int min(int x, int y) {
+    if (x < y) {
+        return x;
+    } else {
+        return y;
+    }
+}
 
-//function min 
-
-//function min4 
+int min4(int x, int y, int c, int d) {
+    int first, second;
+    first = min(x,y);
+    second = min (c,d);
+    return min(first, second);
+}
 
 int t01_min() {
+    int x, y, c, d;
+    cin >> x >> y >> c >> d;
+    cout << min4(x,y,c,d);
 
     return 0;
 }
