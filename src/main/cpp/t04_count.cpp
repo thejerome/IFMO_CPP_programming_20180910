@@ -24,9 +24,14 @@
 #include "t04_count.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t04_count() {
-
+    string a;
+    getline(cin,a);
+    int words=1;
+    for (int i=0; i<a.length(); i++){
+        if (a[i]==' ') words++;
+    }
+    cout << words;
 }
