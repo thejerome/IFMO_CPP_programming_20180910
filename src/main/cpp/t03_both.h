@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-11-27.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T03_BOTH_H
+#define IFMO_CPP_PROGRAMMING_20180910_T03_BOTH_H
+
+
+int t03_both();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T03_BOTH_H

@@ -3,13 +3,12 @@
 #include <functional>
 #include <cstring>
 
-#include "t01_char.h"
-#include "t02_up.h"
-#include "t03_toggle.h"
-#include "t04_count.h"
-#include "t05_palindrom.h"
-#include "t06_longest.h"
-#include "t07_ip.h"
+#include "t01_unique.h"
+#include "t02_new.h"
+#include "t03_both.h"
+#include "t04_both2.h"
+#include "t05_syn.h"
+#include "t06_homework.h"
 
 using namespace std;
 
@@ -22,13 +21,12 @@ int main(int argc, char **argv) {
 
     std::map<std::string, std::function<int()>> funcMap =
             {
-                    {"t01_char", t01_char},
-                    {"t02_up", t02_up},
-                    {"t03_toggle", t03_toggle},
-                    {"t04_count", t04_count},
-                    {"t05_palindrom", t05_palindrom},
-                    {"t06_longest", t06_longest},
-                    {"t07_ip", t07_ip}
+                    {"t01_unique",t01_unique},
+                    {"t02_new",t02_new},
+                    {"t03_both",t03_both},
+                    {"t04_both2",t04_both2},
+                    {"t05_syn",t05_syn},
+                    {"t06_homework",t06_homework}
             };
 
     funcMap[functionName]();
