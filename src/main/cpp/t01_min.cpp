@@ -18,14 +18,35 @@
 #include "t01_min.h"
 #include <iostream>
 
-
 using namespace std;
 
 //function min 
-
+int min (int a, int b) {
+		return (a < b) ? a : b;
+}
 //function min4 
+int min4 (int a, int b, int c, int d) {
+	if (min(a, b) < min(c, d)) {
+		return min(a, b);
+	}
+	else {
+		if (min(c, d) < min(a, b)) {
+			return min(c, d);
+		}
+		else {
+			if (min(a, c) < min(b, d)) {
+				return min(a, c);
+			}
+			else {
+				return min(b, d);
+			}
+		}
+	}
+}
 
 int t01_min() {
-
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	cout << min4(a, b, c, d);
     return 0;
 }

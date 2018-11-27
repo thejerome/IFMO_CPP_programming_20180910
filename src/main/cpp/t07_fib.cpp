@@ -17,9 +17,22 @@
 
 using namespace std;
 
+int acc(int n, int a, int b) {
+	if (n > 1) {
+		return acc(n-1, b, a+b);
+	}
+	else {
+		return a;
+	}
+}
 // function fib
+int fib(int n) {
+	return acc(n, 1, 1);
+}
 
-int t07_fib()
-{
+int t07_fib() {
+	int n;
+	cin >> n;
+	cout << fib(n);
     return 0;
 }
