@@ -21,8 +21,14 @@
 #include <cmath>
 
 using namespace std;
+int sum(){
+    int n;
+    cin>>n;
+    if (n==0){return n;}
+    else {return n+sum();}
+}
 
 int t06_sum() {
-
+    cout<<sum();
     return 0;
 }
