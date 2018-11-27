@@ -51,13 +51,19 @@ int t08_queen(){
     int n;
     int count = 0;
     cin >> n;
-    if(n < 4){
+    if(n == 1){
+        cout << 1;
+        return 0;
+    }else if (n < 4){
+        cout << 0;
+        return 0;
+    }else{
+        int *NQueen = new int[n];
+        queen(0, NQueen, n, count);
+        cout << count;
         return 0;
     }
-    int *NQueen = new int[n];
-    queen(0, NQueen, n, count);
-    cout << count;
-    return 0;
+
 }
 /**
 int N;
