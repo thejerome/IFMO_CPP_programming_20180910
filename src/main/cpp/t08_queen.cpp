@@ -22,7 +22,35 @@
 
 using namespace std;
 
-int t08_queen(){
+int n, a[10][10], ans = 0;
+void CheckingAQuantity(int x, int y)
+{
+    bool ok = true;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (a[i][j] == 1)
+                if (i == x || j == y || abs(x - i) == abs(y - j))
+                    ok = false;
+    if (ok) {
+        if (y == n - 1)
+            ans++;
+        else {
+            a[x][y] = 1;
+            for (int i = 0; i < n; i++)
+                CheckingAQuantity(i, y + 1);
+        }
+    }
+    a[x][y] = 0;
+}
+int t08_queen()
+{
+    cin >> n;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a[i][j] == 0;
+    for (int i = 0; i < n; i++)
+        CheckingAQuantity(i, 0);
+    cout << ans;
 
     return 0;
 }

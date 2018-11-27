@@ -19,7 +19,19 @@ using namespace std;
 
 // function fib
 
+int fib (int a)
+{
+    if (a <= 2)
+        return 1;
+    else
+        return fib(a-1)+fib(a-2);
+}
+
 int t07_fib()
 {
+    int n;
+    cin >> n;
+    cout << fib (n);
+
     return 0;
 }
