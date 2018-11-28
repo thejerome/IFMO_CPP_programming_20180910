@@ -35,12 +35,12 @@ using namespace std;
 
 int t07_ip() {
 	string a, answer = "YES";
-
+	int dots = 0;
 	getline(cin, a);
 	if (a[0] == '.' || a[a.length() - 1] == '.') answer = "NO";
 	else
 	{
-		int cut = 0, leng = 0, dots = 0;
+		int cut = 0, leng = 0;
 		for (int i = 0; i < a.length() + 1; i++)
 		{
 
