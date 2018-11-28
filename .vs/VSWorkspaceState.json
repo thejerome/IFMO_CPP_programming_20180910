@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\main",
-    "\\src\\main\\cpp"
+    "\\src\\main\\cpp",
+    "\\src\\test"
   ],
-  "SelectedNode": "\\src\\main\\cpp\\t09_spiral.cpp",
   "PreviewInSolutionExplorer": false
 }
