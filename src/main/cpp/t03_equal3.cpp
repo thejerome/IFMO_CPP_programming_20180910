@@ -19,5 +19,14 @@
 using namespace std;
 
 int t03_equal3() {
-
+    int a, b, c;
+    if ((a == b) && (b == c)){
+        count << "3";
+    }
+    else if((a == b) || (a == c) || (b == c)){
+        count << "2";
+    }
+    else{
+        count << "0";
+    }
 };
