@@ -34,5 +34,24 @@
 using namespace std;
 
 int t07_ip() {
+	string a, answer = "YES";
+	int cut = 0, leng = 0, dots = 0;
+	getline(cin, a);
+	if (a[0] == '.' || a[a.length() - 1] == '.') answer = "NO";
+	else for (int i = 0; i < a.length() + 1; i++)
+	{
+		int  num;
+		leng++;
+		if (a[i] == '.')
+		{
+			dots++;
+			if (leng == 1) { answer = "NO"; break; }
+			num = stoi(a.substr(cut, leng - 1));
+			if (!(num >= 0 && num <= 255)) { answer = "NO"; break; }
+			cut = i + 1; leng = 0;
+		}
+	}
+	if (dots != 3) answer = "NO";
+	cout << answer;
 
 }
