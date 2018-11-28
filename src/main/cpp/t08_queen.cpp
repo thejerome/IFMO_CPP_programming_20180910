@@ -22,7 +22,36 @@
 
 using namespace std;
 
-int t08_queen(){
+bool QueenMayBeHere(int *queens, int column, int line) {
+    for (int q=0; q < column; q++) {
+        if (queens[q] == line ||
+        column - q == abs(queens[q] - line))
+            return false;
+    }
+    return true;
+}
 
+int count_arrangements(int table_size, int *queens, int next_column, int line) {
+    if (table_size == next_column)
+        return 1;
+    if (line < table_size) {
+        int cnt = 0;
+        if (QueenMayBeHere(queens, next_column, line)) {
+            queens[next_column] = line;
+            cnt = count_arrangements(table_size, queens, next_column+1, 0);
+        }
+        return cnt + count_arrangements(table_size, queens, next_column, line+1);
+    }
+    else return 0;
+}
+
+int t08_queen(){
+    int n;
+    cin>>n;
+    int queens[n];
+    for (int i=0; i < n; i++) {
+        queens[i] = 32000;
+    }
+    cout<<count_arrangements(n, queens, 0, 0);
     return 0;
 }
