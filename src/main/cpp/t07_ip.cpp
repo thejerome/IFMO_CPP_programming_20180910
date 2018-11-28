@@ -46,8 +46,12 @@ int howmanydots(string s){
 }
 
 bool is_two_dots_together(string s){
-    if (s.find("..")==-1) return false;
-        else return true;
+    bool f=false;
+    for (int i=0; i < s.length()-1; i++) {
+        if (s[i] == s[i + 1] && s[i] == '.') {  f = true;}
+            else f=false;
+    }
+    return f;
 }
 
 int t07_ip() {
