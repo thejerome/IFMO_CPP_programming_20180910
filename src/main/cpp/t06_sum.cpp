@@ -24,8 +24,10 @@ using namespace std;
 
 int sum(int Number) 
 {
-	int Summ = 0, Temp;
-	if (Number != 0) {
+	int Summ = 0;
+	if (Number != 0) 
+	{
+		int Temp;
 		cin >> Temp;
 		Summ += Number + sum(Temp);
 	}

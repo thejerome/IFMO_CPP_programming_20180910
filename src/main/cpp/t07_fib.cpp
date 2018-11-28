@@ -20,7 +20,7 @@ using namespace std;
 // function fib
 int fib(int Number) 
 {
-	int fn;
+	int fn = 0;
 	if ((Number <= 2) && (Number > 0)) {
 		fn = 1;
 	}
