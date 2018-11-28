@@ -17,10 +17,22 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t06_longest() {
-
+string s;
+getline(cin,s);
+int max=0,maxind=0,k=0;
+for (int i=0;i<s.length();i++) {
+    if (s[i]!= ' ') k++;
+    else k=0;
+    if (k > max) {
+        max = k;
+        maxind = i;
+    }
+}
+for (int i=maxind-max+1;i<=maxind;i++)
+    cout << s[i];
 }
