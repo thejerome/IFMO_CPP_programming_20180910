@@ -1,7 +1,7 @@
 script:
 - chmod +x run_test.sh
 - chmod +x run_tests.sh
-- ./run_tests.sh plus minus
+- ./run_tests.sh t01_min t02_dist t03_circle t04_area t05_power t06_sum t07_fib t08_queen
 
 # disabling email notifications
 notifications:

@@ -14,10 +14,10 @@ for test_case in $test_cases
 do
     test_case_directory="$resources/$test_group/$test_case"
     input=`cat $test_case_directory/input.txt`
-    expected_output=`cat $test_case_directory/output.txt`
-    actual_output=`echo $input | $executable $test_group`
+    expected_output=`cat $test_case_directory/output.txt | xargs`
+    actual_output=`echo $input | $executable $test_group | xargs`
 
-    if [[ $expected_output = $actual_output ]]
+    if [[ "$expected_output" = "$actual_output" ]]
     then
         echo "PASSED: $test_case"
     else
