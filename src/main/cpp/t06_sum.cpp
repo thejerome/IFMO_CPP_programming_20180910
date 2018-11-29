@@ -25,6 +25,7 @@ using namespace std;
 int sum(int a){
     cin>>a;
     if (a!=0) return (a+sum(a));
+    else return a;
 }
 
 int t06_sum() {
