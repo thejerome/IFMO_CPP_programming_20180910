@@ -40,4 +40,5 @@ int t06_max_count() {
         cin >> k;
     }
     cout << m;
+
 };
