@@ -44,6 +44,9 @@ int t07_ip() {
 }
 
 bool IpIsValid(string ip) {
+    //== format control
+    if(ip.length() > 3 * 4 + 3 || ip.length() < 7) return false;
+
     for(int i = ip.length() - 1; i >= 0; --i)
         if(ip[i] != '.' && ip[i] < '0' && ip[i] > '9')
             return false;
@@ -54,8 +57,9 @@ bool IpIsValid(string ip) {
 
     if(ip[0] == '.' || ip[ip.length() - 1] == '.') return false;
 
-    unsigned int begin = 0, quat, count = 0, len = ip.length();
-    for(unsigned int i = begin, end = begin; i < len; i = begin) {
+    //== content check
+    unsigned int count = 0;
+    for(unsigned int i = 0, begin, end, quat, len = ip.length(); i < len; i = begin) {
         begin = i;
         end = i;
         while(end < len - 1 && ip[end] != '.') end++;
@@ -64,5 +68,6 @@ bool IpIsValid(string ip) {
         if(quat > 255) return false;
         begin = end+1;
     }
+
     return count == 3;
 }
