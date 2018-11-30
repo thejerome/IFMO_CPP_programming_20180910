@@ -20,21 +20,15 @@
 using namespace std;
 
 int t05_max() {
-    int m, k, i;
-    cin >> i;
-    m = i;
-    k = 0;
-    while (i != 0) {
-        if (i > m) {
-            m = i;
-            k = 1;
+    int k, m;
+    cin >> k;
+    m = k;
+    while (k != 0) {
+        if (k > m) {
+            m = k;
         }
-        else if (i == m) {
-            k = k + 1;
-        }
-        cin >> i;
+        cin >> k;
     }
-
-    cout << k;
+    cout << m
 
 };
