@@ -34,7 +34,7 @@ using namespace std;
 
 //function IsPointInArea
 int IsPointInArea(int x,int y){
-    return (((y>-x)and(y>2*x+2)and(pow(y-1,2)+pow(x+1,2)<=4))or((y<-x)and(y<2*x+2)and(pow(y-1,2)+pow(x+1,2)>=4)));
+    return ((x + 1)*(x + 1) + (y - 1)*(y - 1) <= 4 and y >= 2*x + 2 and y >= -x || (x + 1)*(x + 1) + (y - 1)*(y - 1) >= 4 and y <= 2*x + 2 and y <= -x);;
 
 
 }
