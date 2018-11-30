@@ -22,7 +22,7 @@
 
 using namespace std;
 
-int sum(){
+void sum(){
     int a;
     cin>>a;
     if (a!=0) return (a+sum(a));
