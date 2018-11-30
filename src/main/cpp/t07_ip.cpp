@@ -34,5 +34,39 @@
 using namespace std;
 
 int t07_ip() {
+    string s1;
+    getline(cin,s1);
+    int count = -1;
+    int point = 0;
+    string number;
+    int nC = 0;
+    if (s1[0]=='.') {cout<<"NO";}
+    else {
+    for (int i=0;i<s1.size();i++){
+        count++;
+        if (s1[i]=='.') {
+            number = s1.substr(i-count, count);
+             int n = stoi(number);
 
+                    if ((n>=0) && (n<256)) {nC++;};
+            
+            count =-1;
+            point++;
+            
+        }
+        
+    }
+        int size=s1.size();
+        number = s1.substr(size-count, count);
+        int n = stoi(number);
+        
+        if ((n>=0) && (n<256)) {nC++;};
+        
+        
+    cout<<nC<<' '<<point;
+    if ((nC == 4) && (point == 3)) {cout<<"YES";}
+    
+    else {cout<<"NO";}
+    return 0;
+}
 }

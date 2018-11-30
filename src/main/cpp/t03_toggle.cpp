@@ -25,9 +25,8 @@ using namespace std;
 
 int t03_toggle() {
     char symb;
-    int count;
     cin >> symb;
-    if ((symb>='a' && symb<='z') && (count == 0)){ symb=symb+('A'-'a'); count++;};
-    if ((symb>='a' && symb<='z') && (count == 0)){ symb=symb-('A'-'a'); count++;};
-    cout<< symb;
+    if (symb>='a' && symb<='z') { symb=symb+('A'-'a'); cout<<symb;}
+    else {if (symb>='A' && symb<='Z') { symb=symb-('A'-'a');} cout<<symb;}
+    return 0;
 }
