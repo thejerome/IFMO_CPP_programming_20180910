@@ -19,5 +19,12 @@
 using namespace std;
 
 int t01_quad() {
+    int N;
+    cin >> N;
+    int i = 1;
+    while(i*i <= N){
+        cout << i*i << " ";
+        i++;
+    }
 
 };
