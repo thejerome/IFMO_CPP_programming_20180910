@@ -54,11 +54,11 @@ bool IpIsValid(string ip) {
 
     if(ip[0] == '.' || ip[ip.length() - 1] == '.') return false;
 
-    unsigned int begin = 0, end, quat, count = 0, len = ip.length();
-    for(unsigned int i = begin; i < len; i = begin) {
+    unsigned int begin = 0, quat, count = 0, len = ip.length();
+    for(unsigned int i = begin, end = begin; i < len; i = begin) {
         begin = i;
         end = i;
-        while(ip[end] != '.' && end < len-1) end++;
+        while(end < len - 1 && ip[end] != '.') end++;
         count += (ip[end] == '.');
         quat = (unsigned int)atoi(ip.substr(begin, end).c_str());
         if(quat > 255) return false;
