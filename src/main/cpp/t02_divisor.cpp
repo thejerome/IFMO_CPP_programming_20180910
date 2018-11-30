@@ -20,4 +20,5 @@ using namespace std;
 
 int t02_divisor() {
 
+
 };
