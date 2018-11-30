@@ -28,7 +28,16 @@
 
 
 using namespace std;
-
+//tests are passed
 int t01_char() {
+    char smb;
 
+    cin >> smb;
+
+    if ((smb >= '0') && (smb <= '9')){
+        cout << "yes";
+    }
+    else{
+        cout << "no";
+    }
 }
