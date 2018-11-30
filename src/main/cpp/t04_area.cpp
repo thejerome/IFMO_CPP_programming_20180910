@@ -33,8 +33,16 @@
 using namespace std;
 
 //function IsPointInArea
+int IsPointInArea(int x,int y){
+    return ((x + 1)*(x + 1) + (y - 1)*(y - 1) <= 4 and y >= 2*x + 2 and y >= -x || (x + 1)*(x + 1) + (y - 1)*(y - 1) >= 4 and y <= 2*x + 2 and y <= -x);;
+
+
+}
 
 int t04_area() {
+    int x,y;
+    cin>>x >>y;
+    cout<< (IsPointInArea(x,y)? "YES":"NO");
 
     return 0;
 }
