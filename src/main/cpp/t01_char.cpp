@@ -30,5 +30,10 @@
 using namespace std;
 
 int t01_char() {
-
+    char m;
+    cin>>m;
+    if (m < 'A')
+        cout<<"yes";
+    else
+        cout<<"no";
 }
