@@ -32,7 +32,23 @@
 
 
 using namespace std;
-
+bool check(string& s, int eos){
+    int x;
+    string::size_type sz;
+    x = stoi(s, &sz);
+    if (0>x || x>255) return false;
+    if (eos) s = s.substr(++sz);
+    return true;
+}
 int t07_ip() {
-
+    string s;
+    cin >> s;
+    if (check(s,1))
+        if (check(s,1))
+            if (check(s,1))
+                if (check(s,0)) cout << "YES";
+                else cout << "NO";
+            else cout << "NO";
+        else cout << "NO";
+    else cout << "NO";
 }

@@ -22,5 +22,10 @@
 using namespace std;
 
 int t06_longest() {
-
+    string s;
+    string BIG;
+    unsigned int biggest=0;
+    while (cin >> s)
+        if (s.size() > biggest) BIG = s, biggest = s.size();
+    cout << s;
 }
