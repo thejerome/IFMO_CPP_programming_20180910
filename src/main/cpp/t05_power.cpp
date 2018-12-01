@@ -44,7 +44,7 @@ double power(double a, int n){
 int t05_power() {
 	int n;
 	double a;
-	cin >> n >> a;
+	cin >> a >> n;
 	cout << power(a, n);
 
     return 0;
