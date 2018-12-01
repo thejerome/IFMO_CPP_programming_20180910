@@ -22,7 +22,43 @@
 
 using namespace std;
 
-int t08_queen(){
+bool canBePlaced(int* queenPosition, int columnNumber, int a) {	
+ 	for (int i = 0; i < columnNumber; i++) {
+ 		if (queenPosition[i] == a || abs(a - queenPosition[i]) == abs(columnNumber - i)) {
+ 			return false;
+ 		}
+ 	}
+
+ 	return true;
+ }
+
+ int countArrangements(int* queenPosition, int columnNumber, int boardSize) {
+ 	if (boardSize == columnNumber) {
+ 		return 1;
+ 	}
+
+ 	int sum = 0;
+ 	for (int i = 0; i < boardSize; i++) {
+ 		if (canBePlaced(queenPosition, columnNumber, i)) {
+ 			queenPosition[columnNumber] = i;
+ 			sum += countArrangements(queenPosition, columnNumber+1, boardSize);
+ 		} 
+ 	}
+
+ 	return sum;
+ }
+
+ int t08_queen() {
+ 	int n;
+
+ 	cin >> n;
+
+ 	int queenPosition[n];
+
+ 	for (int i = 0; i < n; i++) {
+ 		queenPosition[i] = 0;
+ 	}
+ 	cout << countArrangements(queenPosition, 0, n);
 
     return 0;
 }
