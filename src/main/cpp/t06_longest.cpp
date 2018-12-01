@@ -27,5 +27,5 @@ int t06_longest() {
     unsigned int biggest=0;
     while (cin >> s)
         if (s.size() > biggest) BIG = s, biggest = s.size();
-    cout << s;
+    cout << BIG;
 }

@@ -32,23 +32,33 @@
 
 
 using namespace std;
-bool check(string& s, int eos){
-    int x;
-    string::size_type sz;
-    x = stoi(s, &sz);
-    if (0>x || x>255) return false;
-    if (eos) s = s.substr(++sz);
-    return true;
-}
+
 int t07_ip() {
-    string s;
+    string s,sub;
     cin >> s;
-    if (check(s,1))
-        if (check(s,1))
-            if (check(s,1))
-                if (check(s,0)) cout << "YES";
-                else cout << "NO";
-            else cout << "NO";
-        else cout << "NO";
-    else cout << "NO";
+    if (s[0]=='.') {cout << "NO"; return 0;}
+    int i=-1,x;
+    for (int k=0; k<3; k++) {
+        i++; sub = "";
+        while (i < s.size() && s[i] != '.') {
+            sub += s[i];
+            i++;
+        }
+        x = stoi(sub);
+        if (x < 0 || 255 < x || i == s.size() || s[i+1] == '.') {
+            cout << "NO";
+            return 0;
+        }
+    }
+    i++; sub = "";
+    while (i < s.size() && s[i] != '.') {
+        sub += s[i];
+        i++;
+    }
+    x = stoi(sub);
+    if (x < 0 || 255 < x || i != s.size()) {
+        cout << "NO";
+        return 0;
+    }
+    cout << "YES";
 }
