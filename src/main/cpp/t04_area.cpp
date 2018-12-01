@@ -34,12 +34,12 @@ using namespace std;
 
 //function IsPointInArea
 bool IsPointInArea(double x, double y){
-	double dis = sqrt(pow(x + 1, 2) + pow(y - 1, 2));
+	double dis = sqrt(pow(x + 1,2) + pow(y - 1,2));
 	if (dis <= 2.0 && -y <= x && (y-2)/2 >= x){
 		return true;
 	}
 	if (dis >= 2.0 && -y >= x && (y-2)/2 <= x){
-		return 0;
+		return true;
 	}
 	return false;
 }

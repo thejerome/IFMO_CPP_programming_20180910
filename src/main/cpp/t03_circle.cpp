@@ -48,7 +48,7 @@ bool IsPointInCircle(double x, double y, double xc, double yc, double r){
 }
 
 int t03_circle() {
-	int x, y, xc, yc, r;
+	double x, y, xc, yc, r;
 
 	cin >> x >> y >> xc >> yc >> r;
 
