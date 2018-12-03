@@ -24,5 +24,9 @@
 using namespace std;
 
 int t02_up() {
-    
+    char inp;
+    cin >> inp;
+    inp = (char) toupper(inp);
+    cout << inp;
+    return 0;
 }
