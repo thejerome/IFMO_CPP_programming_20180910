@@ -30,5 +30,15 @@
 using namespace std;
 
 int t01_char() {
-
+    char inp;
+    cin >> inp;
+    if (isdigit(inp))
+    {
+        cout<<"yes";
+    }
+    else
+    {
+        cout<<"no";
+    }
+    return 0;
 }
