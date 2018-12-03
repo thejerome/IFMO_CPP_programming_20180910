@@ -47,12 +47,12 @@ bool is_valid_ip(string s)
 }
 int t07_ip() {
     string inp, ip[4];
-    long found=-1, anchor=0;
+    long found=-1;
     short ips=0;
     getline(cin, inp);
     for (long i = 0; i < inp.length(); i++)
     {
-        anchor = found+1;
+        long anchor = found+1;
         found = inp.find('.', anchor);
         if (found == string::npos) // no more dots
         {
