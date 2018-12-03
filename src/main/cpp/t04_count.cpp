@@ -28,5 +28,19 @@
 using namespace std;
 
 int t04_count() {
-
+    std::string inp;
+    size_t found = 0;
+    int word_count = 1;
+    getline(cin, inp);
+    for (unsigned long i = 0; i < inp.length(); i++)
+    {
+        found = inp.find(' ', i);
+        if (found != string::npos)
+        {
+            word_count++;
+            i = found;
+        }
+    }
+    cout << word_count;
+    return 0;
 }
