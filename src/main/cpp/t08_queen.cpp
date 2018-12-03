@@ -21,7 +21,7 @@
 #include <vector>
 using namespace std;
 
-int chessboard[10]; // each position in an array represents a column, its value represents a row
+/* int chessboard[10]; // each position in an array represents a column, its value represents a row
 
 bool check_attack(int i, int j, int k)
 {
@@ -44,11 +44,20 @@ int place_queen(int n, int i, int j) {
             return pos + place_queen(n, i, j + 1);
         } 
         else return 0;
+}*/
+
+int add_queen(int* board, int n, int i, int j)
+{
+    for (int i_ctr = i; i < n; i++){}
 }
 
 int t08_queen(){
-    int n;
+    int n, *board;
     cin >> n;
-    cout << place_queen(n , 0, 0);
+    board = (int*) calloc(n, sizeof(int));
+    cout << add_queen(board, n, 0, 0);
+    /*int n;
+    cin >> n;
+    cout << place_queen(n , 0, 0);*/
     return 0;
 }
