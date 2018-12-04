@@ -22,7 +22,13 @@
 
 
 using namespace std;
-
+//tests're done
 int t02_up() {
-    
+
+    char chr;
+    int shift = int('a') - int ('A');
+
+    cin >> chr;
+
+    cout << ((chr>= 'a') && (chr <= 'z') ? char(int(chr)-shift) : chr);
 }
