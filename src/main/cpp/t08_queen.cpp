@@ -46,9 +46,29 @@ int place_queen(int n, int i, int j) {
         else return 0;
 }*/
 
-int add_queen(int* board, int n, int i, int j)
+bool check_attack(int* board, int queen_number)
 {
-    for (int i_ctr = i; i < n; i++){}
+
+    return
+}
+
+int add_queen(int* board, int n, int queen_number, int row)
+{
+    long positions = 0;
+
+    if (n == queen_number+1) // leaves on the tree
+    {
+        if (check_attack()) { return 1;}
+        else { return 0; }
+    }
+
+    for (int attempt = 0; attempt < n; attempt++) // try each row...
+    {
+        board[queen_number]=row;
+        positions+=add_queen(board, n, queen_number+1, attempt); // put queens in next columns
+    }
+
+
 }
 
 int t08_queen(){
