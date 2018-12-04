@@ -161,5 +161,5 @@ int t06_homework() {
            }
        }else mistakes ++;
    }
-   cout << mistakes-1;              //very important place in program
+   cout << mistakes;              //very important place in program
 }
