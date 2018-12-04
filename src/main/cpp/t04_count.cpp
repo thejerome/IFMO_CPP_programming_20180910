@@ -23,10 +23,22 @@
 
 #include "t04_count.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
-
+// tests're passed
 int t04_count() {
 
+    string str;
+    int count = 0, pos = 0;
+
+    getline(cin,str);
+    str += ' ';
+    while (pos != str.size() - 1){
+        count++;
+        pos = str.find(' ', pos+1);
+    }
+
+    cout << count;
 }

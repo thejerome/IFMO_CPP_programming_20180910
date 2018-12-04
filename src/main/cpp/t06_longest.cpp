@@ -17,10 +17,35 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
-
+#include <string>
 using namespace std;
 
-int t06_longest() {
+// tests're done
 
+string sub(std::string str, int first, int last){
+    string substr="";
+    for (int i = first; i < last; i++){
+        substr += str[i];
+    }
+    return substr;
+};
+
+
+int t06_longest() {
+    string str, word = "";
+    int pos = -1, max_size = 0;
+
+    getline(cin,str);
+    str += ' ';
+
+    while (pos != str.size() - 1){
+        int pos0 = pos;
+        pos = str.find(' ', pos+1);
+        if (max_size < pos-pos0-1){
+            max_size = pos-pos0-1;
+            word = sub(str, pos0+1, pos);
+        }
+    }
+
+    cout << word;
 }

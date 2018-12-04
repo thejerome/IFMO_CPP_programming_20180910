@@ -18,10 +18,26 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
-
-
+#include <string>
 using namespace std;
 
+//tests're done
 int t05_palindrom() {
 
+    string word;
+    bool flag = true;
+
+    cin >> word;
+    for (int i = 0; (i < (word.size()/2)) && (flag); i++){
+        if (word[i] != word[word.size()-1-i]){
+            flag = false;
+        }
+    }
+
+    if (flag){
+        cout << "yes";
+    }
+    else{
+        cout << "no";
+    }
 }
