@@ -33,6 +33,18 @@ bool my_upper_func(char c)
     }
 }
 
+char mytoupper(char c)
+{
+    char offset = c - 'a';
+    return ('A' + offset);
+}
+
+char mytolower(char c)
+{
+    char offset = c - 'A';
+    return ('a' + offset);
+}
+
 int t03_toggle() {
     char inp;
     cin >> inp;
@@ -40,11 +52,11 @@ int t03_toggle() {
     {
         if(my_upper_func(inp))
         {
-            inp = (char) tolower(inp);
+            inp = mytolower(inp);
         }
         else
         {
-            inp = (char) toupper(inp);
+            inp = mytoupper(inp);
         }
     }
     cout << inp;
