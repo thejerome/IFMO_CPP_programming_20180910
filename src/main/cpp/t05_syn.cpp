@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+    map <string, string> synonym;
+    int N;
+    string aim;
+    string key, value;
+    cin >> N;
+    for (int i=0; i<N; i++){
+        cin >> key >> value;
+        synonym[key] =  value;
+    }
+    cin >> aim;
+    for (auto element:synonym){
+        if (aim == element.first) cout << element.second;
+        if (aim == element.second) cout << element.first;
+    }
 }

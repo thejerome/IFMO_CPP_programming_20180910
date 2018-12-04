@@ -80,9 +80,86 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <vector>
+#include <set>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+    bool is_stresses_correct(string s){             //checking for number of stress
+        int c=0;
+        for (int i=0; i < s.length(); i++){
+            if (s[i]>='A' && s[i]<='Z') c++;
+        }
+    if (c==1) return true;
+        else return false;
+    }
 
+    string low(string s){
+        string t;
+        t="";
+        for (int i=0; i<s.length(); i++){
+            if (s[i]>='A' && s[i]<='Z') s[i]=s[i]-'A'+'a';
+            t+=s[i];
+        }
+        return t;
+    }
+
+int t06_homework() {
+   string s,t;
+   int N, mistakes;
+   s="";
+   mistakes=0;
+   set<string> dictionary;
+   set<string> homework;
+   cin >> N;
+   for (int i=0; i<N; i++){                 //enter data in dictionary
+       t="";
+       cin >> t;
+       dictionary.insert(t);
+   }
+   cin.get();                               //without this nothing works
+   getline(cin, s);                         //get homework
+   t="";
+   for (int i=0; i<s.length(); i++){        //devide s to words
+       if (s[i]!=' ' && i!=s.length()-1) t+=s[i];
+            else {
+                if (s[i]!=' ') t+=s[i];
+                homework.insert(t);
+                t="";
+            }
+   }
+   /*for (int i=0; i<homework.size(); i++){
+       bool correct = false;
+       if (is_stresses_correct(homework[i])){
+           for (int j=0; j<dictionary.size(); j++){
+               if (low(homework[i])==low(dictionary[j]) && homework[i]==dictionary[i]) break;
+                    else while(j<dictionary.size() && low(dictionary[j])==low(dictionary[j+1]))
+                        if (homework[i]==dictionary[j+1]){
+                            correct = true;
+                        } else j++;
+           }
+       } else {
+           //cout << '|'<<homework[i]; //<< endl;
+           mistakes++;
+       }
+       //cout << 1;
+       if (correct==false) mistakes++;
+   }*/ //first version (it didn't work, so I've decided to try something new)
+
+
+   for (auto nowh=homework.begin(); nowh!=homework.end(); nowh++){
+       string elementh = *nowh;
+       if (is_stresses_correct(elementh)==true) {                                   //checking stress
+           for (auto nowd=dictionary.begin(); nowd!=dictionary.end(); nowd++){
+               string elementd = *nowd;
+               if (low(elementh)==low(elementd)){                                   //is word in dictionary?
+                   if (dictionary.find(elementh)==dictionary.end()){                //is word written by the rule?
+                        mistakes++;
+                   }
+               }
+           }
+       }else mistakes ++;
+   }
+   cout << mistakes-1;              //very important place in program
 }
