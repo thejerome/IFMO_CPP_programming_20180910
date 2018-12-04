@@ -23,9 +23,40 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
+#include <vector>
+
 
 using namespace std;
 
 int t04_both2() {
-
+    int N, M,a;
+    vector<int> conjunction;
+    set<int> int1;
+    set<int> int2;
+    cin >> N;
+    for (int i=0; i<N; i++){
+        cin >> a;
+        int1.insert(a);
+    }
+    cin >> M;
+    for (int i=0; i<M; i++){
+        cin >> a;
+        int2.insert(a);
+    }
+    for (auto now1=int1.begin(); now1!=int1.end(); now1++) {
+        int element1 = *now1;
+        for (auto now2 = int2.begin(); now2!=int2.end();now2++){
+            int element2 = *now2;
+            if (element2 == element1 ) conjunction.push_back(element1) ;
+        }
+    }
+    for (int i=0; i<conjunction.size()-1; i++){
+        for (int j=i; j < conjunction.size(); j++ ) {
+            if (conjunction[i]>conjunction[j]) swap(conjunction[i], conjunction[j]);
+        }
+    }
+    for (int i=0; i < conjunction.size(); i++){
+        cout << conjunction[i]<< ' ';
+    }
 }
