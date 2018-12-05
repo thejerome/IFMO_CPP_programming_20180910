@@ -98,11 +98,21 @@ bool my_upper_func(char c)
     }
 }
 
+char mytolower(char c)
+{
+    if ( c >= 'A' && c <= 'Z')
+    {
+        char offset = c - 'A';
+        return ('a' + offset);
+    }
+    else { return c; }
+}
+
 string strttolower(string inp)
 {
     for (auto& c : inp)
     {
-        c = tolower(c);
+        c = mytolower(c);
     }
     return inp;
 }
