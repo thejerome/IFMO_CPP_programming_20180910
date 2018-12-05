@@ -140,6 +140,6 @@ int t06_homework() {
     }
     cout << mistakes;
 
-
+    return 0;
 
 }
