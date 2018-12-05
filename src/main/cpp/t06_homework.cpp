@@ -1,4 +1,4 @@
-//Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах, 
+//Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах,
 // после чего поручила Васе проверить это домашнее задание. 
 // Вася очень плохо знаком с данной темой, поэтому он нашел словарь, 
 // в котором указано, как ставятся ударения в словах. 
@@ -80,9 +80,80 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+string strttolower(string inp)
+{
+    for (auto& c : inp)
+    {
+        c = tolower(c);
+    }
+    return inp;
+}
 
+int countupper(string inp)
+{
+    int upper=0;
+    for(auto& c : inp)
+    {
+        if (isupper(c)) { upper++; }
+    }
+    return upper;
+}
+
+bool checkword(string word, multimap<string, string> dict)
+{
+    if (word == "") { return true;} // xarg cockup
+    auto entries = dict.equal_range(strttolower(word));
+    if (entries.first != entries.second)// equal_range actually found at least one entry
+    {
+        for (auto it = entries.first; it != entries.second; it++)
+        {
+            if (word == it->second)
+            {
+                //cout<<"DICT MATCH: "<<word<<" --- "<<it->second<<endl;
+                return false;
+            }
+        }
+        return true;
+    }
+    else //no dict entries for this word
+    {
+        if (countupper(word) == 1) { return false; }
+        else return true;
+    }
+}
+
+int t06_homework() {
+    multimap<string, string> dict;
+    string homework;
+    int d_length, mistakes=0;
+    cin >> d_length;
+    for (int i = 0; i < d_length+1; i++)
+    {
+        string word;
+        getline(cin, word);
+        dict.insert(pair<string, string>(strttolower(word), word));
+    }
+
+    getline(cin, homework);
+    int start = -1;
+    int end = 0;
+    while(start != -12)
+    {
+        string word;
+        end = homework.find(' ', start+1);
+        word = homework.substr(start+1, end-start-1);
+        //cout<<"Word: <"<<word<<endl; //analyze word
+        if (checkword(word, dict)) { mistakes++; }
+        start = end;
+        if (start == string::npos) { start = -12; }
+    }
+
+    cout<<mistakes;
+
+    return 0;
 }
