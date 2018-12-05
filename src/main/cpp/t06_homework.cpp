@@ -85,6 +85,19 @@
 
 using namespace std;
 
+bool my_upper_func(char c)
+{
+    auto cc = (int) c;
+    if ((cc >= (int) 'A')&&(cc <= (int) 'Z'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 string strttolower(string inp)
 {
     for (auto& c : inp)
@@ -99,7 +112,7 @@ int countupper(string inp)
     int upper=0;
     for(auto& c : inp)
     {
-        if (isupper(c)) { upper++; }
+        if (my_upper_func(c)) { upper++; }
     }
     return upper;
 }
@@ -132,25 +145,17 @@ int t06_homework() {
     string homework;
     int d_length, mistakes=0;
     cin >> d_length;
-    for (int i = 0; i < d_length+1; i++)
+    for (int i = 0; i < d_length; i++)
     {
         string word;
-        getline(cin, word);
+        cin >> word;
         dict.insert(pair<string, string>(strttolower(word), word));
     }
 
-    getline(cin, homework);
-    int start = -1;
-    int end = 0;
-    while(start != -12)
+    string word;
+    while(cin >> word)
     {
-        string word;
-        end = homework.find(' ', start+1);
-        word = homework.substr(start+1, end-start-1);
-        //cout<<"Word: <"<<word<<endl; //analyze word
         if (checkword(word, dict)) { mistakes++; }
-        start = end;
-        if (start == string::npos) { start = -12; }
     }
 
     cout<<mistakes;
