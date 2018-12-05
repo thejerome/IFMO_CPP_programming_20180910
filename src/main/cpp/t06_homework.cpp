@@ -80,9 +80,66 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
+string lower(string str){
+    string answer = "";
+    for (int i = 0; i < str.size(); i++){
+        if ((str[i] >= 'A') && (str[i] <= 'Z')){
+            answer += char(int(str[i]) + (int('a')- int('A')));
+        }
+        else{
+            answer += str[i];
+        }
+    }
+    return answer;
+}
+
+int count_stress(string str){
+    int answer = 0;
+    for (int i = 0; i < str.size(); i++){
+        if ((str[i] >= 'A') && (str[i] <= 'Z')){
+            answer++;
+        }
+    }
+    return answer;
+}
+//tests're passed
 int t06_homework() {
+
+    int count, i, mistakes = 0;
+    string word;
+    multimap < string, string> dict = {};
+
+    cin >> count;
+
+    for (i = 0; i < count; i++){
+        cin >> word;
+        dict.insert(make_pair(lower(word), word));
+    }
+
+    while (cin >> word) {
+        if (dict.find(lower(word)) == dict.end()) {
+            if (count_stress(word) != 1) {
+                mistakes++;
+            }
+        } else {
+            bool flag = false;
+            for (auto it = dict.begin(); it != dict.end(); it++) {
+                if ((it->first == lower(word)) && (it->second == word)){
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                mistakes++;
+            }
+        }
+    }
+    cout << mistakes;
+
+    return 0;
 
 }

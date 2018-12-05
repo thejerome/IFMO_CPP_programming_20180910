@@ -27,10 +27,27 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 
 using namespace std;
-
+//tests're passed
 int t05_syn() {
 
+    int count;
+    string word1, word2;
+    map < string, string> dict = {};
+
+    cin >> count;
+
+    for (int i = 0; i < count; i++){
+        cin >> word1 >> word2;
+        dict[word1] = word2;
+        dict[word2] = word1;
+    }
+
+    cin >> word1;
+
+    cout << dict[word1];
 }

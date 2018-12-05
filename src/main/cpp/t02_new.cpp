@@ -25,10 +25,27 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
-
+//tests're passed
 int t02_new() {
-    
+
+    int count, num;
+    set <int> numbers_set;
+
+    cin >> count;
+
+    for (int i = 0; i < count; i++){
+        cin >> num;
+        if (numbers_set.find(num) != numbers_set.end()){
+            cout << "YES";
+        }
+        else{
+            cout << "NO";
+        }
+        cout << ' ';
+        numbers_set.insert(num);
+    }
 }
