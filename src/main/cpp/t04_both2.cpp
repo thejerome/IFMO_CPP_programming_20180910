@@ -23,9 +23,41 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
+    int s1, s2;
+    set<int> nums1, nums2, res;
+    int pairs = 0;
+    cin >> s1;
+    for (int i = 0; i < s1; i++)
+    {
+        int inp;
+        cin >> inp;
+        nums1.insert(inp);
+    }
+
+    cin>>s2;
+    for (int i = 0; i < s2; i++)
+    {
+        int inp;
+        cin >> inp;
+        nums2.insert(inp);
+    }
+
+
+    for(auto element: nums1){
+        if( nums2.find(element) != nums2.end())
+        {
+            res.insert(element);
+        }
+    }
+
+    for(auto element: res){
+        cout<<element<<" ";
+    }
+    return 0;
 
 }

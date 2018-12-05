@@ -25,10 +25,30 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
 
 
 using namespace std;
 
 int t02_new() {
-    
+    const string y = "YES ";
+    const string n = "NO ";
+    int total;
+    set<int> nums;
+    cin >> total;
+    for (int i = 0; i < total; i++)
+    {
+        int inp;
+        cin >> inp;
+        if (!nums.insert(inp).second)
+        {
+            cout << y;
+        }
+        else
+        {
+            cout << n;
+            nums.insert(inp);
+        }
+    }
+    return 0;
 }
