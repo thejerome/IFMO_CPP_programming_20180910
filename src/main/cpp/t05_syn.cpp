@@ -27,10 +27,28 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
+#include <vector>
+#include <string>
 
 
 using namespace std;
 
-int t05_syn() {
 
+int t05_syn() {
+    map<string, string> dict;
+    string query;
+    int l;
+    cin >> l;
+    for(int i = 0; i < l; i++)
+    {
+        string key, value;
+        cin >> key >> value;
+        dict[key] = value;
+        dict[value] = key;
+
+    }
+    cin >> query;
+    cout << dict[query];
+    return 0;
 }
