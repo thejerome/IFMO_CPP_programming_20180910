@@ -30,19 +30,19 @@
 using namespace std;
 
 int t02_new() {
-    int n;
-    cin>>n;
-    int a[n];
-    int b[100000];
-    for(int i = 0; i<n;i++)
-    {
-        cin>>a[i];
-        b[i] = 0;
-    }
-    for(int i = 0; i<n;i++)
-    {
-        if(b[a[i]] == 0) cout<<"NO\n";
-            else cout << "YES\n";
-        b[a[i]]++;
-    }  
+	int n;
+	cin >> n;
+	int a[n];
+	int b[100000];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+		b[i] = 0;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (b[a[i]] == 0) cout << "NO\n";
+		else cout << "YES\n";
+		b[a[i]]++;
+	}
 }

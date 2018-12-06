@@ -80,9 +80,49 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <map>
+#include <string>
 using namespace std;
-
-int t06_homework() {
-
+string propis(string a)
+{
+	for (int i = 0; i < a.length(); i++)
+	{
+		if (a[i] >= 'A' && a[i] <= 'Z') a[i] = int(a[i]) - int('A') + int('a');
+	}
+}
+int stressedcount(string a)
+{
+	int x = 0;
+	for (int i = 0; i < a.length(); i++)
+	{
+		if (a[i] >= 'A' && a[i] <= 'Z') x++;
+	}
+	return x;
+}
+bool stressingcheck(multimap<string, string> a, string b)
+{
+	for (auto i = a.begin(); i != a.end(); i++) if ((i->first == propis(b)) && (i->second == b)) return true;
+	return false;
+}
+int t06_homework()
+{
+	multimap <string, string> dictionary;
+	string w;
+	int n, mist = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> w;
+		dictionary.insert(make_pair(propis(w), w));
+	}
+	while (cin >> w)
+	{
+		if (w == " ") break;
+		if (dictionary.find(propis(w)) == dictionary.end())
+		{
+			if (stressedcount(w) != 1) mist++;
+		}
+		else if (!stressingcheck(dictionary, w)) mist++;
+	}
+	cout << mist;
 }
