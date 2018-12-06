@@ -36,15 +36,14 @@ using namespace std;
 
 int check(string number){
 	int k = 0;
-	int mn = 10;
 	if (number.size()>3) {return (-1);}
 	else { 
 
 	for (int i=0;i<number.size();i++){
 		char n = number[i];
-		k = (k + n - '0')* mn ;
+		k = ((k*10) + n - '0') ;
 	}
-return (k/10);
+return k;
 }
 }
 
