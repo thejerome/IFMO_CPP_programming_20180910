@@ -29,7 +29,6 @@
 
 #include "t07_ip.h"
 #include <iostream>
-#include <vector>
 
 
 using namespace std;
