@@ -33,40 +33,53 @@
 
 using namespace std;
 
+
+int check(string number){
+	int k = 0;
+	int mn = 10;
+	if (number.size()>3) {return (-1);}
+	else { 
+
+	for (int i=0;i<number.size();i++){
+		char n = number[i];
+		k = (k + n - '0')* mn ;
+	}
+return (k/10);
+}
+}
+
+    
 int t07_ip() {
     string s1;
     getline(cin,s1);
-    int count = -1;
     int point = 0;
     string number;
     int nC = 0;
-    if (s1[0]=='.') {cout<<"NO";}
-    else {
-    for (int i=0;i<s1.size();i++){
-        count++;
-        if (s1[i]=='.') {
-            number = s1.substr(i-count, count);
-             int n = stoi(number);
+    int n = 0;
 
-                    if ((n>=0) && (n<256)) {nC++;};
-            
-            count =-1;
-            point++;
-            
+
+    for (int i=0;i<s1.size();i++){
+
+        if ((s1[i]<'0') || (s1[i]>'9')) {
+        		n =check(number);
+ 
+                  if ((n>=0) && (n<256)) {nC++;};
+               point++;
+               n=0;
+               number.clear();
+
         }
-        
-    }
-        int size=s1.size();
-        number = s1.substr(size-count, count);
-        int n = stoi(number);
-        
-        if ((n>=0) && (n<256)) {nC++;};
-        
-        
-    cout<<nC<<' '<<point;
+
+        if ((s1[i]>='0') && (s1[i]<='9')) {number =number + s1[i];}
+         
+        }
+
+    			n =check(number);
+                if ((n>=0) && (n<256)) {nC++;};
+                
     if ((nC == 4) && (point == 3)) {cout<<"YES";}
     
     else {cout<<"NO";}
     return 0;
 }
-}
+
