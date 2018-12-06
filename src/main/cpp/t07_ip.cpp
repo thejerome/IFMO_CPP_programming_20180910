@@ -34,5 +34,45 @@
 using namespace std;
 
 int t07_ip() {
+    bool result = true; //конечный ответ. true - YES
+    string str; //исходная строка
+    cin >> str;
+    int count = 0; //количество точек в строке
+    for (char q : str)
+        if (q == '.')
+            count++;
+    if (count != 3) // если количество точек больше 3 возвращаем ответ NO и дальше НЕ идём
+    {
+        cout<<"NO";
+        return 0;
+    }
 
+    //добавляем в конец точку, чтобы после прочтения этой точки, в массив ip записался последний номер
+    str.push_back('.');
+
+    int len = str.length();
+    string current;
+    int ip[4]; //числа ip адреса
+    int j = 0;
+
+    for (int i = 0; i < len; i++)
+    {
+        if ((str[i] >= '0' && str[i] <= '9') || str[i] == '-') {
+            current += str[i];
+        }
+        else if (str[i] == '.' && !current.empty()) {
+            ip[j] = stoi(current);
+            j++;
+            current.erase();
+        }
+    }
+
+    for (int k = 0; k < 4 && result; ++k) {
+        if (ip[k] > 255 || ip[k] < 0)
+            result = false;
+    }
+    if (result)
+        cout<<"YES";
+    else
+        cout<<"NO";
 }
