@@ -30,5 +30,9 @@
 using namespace std;
 
 int t01_char() {
-
+    char symb;
+    cin >> symb;
+    if (symb>='0' && symb<='9') { cout<<"yes";}
+    else {cout<<"no";}
+    return 0;
 }

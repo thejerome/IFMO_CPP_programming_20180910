@@ -24,5 +24,9 @@
 using namespace std;
 
 int t02_up() {
-    
+    char symb;
+    cin >> symb;
+    if (symb>='a' && symb<='z') { symb=symb+('A'-'a');}
+    cout<<symb;
+    return 0;
 }

@@ -33,6 +33,52 @@
 
 using namespace std;
 
-int t07_ip() {
 
+int check(string number){
+	int k = 0;
+	if (number.size()>3) {return (-1);}
+	else { 
+
+	for (int i=0;i<number.size();i++){
+		char n = number[i];
+		k = ((k*10) + n - '0') ;
+	}
+return k;
 }
+}
+
+    
+int t07_ip() {
+    string s1;
+    getline(cin,s1);
+    int point = 0;
+    string number;
+    int nC = 0;
+    int n = 0;
+
+
+    for (int i=0;i<s1.size();i++){
+
+        if ((s1[i]<'0') || (s1[i]>'9')) {
+        		n =check(number);
+ 
+                  if ((n>=0) && (n<256)) {nC++;};
+               point++;
+               n=0;
+               number.clear();
+
+        }
+
+        if ((s1[i]>='0') && (s1[i]<='9')) {number =number + s1[i];}
+         
+        }
+
+    			n =check(number);
+                if ((n>=0) && (n<256)) {nC++;};
+                
+    if ((nC == 4) && (point == 3)) {cout<<"YES";}
+    
+    else {cout<<"NO";}
+    return 0;
+}
+
