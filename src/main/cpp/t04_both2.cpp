@@ -27,5 +27,20 @@
 using namespace std;
 
 int t04_both2() {
-
+    int n,m,a[100000]={0};
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int x;
+        cin >> x;
+        a[x]++;
+    }
+    cin >> m;
+    for (int i=0; i<m; i++) {
+        int x;
+        cin >> x;
+        a[x]++;
+    }
+    int count=0;
+    for (int i=0; i<100000; i++)
+        if (a[i]>1) cout << i << ' ';
 }

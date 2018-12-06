@@ -23,5 +23,15 @@
 using namespace std;
 
 int t01_unique() {
-    
+    int n, a[100000]={0};
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int x;
+        cin >> x;
+        a[x]++;
+    }
+    int count=0;
+    for (int i=0; i<100000; i++)
+        if (a[i]) count++;
+    cout << count;
 }

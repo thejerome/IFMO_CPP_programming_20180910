@@ -83,6 +83,37 @@
 
 using namespace std;
 
-int t06_homework() {
+string LowerCase(string s) {
+    for (int i=0; i<s.size(); i++) s[i] = tolower(s[i]);
+    return s;
+}
 
+int AmoutOfUpperCase(string s) {
+    int count=0;
+    for (int i=0; i<s.size(); i++)
+        if (s[i] >= 'A' && s[i] <= 'Z') count++;
+    return count;
+}
+
+int t06_homework() {
+    int n, error=0;
+    string dir[20000];
+    cin >> n;
+    for (int i=0; i<n; i++) cin >> dir[i];
+    string s;
+    while (cin >> s) {
+        bool indir=false, check=false;
+        for (int i=0; i<n; i++) {
+            if (LowerCase(dir[i]) != LowerCase(s)) continue;
+            indir=true;
+            if (dir[i] == s) check=true;
+        }
+        if (indir) {
+            if (!check) error++;
+        }
+        else {
+            if (AmoutOfUpperCase(s) != 1) error++;
+        }
+    }
+    cout << error;
 }

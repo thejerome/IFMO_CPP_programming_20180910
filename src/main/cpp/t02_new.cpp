@@ -30,5 +30,13 @@
 using namespace std;
 
 int t02_new() {
-    
+    int n, a[100000]={0};
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int x;
+        cin >> x;
+        if (a[x]) cout << "YES\n";
+        else cout << "NO\n";
+        a[x]++;
+    }
 }
