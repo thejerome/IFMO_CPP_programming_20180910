@@ -25,7 +25,7 @@ int t06_longest() {
     string s1;
     getline(cin,s1);
     int count = 0;
-    int index = 0;
+
     int max = 0;
     string word;
     for (int i=0;i<s1.size();i++){
