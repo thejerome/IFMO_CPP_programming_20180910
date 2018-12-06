@@ -27,5 +27,28 @@
 using namespace std;
 
 int t04_both2() {
+	int n;
+	cin >> n;
+	int a[n];
+	int c[100000];
+	for (int i = 0; i < 100000; i++) 	c[i] = 0;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+		c[a[i]] = 1;
+	}
+	int m;
+	cin >> m;
+	int b[m];
+	for (int i = 0; i < m; i++)
+	{
+		cin >> b[i];
+		if (c[b[i]] == 1)
+		{
+			c[b[i]] = 2;
+		}
+	}
+
+	for (int i = 0; i < 100000; i++)  if (c[i] == 2) cout << i << " ";
 
 }

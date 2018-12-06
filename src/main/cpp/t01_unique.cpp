@@ -23,5 +23,19 @@
 using namespace std;
 
 int t01_unique() {
-    
+	int n, uniq = 0;
+	cin >> n;
+	int a[n];
+	int b[100000];
+	for (int i = 0; i < n; i++)
+	{
+		b[i] = 0;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+		if (b[a[i]] == 0) uniq++;
+		b[a[i]]++;
+	}
+	cout << uniq;
 }

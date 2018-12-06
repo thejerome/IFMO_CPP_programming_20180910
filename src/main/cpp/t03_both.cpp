@@ -27,5 +27,25 @@
 using namespace std;
 
 int t03_both() {
-
+	int n, both = 0;
+	cin >> n;
+	int a[n];
+	int c[100000];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+		c[a[i]] = 1;
+	}
+	int m;
+	cin >> m;
+	int b[m];
+	for (int i = 0; i < m; i++)
+	{
+		cin >> b[i];
+		if (c[b[i]] == 1)
+		{
+			c[b[i]] = 2; both++;
+		}
+	}
+	cout << both;
 }
