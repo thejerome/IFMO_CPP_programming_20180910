@@ -34,5 +34,22 @@
 using namespace std;
 
 int t07_ip() {
-
+    string s;
+    getline(cin,s);
+    int l  = 0, r  = 0, n = 0;
+    bool chek = true;
+    while (r < s.length()){
+        r = s.find('.', r);
+        chek = (chek)? r != s.length() - 1  : chek;
+        r = (r == -1)? s.length(): r;
+        chek = (chek)? (r != l && stoi(s.substr(l, r - l)) >= 0 && stoi(s.substr(l, r - l)) < 256) : chek;
+        r++;
+        l = r;
+        n++;
+    }
+    if (chek && n == 4){
+        cout << "YES";
+    }else{
+        cout << "NO";
+    }
 }
