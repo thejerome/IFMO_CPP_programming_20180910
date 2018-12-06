@@ -78,51 +78,64 @@
 //
 //4
 
-#include "t06_homework.h"
-#include <iostream>
-#include <map>
-#include <string>
+#include "t06_homework.h" 
+#include <iostream> 
+#include <map> 
+#include <string> 
 using namespace std;
-string propis(string a)
-{
-	for (int i = 0; i < a.length(); i++)
-	{
-		if (a[i] >= 'A' && a[i] <= 'Z') a[i] = int(a[i]) - int('A') + int('a');
-	}
-}
-int stressedcount(string a)
-{
-	int x = 0;
-	for (int i = 0; i < a.length(); i++)
-	{
-		if (a[i] >= 'A' && a[i] <= 'Z') x++;
-	}
-	return x;
-}
-bool stressingcheck(multimap<string, string> a, string b)
-{
-	for (auto i = a.begin(); i != a.end(); i++) if ((i->first == propis(b)) && (i->second == b)) return true;
-	return false;
-}
-int t06_homework()
-{
-	multimap <string, string> dictionary;
-	string w;
-	int n, mist = 0;
-	cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-		cin >> w;
-		dictionary.insert(make_pair(propis(w), w));
-	}
-	while (cin >> w)
-	{
-		if (w == " ") break;
-		if (dictionary.find(propis(w)) == dictionary.end())
-		{
-			if (stressedcount(w) != 1) mist++;
+
+string propis(string str) {
+	string answer = "";
+	for (int i = 0; i < str.size(); i++) {
+		if ((str[i] >= 'A') && (str[i] <= 'Z')) {
+			answer += char(int(str[i]) + (int('a') - int('A')));
 		}
-		else if (!stressingcheck(dictionary, w)) mist++;
+		else {
+			answer += str[i];
+		}
+	}
+	return answer;
+}
+int stressingcount(string str) {
+	int answer = 0;
+	for (int i = 0; i < str.size(); i++) {
+		if ((str[i] >= 'A') && (str[i] <= 'Z')) {
+			answer++;
+		}
+	}
+	return answer;
+}
+
+
+
+int t06_homework() {
+	int n, i, mist = 0;
+	string w;
+	multimap < string, string> dict = {};
+	cin >> n;
+	for (i = 0; i < n; i++) {
+		cin >> w;
+		dict.insert(make_pair(propis(w), w));
+	}
+	while (cin >> w) {
+		if (dict.find(propis(w)) == dict.end()) {
+			if (stressingcount(w) != 1) {
+				mist++;
+			}
+		}
+		else {
+			bool flag = false;
+			for (auto it = dict.begin(); it != dict.end(); it++) {
+				if ((it->first == propis(w)) && (it->second == w)) {
+
+					flag = true;
+				}
+			}
+			if (!flag) {
+				mist++;
+			}
+		}
 	}
 	cout << mist;
+	return 0;
 }
