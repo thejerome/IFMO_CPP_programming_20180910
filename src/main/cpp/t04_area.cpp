@@ -1,3 +1,4 @@
+
 //Проверьте, принадлежит ли точка данной закрашенной области:
 //
 // https://www.dropbox.com/s/3h3nl34g4ciiglt/3795.png?dl=1
@@ -46,3 +47,4 @@ int t04_area() {
 		cout << "NO";
     return 0;
 }
+
