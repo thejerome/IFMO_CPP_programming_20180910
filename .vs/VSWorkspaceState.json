@@ -3,9 +3,8 @@
     "",
     "\\src",
     "\\src\\main",
-    "\\src\\main\\cpp",
-    "\\src\\test"
+    "\\src\\main\\cpp"
   ],
-  "SelectedNode": "\\src\\main\\cpp\\main.cpp",
+  "SelectedNode": "\\src\\main\\cpp\\t01_min.cpp",
   "PreviewInSolutionExplorer": false
 }

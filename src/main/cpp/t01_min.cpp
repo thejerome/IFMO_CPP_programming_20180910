@@ -40,5 +40,5 @@ int t01_min() {
 	int a, b, c, d;
 	cin >> a >> b >> c >> d;
 	cout << min4(a, b, c, d);
-    return 0;
+	return 0;
 }
