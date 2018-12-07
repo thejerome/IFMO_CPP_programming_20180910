@@ -1,7 +1,0 @@
-5
-Hello Hi
-Bye Goodbye
-List Array
-Good Nice
-Best Nicest
-Best
