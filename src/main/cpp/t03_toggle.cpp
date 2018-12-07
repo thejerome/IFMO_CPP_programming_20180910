@@ -24,6 +24,7 @@
 using namespace std;
 
 int t03_toggle() {
+
 	char c;
 	cin >> c;
 	if (c >= 'a' && c <= 'z')
@@ -33,4 +34,5 @@ int t03_toggle() {
 	else
 		cout << c;
 	return 0;
+
 }

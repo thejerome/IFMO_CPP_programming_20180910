@@ -25,9 +25,11 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 int t04_count() {
+
 	string s;
 	getline(cin, s);
 	int spaces = 0;
@@ -36,4 +38,6 @@ int t04_count() {
 			spaces++;
 	cout << spaces + 1;
 	return 0;
+
+
 }

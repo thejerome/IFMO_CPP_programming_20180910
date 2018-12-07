@@ -19,9 +19,11 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
 int t06_longest() {
+
 	string s;
 	getline(cin, s);
 	s += ' ';
@@ -38,4 +40,5 @@ int t06_longest() {
 	}
 	cout << max;
 	return 0;
+
 }
