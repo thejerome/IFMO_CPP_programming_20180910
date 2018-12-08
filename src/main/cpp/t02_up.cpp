@@ -22,7 +22,16 @@
 
 
 using namespace std;
-
-int t02_up() {
     
+int t02_up() {
+    char symbol;
+    cin >> symbol;
+    if (symbol >= 'a' && symbol <= 'z') {
+        int temp = symbol - 'a';
+        char s = 'A' + temp;
+        cout << s;
+    }
+    else {
+        cout << symbol;
+    }
 }
