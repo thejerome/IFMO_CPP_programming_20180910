@@ -22,5 +22,24 @@
 using namespace std;
 
 int t06_longest() {
-
+    string s1,s2,s3 ;
+    getline (cin,s1);
+    s2="";
+    s3="";
+    for(int i=0;i<s1.size();i++) {
+        if (s1[i] != ' ') {
+            s2+=s1[i];
+        } else if (s2.size() > s3.size()) {
+            s3 = s2;
+            s2.clear();
+        }
+        else {
+            s2.clear();
+        }
+    }
+    if (s2.size() > s3.size()) {
+        s3 = s2;
+    }
+    cout<<s3;
+    return 0;
 }
