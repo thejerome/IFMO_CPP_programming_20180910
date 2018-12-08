@@ -23,5 +23,22 @@
 using namespace std;
 
 int t05_palindrom() {
-
+int palindrom;
+string a;
+getline(cin,a);
+int i=0;
+int j=a.length()-1;
+while (i!=a.length()/2){
+    if (a[i]==a[j])
+        palindrom =1;
+    else {
+        palindrom =0 ;
+        break;
+    }
+    i++;
+    j--;
+}
+if (palindrom == 1)
+    cout <<"yes";
+else cout<<"no";
 }

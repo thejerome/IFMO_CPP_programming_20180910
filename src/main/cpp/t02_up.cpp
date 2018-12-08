@@ -24,5 +24,10 @@
 using namespace std;
 
 int t02_up() {
-    
+    char b;
+    cin>>b;
+    int a = abs ('A'-'a');
+    if (b >='a')
+        b=b-a;
+    cout<<b;
 }

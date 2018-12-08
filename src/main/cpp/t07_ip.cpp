@@ -24,15 +24,43 @@
 //
 //127.0.0.1
 //Sample Output:
-//
+//s.find() s.subslr()
 //YES
 
 #include "t07_ip.h"
 #include <iostream>
+#include <string>
 
 
 using namespace std;
-
+#include <string>
 int t07_ip() {
-
+string a;
+int point = -1, kolichestvo = 0, res = 0, leng = 0;
+getline(cin,a);
+if (a[0]== '.'|| a[a.length()-1]=='.') res = 0;
+else for (int i = 0; i<a.length(); i++){
+    if (a[i]=='.' || i == a.length()-1){
+        if (i == a.length()-1) leng++;
+        if (a[i]== '.' && a[i-1] == '.') {
+            res = 0;
+            break;
+        }
+        else{
+        int number = stoi(a.substr(point+1, leng));
+        if (number <= 255 && number >-1)
+            res = 1;
+        else {
+            res = 0;
+            break;
+        }
+        leng = 0;
+        point = i;
+        kolichestvo ++;
+    }}
+    else leng++;
+}
+if (res == 1 && kolichestvo == 4)
+    cout <<"YES";
+else cout <<"NO";
 }
