@@ -22,7 +22,21 @@
 
 using namespace std;
 
-int t06_sum() {
-
-    return 0;
+int summer(int sum)
+{
+	int cur;
+	cin >> cur;
+	if (cur == 0) 
+	{
+		return sum;
+	}
+	else 
+	{
+		return summer(cur + sum);
+	}
+}
+int t06_sum() 
+{
+	cout << summer(0);
+	return 0;
 }

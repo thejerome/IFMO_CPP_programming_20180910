@@ -22,8 +22,14 @@
 using namespace std;
 
 //function distance
-
-int t02_dist() {
-
-    return 0;
+float distance(float x1, float y1, float x2, float y2)
+{
+	return sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
+}
+int t02_dist()
+{
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	cout << distance(a, b, c, d);
+	return 0;
 }
