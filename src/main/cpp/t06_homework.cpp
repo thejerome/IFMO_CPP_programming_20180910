@@ -3,7 +3,7 @@
 // Вася очень плохо знаком с данной темой, поэтому он нашел словарь, 
 // в котором указано, как ставятся ударения в словах. 
 // К сожалению, в этом словаре присутствуют не все слова. 
-// Вася решил, что в словах, которых нет в словаре, он будет считать, 
+// Вася решил, что в словах, которых нет в словаре, он будет считать,
 // что Петя поставил ударения правильно, если в этом слове Петей поставлено ровно одно ударение.
 //
 //Оказалось, что в некоторых словах ударение может быть поставлено больше, чем одним способом. 
@@ -80,9 +80,45 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+string to_lower(string s) {
+    for(auto &i: s)
+        if(i >= 'A' && i < 'Z')
+            i = 'a' + i - 'A';
+    return s;
+}
 
+bool check(const string &s, const map<string, set<string> > &dict) {
+    if(dict.find(to_lower(s)) != dict.end())
+        return dict.at(to_lower(s)).find(s) != dict.at(to_lower(s)).end();
+    else {
+        bool stress = false;
+        for(auto c: s)
+            if(c >= 'A' && c <= 'Z') {
+                if(stress) return false;
+                stress = true;
+            }
+        return stress;
+    }
+}
+
+int t06_homework() {
+    int n;
+    map<string, set<string> > dict;
+    string w;
+
+    cin >> n;
+    for(int i = 0; i < n; ++i) {
+        cin >> w;
+        dict[to_lower(w)].insert(w);
+    }
+
+    int mistakes = 0;
+    while(cin >> w) mistakes += !check(w, dict);
+
+    cout << mistakes;
 }
