@@ -21,11 +21,25 @@
 //
 //2
 
-#include "t03_both.h"
+#include"t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+    int n;
+    cin >> n;
+    set<int> fs;
+    for(int i = 0, elem; i < n; ++i) {
+        cin >> elem;
+        fs.insert(elem);
+    }
+    int c = 0;
+    cin >> n;
+    for(int i = 0, elem; i < n; ++i) {
+        cin >> elem;
+        c += fs.count(elem);
+    }
+    cout << c;
 }

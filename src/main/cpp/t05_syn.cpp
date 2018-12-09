@@ -27,10 +27,30 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
+    int n;
+    map<string, string> dict;
+    string w1,w2;
 
+    cin >> n;
+    for(int i = 0; i < n; ++i) {
+        cin >> w1 >> w2;
+        dict.insert(make_pair(w1,w2));
+    }
+    cin >> w1;
+    for(const auto &it: dict) {
+        if (it.first == w1) {
+            w2 = it.second;
+            break;
+        } else if (it.second == w1) {
+            w2 = it.first;
+            break;
+        }
+    }
+
+    cout << w2;
 }
