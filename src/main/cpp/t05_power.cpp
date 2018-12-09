@@ -29,11 +29,9 @@ using namespace std;
 
 //function power
 double power(double a, int n) {
-    if (n != 1) {
-        a = a * a;
-        n--;
-        return power(a, n);
-    } else { return a; }
+    if (n==0){return 1;}
+    if (n>0) {return a*power(a,n-1);}
+    else {return 1/a*power(a,n+1);}
 }
 int t05_power() {
     double a;
