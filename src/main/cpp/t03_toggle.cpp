@@ -29,7 +29,7 @@ int t03_toggle() {
 
 	if (x >= 'a' && x <= 'z'){
 		x += 'A' - 'a';
-	}else{
+	}else if (x >= 'A' && x <= 'Z'){
 		x += 'a' - 'A';
 	}
 	cout << x;

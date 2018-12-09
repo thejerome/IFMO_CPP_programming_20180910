@@ -34,7 +34,7 @@ int t04_count() {
 	getline(cin, x);
 
 	for (int i = 1; i <= x.size(); ++i){
-		if (x[i] = ' '){
+		if (x[i] == ' '){
 			n += 1;
 		}
 	}

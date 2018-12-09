@@ -63,7 +63,9 @@ int t07_ip() {
 
     if (sum >= 0 && sum <= 255) {
         prv++;
-    }else if (t != 3 || prv != 4){
+    }
+    
+    if (t != 3 || prv != 4){
         cout << "NO";
     }else{
         cout << "YES";
