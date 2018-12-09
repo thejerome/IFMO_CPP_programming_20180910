@@ -22,7 +22,24 @@
 
 using namespace std;
 
-int t06_sum() {
+int sum ()
+{
+    int x;
+
+    cin >> x;
+
+    if (x == 0)
+    {
+        return 0;
+    }
+
+    return x + sum();
+}
+
+int t06_sum()
+{
+
+    cout << sum();
 
     return 0;
 }
