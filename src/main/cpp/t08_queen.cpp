@@ -22,7 +22,46 @@
 
 using namespace std;
 
-int t08_queen(){
+int chess[10];
+
+bool check_position (int i, int j, int k)
+{
+    if (k == i) return true;
+    else
+    {
+        return (chess[k] != j) && ((i - k) != (chess [k] - j)) && ((i - k) != (j - chess [k]))  && check_position (i, j, k + 1);
+    }
+}
+int execution (int i, int j, int k)
+{
+    if (j == i)
+    {
+        return 1;
+    }
+    else
+    {
+        if (k < i)
+        {
+            int l = 0;
+
+            if (check_position (j, k, 0))
+            {
+                chess [j] = k;
+                l = execution (i, j + 1, 0);
+            }
+            return l + execution (i, j, k + 1);
+        }
+        else return 0;
+    }
+}
+
+int t08_queen()
+{
+    int N;
+
+    cin >> N;
+
+    cout << execution (N, 0, 0);
 
     return 0;
 }
