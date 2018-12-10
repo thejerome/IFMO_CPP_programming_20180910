@@ -1,4 +1,4 @@
-//Найдите в данной строке самое длинное слово и выведите его.
+﻿//Найдите в данной строке самое длинное слово и выведите его.
 //
 //Входные данные
 //
@@ -22,5 +22,21 @@
 using namespace std;
 
 int t06_longest() {
+string a;
+int len = 0; int lenmax = 0; int place = 0;
+getline(cin,a);
+for (int i=0; i<a.length(); i++){
+    if (a[i]!= ' ') len++;
+    if (a[i]== ' ' || i == a.length()-1){
+        if (len > lenmax) {
+            lenmax = len;
+            place = i;
+        }
+        len = 0;
+    }
+}
+for (int i = place - lenmax; i<= place; i++){
+    cout << a[i];
+}
 
 }
