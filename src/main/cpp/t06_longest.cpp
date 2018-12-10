@@ -36,5 +36,4 @@ int t06_longest() {
         } else c++;
     }
     cout << s.substr(idx, max);
-
 }

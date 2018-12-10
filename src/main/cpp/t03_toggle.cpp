@@ -31,5 +31,4 @@ int t03_toggle() {
     else if(b >= 'A' && b <= 'Z')
         b = 'a' + (b - 'A');
     cout << b;
-
 }

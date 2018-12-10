@@ -34,5 +34,4 @@ int t04_count() {
     for(auto i:s)
         if(i== ' ') n++;
         cout << n;
-
 }
