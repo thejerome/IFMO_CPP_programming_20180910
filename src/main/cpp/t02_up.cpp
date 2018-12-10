@@ -19,10 +19,14 @@
 
 #include "t02_up.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t02_up() {
-    
+    char b;
+    cin >> b;
+    if(b >= 'a' && b <= 'z')
+        b = 'A' + (b - 'a');
+    cout << b;
 }
