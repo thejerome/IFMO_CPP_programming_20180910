@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
 
 using namespace std;
 
-int t06_homework() {
+string lower (string s) {
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            s[i] = s[i] - 'A' + 'a';
+        }
+    }
+    return s;
+}
 
+bool is_stressed_correct (string s) {
+    int count = 0;
+    for (int i = 0; i < s.size(); i++)
+        if (s[i] >= 'A' && s[i] <= 'Z')
+            count++;
+    return count == 1;
+}
+
+int t06_homework() {
+    int N;
+    cin >> N;
+    map<string, set<string>> dictionary;
+    for (int i = 0; i < N; i++) {
+        string straight, stressed;
+        cin >> stressed;
+        straight = lower(stressed);
+        dictionary[straight].insert (stressed);
+    }
+    string homework;
+    getline (cin, homework);
+    homework += ' ';
+    string w = "";
+    int count = 0;
+    for (int i = 0; i < homework.size(); i++)
+        if (homework[i] != ' ')
+            w += homework[i];
+        else {
+            if (dictionary.count (lower (w)) == 1) {
+                if (dictionary[lower (w)].count (w) == 0)
+                    count++;
+            }
+            else if (!is_stressed_correct(w)) {
+                count++;
+            }
+            w = "";
+        }
+    cout << count - 1;
 }
