@@ -13,7 +13,7 @@
 //Sample Input:
 //
 //b
-//        Sample Output:
+//Sample Output:
 //
 //B
 
@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_up() {
-    
+    char symbol;
+    cin >> symbol;
+    if (symbol >= 'a' && symbol <= 'z') {
+    	symbol = symbol + 'A' - 'a';
+    }
+    cout << symbol;
+    return 0;
 }

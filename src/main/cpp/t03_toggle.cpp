@@ -13,7 +13,7 @@
 //Sample Input:
 //
 //b
-//        Sample Output:
+//Sample Output:
 //
 //B
 
@@ -24,5 +24,16 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char symbol;
+    cin >> symbol;
+    if (symbol >= 'a' && symbol <= 'z') {
+    	symbol = symbol + 'A' - 'a';
+    }
+    else {
+    	if (symbol >= 'A' && symbol <= 'Z') {
+    		symbol = symbol + 'a' - 'A';
+    	}
+    }
+    cout << symbol;
+	return 0;
 }
