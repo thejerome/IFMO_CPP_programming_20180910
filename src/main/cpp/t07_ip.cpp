@@ -34,5 +34,36 @@
 using namespace std;
 
 int t07_ip() {
+    string n1, n2;
+    int x, sum, r, p;
+    sum = 0;
+    x = 1;
+    r = 0;
+    p = 0;
+    getline (cin, n1);
+    char k = 0;
+    for (int i = n1.size()-1; i >= 0; i--){
+        if (n1[i] != '.'){
+            k = n1[i] - '0';
+            sum += k*x;
+            x *= 10;
+        }else{
+            if (sum >= 0 and sum <= 255){
+                p++;
+            }
+            x = 1;
+            ++r;
+            sum = 0;
+        }
+    }
+    if (sum >= 0 and sum <= 255) {
+        p++;
+    }
 
+    if (r != 3 or p != 4){
+        cout << "NO";
+    }
+    else{
+        cout << "YES";
+    }
 }
