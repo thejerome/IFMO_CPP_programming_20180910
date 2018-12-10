@@ -24,5 +24,10 @@
 using namespace std;
 
 int t02_up() {
+    char alphabet;
+    cin >> alphabet;
+    if (alphabet >= 'a' && alphabet <= 'z') alphabet = alphabet-32;
+    cout << alphabet;
+    return 0;
     
 }
