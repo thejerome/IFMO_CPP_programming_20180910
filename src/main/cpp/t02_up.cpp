@@ -24,5 +24,13 @@
 using namespace std;
 
 int t02_up() {
-    
+char simvol;
+cin>>simvol;
+    if(simvol<='z' && simvol>='a'){
+        simvol=simvol+'A'-'a';
+        cout<<simvol;}
+    else
+        cout<<simvol;
+return 0;
+
 }

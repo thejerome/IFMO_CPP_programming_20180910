@@ -24,5 +24,16 @@
 using namespace std;
 
 int t03_toggle() {
+char simvol;
+cin>>simvol;
+    if(simvol<='z' && simvol>='a'){
+        simvol=simvol+'A'-'a';
+        cout<<simvol;}
+    else if(simvol<='Z' && simvol>='A'){
+        simvol=simvol+'a'-'A';
+        cout<<simvol;}
+    else
+cout<<simvol;
+return 0;
 
 }

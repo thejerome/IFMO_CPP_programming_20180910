@@ -34,5 +34,25 @@
 using namespace std;
 
 int t07_ip() {
+string stroka;
+int a=1,chislo=0,dots=0,number=0;
+getline (cin,stroka);
+char b=0;
+    for (int i= static_cast<int>(stroka.length() - 1); i >= 0; i--){
+        if(stroka[i]!='.'){
+            b=stroka[i]-'0';
+            chislo=chislo+(b*a);
+            a=a*10;}
+        else{
+            if((chislo>=0)&&(chislo<=255)){
+                number++;}
+            a=1;
+            dots++;
+            chislo=0;}}
+    if(dots==3&&number==3)
+        cout<<"YES";
+    else
+        cout<<"NO";
+return 0;
 
 }
