@@ -44,7 +44,7 @@ int t07_ip() {
         while(i <= ip.size()-1){
             int temp = i;
             if(ip.find(".",i) != string::npos){
-                if(i == ip.find(".",i)){
+                if(i == ip.find(".",i) || ip.find(".",i) == ip.length()-1){
                     cout << "NO";
                     return 0;
                 }
@@ -55,7 +55,6 @@ int t07_ip() {
                     return 0;
                 }
                 count++;
-
             }
             else {
                 iparr[count] = stoi(ip.substr(temp,ip.length()));
