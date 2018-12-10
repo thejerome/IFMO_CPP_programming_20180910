@@ -22,5 +22,28 @@
 using namespace std;
 
 int t06_longest() {
+    string str;
+    getline(cin,str);
+    int i=0;
+    int length=0;
+    int maxlength=0;
+    int maxi;
+    if (str.find(" ",i) == string::npos) cout << str;
+    else {
+        while (i < str.size()) {
+            if (str.find(" ", i) != string::npos) {
+                length = str.find(" ", i) - i;
+                i = str.find(" ", i) + 1;
+                if (length > maxlength) {
+                    maxlength = length;
+                    maxi = i - 2;
+                }
+            } else break;
+        }
+        for (int j = maxi - maxlength + 1; j <= maxi; j++) {
+            cout << str[j];
+        }
+    }
+    return 0;
 
 }
