@@ -37,14 +37,17 @@ int t07_ip() {
     getline(cin,ip);
     int i=0;
     int count=0;
-    /**
     int iparr[ip.length()];
 
-    if (ip.length() == 0) cout << count;
+    if (ip.length() == 0) cout << "NO";
     else{
         while(i <= ip.size()-1){
             int temp = i;
             if(ip.find(".",i) != string::npos){
+                if(i == ip.find(".",i)){
+                    cout << "NO";
+                    return 0;
+                }
                 i = ip.find(".",i)+1;
                 iparr[count] = stoi(ip.substr(temp,i));
                 if(iparr[count] < 0 || iparr[count] > 255){
@@ -65,17 +68,15 @@ int t07_ip() {
         }
     }
     cout << "YES";
-**/
-    string str;
+    /**string str;
     string a;
     while (i<ip.size()){
         if (ip.find(".",i) != string::npos){
             str = ip.substr(i,ip.find(".",i));
-            if((stoi(str) >= 0) && (stoi(str) <= 255) && (str.size() >= 1) && (str.size() <= 3))
-            {
-                count++;
-                i = ip.find(".", i) + 1;
-            }
+            cout << str << endl;
+            if((stoi(str) < 0) || (stoi(str) > 255)) cout << "NO";
+            else
+
             else break;
         }
         else {
@@ -86,7 +87,7 @@ int t07_ip() {
         }
     }
     if (count == 4) cout << "YES";
-    else cout << "NO";
+    else cout << "NO";**/
     return 0;
 
 }

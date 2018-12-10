@@ -38,7 +38,13 @@ int t06_longest() {
                     maxlength = length;
                     maxi = i - 2;
                 }
-            } else break;
+            }
+            else break;
+        }
+        length = str.size() - i;
+        if (length > maxlength){
+            maxlength = length;
+            maxi = str.size()-1;
         }
         for (int j = maxi - maxlength + 1; j <= maxi; j++) {
             cout << str[j];

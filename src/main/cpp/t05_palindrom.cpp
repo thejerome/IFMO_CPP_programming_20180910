@@ -36,7 +36,13 @@ int t05_palindrom() {
         if (count == (b-1)/2) cout << "yes";
         else cout << "no";
     }
-    else cout << "no";
+    else if (b%2 == 0){
+        for (int i=0; i <= b/2-1; i++){
+            if (str[i] == str[b-1-i]) count++;
+        }
+        if (count == b/2) cout << "yes";
+        else cout << "no";
+    }
     return 0;
 
 
