@@ -23,6 +23,21 @@
 
 using namespace std;
 
-int t02_up() {
-    
+int t02_up()
+{
+
+    char x;
+
+    cin >> x;
+
+    if ((int(x) >= int('a')) && (int(x) <= int('z')))
+    {
+        cout << char(int(x) - int('a') + int('A'));
+    }
+
+    else
+        {
+        cout << x;
+        }
+
 }

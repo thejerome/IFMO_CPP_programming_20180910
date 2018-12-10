@@ -21,6 +21,44 @@
 
 using namespace std;
 
-int t06_longest() {
+int t06_longest()
+{
+
+    string word;
+
+    getline(cin, word);
+
+    int count, max, X;
+
+    count = 0;
+    max = -1;
+    X = 0;
+
+    for (int i = 0; i <= word.size() - 1; i++)
+    {
+        if (word[i] != ' ')
+        {
+            count++;
+        }
+        else
+            {
+            if (count > max)
+            {
+                max = count;
+                X = abs(max - i);
+            }
+            count = 0;
+            }
+    }
+
+    if (count > max)
+    {
+        max = count;
+        X = word.size() - max;
+    }
+    for (int j = X; j < X + max; j++)
+    {
+        cout << word[j];
+    }
 
 }
