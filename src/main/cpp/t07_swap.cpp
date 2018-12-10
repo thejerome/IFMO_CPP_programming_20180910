@@ -19,5 +19,19 @@
 using namespace std;
 
 int t07_swap() {
+	int n = 0;
+	cin >> n;
+	int arr[n];
+	for (int i = 0; i < n; i++)
+	{
+		int finindex = 1 - i + (i / 2) * 4;
+		if (finindex >= n) 
+			finindex = i;
 
+		cin >> arr[finindex];
+	}
+	for (int i = 0; i < n; i++)
+		cout << arr[i] << " ";
+
+	return 0;
 }

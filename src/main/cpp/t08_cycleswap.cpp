@@ -19,5 +19,18 @@
 using namespace std;
 
 int t08_cycleswap() {
+	int n = 0;
+	cin >> n;
+	int arr[n];
+	for (int i = 0; i < n; i++)
+	{
+		int finindex = i + 1;
+		if (finindex >= n) 
+			finindex = 0;
+		cin >> arr[finindex];
+	}
+	for (int i = 0; i < n; i++)
+		cout << arr[i] << " ";
 
+return 0;
 }
