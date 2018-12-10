@@ -23,5 +23,36 @@
 using namespace std;
 
 int t05_palindrom() {
-
+string x;
+int e,b,u;
+b = 0;
+getline(cin,x);
+e = x.size();
+u = e;
+if (e%2 == 1)
+{
+    e -= 1;
+}
+for (int i = 0; i < e/2 ; i++)
+{
+    if (u%2 == 1){
+        if(x[i] == x[e-i])
+        {
+            b++;
+        }
+    }
+    else if (u%2 == 0)
+    {
+        if (x[i] == x[e-i-1]){
+            b++;
+        }
+    }
+}
+if(b == e/2){
+    cout<< "yes";
+}
+else
+{
+    cout<<"no";
+}
 }
