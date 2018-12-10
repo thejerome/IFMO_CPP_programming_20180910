@@ -36,4 +36,5 @@ int t01_char() {
         cout << "yes";
     else
         cout << "no";
+
 }

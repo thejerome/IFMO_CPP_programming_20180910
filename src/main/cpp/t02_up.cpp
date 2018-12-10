@@ -29,4 +29,5 @@ int t02_up() {
     if(b >= 'a' && b <= 'z')
         b = 'A' + (b - 'a');
     cout << b;
+
 }

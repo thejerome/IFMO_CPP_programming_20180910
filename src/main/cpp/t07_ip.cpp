@@ -47,4 +47,5 @@ int t07_ip() {
     }
     if (d == 3 and check == 3) cout<<"YES";
         else cout << "NO";
+
 }

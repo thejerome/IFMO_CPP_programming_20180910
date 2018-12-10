@@ -30,4 +30,5 @@ int t05_palindrom() {
         if(s[i] != s[j])
             palin = false;
     cout << ( palin ? "yes" : "no");
+
 }
