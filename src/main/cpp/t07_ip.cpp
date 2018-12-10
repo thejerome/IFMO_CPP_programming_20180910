@@ -29,10 +29,22 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t07_ip() {
-
+    string ip;
+    cin >> ip;
+    int l = ip.length();
+    int numb = 0, d = 0, check = 0;
+    for (int i = 0; i < l; i++) {
+        if (ip[i] == '.') {
+            d += 1;
+            if (numb >= 0 and numb <= 255) check += 1;
+            numb = 0;
+        } else numb = numb * 10 + int(ip[i]) - 48;
+    }
+    if (d == 3 and check == 3) cout << "YES";
+    else cout << "NO";
 }
