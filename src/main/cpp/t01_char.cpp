@@ -30,5 +30,12 @@
 using namespace std;
 
 int t01_char() {
+char simvol;
+cin>>simvol;
+    if (simvol<='9' && simvol>='0')
+        cout<<"yes";
+    else
+        cout<<"no";
+return 0;
 
 }

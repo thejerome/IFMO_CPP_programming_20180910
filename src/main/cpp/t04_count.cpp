@@ -28,5 +28,13 @@
 using namespace std;
 
 int t04_count() {
+string stroka;
+getline(cin, stroka);
+int w=1;
+for(int i=1; i<=stroka.size(); i++)
+    if(stroka[i]==' ')
+        w++;
+cout<<w;
+return 0;
 
 }

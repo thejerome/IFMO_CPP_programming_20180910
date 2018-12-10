@@ -22,5 +22,13 @@
 using namespace std;
 
 int t06_longest() {
+string stroka, longest;
+unsigned long long int length=0;
+    while (cin>>stroka)
+         if (stroka.length()>length){
+            longest = stroka;
+            length = stroka.size();}
+cout << longest;
+return 0;
 
 }
