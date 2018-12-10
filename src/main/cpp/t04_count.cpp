@@ -28,5 +28,13 @@
 using namespace std;
 
 int t04_count() {
-
+string n;
+int x=0;
+getline(cin, n);
+for (int i = 1; i <= n.size(); ++i){
+    if (n[i] == ' '){
+        x += 1;
+    }
+}
+cout << x + 1;
 }
