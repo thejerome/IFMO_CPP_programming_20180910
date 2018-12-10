@@ -29,6 +29,21 @@
 
 using namespace std;
 
-int t01_char() {
+int t01_char()
+{
+
+    char x;
+
+    cin >> x;
+
+    if ((int(x) >= 48) && (int(x) <= 57))
+    {
+        cout << "yes";
+    }
+
+    else
+        {
+        cout << "no";
+        }
 
 }

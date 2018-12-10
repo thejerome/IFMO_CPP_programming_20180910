@@ -27,6 +27,22 @@
 
 using namespace std;
 
-int t04_count() {
+int t04_count()
+{
+
+    string word;
+
+    int count = 1;
+
+    getline(cin, word);
+
+    for ( int i = 0; i <= word.size() - 1; i++)
+    {
+        if (word[i] == ' ')
+        {
+            count++;
+        }
+    }
+    cout << count;
 
 }

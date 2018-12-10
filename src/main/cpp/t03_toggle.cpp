@@ -23,6 +23,26 @@
 
 using namespace std;
 
-int t03_toggle() {
+int t03_toggle()
+{
+
+    char x;
+
+    cin >> x;
+
+    if ((int(x) >= int('a')) && (int(x) <= int('z')))
+    {
+        cout << char(int(x) - int('a') + int('A'));
+    }
+
+    else if ((int(x) >= int('A')) && (int(x) <= int('Z')))
+    {
+        cout << char(int(x) - int('A') + int('a'));
+    }
+
+    else
+        {
+        cout << x;
+        }
 
 }

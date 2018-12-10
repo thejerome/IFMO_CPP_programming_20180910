@@ -35,4 +35,62 @@ using namespace std;
 
 int t07_ip() {
 
+    string IP;
+
+    getline(cin, IP);
+
+    int stop = 0, count = 0;
+
+    string num;
+
+    if (IP[0] == '.')
+    {
+        cout << "NO";
+    }
+
+    else if (IP[IP.size()-1] == '.')
+    {
+        cout << "NO";
+    }
+    else
+        {
+        for (int i = 0; i <= IP.size() - 1; i++)
+        {
+            if (IP[i] != '.')
+            {
+                if (IP[i] >= '0' && IP[i] <= '9')
+                {
+                    num += IP[i];
+                }
+
+                else
+                    {
+                    stop++;
+
+                    break;
+                    }
+            }
+            else
+                {
+                if (stoi(num) > 255 || stoi(num) < 0)
+                {
+                    stop++;
+
+                    break;
+                }
+                num = '0';
+
+                count++;
+                }
+        }
+        if (count != 3 || stop != 0 )
+        {
+            cout << "NO";
+        }
+        else
+            {
+            cout << "YES";
+            }
+        }
+
 }
