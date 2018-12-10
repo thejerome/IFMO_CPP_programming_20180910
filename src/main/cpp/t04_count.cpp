@@ -13,7 +13,7 @@
 //
 //Примечание
 //﻿В этой задаче может быть полезен метод find с двумя параметрами. 
-// Первый из них - искомая подстрока, второй - позиция, начиная с которой нужно искать первое вхождение.
+//Первый из них - искомая подстрока, второй - позиция, начиная с которой нужно искать первое вхождение.
 //Sample Input:
 //
 //In the town where I was born
@@ -24,9 +24,17 @@
 #include "t04_count.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t04_count() {
-
+	string sentence;
+	getline(cin, sentence);
+	int count = 1;
+	for(int i=0; i<sentence.size(); i++) {
+		if (sentence[i] == ' ') {
+			count++;
+		}
+	}
+	cout << count;
+	return 0;
 }

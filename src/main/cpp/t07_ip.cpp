@@ -30,9 +30,28 @@
 #include "t07_ip.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t07_ip() {
-
+	string ipAddress;
+	cin >> ipAddress;
+	string currentNumber;
+	bool isCorrect = true;
+	int dots = 0;
+	for (int i=0; i<ipAddress.size(); i++) {
+		currentNumber += ipAddress[i];
+		if (ipAddress[i] == '.') {
+			dots++;
+			if (currentNumber == "." || currentNumber.size() > 4 || (stoi(currentNumber) > 255 || stoi(currentNumber) < 0)) {
+				isCorrect = false;
+				break;
+			}
+			currentNumber.clear();
+		}
+	}
+	if (dots != 3) {
+		isCorrect = false;
+	}
+	isCorrect ? cout << "YES" : cout << "NO";
+	return 0;
 }

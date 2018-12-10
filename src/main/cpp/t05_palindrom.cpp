@@ -19,9 +19,22 @@
 #include "t05_palindrom.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t05_palindrom() {
-
+	string palindrom;
+	getline(cin, palindrom);
+	int length = palindrom.size();
+	bool isPalindrom;
+	for (int i=0, j=length-1; i<length && j>=0; i++, j--) {
+		if (palindrom[i] == palindrom [j]) {
+			isPalindrom = true;
+		}
+		else {
+			isPalindrom = false;
+			break;
+		}
+	}
+	isPalindrom ? cout << "yes" : cout << "no";
+	return 0;
 }

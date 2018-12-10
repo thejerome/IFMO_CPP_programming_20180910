@@ -18,9 +18,16 @@
 #include "t06_longest.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t06_longest() {
-
+	string currentWord;
+	string longestWord;
+	while (cin >> currentWord) {
+		if (currentWord.size() > longestWord.size()) {
+			longestWord = currentWord;
+		}
+	}
+	cout << longestWord;
+	return 0;
 }
