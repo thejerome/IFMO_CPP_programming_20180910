@@ -35,53 +35,43 @@
 using namespace std;
 
 struct data{
-    string surname;
     string name;
+    string surname;
     double avg;
-};
-
-struct program{
-    data students[100];
-
-
-    void read(int n) {
-        for (int i = 0; i < n; i++) {
-            cin >> students[i].surname >> students[i].name;
-            students[i].avg=0;
-            for (int j=0; j<3; j++){
-                int t;
-                cin >> t;
-                students[i].avg+=t;
-            }
-            students[i].avg=(students[i].avg)/3;
-        }
-    }
-
-    void sort(int n){
-        for (int i=0; i<n-1; i++){
-            for (int j=i+1; j<n; j++){
-                if (students[i].avg > students[j].avg ){
-                    swap(students[i].surname, students[j].surname);
-                    swap(students[i].name, students[j].name);
-                    swap(students[i].avg, students[j].avg);
-                }
-            }
-        }
-    }
-
-    void write(int n){
-        for (int i=0; i<n; i++){
-            cout << students[i].surname << ' ' << students[i].name << endl;
-        }
-    }
+    int number;
 };
 
 int t04_students() {
-    program t04;
     int n;
     cin >> n;
-    t04.read(n);
-    t04.sort(n);
-    t04.write(n);
-}
+    data notes[n];
+    for (int i=0; i<n; i++){
+        cin >> notes[i].name;
+        cin >> notes[i].surname;
+        int a=0;
+        cin >> a;
+        notes[i].avg=0;
+        notes[i].avg=notes[i].avg+a;
+        cin >> a;
+        notes[i].avg=notes[i].avg+a;
+        cin >> a;
+        notes[i].avg=notes[i].avg+a;
+        notes[i].avg=notes[i].avg/3;
 
+        notes[i].number=i+1;
+    }
+    for (int i=n-1; i>0; i--){
+        for (int j=i-1; j>=0; j--){
+            if ((notes[i].avg>notes[j].avg) || (notes[i].avg==notes[j].avg && notes[i].number<notes[j].number)){
+                //cout << notes[i].number << " " << notes[j].number << endl;
+                swap(notes[i].avg,notes[j].avg);
+                swap(notes[i].name,notes[j].name);
+                swap(notes[i].surname,notes[j].surname);
+                swap(notes[i].number,notes[j].number);
+            }
+        }
+    }
+    for (int i=0; i<n; i++){
+        cout << notes[i].name << " " << notes[i].surname << /*notes[i].number <<*/ endl;
+    }
+}
