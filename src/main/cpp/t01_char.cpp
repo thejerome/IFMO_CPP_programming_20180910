@@ -33,7 +33,7 @@ int t01_char()
 {
     char input;
     cin >> input;
-    if (int(input) >= 0 && int(input) <= 9)
+    if (int(input) >= (int)'0' && int(input) <= (int)'9')
         cout << "yes";
     else
         cout << "no";
