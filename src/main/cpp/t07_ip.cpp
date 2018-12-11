@@ -1,0 +1,71 @@
+//В сети интернет каждому компьютеру присваивается четырехбайтовый код, 
+// который принято записывать в виде четырех чисел, 
+// каждое из которых может принимать значения от 0 до 255, разделенных точками.
+// Вот примеры правильных IP-адресов:
+//127.0.0.0
+//192.168.0.1
+//255.0.255.255
+//Напишите программу, которая определяет, является ли заданная строка правильным IP-адресом.
+//
+//Входные данные
+//
+//Программа получает на вход строку из произвольных символов.
+//
+//Выходные данные
+//
+//Если эта строка является корректной записью IP-адреса, выведите YES, иначе выведите NO.
+//
+//Примечание
+//
+//Для перевода из строки в число удобно пользоваться функцией stoi,
+// которая принимает на вход строку, а возвращает число.
+//
+//Sample Input:
+//
+//127.0.0.1
+//Sample Output:
+//
+//YES
+
+#include "t07_ip.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int t07_ip() {
+	string maybe_IP_adress;
+	getline(cin, maybe_IP_adress);
+	int dots = 0, if_was_break = 0;
+	string number;
+	if (maybe_IP_adress[0] >'9' || maybe_IP_adress[0] < '0' || maybe_IP_adress[maybe_IP_adress.size() - 1] > '9' || maybe_IP_adress[maybe_IP_adress.size() - 1] > '9'  || maybe_IP_adress.size() < 7 || maybe_IP_adress.size() > 15) {
+		cout << "NO";
+	}
+	else {
+		for (int i = 0; i < maybe_IP_adress.size(); i++) {
+			if (maybe_IP_adress[i] != '.') {
+				if (maybe_IP_adress[i] >= '0' && maybe_IP_adress[i] <= '9') {
+					number += maybe_IP_adress[i];
+				}
+				else {
+					if_was_break++;
+					break;
+				}
+			}
+			else {
+				if (stoi(number) > 255 || stoi(number) < 0) {
+					if_was_break++;
+					break;
+				}
+				number = '0';
+				dots++;
+			}
+		}
+		if (dots == 3 && if_was_break == 0) {
+			cout << "YES";
+		}
+		else {
+			cout << "NO";
+		}
+	}
+}
