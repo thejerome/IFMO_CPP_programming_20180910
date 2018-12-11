@@ -34,5 +34,29 @@
 using namespace std;
 
 int t07_ip() {
+    string str;
+    int pointCounter = 0, err = 0, number = 0, exp = 1;
+    getline(cin, str);
+    for (int i = str.size() - 1; i >= 0; i--) {
+        if (err == 0) {
+            if ((str[i] == '.') && (pointCounter < 4) && (number >= 0) && (number <= 255)) {
+                pointCounter++;
+                number = 0;
+                exp = 1;
+            } else if ((str[i] >= '0') && (str[i] <= '9')) {
+                number += (int(str[i]) - '0') * exp;
+                exp *= 10;
+            } else {
+                err++;
+                number = 0;
+                exp = 1;
+            }
+        }
+    }
+    if ((number >= 0) && (number <= 255) && (err == 0) && (pointCounter < str.size()) && (pointCounter == 3)) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 
 }
