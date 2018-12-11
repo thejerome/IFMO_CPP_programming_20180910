@@ -29,10 +29,59 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <cstdlib>
+#include <string>
 
 using namespace std;
 
+struct data{
+    string surname;
+    string name;
+    double avg;
+};
+
+struct program{
+    data students[100];
+
+
+    void read(int n) {
+        for (int i = 0; i < n; i++) {
+            cin >> students[i].surname >> students[i].name;
+            students[i].avg=0;
+            for (int j=0; j<3; j++){
+                int t;
+                cin >> t;
+                students[i].avg+=t;
+            }
+            students[i].avg=(students[i].avg)/3;
+        }
+    }
+
+    void sort(int n){
+        for (int i=0; i<n-1; i++){
+            for (int j=i+1; j<n; j++){
+                if (students[i].avg > students[j].avg ){
+                    swap(students[i].surname, students[j].surname);
+                    swap(students[i].name, students[j].name);
+                    swap(students[i].avg, students[j].avg);
+                }
+            }
+        }
+    }
+
+    void write(int n){
+        for (int i=0; i<n; i++){
+            cout << students[i].surname << ' ' << students[i].name << endl;
+        }
+    }
+};
+
 int t04_students() {
-    
+    program t04;
+    int n;
+    cin >> n;
+    t04.read(n);
+    t04.sort(n);
+    t04.write(n);
 }
 
