@@ -45,8 +45,10 @@ int t07_ip()
         {
             Dots += 1;
             if (Numbers >= 0 && Numbers <= 255)
+            {
                 NumbersCheck++;
             Numbers = 0;
+            }
         }
         else
             Numbers = Numbers * 10 + int(Input[i]) - 48;

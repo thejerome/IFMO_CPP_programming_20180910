@@ -24,7 +24,7 @@ using namespace std;
 
 int t05_palindrom()
 {
-    int input;
+    string input;
     cin >> input;
     int inputL = input.length();
     bool test = true;
