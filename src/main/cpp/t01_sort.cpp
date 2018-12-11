@@ -18,11 +18,20 @@
 //1 2 3 4 5
 
 #include "t01_sort.h"
+#include <algorithm>
 #include <iostream>
+#include <vector>
 
 
 using namespace std;
 
 int t01_sort() {
-    
+    int n;
+    cin >> n;
+    vector< int > a(n);
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+    sort(a.begin(), a.end());
+    for (auto x : a)
+        cout << x << " ";
 }
