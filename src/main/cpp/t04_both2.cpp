@@ -23,9 +23,29 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <vector>
+#include <map>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
+    int n, a;
+    cin >> n;
+    map< int, int > cnt;
+    set< int > ans;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        cnt[a]++;
+    }
 
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        if (cnt[a] != 0)
+            ans.insert(a);
+    }
+
+    for (auto x : ans)
+        cout << x << " ";
 }
