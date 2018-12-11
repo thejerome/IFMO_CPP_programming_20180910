@@ -23,6 +23,12 @@
 
 using namespace std;
 
-int t02_up() {
-    
+int t02_up()
+{
+    char input;
+    cin >> input;
+    if ((int)input >= (int)'a' && (int)input <= (int)'z')
+        cout << (char)((int)'A' + (int)input + - (int)'a');
+    else
+        cout << input;
 }

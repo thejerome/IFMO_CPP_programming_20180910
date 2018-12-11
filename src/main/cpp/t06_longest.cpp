@@ -17,10 +17,28 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
-int t06_longest() {
+int t06_longest()
+{
+    int Maximum = 0, MaximumIndex = 0, Temp = 0;
+    string Input;
+    getline(cin, Input);
 
+    for (int i=0; i < Input.length(); i++)
+    {
+        if (Input[i] != ' ')
+            Temp++;
+        else
+            Temp = 0;
+        if (Temp > Maximum)
+        {
+            Maximum = Temp;
+            MaximumIndex = i;
+        }
+    }
+    for (int i = MaximumIndex - Maximum + 1; i <= MaximumIndex; i++)
+        cout << Input[i];
 }
