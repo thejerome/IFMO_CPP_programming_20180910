@@ -29,10 +29,32 @@
 
 #include "t07_ip.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
-int t07_ip() {
-
+int t07_ip()
+{
+    int Numbers = 0, Dots = 0, NumberCheck = 0;
+    string Input;
+    cin >> Input;
+    int InputLenght = Input.length();
+    for (int i = 0; i < InputLenght; i++)
+    {
+        if (Input[i] == '.')
+        {
+            Dots += 1;
+            if (Numbers >= 0 && Numbers <= 255)
+            {
+                NumberCheck++;
+            Numbers = 0;
+            }
+        }
+        else
+            Numbers = Numbers * 10 + int(Input[i]) - 48;
+    }
+    if(Dots == 3 && NumberCheck == 3)
+        cout << "YES";
+    else
+        cout << "NO";
 }

@@ -23,6 +23,17 @@
 
 using namespace std;
 
-int t03_toggle() {
-
+int t03_toggle()
+{
+    char input;
+    cin >> input;
+    if ((int)input >= (int)'a' && (int)input <= (int)'z')
+        cout << (char)((int)'A' + (int)input - (int)'a');
+    else
+    {
+        if ((int)input >= (int)'A' && (int)input <= (int)'Z')
+            cout << (char)((int)'a' + (int)input - (int)'A');
+        else
+            cout << input;
+    }
 }
