@@ -23,9 +23,25 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 int t03_both() {
+    int n, a, ans =  0;
+    cin >> n;
+    map< int, int > cnt;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        cnt[a]++;
+    }
 
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a;
+        if (cnt[a] != 0)
+            ans++;
+    }
+
+    cout << ans;
 }
