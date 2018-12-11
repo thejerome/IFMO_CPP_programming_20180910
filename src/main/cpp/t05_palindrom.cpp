@@ -18,10 +18,24 @@
 
 #include "t05_palindrom.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t05_palindrom() {
-
+	string maybe_palindrom;
+	int a = 1;
+	getline(cin, maybe_palindrom);
+	for (int i = 0; i < maybe_palindrom.size() / 2; i++) {
+		if (maybe_palindrom[i] != maybe_palindrom[maybe_palindrom.size() - 1 - i]) {
+			a = 0;
+			break;
+		}
+	}
+	if (a == 1) {
+		cout << "yes" << endl;
+	}
+	else {
+		cout << "no" << endl;
+	}
 }

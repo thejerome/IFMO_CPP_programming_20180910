@@ -17,10 +17,32 @@
 
 #include "t06_longest.h"
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
 int t06_longest() {
-
+	string sentence;
+	getline(cin, sentence);
+	int word_lenght = 0, max_word_lenght = 0, position = 0;
+	for (int i = 0; i < sentence.size(); i++) {
+		if (sentence[i] != ' ') {
+			word_lenght++;
+		}
+		else {
+			if (word_lenght > max_word_lenght) {
+				max_word_lenght = word_lenght;
+				position = abs(max_word_lenght - i);
+			}
+			word_lenght = 0;
+		}
+	}
+	if (word_lenght > max_word_lenght) {
+		max_word_lenght = word_lenght;
+		position = sentence.size() - max_word_lenght;
+	}
+	for (int i = position; i < position + max_word_lenght; i++) {
+		cout << sentence[i];
+	}
+	cout << endl;
 }
