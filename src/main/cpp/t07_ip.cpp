@@ -46,7 +46,7 @@ int t07_ip()
             Dots += 1;
             if (Numbers >= 0 && Numbers <= 255)
             {
-                NumbersCheck++;
+                NumberCheck++;
             Numbers = 0;
             }
         }

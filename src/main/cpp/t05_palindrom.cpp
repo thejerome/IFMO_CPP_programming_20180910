@@ -30,7 +30,7 @@ int t05_palindrom()
     bool test = true;
 
     for (int i = 0; i < inputL; i++)
-        if (input[i] != input[InputL - 1 - i])
+        if (input[i] != input[inputL - 1 - i])
             test = false;
     if (test)
         cout << "yes";
