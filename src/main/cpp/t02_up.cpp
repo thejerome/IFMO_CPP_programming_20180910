@@ -24,5 +24,13 @@
 using namespace std;
 
 int t02_up() {
-    
+
+char sim;
+cin >> sim;
+if(sim>='a'&&sim<='z'){
+    cout << char('A'+(sim-'a'));
+}
+else{
+    cout << sim;
+}
 }

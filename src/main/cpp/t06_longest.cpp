@@ -18,9 +18,32 @@
 #include "t06_longest.h"
 #include <iostream>
 
+#include<string>
 
 using namespace std;
 
 int t06_longest() {
 
+string line;
+getline(cin,line);
+int lenght=0,mlenght=0,position=0;
+for(int i=0;i<line.size();i++){
+    if(line[i]!=' '){
+        lenght++;
+    }
+    else{
+        if(lenght>mlenght){
+            mlenght=lenght;
+            position=abs(mlenght-i);
+        }
+        lenght=0;
+    }
+}
+if(lenght>mlenght){
+    mlenght=lenght;
+    position=line.size()-mlenght;
+}
+for(int i=position;i<position+mlenght;i++){
+    cout << line[i];
+}
 }

@@ -30,9 +30,44 @@
 #include "t07_ip.h"
 #include <iostream>
 
+#include<string>
 
 using namespace std;
 
 int t07_ip() {
 
+string ip;
+getline(cin,ip);
+int dots=0,broken=0;
+string num;
+if(ip[0]=='.'||ip[ip.size()-1]=='.'||ip.size()< 7){
+    cout << "NO";
+}
+else{
+    for(int i=0;i<ip.size();i++){
+        if(ip[i]!='.'){
+            if(ip[i]>='0'&&ip[i]<='9'){
+                num+=ip[i];
+            }
+            else{
+                broken++;
+                break;
+            }
+        }
+        else{
+            if(stoi(num)>255||stoi(num)<0){
+                broken++;
+                break;
+            }
+            num='0';
+            dots++;
+        }
+    }
+    if(dots==3&&broken==0){
+        cout << "YES";
+    }
+    else{
+        cout << "NO";
+    }
+}
 }

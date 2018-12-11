@@ -25,4 +25,15 @@ using namespace std;
 
 int t03_toggle() {
 
+char sim;
+cin >> sim;
+if(sim>='a'&&sim<='z'){
+    cout << char('A'+sim-'a');
+}
+else if(sim>='A'&&sim<='Z'){
+    cout << char('a'+sim-'A');
+}
+else{
+    cout << sim;
+}
 }
