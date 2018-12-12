@@ -80,9 +80,79 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <map>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
-
+string small_letters(string word){
+    for (int i = 0; i <= word.size()-1; i ++){
+        if (word[i] >= 'A' and word[i] <= 'Z'){
+            word[i] = 'a' + (word[i] - 'A');
+        }
+    }
+    return word;
 }
+
+
+int emphasis_check(string word){
+    int count = 0;
+    for (int i = 0; i <= word.size()-1; i ++){
+        if (word[i] >= 'A' and word[i] <= 'Z'){
+            count += 1;
+        }
+    }
+    return count;
+}
+
+int t06_homework() {
+    multimap <string, string> dictionary;
+    int number_of_words;
+    string text, word;
+    cin >> number_of_words;
+    for (int i = 0; i < number_of_words; i++) {
+        cin >> word;
+        dictionary.insert(pair< string, string >(small_letters(word), word));
+    }
+    cin.get();
+    getline(cin, text);
+    string new_word;
+    new_word = "";
+    set <string> words;
+    for (auto symbol : text){
+        if (symbol != ' '){
+            new_word += symbol;
+        }
+        else{
+            words.insert(new_word);
+            new_word = "";
+        }
+    }
+    int count_of_right_words = 0;
+    int check = 0;
+    bool if_was_break = false;
+    words.insert(new_word);
+    for (auto&& word_to_check : words){
+        for (auto word1 : dictionary){
+            if (small_letters(word_to_check) == word1.first){
+                check += 1;
+                if (word_to_check == word1.second){
+                    count_of_right_words += 1;
+                    if_was_break = true;
+                    break;
+                }
+            }
+        }
+        if (check == 0 and !if_was_break and emphasis_check(word_to_check) == 1){
+            count_of_right_words += 1;
+        }
+        else {
+            check = 0;
+            if_was_break = false;
+        }
+    }
+    cout << words.size() - count_of_right_words;
+    return 0;
+}
+
