@@ -33,6 +33,35 @@
 
 using namespace std;
 
-int t07_ip() {
+int t07_ip() {string x;
+    getline (cin, x);
+    x += '.'; // border char
+    int p = -1; // point counter
+    string d = "";
+    for (int i = 0; i < x.length(); i++)
+        if ((x[i] >= '0') and (x[i] <= '9')) {
+            d += x[i];
+        }
+        else if (x[i] == '.') {
+            if (d.length() == 0 || d[0] == '0' && d.length() != 1 || d.length() > 3) {
+                cout << "NO";
+                return 0;
+            }
+            int n = stoi(d);
+            if (n > 255) {
+                cout << "NO";
+                return 0;
+            }
+            d = "";
+            p++;
+        }
+        else {
+            cout << "NO";
+            return 0;
+        }
+    if (p != 3)
+        cout << "NO";
+    else
+        cout << "YES";
 
 }

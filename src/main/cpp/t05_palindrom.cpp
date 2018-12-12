@@ -23,5 +23,13 @@
 using namespace std;
 
 int t05_palindrom() {
+    string x;
+    cin >> x;
+    for (int i = 0; i < x.length() / 2; i++)
+        if (x[i] != x[x.length() - 1 - i]) {
+            cout << "no";
+            return 0;
+        }
+    cout << "yes";
 
 }
