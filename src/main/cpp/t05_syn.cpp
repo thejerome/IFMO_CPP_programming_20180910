@@ -27,10 +27,29 @@
 
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
+    int n;
+    string first_word, second_word;
+    cin >> n;
+    map <string, string> dictionary;
+    for (int i = 0; i < n; i++){
+        cin >> first_word >> second_word;
+        dictionary[first_word] = second_word;
+    }
+    string our_word;
+    cin >> our_word;
+    for (auto now : dictionary){
+        if (now.first == our_word){
+            cout << now.second;
+        }
+        else if (now.second == our_word){
+            cout << now.first;
+        }
+    }
 
 }
