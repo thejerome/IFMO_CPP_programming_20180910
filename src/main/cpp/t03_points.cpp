@@ -23,10 +23,31 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <utility>
 
 
 using namespace std;
 
 int t03_points() {
-    
+    unsigned int size;
+    int x, y;
+    cin >> size;
+    vector <pair <int, int>> coordinates(size);
+    for (int i = 0; i < size; i ++){
+        cin >> x >> y;
+        coordinates[i] = {x, y};
+    }
+    for (int prohod = 0; prohod < size; prohod ++){
+        for (int i = 0; i < size - prohod; i ++){
+            if ((coordinates[i].first * coordinates[i].first + coordinates[i].second * coordinates[i].second) > (coordinates[i+1].first * coordinates[i+1].first + coordinates[i+1].second * coordinates[i+1].second)){
+                swap(coordinates[i], coordinates[i+1]);
+            }
+        }
+    }
+    for (int i = 0; i < size; i ++){
+        cout << coordinates[i].first << ' ' << coordinates[i].second << ' ';
+    }
+    return 0;
 }
