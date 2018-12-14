@@ -50,9 +50,10 @@ int t02_shoes() {
 
     while ( (first != n) && (shoes[first] < shoes_size)){
         first++;
+        last++;
     }
     if (first == n){
-        count = 1;
+        count = 0;
     }
     while (last < n){
         if (shoes[first]+3 <= shoes[last]){
