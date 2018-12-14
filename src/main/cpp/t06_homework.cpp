@@ -90,7 +90,7 @@ int findstress(string &s){
     for (int j = 0; j < s.length(); j++){
         if (s[j] >= 'A' && s[j] <= 'Z'){
             pos = (pos == -1)? j : -2;
-            s[j] = char(s[j] - 'A' + 'a');
+            s[j] = s[j] - 'A' + 'a';
             flag = true;
         }
     }
