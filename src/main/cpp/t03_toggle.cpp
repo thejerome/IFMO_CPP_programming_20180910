@@ -24,5 +24,12 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char e;
+    cin>>e;
+    if (e>='a' && e<='z')
+        cout<<char(e-'a'+'A');
+    else if (e>='A' && e<='Z')
+        cout<<char(e-'A'+'a');
+    else
+        cout<<e;
 }
