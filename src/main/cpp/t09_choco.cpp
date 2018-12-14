@@ -35,4 +35,5 @@ int t09_choco() {
     else {
     	cout << "NO";
     }
+    return 0;
 };

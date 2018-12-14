@@ -26,10 +26,11 @@ int t03_equal3() {
     }
     else {
         if ((A != B) && (B != C) && (A != C)) {
-        cout << 0;
+            cout << 0;
         }
         else {
             cout << 2;
         }
     }
+    return 0;
 };

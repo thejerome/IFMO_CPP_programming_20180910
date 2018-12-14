@@ -28,5 +28,5 @@ int t06_chess_bishop() {
     else {
     	cout << "NO";
     }
-
+    return 0;
 };

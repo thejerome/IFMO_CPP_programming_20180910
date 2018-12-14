@@ -31,5 +31,5 @@ int t01_max3() {
     	cout << C;
     	}
     }
-    
+  	return 0;  
 };

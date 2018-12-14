@@ -28,5 +28,5 @@ int t05_chess_king() {
     else {
     	cout << "NO";
     }
-
+    return 0;
 };
