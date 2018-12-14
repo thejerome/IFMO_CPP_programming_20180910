@@ -31,5 +31,4 @@ int t09_snail() {
     cin >>H>>A>>B;
     int result = ((H-B)+(A-B)-1)/(A-B);
     cout << result;
-
 };

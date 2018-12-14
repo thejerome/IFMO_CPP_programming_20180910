@@ -27,5 +27,4 @@ int t03_last_number() {
     cin >> N;
     int result = N%10;
     cout << result;
-
 };
