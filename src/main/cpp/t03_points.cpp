@@ -23,10 +23,33 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <map>
+#include <math.h>
+#include <string>
 
 
 using namespace std;
-
+//tests're done
 int t03_points() {
-    
+    int n;
+    multimap<double, string> points;
+    multimap<double, string> :: iterator it;
+    points.clear();
+
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        int x, y;
+        cin >> x >> y;
+        points.insert(make_pair(pow(x*x+y*y, 0.5), to_string(x)+" "+to_string(y)));
+    }
+
+    for (it = points.begin(); it != points.end(); it++){
+        cout << it->second << ' ';
+    }
+
+
+
+
+
 }

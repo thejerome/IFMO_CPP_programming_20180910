@@ -29,10 +29,32 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <map>
+#include <string>
+//tests're passed
 using namespace std;
 
+
 int t04_students() {
-    
+    int n;
+    multimap<double, string> students;
+    multimap<double, string> :: iterator it;
+    students.clear();
+
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        string name, second_name;
+        int num1, num2, num3;
+
+        cin >> name >> second_name;
+        cin >> num1 >> num2 >> num3;
+
+        students.insert(make_pair(-(num1+num2+num3)/3.0, name+" "+second_name));
+    }
+
+    for (it = students.begin(); it != students.end(); it++){
+        cout << it->second << ' ';
+    }
 }
 
