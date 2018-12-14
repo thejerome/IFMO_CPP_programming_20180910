@@ -28,5 +28,14 @@
 using namespace std;
 
 int t04_count() {
-
+    string n;
+    getline(cin, n);
+    int calculator = 0;
+    int size = n.size();
+    for (int i = 0; i < size; i++) {
+        if (n[i] == (' ')) {
+            calculator = calculator + 1;
+        }
+    }
+    cout << calculator + 1;
 }

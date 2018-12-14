@@ -22,5 +22,29 @@
 using namespace std;
 
 int t06_longest() {
-
+    string text, memory, copy;
+    memory = "";
+    copy = "";
+    getline(cin, text);
+    int size = text.size();
+    int i = 0;
+    while (i != size) {
+        if (text[i] != ' ') {
+            memory = memory + text[i];
+        }
+        else {
+            if (memory.size() > copy.size()) {
+                copy = memory;
+                memory.clear();
+            }
+            else {
+                memory.clear();
+            }
+        }
+        i++;
+    }
+    if (memory.size() > copy.size()) {
+        copy = memory;
+    }
+    cout<< copy;
 }
