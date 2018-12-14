@@ -80,9 +80,57 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
 
-int t06_homework() {
+int findstress(string &s){
+    int pos = -1;
+    bool flag = false;
+    for (int j = 0; j < s.length(); j++){
+        if (s[j] >= 'A' && s[j] <= 'Z'){
+            pos = (pos == -1)? j : -2;
+            s[j] = char(s[j] - 'A' + 'a');
+            flag = true;
+        }
+    }
+    pos = (flag)? pos : -2;
+    return pos;
+}
 
+int t06_homework() {
+    multimap<string, int> vocablurary;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++){
+        string s;
+        cin >> s;
+        int pos = findstress(s);
+        vocablurary.insert(pair<string,int>(s,pos));
+    }
+    string s;
+    getline(cin, s);
+    getline(cin, s);
+    int l = 0, r = s.find(' ',0);
+    int ans = 0;
+    while (r <= s.length()){
+        string word = s.substr(l, r - l);
+        int pos = findstress(word);
+        pair<multimap<string, int> :: iterator, multimap<string, int> :: iterator> it;
+        it = vocablurary.equal_range(word);
+        bool chek = (it.first == it.second);
+        for (auto i = it.first; i != it.second; i++){
+            if (i -> second == pos){
+                chek = true;
+            }
+        }
+        if (!chek || pos == -2){
+            ans++;
+        }
+        r++;
+        l = r;
+        r = (r != s.length() + 1)? s.find(' ',r) : r;
+        r = (r == -1)? s.length(): r;
+    }
+    cout << ans;
 }

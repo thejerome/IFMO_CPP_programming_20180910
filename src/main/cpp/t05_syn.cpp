@@ -27,10 +27,21 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+    map<string,string> vocabulary;
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        string s1, s2;
+        cin >> s1 >> s2;
+        vocabulary.insert(pair<string, string>(s1,s2));
+        vocabulary.insert(pair<string, string>(s2,s1));
+    }
+    string s;
+    cin >> s;
+    cout << vocabulary[s];
 }
