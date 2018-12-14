@@ -37,5 +37,29 @@
 using namespace std;
 
 int t11_boxes() {
+        int n[3],m[3],l=0,h=0;
+        for (int i=0; i<3; i++) cin>>n[i];
+        for (int j=0; j<3; j++) cin>>m[j];
+        for (int i=0; i<3; i++)
+            for (int j=i; j<3; ++j) {
+                if (n[i]>n[j]) {
+                    int copy = n[i];
+                    n[i] = n[j];
+                    n[j] = copy;
+                }
+                if (m[i]>m[j]) {
+                    int copy = m[i];
+                    m[i] = m[j];
+                    m[j] = copy;
+                }
+            }
 
+        for (int i=0; i<3; ++i) {
+            if (n[i]>m[i]) l++;
+            if (m[i]>n[i]) h++;
+        }
+        if (l==0 && h==0)		cout<<"Boxes are equal";
+        else if (l>h && h==0) 	cout<<"The first box is larger than the second one";
+        else if (h>l && l==0)	cout<<"The first box is smaller than the second one";
+        else 					cout<<"Boxes are incomparable";
 };

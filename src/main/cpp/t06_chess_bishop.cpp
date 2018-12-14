@@ -17,8 +17,22 @@
 #include "t06_chess_bishop.h"
 #include <iostream>
 
+
 using namespace std;
 
 int t06_chess_bishop() {
-
+    int x1, x2, y1, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    if (x1 > x2) {
+        int copy = x1;
+        x1 = x2;
+        x2 = copy;
+    }
+    if(y1 > y2) {
+        int copy = y1;
+        y1 = y2;
+        y2 = copy;
+    }
+    if ( x2 - x1 == y2 - y1 ) cout << "YES";
+    else cout << "NO";
 };
