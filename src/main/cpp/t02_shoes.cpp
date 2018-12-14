@@ -28,10 +28,30 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 
 using namespace std;
+int n, result=0;
+vector<int> a;
+
+void wear(int size, int amount, int pos) {
+    for (int i=pos; i<n; i++)
+        if (a[i] > size+2) wear(a[i],amount+1,i+1);
+    result = max(result,amount);
+}
 
 int t02_shoes() {
-    
+    int size_s;
+    cin >> size_s >> n;
+    for (int i=0; i<n; i++) {
+        int ai;
+        cin >> ai;
+        a.push_back(ai);
+    }
+    for (int i=0; i<n; i++)
+        if (a[i] >= size_s) {wear(a[i],1,i+1); cout << result; return 0;}
+    cout << result;
+    return 0;
 }
