@@ -29,49 +29,26 @@
 using namespace std;
 
 int t04_both2() {
-int N, M, x;
-set<int> int1;
-set<int> int2;
-vector<int> result;
-cin >> N;
-for (int i=0; i < N; i++)
-{
-    cin >> x;
-    int1.insert(x);
-}
-cin >> M;
-for (int i=0; i < M; i++)
-{
-    cin >> x;
-    int2.insert(x);
-}
-for (auto now1=int1.begin(); now1!=int1.end(); now1++)
-{
-    int element1=*now1;
-    for (auto now2=int2.begin(); now2!=int2.end(); now2++)
+    int N;
+    set<int> s0, s1, s2;
+    cin >> N;
+    for (int i = 0; i < N; i++)
     {
-        int element2=*now2;
-        if (element1==element2)
-        {
-            result.push_back(element1);
-        }
+        int x;
+        cin >> x;
+        s0.insert(x);
+        s1.insert(x);
     }
-}
-for (int i=0; i < (result.size()-1); i++)
-{
-    for (int j=i+1; j < result.size(); j++)
+    cin >> N;
+    for (int i = 0; i < N; i++)
     {
-        if (result[i] > result[j])
-        {
-            int t = result[j];
-            result[j] = result[i];
-            result[i] = t;
-        }
+        int x;
+        cin >> x;
+        s.insert(x);
+        s2.insert(x);
     }
-}
-for (int i=0; i < result.size(); i++)
-{
-    cout << result[i] << " ";
-}
+    for (auto it = s0.begin(); it != s0.end(); ++it)
+        if (s1.count(*it) > 0 && s2.count(*it) > 0)
 
+            cout << *it << ' ';
 }

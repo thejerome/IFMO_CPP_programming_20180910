@@ -28,29 +28,23 @@
 #include "t05_syn.h"
 #include <iostream>
 #include <map>
+#include <string>
 
 using namespace std;
 
 int t05_syn() {
-    map <string, string> syn;
     int N;
     cin >> N;
-    string key, value, word;
-    for (int i=0; i < N; i++)
+    map<string, string> m;
+    for (int i = 0; i < N; i++)
     {
-        cin >> key >> value;
-        syn[key] = value;
+        string a, b;
+        cin >> a >> b;
+        m[a] = b;
+        m[b] = a;
     }
-    cin >> word;
-    for (auto element: syn)
-    {
-        if (word == element.first)
-        {
-            cout << element.second;
-        }
-        else if (word == element.second)
-        {
-            cout << element.first;
-        }
-    }
+    string s;
+    cin >> s;
+
+    cout << m[s];
 }

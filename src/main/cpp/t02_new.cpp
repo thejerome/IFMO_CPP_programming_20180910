@@ -30,21 +30,20 @@
 using namespace std;
 
 int t02_new() {
-int N, n;
-cin >> N;
-set<int> integers;
-
-for (int i=0; i < N; i++){
-    cin >> n;
-    if (integers.find(n) == integers.end())
+    int N;
+    cin >> N;
+    set<int> s;
+    for (int i = 0; i < N; i++)
     {
-        cout << "NO" << endl;
-    }
-    else
+        int x;
+        cin >> x;
+        if (s.count(x) > 0)
+            cout << "YES" << ' ';
+        else
         {
-            cout << "YES" << endl;
+            cout << "NO" << ' ';
+            s.insert(x);
         }
-
-        integers.insert(a);
     }
 }
+

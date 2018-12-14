@@ -86,57 +86,53 @@
 using namespace std;
 
 int t06_homework() {
-    string lower (string s) {
-        for (int i = 0; i < s.size(); i++)
-        {
+    string to_lower_case (string s)
+    {
+        for (int i = 0; i < s.length(); i++)
             if (s[i] >= 'A' && s[i] <= 'Z')
-            {
                 s[i] = s[i] - 'A' + 'a';
-            }
-        }
         return s;
     }
-    bool is_stressed_correct (string s)
+    bool one_is_stressed (const string &s)
     {
-        int count = 0;
-        for (int i = 0; i < s.size(); i++)
+        int cnt = 0;
+        for (int i = 0; i < s.length(); i++)
             if (s[i] >= 'A' && s[i] <= 'Z')
-                count++;
-        return count == 1;
-    }
+                cnt++;
+        return cnt == 1;
+    };
     int t06_homework()
     {
-        int N;
-        cin >> N;
-        map<string, set<string>> dictionary;
-        for (int i = 0; i < N; i++)
+        int n;
+        cin >> n;
+        map<string, set<string>> d;
+        for (int i = 0; i < n; i++)
         {
             string straight, stressed;
             cin >> stressed;
-            straight = lower(stressed);
-            dictionary[straight].insert (stressed);
+            straight = to_lower_case (stressed);
+            d[straight].insert (stressed);
         }
-        string homework;
-        getline (cin, homework);
-        homework += ' ';
+        string hw;
+        getline (cin, hw);
+        hw += ' ';
         string w = "";
-        int count = 0;
-        for (int i = 0; i < homework.size(); i++)
-            if (homework[i] != ' ')
-                w += homework[i];
-            else
+        int cnt = 0;
+        for (int i = 0; i < hw.length(); i++)
+            if (hw[i] != ' ')
+                w += hw[i];
+            else {
+                if (d.count (to_lower_case (w)) == 1)
                 {
-                if (dictionary.count (lower (w)) == 1)
-                {
-                    if (dictionary[lower (w)].count (w) == 0)
-                        count++;
+                    if (d[to_lower_case (w)].count (w) == 0)
+                        cnt++;
                 }
-                else if (!is_stressed_correct(w))
+                else if (!one_is_stressed(w))
                 {
-                    count++;
+                    cnt++;
                 }
                 w = "";
             }
             
-        cout << count - 1;
+        cout << cnt - 1;
 }

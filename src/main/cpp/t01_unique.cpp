@@ -24,15 +24,16 @@
 using namespace std;
 
 int t01_unique() {
-int N, n;
-cin >> N;
-set<int> integers;
+    int N;
+    cin >> N;
+    set<int> s;
+    for (int i = 0; i < N; i++)
+    {
+        int x;
+        cin >> x;
+        s.insert(x);
+    }
 
-for (int i=0; i<N; i++)
-{
-    cin >> n;
-    integers.insert(n);
-}
+    cout << s.size();
 
-cout << integers.size();
 }
