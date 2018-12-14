@@ -38,6 +38,7 @@
 using namespace std;
 
 int t05_kdiag() {
+<<<<<<< HEAD
 	int n, i, j, k;
     
     cin >> n;
@@ -59,6 +60,8 @@ int t05_kdiag() {
             }
         }
     }
+=======
+>>>>>>> parent of 727d796... First commit
     
     return 0;
 }
