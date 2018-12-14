@@ -36,31 +36,31 @@ using namespace std;
 int t07_ip() {
     string s;
     getline (cin, s);
-    s += '.'; // border char
-    int p = -1; // point counter
-    string d = "";
+    s += '.';
+    int oktet = 0;
+    string current_oktet = "";
     for (int i = 0; i < s.length(); i++)
         if (s[i] >= '0' && s[i] <= '9') {
-            d += s[i];
+            current_oktet += s[i];
         }
         else if (s[i] == '.') {
-            if (d.length() == 0 || d[0] == '0' && d.length() != 1 || d.length() > 3) {
+            if (current_oktet.length() == 0 || current_oktet[0] == '0' && current_oktet.length() != 1 || current_oktet.length() > 3) {
                 cout << "NO";
                 return 0;
             }
-            int n = stoi(d);
+            int n = stoi(current_oktet);
             if (n > 255) {
                 cout << "NO";
                 return 0;
             }
-            d = "";
-            p++;
+            current_oktet = "";
+            oktet++;
         }
         else {
             cout << "NO";
             return 0;
         }
-    if (p != 3)
+    if (oktet != 4)
         cout << "NO";
     else
         cout << "YES";
