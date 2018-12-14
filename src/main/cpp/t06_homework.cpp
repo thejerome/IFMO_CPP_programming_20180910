@@ -110,7 +110,6 @@ int t06_homework() {
     }
     string s;
     getline(cin, s);
-    getline(cin, s);
     int l = 0, r = s.find(' ',0);
     int ans = 0;
     while (r <= s.length()){
@@ -132,5 +131,5 @@ int t06_homework() {
         r = (r != s.length() + 1)? s.find(' ',r) : r;
         r = (r == -1)? s.length(): r;
     }
-    cout << ans;
+    cout << ans - 1;
 }
