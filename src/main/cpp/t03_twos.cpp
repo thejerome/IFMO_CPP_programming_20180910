@@ -23,5 +23,7 @@
 using namespace std;
 
 int t03_twos() {
-
+    float n; cin >> n;
+    while(n - 1.0f > 0.0f) n /= 2;
+    cout << ((n - 1.0f < 0.0f) ? "NO" : "YES");
 };
