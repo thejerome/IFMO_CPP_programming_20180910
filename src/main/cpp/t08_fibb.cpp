@@ -21,7 +21,8 @@
 using namespace std;
 
 int t08_fibb() {
-    int n; cin >> n;
+    int n; 
+    cin >> n;
     int f1, f2, f = 0;
     f1 = f2 = 1;
     if (n >= 3) {
