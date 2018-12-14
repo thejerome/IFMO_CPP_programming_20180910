@@ -21,8 +21,23 @@ using namespace std;
 int t10_sort3() {
     int a, b, c;
     cin >> a >> b >> c;
-    if (a > b) swap (a, b);
-    if (a > c) swap (a, c);
-    if (b > c) swap (b, c);
+    if (a > b) {
+        int t;
+        t = a;
+        a = b;
+        b = t;
+    }
+    if (a > c) {
+        int t;
+        t = a;
+        a = c;
+        c = t;
+    }
+    if (b > c) {
+        int t;
+        t = b;
+        b = c;
+        c = t;
+    }
     cout << a << " " << b << " " << c;
 };

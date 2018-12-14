@@ -24,7 +24,13 @@ int t05_chess_king() {
     cin >> s1 >> c1 >> s2 >> c2;
     int k1 = s1 * 10 + c1;
     int k2 = s2 * 10 + c2;
-    int x = abs(k1 - k2);
+    int x;
+    if (k1 - k2 > 0) {
+        x = k1-k2;
+    }
+    else {
+        x = k2 - k1;
+    }
     if (x == 9 || x == 11 || x == 1 || x == 10)
         cout << "YES";
     else {
