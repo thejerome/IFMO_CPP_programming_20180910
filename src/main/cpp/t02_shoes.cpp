@@ -37,11 +37,9 @@ int n, result=0;
 vector<int> a;
 
 void wear(int size, int amount, int pos) {
-    if (pos >= n) result = max(result,amount);
-    else {
-        for (int i=pos; i<n; i++)
-            if (a[i] > size+3) wear(a[i],amount+1,i+1);
-    }
+    for (int i=pos; i<n; i++)
+        if (a[i] > size+2) wear(a[i],amount+1,i+1);
+    result = max(result,amount);
 }
 
 int t02_shoes() {
@@ -52,7 +50,8 @@ int t02_shoes() {
         cin >> ai;
         a.push_back(ai);
     }
-    wear(size_s,0,0);
+    for (int i=0; i<n; i++)
+        if (a[i] >= size_s) {wear(a[i],1,i+1); cout << result; return 0;}
     cout << result;
     return 0;
 }
