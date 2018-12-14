@@ -29,10 +29,27 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
 int t04_students() {
+    int n;
+    cin >> n;
+    multimap<float, string, greater<float> > students;
     
+    string fname, sname;
+    float avgrade;
+    for(int i = 0, math, phys, it; i < n; ++i) {
+        cin >> fname >> sname;
+        cin >> math >> phys >> it;
+        avgrade = (math + phys + it) / 3.0f;
+        students.insert(make_pair(avgrade, fname + ' ' + sname));
+    }
+
+    for(auto student: students) {
+        cout << student.second << ' ';
+    }
 }
 

@@ -23,10 +23,25 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <vector>
+#include <utility>
+#include <algorithm>
 
 
 using namespace std;
 
 int t03_points() {
+    int n;
+    cin >> n;
+    vector< pair<int, int> > points(n);
     
+    for(auto &i: points)
+        cin >> i.first >> i.second;     
+    sort(points.begin(), points.end(), [](pair<int, int> a, pair<int, int> b){
+        return sqrt(pow(a.first - 0, 2) + pow(a.second - 0, 2)) < 
+               sqrt(pow(b.first - 0, 2) + pow(b.second - 0, 2));
+    });
+
+    for(auto i: points)
+        cout << i.first << ' ' << i.second << ' ';
 }
