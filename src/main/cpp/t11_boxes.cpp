@@ -42,8 +42,16 @@ int t11_boxes() {
         for (int j=0; j<3; j++) cin>>m[j];
         for (int i=0; i<3; i++)
             for (int j=i; j<3; ++j) {
-                if (n[i]>n[j])swap(n[i],n[j]);
-                if (m[i]>m[j])swap(m[i],m[j]);
+                if (n[i]>n[j]) {
+                    int copy = n[i];
+                    n[i] = n[j];
+                    n[j] = copy;
+                }
+                if (m[i]>m[j]) {
+                    int copy = m[i];
+                    m[i] = m[j];
+                    m[j] = copy;
+                }
             }
 
         for (int i=0; i<3; ++i) {
