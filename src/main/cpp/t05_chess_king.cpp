@@ -20,5 +20,18 @@
 using namespace std;
 
 int t05_chess_king() {
-
+    int a1, b1, a2, b2;
+    cin >> a1 >> b1 >> a2 >> b2;
+    if (a2 > a1) {
+        int tmp = a1;
+        a1 = a2;
+        a2 = tmp;
+    }
+    if (b2 > b1) {
+        int tmp = b1;
+        b1 = b2;
+        b2 = tmp;
+    }
+    if (a1-a2<2 && b1-b2<2) cout << "YES";
+    else cout << "NO";
 };
