@@ -44,7 +44,7 @@ int t04_both2() {
     {
         int x;
         cin >> x;
-        s.insert(x);
+        s0.insert(x);
         s2.insert(x);
     }
     for (auto it = s0.begin(); it != s0.end(); ++it)
