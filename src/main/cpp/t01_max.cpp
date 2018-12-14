@@ -27,6 +27,33 @@
 using namespace std;
 
 int t01_max() {
+    int n, m, i, j, maxI, maxJ, maxVal;
+    
+    cin >> n >> m;
+    
+    int a[n][m];
+    
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+            cin >> a[i][j];
+        }
+    }
+    
+    maxVal = a[0][0];
+    maxI = 0;
+    maxJ = 0;
+    
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+            if (a[i][j] > maxVal){
+                maxVal = a[i][j];
+                maxI = i;
+                maxJ = j;
+            }
+        }
+    }
+
+    cout << maxI << " " << maxJ << " ";
     
     return 0;
 }
