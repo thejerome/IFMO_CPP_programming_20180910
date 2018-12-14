@@ -137,5 +137,6 @@ int t06_homework() {
                 }
                 w = "";
             }
+            
         cout << count - 1;
 }
