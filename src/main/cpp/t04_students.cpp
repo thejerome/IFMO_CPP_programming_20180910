@@ -29,10 +29,32 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct student {
+    string family, name;
+    int sum_score;
+};
+
+bool cmp(student a, student b) {
+    return a.sum_score > b.sum_score;
+}
+
 int t04_students() {
-    
+    int n;
+    vector<student> a;
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        student ai;
+        int s1,s2,s3;
+        cin >> ai.family >> ai.name >> s1 >> s2 >> s3;
+        ai.sum_score = s1+s2+s3;
+        a.push_back(ai);
+    }
+    sort(a.begin(),a.end(),cmp);
+    for (int i=0; i<n; i++) cout << a[i].family << ' ' << a[i].name << endl;
 }
 
