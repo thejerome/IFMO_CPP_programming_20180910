@@ -40,7 +40,7 @@ void wear(int size, int amount, int pos) {
     if (pos >= n) result = max(result,amount);
     else {
         for (int i=pos; i<n; i++)
-            if (a[i] > size+2) wear(a[i],amount+1,i+1);
+            if (a[i] > size+3) wear(a[i],amount+1,i+1);
     }
 }
 
