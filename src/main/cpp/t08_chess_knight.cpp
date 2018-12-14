@@ -41,12 +41,12 @@ int t08_chess_knight() {
         b1 = b2;
         b2 = tmp;
     }
-    if ((a1-a2) == 3)
+    if ((a1-a2) == 2)
         if ((b1-b2) == 1) cout << "YES";
         else cout << "NO";
     else
-    if ((b1-b2) == 3)
-        if ((a1-a2) == 1) cout << "YES";
+        if ((b1-b2) == 2)
+            if ((a1-a2) == 1) cout << "YES";
+            else cout << "NO";
         else cout << "NO";
-    else cout << "NO";
 };
