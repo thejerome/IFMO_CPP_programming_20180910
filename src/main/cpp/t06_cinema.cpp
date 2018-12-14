@@ -29,7 +29,6 @@
 using namespace std;
 
 int t06_cinema() {
-<<<<<<< HEAD
     int n, m, k, c = 0;
 
     cin >> n >> m;
@@ -70,8 +69,5 @@ int t06_cinema() {
 
     cout << min;
  
-=======
-    
->>>>>>> parent of 727d796... First commit
     return 0;
 }

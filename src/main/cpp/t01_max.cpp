@@ -27,7 +27,6 @@
 using namespace std;
 
 int t01_max() {
-<<<<<<< HEAD
     int n, m, i, j, maxI, maxJ, maxVal;
     
     cin >> n >> m;
@@ -55,8 +54,6 @@ int t01_max() {
     }
 
     cout << maxI << " " << maxJ << " ";
-=======
->>>>>>> parent of 727d796... First commit
     
     return 0;
 }
