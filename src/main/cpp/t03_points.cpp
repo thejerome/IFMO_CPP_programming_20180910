@@ -30,13 +30,12 @@ using namespace std;
 
 struct point {
     int x, y;
-
-    bool operator< (const point &p)
-    {
-        return (x*x + y*y < p.x*p.x + p.y*p.y);
-    }
 };
 
+bool cmp (const point &a, const point &b)
+{
+    return (a.x*a.x + a.y*a.y < b.x*b.x + b.y*b.y);
+}
 int t03_points() {
     int n;
     cin >> n;
@@ -45,7 +44,7 @@ int t03_points() {
     for (int i = 0; i < n; i++)
         cin >> v[i].x >> v[i].y;
 
-    sort (v.begin(), v.end());
+    sort (v.begin(), v.end(), cmp);
 
     for (int i = 0; i < n; i++)
         cout << v[i].x << ' ' << v[i].y << ' ';
