@@ -21,5 +21,23 @@
 using namespace std;
 
 int t04_neighbors() {
+    int count;
 
+    cin >> count;
+
+    int array[count];
+
+    for (int i = 0; i < count; ++i) {
+        cin >> array[i];
+    }
+
+    for (int j = 0; j < count; ++j) {
+        if (array[j] < 0 && array[j + 1] < 0){
+            cout << array[j] << ' ' << array[j + 1];
+            break;
+        }else if (array[j] > 0 && array[j + 1] > 0){
+            cout << array[j] << ' ' << array[j + 1];
+            break;
+        }
+    }
 }

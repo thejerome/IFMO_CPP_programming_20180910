@@ -25,5 +25,26 @@
 using namespace std;
 
 int t10_unique() {
+    int count;
+    bool flag = true;
 
+    cin >> count;
+
+    int array[count];
+
+    for (int i = 0; i < count; ++i) {
+        cin >> array[i];
+    }
+
+    for (int j = 0; j < count; ++j) {
+        for (int k = 0; k < count; ++k) {
+            if(array[j] == array[k] & k != j){
+                flag = false;
+            }
+        }
+        if(flag){
+            cout << array[j] << ' ';
+        }
+        flag = true;
+    }
 }

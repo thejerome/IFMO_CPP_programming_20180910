@@ -19,5 +19,25 @@
 using namespace std;
 
 int t07_swap() {
+    int count,temp;
 
+    cin >> count;
+
+    int array[count];
+
+    for (int i = 0; i < count; ++i) {
+        cin >> array[i];
+    }
+
+    for (int j = 0; j < count; j += 2) {
+        if(count - j > 1) {
+            temp = array[j + 1];
+            array[j + 1] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    for (int k = 0; k < count; ++k) {
+        cout << array[k] << ' ';
+    }
 }

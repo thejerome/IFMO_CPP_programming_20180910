@@ -19,5 +19,19 @@
 using namespace std;
 
 int t03_bigger() {
+    int count;
 
+    cin >> count;
+
+    int array[count];
+
+    for (int i = 0; i < count; ++i) {
+        cin >> array[i];
+    }
+
+    for (int j = 1; j < count; ++j) {
+        if(array[j] > array[j-1]){
+            cout << array[j] << ' ';
+        }
+    }
 }
