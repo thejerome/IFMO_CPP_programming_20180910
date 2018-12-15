@@ -80,9 +80,40 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+string LowerCase(string s) {
+    for (int i=0; i<s.size(); i++) s[i] = tolower(s[i]);
+    return s;
+}
 
+int AmoutOfUpperCase(string s) {
+    int count=0;
+    for (int i=0; i<s.size(); i++)
+        if (s[i] >= 'A' && s[i] <= 'Z') count++;
+    return count;
+}
+
+int t06_homework() {
+    set<string> s,dir;
+    int n,error=0;
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        string s1;
+        cin >> s1;
+        s.insert(LowerCase(s1));
+        dir.insert(s1);
+    }
+    string s1;
+    while (cin >> s1) {
+        if (s.count(LowerCase(s1))!=0) {
+            if (dir.count(s1)==0) error++;
+        }
+        else {
+            if (AmoutOfUpperCase(s1) != 1) error++;
+        }
+    }
+    cout << error;
 }

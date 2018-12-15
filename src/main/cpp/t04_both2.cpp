@@ -23,9 +23,31 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+    int n;
+    set<int> s;
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int a;
+        cin >> a;
+        s.insert(a);
+    }
+    int m;
+    cin >> m;
+    set<int, less<int> > kq;
+    for (int i=0; i<m; i++) {
+        int a;
+        cin >> a;
+        if (s.count(a)!=0) kq.insert(a);
+    }
+    set<int>::iterator it=kq.begin();
+    while (it != kq.end()) {
+        cout << *it << ' ';
+        it++;
+    }
+    return 0;
 }
