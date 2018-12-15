@@ -23,6 +23,7 @@
 using namespace std;
 
 int t09_row() {
+
     int prev=-11111;
     int cnt=1, result=1;
     int n;

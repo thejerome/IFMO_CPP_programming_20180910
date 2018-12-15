@@ -20,6 +20,7 @@
 using namespace std;
 
 int t04_sum() {
+
     int sum=0,n;
     do {
         cin >> n;

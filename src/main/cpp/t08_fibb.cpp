@@ -21,6 +21,7 @@
 using namespace std;
 
 int t08_fibb() {
+
     int n, fn = 1, f1 = 0, f2 = 1;
     cin >> n;
     if (n == 0) cout << f1;
