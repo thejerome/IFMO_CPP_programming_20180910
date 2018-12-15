@@ -24,4 +24,17 @@ using namespace std;
 
 int t09_row() {
 
+    int prev=-11111;
+    int cnt=1, result=1;
+    int n;
+    while (n!=0) {
+        cin >> n;
+        if (n == prev) cnt++;
+        else {
+            if (result < cnt) result=cnt;
+            cnt=1;
+        }
+        prev = n;
+    }
+    cout << result;
 };

@@ -22,4 +22,21 @@ using namespace std;
 
 int t08_fibb() {
 
+    int n, fn = 1, f1 = 0, f2 = 1;
+    cin >> n;
+    if (n == 0) cout << f1;
+    if (n == 1) cout << f2;
+    if (n == 2) cout << fn;
+    if (n > 2) {
+        f1 = 1;
+        f2 = 1;
+        int i=3;
+        while (i<=n) {
+            fn = f1 + f2;
+            f2 = f1;
+            f1 = fn;
+            i++;
+        }
+        cout << fn;
+    }
 };

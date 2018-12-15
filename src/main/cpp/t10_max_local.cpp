@@ -25,4 +25,12 @@ using namespace std;
 
 int t10_max_local() {
 
+    int n, cnt=0, prev=1111111, prev0=111111111;
+    while (n!=0) {
+        cin >> n;
+        if (n<prev && prev>prev0 && n!=0) cnt++;
+        prev0 = prev;
+        prev = n;
+    }
+    cout << cnt;
 };
