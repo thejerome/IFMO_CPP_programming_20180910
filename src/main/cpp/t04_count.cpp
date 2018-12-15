@@ -28,5 +28,13 @@
 using namespace std;
 
 int t04_count() {
-
+string c;
+int p=0;
+int d=0;
+getline(cin, c);
+while((p=c.find(" ",p))!=string::npos){
+    p++;
+    d++;
+}
+cout<< d+1;
 }
