@@ -22,5 +22,11 @@
 using namespace std;
 
 int t06_longest() {
-
+string current, find;
+while(cin>>current){
+    if(current.empty() || current.size() > find.size()){
+        find=current;
+    }
+}
+cout<<find;
 }
