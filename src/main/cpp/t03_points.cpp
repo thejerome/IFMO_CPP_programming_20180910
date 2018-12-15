@@ -23,10 +23,29 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct point {
+    int x, y;
+};
+
+bool cmp (const point &a, const point &b)
+{
+    return (a.x*a.x + a.y*a.y < b.x*b.x + b.y*b.y);
+}
 int t03_points() {
-    
+    int n;
+    cin >> n;
+
+    vector<point> v(n);
+    for (int i = 0; i < n; i++)
+        cin >> v[i].x >> v[i].y;
+
+    sort (v.begin(), v.end(), cmp);
+
+    for (int i = 0; i < n; i++)
+        cout << v[i].x << ' ' << v[i].y << ' ';
 }
