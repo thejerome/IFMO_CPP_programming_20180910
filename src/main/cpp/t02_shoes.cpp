@@ -28,10 +28,45 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    int cust, n;
+    cin >> cust >> n;
+
+    vector<int> v;
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+
+        if (x >= cust)
+            v.push_back (x);
+    }
+
+    if (v.size() == 0) {
+        cout << 0;
+        return 0;
+    }
+
+    sort(v.begin(), v.end());
+
+    vector<int> ans(v.size(), 0);
+    int max_ans = 0;
+
+    ans[0] = 1;
+    for (int i = 1; i < ans.size(); i++) {
+        for (int j = i - 1; j >= 0; j--)
+            if (v[i] - v[j] >= 3 && ans[j] > ans[i])
+                ans[i] = ans[j];
+
+        ans[i]++;
+        if (max_ans < ans[i])
+            max_ans = ans[i];
+    }
+
+    cout << max_ans;
+
 }
