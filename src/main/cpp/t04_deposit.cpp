@@ -23,4 +23,12 @@ using namespace std;
 
 int t04_deposit() {
 
+    double p,x,y,k,b;
+    cin >> p >> x >> y >> k;
+    b = x+y/100.0;
+    for (int i=0; i<k; i++) {
+        b *= 1.0+p/100.0;
+        if (i != k-1) b = (floor(b*100))/100.0;
+    }
+    cout << floor(b) << ' ' << floor((b - floor(b))*100.0) << endl;
 };
