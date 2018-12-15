@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <set>
 
 using namespace std;
 
 int t06_homework() {
-
+    int n; //n - количество слов в словаре
+    cin >> n;
+    set <string> vocab1;
+    set <string> vocab_big_letters;
+    for (int i = 0; i < n; i++) {
+        string x;
+        cin >> x;
+        vocab1.insert(x);
+        string big_letters;
+        for (int j = 0; j < x.length(); j++) {
+            big_letters += toupper(x[j]);
+        }
+        vocab_big_letters.insert(big_letters);
+    }
+    string ipsilon = "";
+    int mistakes = 0;
+    getline(cin, ipsilon);
+    ipsilon += " ";
+    string word;
+    for (int k = 1; k < ipsilon.size(); k++) {
+        if (ipsilon[k] != ' '){
+            word+=ipsilon[k];
+        } else {
+            if (vocab1.find(word) == vocab1.end()) {
+                int stress = 0;
+                for (int i = 0; i < word.length(); i++) {
+                    if (word[i] >= 'A' && word[i] <= 'Z') {
+                        stress++;
+                    }
+                }
+                for (int j = 0; j < word.length(); j++) {
+                    word[j] = toupper(word[j]);
+                }
+                if (stress != 1) {
+                    mistakes++;
+                } else {
+                    if (vocab_big_letters.find(word) != vocab_big_letters.end()) {
+                        mistakes++;
+                    }
+                }
+            }
+            word = "";
+        }
+    }
+    cout << mistakes;
 }

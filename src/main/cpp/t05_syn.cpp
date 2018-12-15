@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <string>
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+    int n;
+    cin >> n;
+    map <string, string> vocab;
+    for (int i = 0; i < n; i++) {
+        string s1,s2;
+        cin >> s1;
+        cin >> s2;
+        vocab[s1] = s2;
+        vocab[s2] = s1;
+    }
+    string find;
+    cin >> find;
+    cout << vocab[find];
 }
