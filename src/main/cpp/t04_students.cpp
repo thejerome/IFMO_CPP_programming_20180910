@@ -37,10 +37,12 @@ struct student{
     string name, sur;
     int mark[3];
 };
-bool comp(student a, student b) {
+bool comp(student a, student b)
+{
     int sum1, sum2;
     sum1 = sum2 = 0;
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++)
+    {
         sum1 += a.mark[i];
         sum2 += b.mark[i];
     }
@@ -51,7 +53,8 @@ int t04_students() {
     int n;
     cin >> n;
     vector< student > a(n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> a[i].name >> a[i].sur;
         for (int j = 0; j < 3; j++)
             cin >> a[i].mark[j];
