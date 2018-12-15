@@ -19,5 +19,20 @@
 using namespace std;
 
 int t02_even2() {
+    int count;
+
+    cin >> count;
+
+    int array[count];
+
+    for (int i = 0; i < count; ++i) {
+        cin >> array[i];
+    }
+
+    for (int j = 0; j < count; ++j) {
+        if(array[j]%2 == 0){
+            cout << array[j] << ' ';
+        }
+    }
 
 }

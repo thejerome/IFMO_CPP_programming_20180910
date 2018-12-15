@@ -19,5 +19,22 @@
 using namespace std;
 
 int t06_different() {
+    int count,counter,last;
 
+    cin >> count;
+
+    int array[count];
+    counter = 0;
+    last = 0;
+    for (int i = 0; i < count; ++i) {
+
+        cin >> array[i];
+
+        if(array[i] != last){
+            counter++;
+        }
+        last = array[i];
+    }
+
+    cout << counter;
 }
