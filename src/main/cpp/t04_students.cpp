@@ -29,10 +29,32 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
+struct student {
+    string surname;
+    string name;
+    double rating;
+};
+
+bool cmp (const student &a, const student &b) {
+    return a.rating > b.rating;
+}
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector <student> a(n);
+    for (int i = 0; i < n; i++) {
+        int mat, fis, tech;
+        cin >> a[i].surname >> a[i].name >> mat >> fis >> tech;
+        a[i].rating = (mat + fis + tech);
+    }
+    sort(a.begin(), a.end(), cmp);
+    for (int i = 0; i < n; ++i) {
+        cout << a[i].surname << " " << a[i].name << " ";
+    }
 }
 

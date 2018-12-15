@@ -28,10 +28,30 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    int leg;
+    int n;
+    cin >> leg >> n;
+    vector <int> mas(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> mas[i];
+    }
+    sort(mas.begin(), mas.end());
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        if (k == 0 && mas[i] >= leg) {
+                k++;
+                leg = mas[i];
+        } else {
+        if (mas[i] - leg >= 3) {
+            leg = mas[i];
+            k++;
+        } }
+    }
+    cout << k;    
 }
