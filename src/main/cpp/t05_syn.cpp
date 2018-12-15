@@ -27,10 +27,28 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
+#include <string>
 
 using namespace std;
 
 int t05_syn() {
-
+    map<string,string>old_tut;
+    int N;
+    string d,a,u;
+    cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>d>>a;
+        old_tut.insert(pair<string,string>(d,a));
+    }
+    cin>>u;
+    for (auto i = old_tut.begin(); i!= old_tut.end(); i++)
+    {
+        if((*i).first==u) {
+            cout << (*i).second;
+        }
+        if((*i).second==u){
+            cout<<(*i).first;
+        }
+    }
 }
