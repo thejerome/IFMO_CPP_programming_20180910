@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+string small_letters(string s){
+    for (int i=0; i<s.length(); i++)
+        if (s[i]>='A' && s[i]<='Z')
+            s[i]=s[i]-'A'+'a';
+     return s;
+}
 
+bool one_big_letter(string word){
+    int count = 0;
+    for (int i = 0; i< word.length(); i++)
+        if (word[i]>='A' && word[i]<= 'Z')
+            count++;
+    return count == 1;
+};
+
+int t06_homework() {
+map <string, set <string>> slovar;
+int n;
+cin>>n;
+for (int i=0; i<
+        n; i++){
+    string word;
+    cin>>word;
+    slovar[small_letters(word)].insert(word);
+}
+
+string homework;
+getline(cin,homework);
+string word = "";
+int mistakes = 0;
+homework = homework + ' ';
+for (int i=0; i<homework.length(); i++)
+    if (homework[i]!=' ')
+        word=word+homework[i];
+    else {
+        if (slovar.count(small_letters(word)) ==1) {
+            if (slovar[small_letters(word)].count(word) == 0)
+                mistakes++;
+        }
+        else if (!one_big_letter(word)) {
+                mistakes++;
+            }
+        word="";
+    }
+cout <<mistakes-1;
 }
