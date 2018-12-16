@@ -22,5 +22,19 @@
 using namespace std;
 
 int t04_deposit() {
+    double p,x,y,k,rub;
 
+    cin >> p >> x >> y >> k;
+
+    rub = x+y/100;
+
+    for (int i=0; i<k; i++) {
+        rub *= 1 + p/100;
+
+        if (i != k-1){
+            rub = (floor(rub*100))/100.0;
+        }
+
+    }
+    cout << floor(rub) << ' ' << floor((rub - floor(rub))*100) << endl;
 };
