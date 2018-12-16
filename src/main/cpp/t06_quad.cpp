@@ -21,5 +21,28 @@
 using namespace std;
 
 int t06_quad() {
-
+    float a, b, c, d, x1, x2;
+    cin >> a >> b >> c;
+    if (b != 0 && c != 0) {
+        d = b * b - 4 * a * c;
+        if (d == 0) {
+            cout << -b / (2 * a);
+        } else {
+            if (d > 0) {
+                cout << (-b - pow(d, 0.5)) / (2 * a) << ' ' << (-b + pow(d, 0.5)) / (2 * a);
+            }
+        }
+    } else {
+        if (b == 0 && c == 0) {
+            cout << 0;
+        } else {
+            if (b != 0 && c == 0) {
+                cout << fmin(0, -b / a) << ' ' << fmax(0, -b / a);
+            } else {
+                if (-c / a > 0) {
+                    cout << -abs(c / a) << ' ' << abs(c / a);
+                }
+            }
+        }
+    }
 };
