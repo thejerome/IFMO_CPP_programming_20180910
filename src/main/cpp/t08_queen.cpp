@@ -22,7 +22,30 @@
 
 using namespace std;
 
-int t08_queen(){
+int chess_board[10];
 
+bool check(int i, int j, int k) {
+    if (k==i) {return (true);}
+    else return ((i-k) != (j-chess_board[k])) && (chess_board[k] != j) && check(i, j, k + 1) && ((i-k) != (chess_board[k]-j));
+}
+
+int qn( int n, int i, int j ) {
+    if (i==n) {return 1;}
+    else {
+        if (j<n) {
+            int r = 0;
+            if (check(i, j, 0)) {
+                chess_board[i]=j;
+                r = qn(n, i + 1, 0);
+            }
+            return r + qn(n, i, j + 1);
+        }
+        else return 0;
+    }
+}
+int t08_queen(){
+    int N;
+    cin>>N;
+    cout<<qn(N, 0, 0);
     return 0;
 }
