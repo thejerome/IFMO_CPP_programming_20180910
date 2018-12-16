@@ -30,36 +30,50 @@
 #include "t04_students.h"
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <string>
+
 
 using namespace std;
 
 
-int t04_students() {
-    unsigned int n;
-    string name, surname;
-    int mark1, mark2, mark3;
-    cin >> n;
-    vector <pair <string, string>> students(n);
-    vector <int> marks(n);
-    for (int i = 0; i < n; i ++){
-        cin >> surname >> name >> mark1 >> mark2 >> mark3;
-        students[i].first = surname;
-        students[i].second = name;
-        marks[i] = mark1 + mark2 + mark3;
+struct student{
+    string surname;
+    string name;
+    double mark;
+};
+
+struct students{
+    student pupils[100];
+    void enter(int n){
+        double mark1, mark2, mark3;
+        for (int i = 0; i < n; i ++){
+            cin >> pupils[i].surname >> pupils[i].name;
+            cin >> mark1 >> mark2 >> mark3;
+            pupils[i].mark = mark1 + mark2 + mark3;
+        }
     }
-    for (int prohod = 0; prohod < n; prohod ++) {
-        for (int i = 0; i < n - prohod; i++) {
-            if (marks[i] < marks[i+1]){
-                swap(students[i], students[i+1]);
-                swap(marks[i], marks[i+1]);
+    void Sort(int n){
+        for(int prohod = 0; prohod < n; prohod ++){
+            for (int i = 0; i < n - prohod; i ++){
+                if (pupils[i].mark < pupils[i+1].mark){
+                    swap(pupils[i], pupils[i+1]);
+                }
             }
         }
     }
-    for (auto now : students) {
-        cout << now.first << ' ' << now.second << ' ';
+    void Print(int n){
+        for (int i = 0; i < n; i ++){
+            cout << pupils[i].surname << ' ' <<  pupils[i].name << ' ';
+        }
     }
+};
+int t04_students() {
+    int size;
+    cin >> size;
+    students information;
+    information.enter(size);
+    information.Sort(size);
+    information.Print(size);
     return 0;
 }
 

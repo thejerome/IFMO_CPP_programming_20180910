@@ -22,32 +22,51 @@
 //2 3
 
 #include "t03_points.h"
+#include "t03_points.h"
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <utility>
+#include <cstdlib>
+#include <cmath>
 
 
 using namespace std;
 
-int t03_points() {
-    unsigned int size;
-    int x, y;
-    cin >> size;
-    vector <pair <int, int>> coordinates(size);
-    for (int i = 0; i < size; i ++){
-        cin >> x >> y;
-        coordinates[i] = {x, y};
+
+struct coordinates{
+    int x;
+    int y;
+    double distance;
+};
+
+
+struct my_sort{
+    coordinates my_coordinates[100];
+    void enter(int n){
+        for (int i = 0; i < n; i ++){
+            cin >> my_coordinates[i].x >> my_coordinates[i].y;
+            my_coordinates[i].distance = sqrt(pow(my_coordinates[i].x, 2) + pow(my_coordinates[i].y, 2));
+        }
     }
-    for (int prohod = 0; prohod < size; prohod ++){
-        for (int i = 0; i < size - prohod; i ++){
-            if ((coordinates[i].first * coordinates[i].first + coordinates[i].second * coordinates[i].second) > (coordinates[i+1].first * coordinates[i+1].first + coordinates[i+1].second * coordinates[i+1].second)){
-                swap(coordinates[i], coordinates[i+1]);
+    void Sort(int n){
+        for (int i=0; i<n-1; i++){
+            for (int j=i+1; j<n; j++){
+                if (my_coordinates[i].distance > my_coordinates[j].distance){
+                    swap(my_coordinates[i], my_coordinates[j]);
+                }
             }
         }
     }
-    for (int i = 0; i < size; i ++){
-        cout << coordinates[i].first << ' ' << coordinates[i].second << ' ';
+    void Print(int n){
+        for (int i = 0; i < n; i ++){
+            cout << my_coordinates[i].x << ' ' << my_coordinates[i].y << ' ';
+        }
     }
+};
+int t03_points() {
+    int size;
+    cin >> size;
+    my_sort information;
+    information.enter(size);
+    information.Sort(size);
+    information.Print(size);
     return 0;
 }
