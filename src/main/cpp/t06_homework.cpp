@@ -149,5 +149,5 @@ int t06_homework() {
 		}
 	}
 	errorsCount += analize(temp, dictionaryWords, dictionaryAccent);
-	cout << errorsCount;
+	cout << errorsCount-1;
 }
