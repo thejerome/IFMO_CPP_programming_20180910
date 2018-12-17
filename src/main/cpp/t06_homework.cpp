@@ -102,7 +102,7 @@ bool one_is_stressed (const string &s){
             c++;
         }
     }
-    return cnt == 1;
+    return c == 1;
  }
 
  int t06_homework() {

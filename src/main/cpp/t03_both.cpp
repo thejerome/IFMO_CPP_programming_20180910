@@ -56,6 +56,6 @@ int t03_both() {
         }
     }
 
-    cout << cnt;
+    cout << c;
 
 }
