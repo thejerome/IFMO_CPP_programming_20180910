@@ -1,3 +1,4 @@
+
 //Проверьте, принадлежит ли точка данной закрашенной области:
 //
 // https://www.dropbox.com/s/3h3nl34g4ciiglt/3795.png?dl=1
@@ -33,8 +34,17 @@
 using namespace std;
 
 //function IsPointInArea
-
+bool IsPointInTheArea(double x, double y) 
+{
+	return (x + y) <= 0 && ((y - 1)*(y - 1) + (x + 1)*(x + 1)) >= 4 && (-2 * x + y - 2) <= 0 || ((y - 1)*(y - 1) + (x + 1)*(x + 1)) <= 4 && (-2 * x + y - 2) >= 0 && (x + y) >= 0;
+}
 int t04_area() {
-
+	double a, b;
+	cin >> a >> b;
+	if (IsPointInTheArea(a, b))
+		cout << "YES";
+	else 
+		cout << "NO";
     return 0;
 }
+

@@ -1,3 +1,4 @@
+
 //Дана последовательность чисел, завершающаяся числом 0. 
 // Найдите сумму всех этих чисел, не используя цикл.
 //
@@ -21,8 +22,19 @@
 #include <cmath>
 
 using namespace std;
-
+void summar(int &sum) 
+{
+	int x;
+	cin >> x;
+	if (x != 0) 
+	{
+		sum += x;
+		summar(sum);
+	}
+}
 int t06_sum() {
-
+	int sum = 0;
+	summar(sum);
+	cout << sum;
     return 0;
 }

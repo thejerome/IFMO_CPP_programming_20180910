@@ -1,3 +1,4 @@
+
 //Даны пять действительных чисел: x, y, xc, yc, r. 
 // Проверьте, принадлежит ли точка (x, y) кругу с центром (xc, yc) и радиусом r. 
 // Если точка принадлежит кругу, выведите слово YES, иначе выведите слово NO.
@@ -38,8 +39,17 @@
 using namespace std;
 
 //function IsPointInCircle
-
+bool IsPointInTheCircle(double x, double y, double xc, double yc, double r) 
+{
+	return ((x - xc)*(x - xc) + (y - yc)*(y - yc) <= r * r);
+}
 int t03_circle() {
-
+	double a, b, c, d, e;
+	cin >> a >> b >> c >> d >> e;
+	if (IsPointInTheCircle(a, b, c, d, e))
+		cout << "YES";
+	else
+		cout << "NO";
     return 0;
 }
+
