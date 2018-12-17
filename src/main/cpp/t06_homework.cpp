@@ -80,9 +80,43 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
 
 using namespace std;
 
-int t06_homework() {
+string small(string s){
+for(auto &i: s)
+    if(i>='A'&&i<'Z')
+       i=i+'a'-'A';
+return s;}
 
-}
+bool big(string b){
+bool up=false;
+    for(auto &i: b)
+        if(i>='A'&&i<='Z') {
+            if(up){
+                return false;}
+            up=true;}
+return up;}
+
+bool check(string w, map<string,set<string>> dictionary){
+    if(dictionary.find(small(w)) != dictionary.end())
+        return dictionary.at(small(w)).find(w) != dictionary.at(small(w)).end();
+    else {
+        return big(w);}}
+
+int t06_homework() {
+int N,m=0;
+string word;
+map<string,set<string>> dictionary;
+cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>word;
+        dictionary[small(word)].insert(word);}
+    while(cin>>word){
+        m += !check(word,dictionary);}
+        cout<<m;
+return 0;
+
+    }
