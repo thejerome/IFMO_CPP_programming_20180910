@@ -19,5 +19,27 @@
 using namespace std;
 
 int t03_bigger() {
-
+	int n;
+	cin >> n;
+	//int a[n];
+	int prev = 9999999;
+	for (int i = 0; i < n; i++)
+	{
+		int m;
+		cin >> m;
+		//a[i] = m;
+		if (i == 0)
+		{
+			prev = m;
+		}
+		else
+		{
+			if (prev < m)
+			{
+				cout << m << " ";
+			}
+			prev = m;
+		}
+	}
+	return 0;
 }
