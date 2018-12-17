@@ -22,6 +22,22 @@
 
 using namespace std;
 
-int t05_palindrom() {
+bool isPalindrom(string value){
+	for (int i = 0; i < value.size(); i++) {
+		if (value[i] != value[value.size() - i - 1]) {
+			return false;
+		}
+	}
+	return true;
+}
 
+int t05_palindrom() {
+	string input;
+	getline(cin, input);
+	if (isPalindrom(input)) {
+		cout << "yes";
+	}
+	else {
+		cout << "no";
+	}
 }
