@@ -80,9 +80,74 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+string ToLowerCase(string startValue) {
+	string temp = startValue;
+	for (int i = 0; i < temp.size(); i++)
+	{
+		if (temp[i] >= 'A' && temp[i] <= 'Z') {
+			temp[i] = temp[i] + 'a' - 'A';
+		}
+	}
+	return temp;
+}
 
+int GetUpperCount(string value) {
+	int count = 0;
+	for (int i = 0; i < value.size(); i++)
+	{
+		if (value[i] >= 'A' && value[i] <= 'Z') {
+			count++;
+		}
+	}
+	return count;
+}
+
+int analize(string value, set<string> dictionaryWords, set<string> dictionaryAccent) {
+	if (dictionaryAccent.count(value)) {
+		return 0;
+	}
+	else if (!dictionaryWords.count(ToLowerCase(value))) {
+		if (GetUpperCount(value) != 1) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
+	return 1;
+}
+
+int t06_homework() {
+	set<string> dictionaryWords;
+	set<string> dictionaryAccent;
+
+	int dictLength;
+	cin >> dictLength;
+	for (int i = 0; i < dictLength; i++)
+	{
+		string word;
+		cin >> word;
+		dictionaryAccent.insert(word);
+		dictionaryWords.insert(ToLowerCase(word));
+	}
+	string input;
+	getline(cin, input);
+	string temp;
+	int errorsCount=0;
+	for (int i = 0; i < input.size(); i++)
+	{
+		if (input[i] == ' '){
+			errorsCount += analize(temp, dictionaryWords, dictionaryAccent);
+			temp.clear();
+		}
+		else{
+			temp += input[i];
+		}
+	}
+	errorsCount += analize(temp, dictionaryWords, dictionaryAccent);
+	cout << errorsCount-1;
 }

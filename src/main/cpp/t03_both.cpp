@@ -23,9 +23,33 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+	set<int> values1;
+	set<int> values2;
+	int n;
+	int m;
+	int count = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int temp;
+		cin >> temp;
+		values1.insert(temp);
+	}
+	cin >> m;
+	for (int i = 0; i < m; i++)
+	{
+		int temp;
+		cin >> temp;
+		if (!values2.count(temp)) {
+			count += values1.count(temp);
+			values2.insert(temp);
+		}
+	}
+	cout << count;
+	
 }
