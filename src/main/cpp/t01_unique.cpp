@@ -1,4 +1,4 @@
-//Дан список целых чисел, который может содержать до 100000 чисел. 
+﻿//Дан список целых чисел, который может содержать до 100000 чисел. 
 // Определите, сколько в нем встречается различных чисел.
 //
 //Входные данные
@@ -19,9 +19,16 @@
 
 #include "t01_unique.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t01_unique() {
-    
+    int a, x;
+    cin >> a;
+    set <int> numbers;
+    for (int i = 0; i < a; i ++){
+        cin >> x;
+        numbers.insert(x);
+    }
+    cout << numbers.size();
 }
