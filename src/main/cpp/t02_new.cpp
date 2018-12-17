@@ -25,10 +25,21 @@
 
 #include "t02_new.h"
 #include <iostream>
-
-
 using namespace std;
 
 int t02_new() {
-    
+	int N, a;
+	cin >> N;
+	set<int> integers;
+	for (int i = 0; i < N; i++) {
+		cin >> a;
+		if (integers.find(a) == integers.end()) {
+			cout << "NO" << endl;
+		}
+		else {
+			cout << "YES" << endl;
+		}
+		integers.insert(a);
+	}
+	return 0;
 }
