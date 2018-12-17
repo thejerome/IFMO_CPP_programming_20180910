@@ -33,6 +33,31 @@
 
 using namespace std;
 
-int t07_ip() {
+bool IsCorrectIP(string input){
+	int counter = 1;
+	string temp = "";
+	for (int i = 0; i < input.size(); i++) {
+		if (input[i] == '.') {
+			if (temp.size() == 0 || stoi(temp) > 255 || stoi(temp) < 0) {
+				return false;
+			}
+			temp = "";
+			counter++;
+		}
+		else {
+			temp += input[i];
+		}
+	}
+	return counter == 4;
+}
 
+int t07_ip() {
+	string input;
+	getline(cin, input);
+	if (IsCorrectIP(input)) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
 }
