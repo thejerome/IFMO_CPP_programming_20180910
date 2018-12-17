@@ -27,6 +27,25 @@
 using namespace std;
 
 int t01_max() {
-    
+	int n;
+	int m;
+	cin >> n >> m;
+	int M[n][m];
+	int maxValue=0;
+	int maxRow=-1;
+	int maxCell=-1;
+	for (int  i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cin >> M[i][j];
+			if (M[i][j] > maxValue) {
+				maxValue = M[i][j];
+				maxRow = i;
+				maxCell = j;
+			}
+		}
+	}
+	cout << maxRow << " " << maxCell;
     return 0;
 }
