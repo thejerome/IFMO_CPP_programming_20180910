@@ -23,9 +23,32 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+	set<int> values1;
+	set<int> fin;
+	int n;
+	int m;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		int temp;
+		cin >> temp;
+		values1.insert(temp);
+	}
+	cin >> m;
+	for (int i = 0; i < m; i++)
+	{
+		int temp;
+		cin >> temp;
+		if (values1.count(temp)) {
+			fin.insert(temp);
+		}
+	}
+	for (auto i = fin.begin(); i != fin.end(); i++) {
+		cout << *i << ' ';
+	}
 }

@@ -27,10 +27,21 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+	map <string, string> input;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		string a, b;
+		cin >> a >> b;
+		input[a] = b;
+		input[b] = a;
+	}
+	string target;
+	cin >> target;
+	cout << input[target];
 }
