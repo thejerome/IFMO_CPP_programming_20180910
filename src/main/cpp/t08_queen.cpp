@@ -22,7 +22,40 @@
 
 using namespace std;
 
-int t08_queen(){
+int desk[10];
 
+bool Check(int i, int j, int k)
+{
+	if (k == i) {
+		return true; 
+	}
+
+	return (desk[k] != j) && ((i - k) != (desk[k] - j)) && ((i - k) != (j - desk[k])) && Check(i, j, k + 1);
+}
+
+int CountVariants(int i, int j, int k)
+{
+	if (j == i)
+	{
+		return 1;
+	}
+
+	if (k < i)
+	{
+		int temp = 0;
+		if (Check(j, k, 0))
+		{
+			desk[j] = k;
+			temp = CountVariants(i, j + 1, 0);
+		}
+		return temp + CountVariants(i, j, k + 1);
+	}
+	
+	return 0;
+}
+int t08_queen(){
+	int n;
+	cin >> n;
+	cout << CountVariants(n, 0, 0);
     return 0;
 }
