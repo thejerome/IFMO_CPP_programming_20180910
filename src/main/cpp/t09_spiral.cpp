@@ -22,7 +22,7 @@
 using namespace std;
 
 int t09_spiral() {
-	int n, m, k, a, c;
+	int n, m;
 	int c = 0;
 	int k = 0;
 	int a = 1;
