@@ -149,5 +149,5 @@ int t06_homework() {
 		}
 	}
 	errorsCount += analize(temp);
-	cout << errorsCount-1;
+	cout << errorsCount;
 }
