@@ -142,7 +142,7 @@ int t06_homework() {
 	{
 		if (input[i] == ' ' && temp.size()>0){
 			errorsCount += analize(temp);
-			temp = "";
+			temp.clear();
 		}
 		else{
 			temp += input[i];
