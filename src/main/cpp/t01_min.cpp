@@ -42,3 +42,4 @@ int t01_min() {
 	cout << min4(a, b, c, d);
 	return 0;
 }
+

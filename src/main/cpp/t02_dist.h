@@ -1,3 +1,4 @@
+
 //
 // Created by theje on 2018-10-30.
 //
@@ -10,3 +11,4 @@ int t02_dist();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T02_DIST_H
+

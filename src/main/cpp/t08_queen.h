@@ -1,3 +1,4 @@
+
 //
 // Created by theje on 2018-10-30.
 //
@@ -10,3 +11,4 @@ int t08_queen();
 
 
 #endif //IFMO_CPP_PROGRAMMING_20180910_T08_QUEEN_H
+
