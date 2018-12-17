@@ -106,10 +106,7 @@ int GetUpperCount(string value) {
 	return count;
 }
 
-set<string> dictionaryWords;
-set<string> dictionaryAccent;
-
-int analize(string value) {
+int analize(string value, set<string> dictionaryWords, set<string> dictionaryAccent) {
 	if (dictionaryAccent.count(value)) {
 		return 0;
 	}
@@ -125,6 +122,9 @@ int analize(string value) {
 }
 
 int t06_homework() {
+	set<string> dictionaryWords;
+	set<string> dictionaryAccent;
+
 	int dictLength;
 	cin >> dictLength;
 	for (int i = 0; i < dictLength; i++)
@@ -140,14 +140,14 @@ int t06_homework() {
 	int errorsCount=0;
 	for (int i = 0; i < input.size(); i++)
 	{
-		if (input[i] == ' ' && temp.size()>0){
-			errorsCount += analize(temp);
+		if (input[i] == ' '){
+			errorsCount += analize(temp, dictionaryWords, dictionaryAccent);
 			temp.clear();
 		}
 		else{
 			temp += input[i];
 		}
 	}
-	errorsCount += analize(temp);
+	errorsCount += analize(temp, dictionaryWords, dictionaryAccent);
 	cout << errorsCount;
 }
