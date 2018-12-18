@@ -81,7 +81,7 @@
 #include "t06_homework.h"
 #include <iostream>
 #include <vector>
-
+#include<map>
 using namespace std;
 string to_lower_case(const string& s) {
     string tmp;

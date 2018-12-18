@@ -38,7 +38,7 @@ int t04_both2() {
     }
     int m,k=0;
     cin>>m;
-    for(int i=0, i<m; i++){
+    for(int i=0; i<m; i++){
         int a;
         cin>>a;
         s1.insert(a);
