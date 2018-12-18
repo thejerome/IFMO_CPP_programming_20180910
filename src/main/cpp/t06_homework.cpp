@@ -80,9 +80,53 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
+string lower_case(string s) {
+	for (int i = 0; i < s.length(); i++)
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] = s[i] - 'S' + 's';
+	return s;
+}
 
+bool upper_case_letter(string word) {
+	int count = 0;
+	for (int i = 0; i < word.length(); i++)
+		if (word[i] <= 'Z' && word[i] >= 'A')
+			count++;
+	return count == 1;
+};
+
+int t06_homework() {
+	map <string, set <string>> Vocabulary;
+	int Vocabulary_size;
+	cin >> Vocabulary_size;
+	for (int i = 0; i < Vocabulary_size; i++) {
+		string word;
+		cin >> word;
+		Vocabulary[lower_case(word)].insert(word);
+	}
+	string done_work;
+	getline(cin, done_work);
+	string word = "";
+	int mistakes = 0;
+	done_work = done_work + ' ';
+	for (int i = 0; i < done_work.length(); i++)
+		if (done_work[i] != ' ')
+			word = word + done_work[i];
+		else {
+			if (Vocabulary.count(lower_case(word)) == 1) {
+				if (Vocabulary[lower_case(word)].count(word) == 0)
+					mistakes++;
+			}
+			else if (!upper_case_letter(word)) {
+				mistakes++;
+			}
+			word = "";
+		}
+	cout << mistakes - 1 << endl;
 }
