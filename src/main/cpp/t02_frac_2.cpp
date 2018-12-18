@@ -18,7 +18,8 @@
 using namespace std;
 
 int t02_frac_2() {
-	double X;
+	double X, frac;
 	cin >> X;
-	cout << trunc(modf(X, &X)*10);
+	frac = (X - int(X))*10;
+	cout << int(frac);
 };
