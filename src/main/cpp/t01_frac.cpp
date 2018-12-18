@@ -22,5 +22,5 @@ using namespace std;
 int t01_frac() {
 double x;
 cin >> x;
-cout << modf(x, &x);
+cout << x-trunc(x);
 };
