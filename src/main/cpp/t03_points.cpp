@@ -28,7 +28,7 @@
 
 using namespace std;
 
-struct point{
+struct onepoint{
     int x,y;
     double distance;
 
@@ -37,25 +37,25 @@ struct point{
     }
 };
 
-bool operator < (point &p1, point &p2){
+bool operator < (onepoint &p1, onepoint &p2){
     return p1.distance < p2.distance;
 }
 
 int t03_points() {
     int n;
     cin >> n;
-    vector<point> points;
+    vector<onepoint> manypoints;
     for (int i = 0; i < n; i++){
-        point p;
+        onepoint p;
         cin >> p.x >> p.y;
         p.calculatedistance();
-        points.push_back(p);
+        manypoints.push_back(p);
     }
     if (n > 0) {
-        sort(points.begin(), points.end());
+        sort(manypoints.begin(), manypoints.end());
     }
 
     for (int i = 0; i < n; i++){
-        cout << points[i].x << " " << points[i].y << " ";
+        cout << manypoints[i].x << " " << manypoints[i].y << " ";
     }
 }
