@@ -44,5 +44,5 @@ int t02_new() {
         sad.insert(w);
     }
 
-
+return 0 ;
 }

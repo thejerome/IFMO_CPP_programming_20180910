@@ -32,5 +32,5 @@ int t01_unique() {
         sad.insert(a);
     }
     cout << sad.size();
-
+return 0;
 }

@@ -24,32 +24,45 @@
 #include "t03_both.h"
 #include <iostream>
 #include <vector>
+#include <set>
+using namespace std;
+
+#include "t03_both.h"
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+#include "t03_both.h"
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int t03_both() {
-    vector<int> sad;
-    vector<int> xxx;
-    int n,N,M1,m2,z,k;
-    cin >> n;
+    vector <int> xxx;
+    vector <int> Ains;
+    int N,M,n,m,k,u;
+    u=1;
     k=0;
-    z=1;
-    for (int i = 0; i < n; i++) {
-        cin >> M1;
-        sad.push_back(M1);
+    cin>>N;
+    for ( int i=0; i<N ;i++ ){
+        cin>>n;
+        xxx.push_back(n);
     }
-    cin >> N;
-    for ( int i = 0; i < N ; i++) {
-        cin>>m2;
-        xxx.push_back(m2);
+    cin>>M;
+    for(int i=0;i<M;i++){
+        cin>>m;
+        Ains.push_back(m);
     }
-for ( int i=0; i<n;i++ ){
-    for ( int c=0; c<N;c++ ){
-        if(sad[i]==xxx[c]&&(z==1)){
-            k++;
-            z=0;
+    for ( int i=0;i<N;i++ ) {
+        for( int b=0 ;b<M; b++ ){
+            if ( xxx[i]==Ains[b]&&(u==1) ) {
+                k++;
+                u=0;
+            }
         }
-        z=1;
+        u=1;
     }
-}
     cout<<k;
+    return 0;
 }

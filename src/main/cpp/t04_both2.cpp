@@ -23,35 +23,40 @@
 
 #include "t04_both2.h"
 #include <iostream>
-#include <set>
 #include <vector>
+#include <set>
 using namespace std;
 
 int t04_both2() {
-    set<int>why;
-    vector<int> sad;
-    vector<int> xxx;
-    int n,N,M1,m2,z,k;
-    cin >> n;
+    vector <int> xxx;
+    set<int>MC;
+    vector <int> sad;
+    int N,M,n,m,k,u;
     k=0;
-    for (int i = 0; i < n; i++) {
-        cin >> M1;
-        sad.push_back(M1);
+    u=1;
+    cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>n;
+        xxx.push_back(n);
     }
-    cin >> N;
-    for ( int i = 0; i < N ; i++) {
-        cin>>m2;
-        xxx.push_back(m2);
+    cin>>M;
+    for(int i=0;i<M;i++){
+        cin>>m;
+        sad.push_back(m);
     }
-    for ( int i=0; i<n;i++ ){
-        for ( int c=0; c<N;c++ ){
-            if(sad[i]==xxx[c]){
-                why.insert(sad[i]);
+    for(int i=0;i<N;i++){
+        for ( int b=0 ;b<M ;b++ ) {
+            if ( xxx[i]==sad[b]&&( u==1 )) {
+                k++;
+                u = 0;
+                MC.insert(xxx[i]);
             }
         }
+        u=1;
     }
-    for (auto i=why.begin();i!=why.end();i++){
+    for ( auto i=MC.begin();i!=MC.end();i++ ){
         cout<<*i<<" ";
     }
+    return 0;
 }
 

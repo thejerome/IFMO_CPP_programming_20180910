@@ -32,17 +32,29 @@
 
 using namespace std;
 
+#include "t05_syn.h"
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+#include "t05_syn.h"
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
 int t05_syn() {
-    map<string,string>old_tut;
+    map<string,string>NA_MES;
     int N;
     string d,a,u;
     cin>>N;
     for(int i=0;i<N;i++){
         cin>>d>>a;
-        old_tut.insert(pair<string,string>(d,a));
+        NA_MES.insert(pair<string,string>(d,a));
     }
     cin>>u;
-    for (auto i = old_tut.begin(); i!= old_tut.end(); i++)
+    for (auto i = NA_MES.begin(); i!= NA_MES.end(); i++)
     {
         if((*i).first==u) {
             cout << (*i).second;
@@ -51,4 +63,5 @@ int t05_syn() {
             cout<<(*i).first;
         }
     }
+    return 0;
 }
