@@ -27,5 +27,10 @@
 using namespace std;
 
 int t09_snail() {
+    int H, U, D;
+    int days;
+    cin >> H >> U >> D ;
+    days =(H-D-1)/(U-D)+1;
+    cout << days;
 
 };
