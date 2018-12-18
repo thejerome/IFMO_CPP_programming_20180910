@@ -81,38 +81,51 @@
 #include "t06_homework.h"
 #include <iostream>
 #include <string>
-#include <map>
+#include <set>
 
 using namespace std;
 
+string toLower(string s) {
+	for (int i=0; i<s.size(); i++) {
+		s[i] = tolower(s[i]);
+	}
+	return s;
+}
+
+int countAccents(string s) {
+	int count = 0;
+	for (int i=0; i<s.size(); i++) {
+		if (s[i] <= 'Z') {
+			count++;
+		}
+	}
+	return count;
+}
+
 int t06_homework() {
-	int n, mistakes=0, stress=0; 
-	cin >> n; 
-	map <string,string> book, downbook; 
-	for (int i=0;i<n;i++) { 
-		string s; 
-		cin >> s; 
-		book[s] = "exists"; 
-		for (int i = 0; i < s.size(); i++) 
-			s[i] = tolower(s[i]); 
-			downbook[s] = "exists"; 
-	} 
-	string s, word, downword; 
-	getline(cin,s); 
-	for(int i=0; i<s.size(); i++) { 
-		if (s[i] != ' ') word += s[i]; 
-		else { 
-			for (int j=0; j<word.size(); j++) 
-				downword += tolower(word[j]); 
-				for (int j=0; j<word.size(); j++) 
-					if (word[j] == toupper(word[j])) stress += 1; 
-					if (stress != 1) mistakes += 1;
-					else if (downbook[downword] == "exists" && book[word] != "exists") mistakes += 1; 
-					stress = 0; 
-					word = ""; 
-					downword = ""; 
-		} 
-	} 
-	cout << mistakes; 
+	set <string> book, downbook;
+	int N,
+		mistakes = 0;
+	cin >> N;
+	for (int i=0; i<N; i++) {
+		string word;
+		cin >> word;
+		book.insert(word);
+		downbook.insert(toLower(word));
+	}
+	string sentence;
+	while (cin >> sentence) {
+		if (downbook.count(toLower(sentence)) != 0) {
+			if (book.count(sentence) == 0) {
+				mistakes++;
+			}
+		}
+		else {
+			if (countAccents(sentence) != 1) {
+				mistakes++;
+			}
+		}
+	}
+	cout << mistakes;
 	return 0;
 }
