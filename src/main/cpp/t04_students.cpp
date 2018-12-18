@@ -50,7 +50,7 @@ bool sortirovka(chelovechek a, chelovechek b)
 int t04_students() {
 	int n;
 	cin >> n;
-	chelovechek ludi[10000];
+	chelovechek ludi[n];
 	for (int i = 0; i < n; i++)
 	{
 		cin >> ludi[i].name >> ludi[i].surname;
@@ -58,9 +58,9 @@ int t04_students() {
 		ludi[i].srd = ludi[i].a1 + ludi[i].a2 + ludi[i].a3;
 	}
 	stable_sort(ludi, ludi + n, sortirovka);
-	for (int i = 0; i < 10000; i++)
+	for (int i = 0; i < n; i++)
 	{
-		if (ludi[i].name != "")cout << ludi[i].name << " " << ludi[i].surname << endl;
+		cout << ludi[i].name << " " << ludi[i].surname << endl;
 		
 	}
 	return 0;
