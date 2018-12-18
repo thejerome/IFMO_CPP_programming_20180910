@@ -25,6 +25,7 @@
 //
 //Bye
 
+#include <map>
 #include "t05_syn.h"
 #include <iostream>
 
@@ -32,5 +33,34 @@
 using namespace std;
 
 int t05_syn() {
+
+    map <string, string> syn;
+
+    int N;
+
+    cin >> N;
+
+    string value, val, word;
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> val >> value;
+        syn[val] = value;
+    }
+
+    cin >> word;
+
+    for (auto el: syn)
+    {
+        if (word == el.first)
+        {
+            cout << el.second;
+        }
+        else
+            if (word == el.second)
+        {
+            cout << el.first;
+        }
+    }
 
 }
