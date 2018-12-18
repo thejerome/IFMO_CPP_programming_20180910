@@ -37,8 +37,7 @@
 using namespace std;
 
 int t11_boxes() {
-
-    int x1,y1,z1,x2,y2,z2;
+    int v1,v2,max1,max2,min1,min2,n1,n2,x1,y1,z1,x2,y2,z2;
     cin>>x1>>y1>>z1>>x2>>y2>>z2;
     v1=x1*y1*z1;
     v2=x2*y2*z2;
