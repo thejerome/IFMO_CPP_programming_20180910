@@ -80,9 +80,45 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
+#include <map>
+#include <string>
 
 using namespace std;
 
+string litle(string s){
+    for(auto &i: s)
+        if(i>='A'&&i<'Z')
+            i=i+'a'-'A';
+    return s;}
+
+bool Try(string b){
+    bool up = false;
+    for (auto &i: b)
+        if (i>='A'&&i<='Z') {
+            if (up){
+                return false;
+            }
+            up=true;}
+    return up;}
+
+bool check(string w, map<string,set<string>> dictionary){
+    if (dictionary.find(litle(w)) != dictionary.end())
+        return dictionary.at(litle(w)).find(w) != dictionary.at(litle(w)).end();
+    else {
+        return Try(w);}}
+
 int t06_homework() {
+    int N,m=0;
+    string word;
+    map<string,set<string>> dictionary;
+    cin>>N;
+    for (int i=0;i<N;i++) {
+        cin>>word;
+        dictionary [ litle(word) ].insert(word);}
+    while ( cin>>word ) {
+        m += !check(word,dictionary);}
+    cout<<m;
+    return 0;
 
 }
