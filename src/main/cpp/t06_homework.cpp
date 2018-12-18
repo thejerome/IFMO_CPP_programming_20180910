@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
+int find(string &s){
+int q=-1;
+bool flag=false;
+for(int j=0;j<s.length();j++){
+    if(s[j]>='A'&&s[j]<='Z'){
+        q=(q==-1)?j:-2;
+        s[j]=char(s[j]-'A'+'a');
+        flag=true;
+    }
+}
+q=(flag)?q:-2;
+return q;
+}
 
 int t06_homework() {
-
+multimap<string,int>dict;
+int N,l=0,M=0;
+cin >> N;
+for (int i = 0; i < N; i++){
+    string s;
+    cin >> s;
+    int q=find(s);
+    dict.insert(pair<string,int>(s,q));
+}
+string s;
+getline(cin,s);
+getline(cin,s);
+int r=s.find(' ',0);
+while (r<=s.length()){
+    string word = s.substr(l,r-l);
+    int pos=find(word);
+    pair<multimap<string,int>::iterator,multimap<string,int>::iterator>it;
+    it=dict.equal_range(word);
+    bool check=(it.first==it.second);
+    for(auto i=it.first;i!=it.second;i++){
+        if(i->second==pos){
+            check=true;
+        }
+    }
+    if(!check||pos==-2){
+        M++;
+    }
+    r++;
+    l=r;
+    r=(r!=s.length()+ 1)?s.find(' ',r):r;
+    r=(r==-1)?s.length():r;
+}
+cout << M;
 }

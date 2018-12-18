@@ -23,9 +23,22 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+int N,K,M=0;
+cin >> N;
+set<int>numbers;
+for(int i=0;i<N;i++){
+    cin >> K;
+    numbers.insert(K);
+}
+cin >> N;
+for(int i=0;i<N;i++){
+    cin >> K;
+    M+=numbers.count(K);
+}
+cout << M;
 }
