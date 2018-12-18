@@ -25,10 +25,22 @@
 
 #include "t02_new.h"
 #include <iostream>
-
-
+#include <set>
 using namespace std;
 
 int t02_new() {
-    
+    multiset <int> omg;
+    int N,k;
+    cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>k;
+        if(omg.find(k)==omg.end()){
+            cout<<"NO"<<" ";
+        }
+        else {
+            cout<<"YES"<<" ";
+        }
+        omg.insert(k);
+    }
+    return 0;
 }

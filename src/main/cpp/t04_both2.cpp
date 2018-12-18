@@ -23,9 +23,39 @@
 
 #include "t04_both2.h"
 #include <iostream>
-
+#include <vector>
+#include <set>
 using namespace std;
 
 int t04_both2() {
-
+    set<int>pox;
+    vector <int> omg;
+    vector <int> gl;
+    int N,M,n,m,k,u;
+    k=0;
+    u=1;
+    cin>>N;
+    for(int i=0;i<N;i++){
+        cin>>n;
+        omg.push_back(n);
+    }
+    cin>>M;
+    for(int i=0;i<M;i++){
+        cin>>m;
+        gl.push_back(m);
+    }
+    for(int i=0;i<N;i++){
+        for(int b=0;b<M;b++){
+            if(omg[i]==gl[b]&&(u==1)) {
+                k++;
+                u = 0;
+                pox.insert(omg[i]);
+            }
+        }
+        u=1;
+    }
+    for (auto i=pox.begin();i!=pox.end();i++){
+        cout<<*i<<" ";
+    }
+    return 0;
 }
