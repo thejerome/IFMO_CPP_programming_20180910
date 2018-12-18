@@ -80,9 +80,73 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <vector>
 
 using namespace std;
 
+string toLower(string s) {
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            s[i] = s[i] - 'A' + 'a';
+        }
+    }
+    return s;
+}
+
+int findPos (string s) {
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            return i;
+        }
+    }
+    return -1;
+}
+
+bool check (string s) {
+    int counter = 0;
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z') {
+            counter++;
+        }
+    }
+    return (counter == 1);
+}
+
+
 int t06_homework() {
+    map <string, vector <int>> list;
+    int n, mistakes = 0;
+    string homework, word;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> word;
+        list[toLower(word)].push_back(findPos(word));
+    }
+    getline(cin, homework);
+    homework += " ";
+    for (int i = 0; i < homework.size(); i++) {
+        if (homework[i] != ' ') {
+            word += homework[i];
+        } else {
+            bool ok = false;
+            if (check(word))
+                if (list[toLower(word)].size() != 0) {
+                    for (auto x : list[toLower(word)])
+                        if (findPos(word) == x)
+                            ok = true;
+                }
+                else
+                    ok = true;
+            if (!ok)
+                mistakes++;
+            word = "";
+        }
+    }
+    cout << mistakes;
+
+
+
+
 
 }
