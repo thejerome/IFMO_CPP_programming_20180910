@@ -37,7 +37,7 @@ struct onepoint{
     }
 };
 
-bool operator < (onepoint &p1, onepoint &p2){
+bool lalala (onepoint &p1, onepoint &p2){
     return p1.distance < p2.distance;
 }
 
@@ -52,7 +52,7 @@ int t03_points() {
         manypoints.push_back(p);
     }
     if (n > 0) {
-        sort(manypoints.begin(), manypoints.end());
+        sort(manypoints.begin(), manypoints.end(), lalala);
     }
 
     for (int i = 0; i < n; i++){
