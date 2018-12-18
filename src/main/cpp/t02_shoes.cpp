@@ -38,7 +38,8 @@ int t02_shoes() {
     short buyer_size;
     cin >> buyer_size;
     cin >> n;
-    vector<int> shoes(n);
+    vector<short> shoes(n);
+
     for(int i = 0; i < n; i++)
     {
         int buf;
@@ -49,19 +50,21 @@ int t02_shoes() {
 
     for(int i = 0; i < n; i++)
     {
-        if (shoes[i] >= buyer_size) break;
         pos++;
+        if (shoes[i] >= buyer_size) break;
     }
 
     if(pos == n){ cout << "0"; return 0;}
+
+    amount++;
+    buyer_size=shoes[pos-1];
+
     if (shoes[pos] == buyer_size) amount++;
     for(int i = pos; i < n; i++)
     {
-        cout<<"Trying "<< shoes[i]<<endl;
-        if (shoes[i] >= pos + 3)
+        if (shoes[i] >= buyer_size + 3)
         {
-            pos = shoes[i];
-            cout << "Got: "<<pos<<endl;
+            buyer_size = shoes[i];
             amount++;
         }
     }
