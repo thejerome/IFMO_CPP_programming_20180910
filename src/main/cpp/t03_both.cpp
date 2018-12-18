@@ -23,9 +23,41 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
-int t03_both() {
+void Add(set <int> &x) {
+    int current;
+    cin>>current;
+    x.insert(current);
+}
 
+int t03_both() {
+    int n1;
+    cin>>n1;
+    set <int> list1;
+    for (int i = 0; i < n1; ++i)
+    {
+        Add(list1);
+    }
+
+    int n2;
+    cin>>n2;
+    set <int> list2;
+    for (int i=0; i < n2; i++)
+    {
+        Add(list2);
+    }
+
+    int cnt = 0;
+    for (auto el_1: list1)
+    {
+        for (auto el_2: list2)
+        {
+            if (el_1 == el_2)
+                cnt++;
+        }
+    }
+    cout<<cnt;
 }
