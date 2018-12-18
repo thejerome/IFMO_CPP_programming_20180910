@@ -1,3 +1,4 @@
+
 //Выведите фамилии и имена учащихся в порядке убывания их среднего балла.
 //
 //Входные данные
@@ -30,6 +31,7 @@
 #include "t04_students.h"
 #include <iostream>
 #include <algorithm>
+#include <string>
 using namespace std;
 struct chelovechek
 {
