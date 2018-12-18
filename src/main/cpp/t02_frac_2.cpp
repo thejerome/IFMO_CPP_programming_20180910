@@ -20,5 +20,5 @@ using namespace std;
 int t02_frac_2() {
 double x;
 cin >> x;
-cout << trunc(((x-trunc(x))*10);
+cout << trunc(((x-int(x))*10);
 };
