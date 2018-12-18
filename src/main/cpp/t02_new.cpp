@@ -25,10 +25,21 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+	set <int> Numbers;
+	int quantaty;
+	cin >> quantaty;
+	for (int i = 0; i < quantaty; i++) {
+		int asked_number;
+		cin >> asked_number;
+		if (Numbers.count(asked_number) > 0)
+			cout << "YES" << endl;
+		else
+			cout << "NO" << endl;
+		Numbers.insert(asked_number);
+	}
 }
