@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
+struct chelovechek
+{
+	string name;
+	string surname;
 
+	int a1;
+	int a2;
+	int a3;
+	double srd;
+};
+bool sortir(chelovechek a, chelovechek b)
+{
+	return a.srd > b.srd;
+};
 int t04_students() {
-    
+	int n;
+	cin >> n;
+	chelovechek ludi[10000];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> ludi[i].name >> ludi[i].surname;
+		cin >> ludi[i].a1 >> ludi[i].a2 >> ludi[i].a3;
+		ludi[i].srd = ludi[i].a1 + ludi[i].a2 + ludi[i].a3;
+	}
+	stable_sort(ludi, ludi + n, sortir);
+	for (int i = 0; i < n; i++)
+	{
+		cout << ludi[i].name << " " << ludi[i].surname << endl;
+	}
+	return 0;
 }
 
