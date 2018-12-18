@@ -112,7 +112,7 @@ getline(cin,s);
 getline(cin,s);
 int r=s.find(' ',0);
 while (r<=s.length()){
-    string word = s.substr(l,r-l);
+    string word=s.substr(l,r-l);
     int pos=find(word);
     pair<multimap<string,int>::iterator,multimap<string,int>::iterator>it;
     it=dict.equal_range(word);
