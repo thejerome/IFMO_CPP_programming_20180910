@@ -41,7 +41,7 @@ struct chelovechek
 	int a3;
 	double srd;
 };
-bool sortir(chelovechek a, chelovechek b)
+bool sortirovka(chelovechek a, chelovechek b)
 {
 	return a.srd > b.srd;
 };
@@ -55,7 +55,7 @@ int t04_students() {
 		cin >> ludi[i].a1 >> ludi[i].a2 >> ludi[i].a3;
 		ludi[i].srd = ludi[i].a1 + ludi[i].a2 + ludi[i].a3;
 	}
-	stable_sort(ludi, ludi + n, sortir);
+	stable_sort(ludi, ludi + n, sortirovka);
 	for (int i = 0; i < n; i++)
 	{
 		cout << ludi[i].name << " " << ludi[i].surname << endl;
