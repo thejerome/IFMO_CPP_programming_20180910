@@ -23,5 +23,26 @@
 using namespace std;
 
 int t09_row() {
-
+    int n,last,f,count;
+    cin >> n;
+    last = 0;
+    count = 0;
+    f = 1;
+    while (n > 0) {
+        if (n == last) {
+            f += 1;
+        }
+        else {
+            last = n;
+            f = 1;
+        }
+        if ( f > count ) {
+            count = f;
+        }
+        cin >> n;
+        if (n==0) {
+            break;
+        }
+    }
+    cout << count;
 };
