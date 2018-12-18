@@ -23,6 +23,7 @@
 //YES
 //NO
 
+#include <set>
 #include "t02_new.h"
 #include <iostream>
 
@@ -30,5 +31,27 @@
 using namespace std;
 
 int t02_new() {
-    
+
+    int N, num;
+
+    cin >> N;
+
+    set <int> integers;
+
+    for (int i = 0; i < N; i++)
+    {
+        cin >> num;
+
+        if (integers.find(num) == integers.end())
+        {
+            cout << "NO" << endl;
+        }
+
+        else
+            {
+            cout << "YES" << endl;
+            }
+        integers.insert(num);
+    }
+
 }
