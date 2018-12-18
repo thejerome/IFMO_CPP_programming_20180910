@@ -23,9 +23,27 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 int t03_both() {
-
+    map <int, int> counter;
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        counter[a[i]]++;
+    }
+    int m;
+    cin >> m;
+    int b[m], answer = 0;
+    for (int i = 0; i < m; i++) {
+        cin >> b[i];
+        if (counter[b[i]] != 0) {
+            answer++;
+        }
+    }
+    cout << answer;
 }
