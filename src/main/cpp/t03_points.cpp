@@ -46,7 +46,7 @@ int t03_points() {
     cin >> n;
     vector<onepoint> manypoints;
     for (int i = 0; i < n; i++){
-        onepoint p;
+        onepoint p{};
         cin >> p.x >> p.y;
         p.calculatedistance();
         manypoints.push_back(p);
