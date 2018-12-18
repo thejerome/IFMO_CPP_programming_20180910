@@ -23,9 +23,28 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t03_both() {
-
+	multiset <int> numbers;
+	int N,M,
+		count = 0;
+	cin >> N;
+	for (int i=0; i<N; i++) {
+		int number1 = 0;
+		cin >> number1;
+		numbers.insert(number1);
+	}
+	cin >> M;
+	for (int i=0; i<M; i++) {
+		int number2 = 0;
+		cin >> number2;
+		if (numbers.find(number2) != numbers.end()) {
+			count++;
+		}
+	}
+	cout << count;
+	return 0;
 }

@@ -80,9 +80,39 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <map>
 
 using namespace std;
 
 int t06_homework() {
-
+	int n, mistakes=0, stress=0; 
+	cin >> n; 
+	map <string,string> book, downbook; 
+	for (int i=0;i<n;i++) { 
+		string s; 
+		cin >> s; 
+		book[s] = "exists"; 
+		for (int i = 0; i < s.size(); i++) 
+			s[i] = tolower(s[i]); 
+			downbook[s] = "exists"; 
+	} 
+	string s, word, downword; 
+	getline(cin,s); 
+	for(int i=0; i<s.size(); i++) { 
+		if (s[i] != ' ') word += s[i]; 
+		else { 
+			for (int j=0; j<word.size(); j++) 
+				downword += tolower(word[j]); 
+				for (int j=0; j<word.size(); j++) 
+					if (word[j] == toupper(word[j])) stress += 1; 
+					if (stress != 1) mistakes += 1;
+					else if (downbook[downword] == "exists" && book[word] != "exists") mistakes += 1; 
+					stress = 0; 
+					word = ""; 
+					downword = ""; 
+		} 
+	} 
+	cout << mistakes; 
+	return 0;
 }

@@ -25,10 +25,24 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+    multiset <int> numbers;
+    int N;
+    cin >> N;
+    for (int i=0; i<N; i++) {
+    	int number = 0;
+    	cin >> number;
+    	if (numbers.find(number) == numbers.end()) {
+    		cout << "NO" << endl;
+    	}
+    	else {
+    		cout << "YES" << endl;
+    	}
+        numbers.insert(number);
+    }
+    return 0;
 }
