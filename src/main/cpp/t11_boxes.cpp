@@ -37,5 +37,89 @@
 using namespace std;
 
 int t11_boxes() {
+    int v1,v2,max1,max2,min1,min2,n1,n2,x1,y1,z1,x2,y2,z2;
+    cin>>x1>>y1>>z1>>x2>>y2>>z2;
+    v1=x1*y1*z1;
+    v2=x2*y2*z2;
+    if (x1>y1 && x1>z1) {
+        max1=x1;
+        if (y1>z1) {
+            n1=y1;
+            min1=z1;
+        } else {
+            n1=z1;
+            min1=y1;
+        }
+    } else {
+        if (x1>y1 ) {
+            max1=z1;
+            n1=x1;
+            min1=y1;
+        } else {
+            if (x1>z1) {
+                max1=y1;
+                n1=x1;
+                min1=z1;
+            } else {
+                if (y1>z1) {
+                    max1=y1;
+                    n1=z1;
+                    min1=x1;
+                } else {
+                    max1=z1;
+                    n1=y1;
+                    min1=x1;
+                }
+            }
 
+        }
+    }
+    if (x2>y2 && x2>z2) {
+        max2=x2;
+        if (y2>z2) {
+            n2=y2;
+            min2=z2;
+        } else {
+            n2=z2;
+            min2=y2;
+        }
+    } else {
+        if (x2>y2 ) {
+            max2=z2;
+            n2=x2;
+            min2=y2;
+        } else {
+            if (x2>z2) {
+                max2=y2;
+                n2=x2;
+                min2=z2;
+            } else {
+                if (y2>z2) {
+                    max2=y2;
+                    n2=z2;
+                    min2=x2;
+                } else {
+                    max2=z2;
+                    n2=y2;
+                    min2=x2;
+                }
+            }
+
+        }
+    }
+    if (v1==v2) {
+        cout<<"Boxes are equal";
+    }
+    if (v1>v2) { if ((max1>=max2) && (n1>=n2) && (min1>=min2)) {
+            cout<<"The first box is larger than the second one";
+        } else {
+            cout<<"Boxes are incomparable";
+        }
+    }
+    if (v2>v1) { if ((max2>=max1) && (n2>=n1) && (min2>=min1)) {
+            cout<<"The first box is smaller than the second one";
+        } else {
+            cout<<"Boxes are incomparable";
+        }
+    }
 };
