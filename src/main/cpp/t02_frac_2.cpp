@@ -18,8 +18,8 @@
 using namespace std;
 
 int t02_frac_2() {
-	double x, n;
+	double n;
 	cin >> n;
-	modf(modf(n, &x) * 10, &x);
-	cout << x;
+	cout << (int)(n*10)%10;
+
 };
