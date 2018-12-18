@@ -25,12 +25,29 @@
 //
 //Bye
 
+
 #include "t05_syn.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t05_syn() {
-
+    int N;
+    string word, word1, word2;
+    map<string,string>average;
+    cin>>N;
+    for(int i=0; i<N; i++){
+            
+        cin>>word1>>word2;
+        
+        average[word2]=word1;
+        average[word1]=word2;}
+    
+        cin>>word;
+    
+    cout<<average[word];
+    return 0;
+    
 }

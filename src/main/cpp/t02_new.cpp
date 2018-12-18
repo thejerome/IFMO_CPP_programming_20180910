@@ -25,10 +25,22 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
+    set<int> unique;
+    int n;
+    cin >> n;
+    
+    for (int i=0, number; i<n; i++) {
+        cin>>number;
+        if (unique.find(number) != unique.end()) { cout<<"YES"<<' ';}
+        else {cout<<"NO"<<' ';}
+        unique.insert(number);
+    }
+
+    return 0;
     
 }
