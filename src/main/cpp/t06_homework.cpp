@@ -98,6 +98,7 @@ return q;
 }
 
 int t06_homework() {
+
 multimap<string,int>dict;
 int N,l=0,M=0;
 cin >> N;
