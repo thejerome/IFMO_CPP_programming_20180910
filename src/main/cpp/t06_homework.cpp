@@ -80,9 +80,40 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+    string low(string s) {
+        for (int i=0; i<s.size(); i++) s[i] = tolower(s[i]);
+        return s;
+    }
 
-}
+    int stress(string s) {
+        int count=0;
+        for (int i=0; i<s.size(); i++)
+            if (s[i] >= 'A' and s[i] <= 'Z') count++;
+        return count;
+    }
+
+    int t06_homework() {
+        set <string> s, book;
+        int n, mistakes = 0;
+        cin >> n;
+        for (int i = 0; i < n; i++) {
+            string s1;
+            cin >> s1;
+            s.insert(low(s1));
+            book.insert(s1);
+        }
+        string s1;
+        while (cin >> s1) {
+            if (s.count(low(s1)) != 0) {
+                if (book.count(s1) == 0) mistakes++;
+            } else {
+                if (stress(s1) != 1) mistakes++;
+            }
+        }
+        cout << mistakes;
+    }
