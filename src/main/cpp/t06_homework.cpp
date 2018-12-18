@@ -86,7 +86,7 @@
 using namespace std;
 
     string low(string s) {
-        for (int i=0; i<s.size(); i++) s[i] = char(int(s[i]-int('a')+int('A')));
+        for (int i=0; i<s.size(); i++) s[i] = tolower(s[i]);
         return s;
     }
 
