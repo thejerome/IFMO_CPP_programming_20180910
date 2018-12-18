@@ -25,7 +25,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
-
+#include <algorithm>
+#include <vector>
 
 
 using namespace std;
@@ -36,26 +37,21 @@ struct coordinates{
     double r;
 };
 
+bool cmp(coordinates v1, coordinates v2){
+    return v1.r < v2.r;
+}
+
 struct program{
-    coordinates points[100];
+    vector <coordinates> points;
     int n;
     void read() {
         for (int i = 0; i < n; i++) {
-            cin >> points[i].x >> points[i].y;
-            points[i].r = sqrt(pow(points[i].x, 2) + pow(points[i].y, 2));
+            coordinates p;
+            cin >> p.x >> p.y;
+            p.r = sqrt(pow(p.x, 2) + pow(p.y, 2));
+            points.push_back(p);
         }
-    }
-
-    void sort(){
-        for (int i=0; i<n-1; i++){
-            for (int j=i+1; j<n; j++){
-                if (points[i].r > points[j].r ){
-                    swap(points[i].x, points[j].x);
-                    swap(points[i].y, points[j].y);
-                    swap(points[i].r, points[j].r);
-                }
-            }
-        }
+        sort(points.begin(), points.end(), cmp);
     }
 
     void write(){
@@ -69,6 +65,5 @@ int t03_points() {
     program t03;
     cin >> t03.n;
     t03.read();
-    t03.sort();
     t03.write();
 }

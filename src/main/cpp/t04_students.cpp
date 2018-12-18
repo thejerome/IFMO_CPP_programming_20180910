@@ -31,6 +31,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -38,39 +40,33 @@ struct data{
     string name;
     string surname;
     double avg;
-    int number;
+
 };
+
+bool cmp(data s1, data s2){
+    return s1.avg>s2.avg;
+}
 
 int t04_students() {
     int n;
     cin >> n;
-    data notes[n];
+    vector <data> notes;
+    data m;
     for (int i=0; i<n; i++){
-        cin >> notes[i].name;
-        cin >> notes[i].surname;
+        cin >> m.name;
+        cin >> m.surname;
         int a=0;
         cin >> a;
-        notes[i].avg=0;
-        notes[i].avg=notes[i].avg+a;
+        m.avg=0;
+        m.avg=m.avg+a;
         cin >> a;
-        notes[i].avg=notes[i].avg+a;
+        m.avg=m.avg+a;
         cin >> a;
-        notes[i].avg=notes[i].avg+a;
-        notes[i].avg=notes[i].avg/3;
-
-        notes[i].number=i+1;
+        m.avg=m.avg+a;
+        m.avg=m.avg/3;
+        notes.push_back(m);
     }
-    for (int i=n-1; i>0; i--){
-        for (int j=i-1; j>=0; j--){
-            if ((notes[i].avg>notes[j].avg) || (notes[i].avg==notes[j].avg && notes[i].number<notes[j].number)){
-                //cout << notes[i].number << " " << notes[j].number << endl;
-                swap(notes[i].avg,notes[j].avg);
-                swap(notes[i].name,notes[j].name);
-                swap(notes[i].surname,notes[j].surname);
-                swap(notes[i].number,notes[j].number);
-            }
-        }
-    }
+    stable_sort(notes.begin(), notes.end(),cmp);
     for (int i=0; i<n; i++){
         cout << notes[i].name << " " << notes[i].surname << /*notes[i].number <<*/ endl;
     }
