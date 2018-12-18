@@ -32,6 +32,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <vector>
 using namespace std;
 struct chelovechek
 {
@@ -50,14 +51,14 @@ bool sortirovka(chelovechek a, chelovechek b)
 int t04_students() {
 	int n;
 	cin >> n;
-	chelovechek ludi[n];
+	vector< chelovechek> ludi(n);
 	for (int i = 0; i < n; i++)
 	{
 		cin >> ludi[i].name >> ludi[i].surname;
 		cin >> ludi[i].a1 >> ludi[i].a2 >> ludi[i].a3;
 		ludi[i].srd = ludi[i].a1 + ludi[i].a2 + ludi[i].a3;
 	}
-	stable_sort(ludi, ludi + n, sortirovka);
+	stable_sort(ludi.begin(), ludi.end(), sortirovka);
 	for (int i = 0; i < n; i++)
 	{
 		cout << ludi[i].name << " " << ludi[i].surname << endl;
