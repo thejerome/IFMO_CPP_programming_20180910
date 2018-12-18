@@ -26,9 +26,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
+#include <algorithm>
+#include <vector>
 
 
 using namespace std;
+
+
+
 
 
 struct coordinates{
@@ -37,36 +42,21 @@ struct coordinates{
     double distance;
 };
 
+bool cmp(coordinates coordinates1, coordinates coordinates2){
+    return coordinates1.distance < coordinates2.distance;
+}
 
-struct my_sort{
-    coordinates my_coordinates[100];
-    void enter(int n){
-        for (int i = 0; i < n; i ++){
-            cin >> my_coordinates[i].x >> my_coordinates[i].y;
-            my_coordinates[i].distance = sqrt(pow(my_coordinates[i].x, 2) + pow(my_coordinates[i].y, 2));
-        }
-    }
-    void Sort(int n){
-        for (int i=0; i<n-1; i++){
-            for (int j=i+1; j<n; j++){
-                if (my_coordinates[i].distance > my_coordinates[j].distance){
-                    swap(my_coordinates[i], my_coordinates[j]);
-                }
-            }
-        }
-    }
-    void Print(int n){
-        for (int i = 0; i < n; i ++){
-            cout << my_coordinates[i].x << ' ' << my_coordinates[i].y << ' ';
-        }
-    }
-};
 int t03_points() {
-    int size;
+    unsigned int size;
     cin >> size;
-    my_sort information;
-    information.enter(size);
-    information.Sort(size);
-    information.Print(size);
+    vector <coordinates> my_coordinates(size);
+    for (int i = 0; i < size; i ++){
+        cin >> my_coordinates[i].x >> my_coordinates[i].y;
+        my_coordinates[i].distance = sqrt(pow(my_coordinates[i].x, 2) + pow(my_coordinates[i].y, 2));
+    }
+    sort(my_coordinates.begin(), my_coordinates.end(), cmp);
+    for (int i = 0; i < size; i ++){
+        cout << my_coordinates[i].x << ' ' << my_coordinates[i].y << ' ';
+    };
     return 0;
 }

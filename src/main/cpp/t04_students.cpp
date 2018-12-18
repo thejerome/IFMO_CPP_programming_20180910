@@ -31,6 +31,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 
 using namespace std;
@@ -42,38 +43,23 @@ struct student{
     double mark;
 };
 
-struct students{
-    student pupils[100];
-    void enter(int n){
-        double mark1, mark2, mark3;
-        for (int i = 0; i < n; i ++){
-            cin >> pupils[i].surname >> pupils[i].name;
-            cin >> mark1 >> mark2 >> mark3;
-            pupils[i].mark = mark1 + mark2 + mark3;
-        }
-    }
-    void Sort(int n){
-        for(int prohod = 0; prohod < n; prohod ++){
-            for (int i = 0; i < n - prohod; i ++){
-                if (pupils[i].mark < pupils[i+1].mark){
-                    swap(pupils[i], pupils[i+1]);
-                }
-            }
-        }
-    }
-    void Print(int n){
-        for (int i = 0; i < n; i ++){
-            cout << pupils[i].surname << ' ' <<  pupils[i].name << ' ';
-        }
-    }
-};
-int t04_students() {
-    int size;
-    cin >> size;
-    students information;
-    information.enter(size);
-    information.Sort(size);
-    information.Print(size);
-    return 0;
+bool cmp(student student1, student student2){
+    return student1.mark > student2.mark;
 }
 
+int t04_students() {
+    unsigned int size;
+    int mark1, mark2, mark3;
+    cin >> size;
+    vector <student> students(size);
+    for (int i = 0; i < size; i ++){
+        cin >> students[i].surname >> students[i].name;
+        cin >> mark1 >> mark2 >> mark3;
+        students[i].mark = mark1 + mark2 + mark3;
+    }
+    stable_sort(students.begin(), students.end(), cmp);
+    for (int i = 0; i < size; i ++){
+        cout << students[i].surname << ' ' <<  students[i].name << ' ';
+    }
+    return 0;
+}
