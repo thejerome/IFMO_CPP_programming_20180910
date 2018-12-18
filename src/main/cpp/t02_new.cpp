@@ -38,7 +38,7 @@ int t02_new() {
             cout<<"NO"<<" ";
         }
         else {
-            cout<<"yes"<<" ";
+            cout<<"YES"<<" ";
         }
         omg.insert(k);
     }
