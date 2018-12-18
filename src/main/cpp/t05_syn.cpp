@@ -27,10 +27,28 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <set>
+#include <map>
 
 using namespace std;
 
-int t05_syn() {
-
+int t05_syn()
+{
+    int MapCount;
+    cin >> MapCount;
+    map<string,string> Dic1;
+    map<string,string> Dic2;
+    for(int i = 0; i < MapCount; i++)
+    {
+        string Tmp1, Tmp2;
+        cin >> Tmp1 >> Tmp2;
+        Dic2.insert( pair<string, string>(Tmp1, Tmp2));
+        Dic1.insert( pair<string, string>(Tmp2, Tmp1));
+    }
+    string OutSin;
+    cin >> OutSin;
+    if(Dic1.find(OutSin) != Dic1.end())
+        cout << Dic1[OutSin];
+    else
+        cout << Dic2[OutSin];
 }

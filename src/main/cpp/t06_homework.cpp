@@ -80,9 +80,55 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
-int t06_homework() {
-
+int t06_homework()
+{
+    int SearchUp(string s)
+    {
+        for (int i = 0; i < s.length(); i++)
+            if ((s[i] >= 'A') && (s[i] <= 'Z'))
+                return i;
+        return -1;
+    }
+    string ToLowerCase(string startValue) {
+        string temp = startValue;
+        for (int i = 0; i < temp.size(); i++)
+            if (temp[i] >= 'A' && temp[i] <= 'Z')
+                temp[i] = temp[i] + 'a' - 'A';
+        return temp;
+    }
+    int main()
+    {
+        int InputCount, Mistakes = 0;
+        cin >> InputCount;
+        map<string, int> Dic;
+        for (int i = 0; i < InputCount; i++)
+        {
+            string InputToDic;
+            cin >> InputToDic;
+            Dic[InputToDic] = SearchUp(InputToDic);
+        }
+        string InputText;
+        getline(cin, InputText);
+        getline(cin, InputText);
+        InputText+=" ";
+        string Word = "";
+        for(int i = 0; i < InputText.length(); i++)
+        {
+            if(InputText[i] == ' ')
+            {
+                int WordN = SearchUp(Word);
+                auto search = Dic.find(Word);
+                if(Dic[ToLowerCase(Word)] != WordN && search != Dic.end() || WordN == -1)
+                    Mistakes++;
+                Word = "";
+            }
+            else
+                Word += InputText[i];
+        }
+        cout<< Mistakes;
 }

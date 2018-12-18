@@ -26,6 +26,28 @@
 
 using namespace std;
 
-int t04_both2() {
+int t04_both2()
+{
+    int Count = 0, SetSize = 0, Input = 0;
+    set<int> NumSet;
+    set<int> Sim;
 
+    cin >> SetSize;
+    for(int i = 0; i < SetSize; i++)
+    {
+        cin >> Input;
+        NumSet.insert(Input);
+    }
+    cin >> SetSize;
+    for(int i = 0; i < SetSize; i++)
+    {
+        cin >> Input;
+        auto search = NumSet.find(Input);
+        if(search != NumSet.end())
+        {
+            Sim.insert(Input);
+        }
+    }
+    for(auto i:Sim)
+        cout << i << " ";
 }

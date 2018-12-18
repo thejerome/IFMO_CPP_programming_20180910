@@ -25,10 +25,32 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <set>
+#include <vector>
 
 
 using namespace std;
 
-int t02_new() {
-    
+int t02_new()
+{
+    int SetSize, Input;
+    cin >> SetSize;
+    set<int> NumSet;
+    vector<string> Out;
+    for(int i = 0; i < SetSize; i++)
+    {
+        cin >> Input;
+        auto search = NumSet.find(Input);
+        if(search != NumSet.end())
+            Out.push_back("YES\n");
+        else
+        {
+            Out.push_back("NO\n");
+            NumSet.insert(Input);
+        }
+
+    }
+    for(int i = 0; i < Out.capacity(); i++){
+        cout << Out[i];
+    }
 }
