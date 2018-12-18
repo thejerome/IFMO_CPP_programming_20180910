@@ -28,10 +28,48 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <vector>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+    int size=0;
+    int t, n;
+    cin >> size;
+    int N=0; cin >> N;
+    vector <int> temp;
+    int sizes[N];
+    for (int i=0; i<N; i++){
+        cin >> sizes[i];
+    }
+    int p;
+    n=0;
+    for(p=0; p<N; p++){
+        if (sizes[p]>=size){
+            temp.push_back(sizes[p]);
+            n++;
+            //cout << sizes[p];
+            break;
+        }
+    }
+
+    for (int i=p; i<N-1; i++){
+        for (int j=i+1; j<N; j++){
+            if (sizes[j]-3>=sizes[i]) {
+                temp.push_back(sizes[j]);
+                i=j-1;
+                //cout << sizes[j] << ' ';
+                break;
+            }
+        }
+    if (!(i<N-2)) {
+        if (temp.size()> n) {
+            n=temp.size();
+            temp.clear();
+            //cout << n;
+        }
+        }
+    }
+    cout << n;
 }
