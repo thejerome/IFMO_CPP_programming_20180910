@@ -58,9 +58,10 @@ int t04_students() {
 		ludi[i].srd = ludi[i].a1 + ludi[i].a2 + ludi[i].a3;
 	}
 	stable_sort(ludi, ludi + n, sortirovka);
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < 10000; i++)
 	{
-		cout << ludi[i].name << " " << ludi[i].surname << endl;
+		if (ludi[i].name != "")cout << ludi[i].name << " " << ludi[i].surname << endl;
+		
 	}
 	return 0;
 }
