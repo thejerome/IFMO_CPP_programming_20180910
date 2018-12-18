@@ -80,9 +80,52 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <string>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+string toLower(string s) {
+	for (int i=0; i<s.size(); i++) {
+		s[i] = tolower(s[i]);
+	}
+	return s;
+}
 
+int countAccents(string s) {
+	int count = 0;
+	for (int i=0; i<s.size(); i++) {
+		if (s[i] <= 'Z') {
+			count++;
+		}
+	}
+	return count;
+}
+
+int t06_homework() {
+	set <string> book, downbook;
+	int N,
+		mistakes = 0;
+	cin >> N;
+	for (int i=0; i<N; i++) {
+		string word;
+		cin >> word;
+		book.insert(word);
+		downbook.insert(toLower(word));
+	}
+	string sentence;
+	while (cin >> sentence) {
+		if (downbook.count(toLower(sentence)) != 0) {
+			if (book.count(sentence) == 0) {
+				mistakes++;
+			}
+		}
+		else {
+			if (countAccents(sentence) != 1) {
+				mistakes++;
+			}
+		}
+	}
+	cout << mistakes;
+	return 0;
 }

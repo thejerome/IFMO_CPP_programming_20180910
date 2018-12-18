@@ -27,10 +27,23 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <string>
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+	map <string,string> synonyms;
+	string synonym;
+	int N;
+	cin >> N;
+	for (int i=0; i<N; i++) {
+		string word1, word2;
+		cin >> word1 >> word2;
+		synonyms[word1] = word2;
+		synonyms[word2] = word1;
+	}
+	cin >> synonym;
+	cout << synonyms[synonym];
+	return 0;
 }
