@@ -27,20 +27,20 @@
 
 using namespace std;
 
-struct chelovechek
+struct pot
 {
 	int x;
 	int y;
 	double rast;
 };
-bool sortir(chelovechek a, chelovechek b)
+bool sortir(pot a, pot b)
 {
 	return a.rast < b.rast;
 };
 int t03_points() {
 	int n;
 	cin >> n;
-	chelovechek pots[10000];
+	pot pots[10000];
 	for (int i = 0; i < n; i++)
 	{
 		cin >> pots[i].x >> pots[i].y;
