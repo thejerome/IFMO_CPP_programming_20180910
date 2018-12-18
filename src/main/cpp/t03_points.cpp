@@ -22,11 +22,41 @@
 //2 3
 
 #include "t03_points.h"
+#include "t03_points.h"
 #include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <algorithm>
+#include <vector>
 
 
 using namespace std;
 
+
+
+
+
+struct coordinates{
+    int x;
+    int y;
+    double distance;
+};
+
+bool cmp(coordinates coordinates1, coordinates coordinates2){
+    return coordinates1.distance < coordinates2.distance;
+}
+
 int t03_points() {
-    
+    unsigned int size;
+    cin >> size;
+    vector <coordinates> my_coordinates(size);
+    for (int i = 0; i < size; i ++){
+        cin >> my_coordinates[i].x >> my_coordinates[i].y;
+        my_coordinates[i].distance = sqrt(pow(my_coordinates[i].x, 2) + pow(my_coordinates[i].y, 2));
+    }
+    sort(my_coordinates.begin(), my_coordinates.end(), cmp);
+    for (int i = 0; i < size; i ++){
+        cout << my_coordinates[i].x << ' ' << my_coordinates[i].y << ' ';
+    };
+    return 0;
 }
