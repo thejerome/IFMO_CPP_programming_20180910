@@ -23,10 +23,38 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
 
+struct chelovechek
+{
+	int x;
+	int y;
+	double rast;
+};
+bool sortir(chelovechek a, chelovechek b)
+{
+	return a.rast < b.rast;
+};
 int t03_points() {
-    
+	int n;
+	cin >> n;
+	chelovechek pots[10000];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> pots[i].x >> pots[i].y;
+		pots[i].rast = pots[i].x * pots[i].x + pots[i].y * pots[i].y;
+
+	}
+
+	sort(pots, pots + n, sortir);
+	for (int i = 0; i < n; i++)
+	{
+		cout << pots[i].x << " " << pots[i].y << endl;
+	}
+
+
+	return 0;
+
 }
