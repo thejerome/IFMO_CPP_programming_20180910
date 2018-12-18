@@ -28,10 +28,41 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+    int startsize;
+    cin >> startsize;
+    int n;
+    cin >> n;
+    vector<int> shoes;
+    for (int i = 0; i < n; i++){
+        int a;
+        cin >> a;
+        shoes.push_back(a);
+    }
+    if (shoes.begin() == shoes.end()) {
+        sort(shoes.begin(),shoes.end());
+    }
+
+    int ans = 0, step = 0;
+    while (step < n && shoes[step] < startsize){
+        step++;
+    }
+
+    if ( step < n ){
+        ans++;
+        startsize = shoes[step];
+        step++;
+    }
+
+    for (int i = step; i < n; i++){
+        if (shoes[i] >= startsize + 3){
+           ans++;
+           startsize = shoes[i];
+        }
+    }
+    cout << ans;
 }
