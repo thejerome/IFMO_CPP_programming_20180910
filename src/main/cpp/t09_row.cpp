@@ -24,4 +24,37 @@ using namespace std;
 
 int t09_row() {
 
+    int b = 0, no = 1, count = 0, n;
+
+    cin >> n;
+
+    while (n > 0)
+    {
+        if (n == b)
+        {
+            no += 1;
+        }
+
+        else
+            {
+            b = n;
+
+            no = 1;
+            }
+
+        if ( no > count )
+        {
+            count = no;
+        }
+
+        cin >> n;
+
+        if (n==0)
+        {
+            break;
+        }
+    }
+
+    cout << count;
+
 };
