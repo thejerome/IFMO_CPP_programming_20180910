@@ -130,7 +130,7 @@ int t06_homework() {
             else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
         }
     }
-    str = sentence.substr(a,sentence.size()-a); cout << a; cout << str;
+    str = sentence.substr(a,sentence.size()-a);
     str2 = str;
     for(int i=0; i < str.size(); i++) str[i]=tolower(str[i]);
     if(dictionarylow.count(str) == 1){
