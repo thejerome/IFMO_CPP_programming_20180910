@@ -23,9 +23,27 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+    set<int>numbers;
+    int N;
+    cin >> N;
+    int num;
+    for(int i=0; i<N; i++){
+        cin >> num;
+        numbers.insert(num);
+    }
+    int M;
+    cin >> M;
+    set<int>samenum;
+    for(int j=0; j<M; j++){
+        cin >> num;
+        if(numbers.count(num)!=0) samenum.insert(num);
+    }
+    set<int>::iterator it;
+    for(it=samenum.begin(); it!=samenum.end(); it++) cout << *it << " ";
+    return 0;
 }

@@ -80,9 +80,68 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
-int t06_homework() {
+int N;
 
+int amount(string s){
+    int amount = 0;
+    for (int i=0; i<s.size(); i++){
+        if(s[i]>='A' && s[i]<='Z') amount++;
+    }
+    return amount;
 }
+
+int t06_homework() {
+    set<string> dictionary;
+    cin >> N;
+    string word;
+    for (int i = 0; i < N; i++) {
+        cin >> word;
+        dictionary.insert(word);
+    }
+    set<string>::iterator it;
+    set<string> dictionarylow;
+    for (it = dictionary.begin(); it != dictionary.end(); it++) {
+        string string1;
+        string1 = *it;
+        for(int i=0; i < string1.size(); i++) string1[i]=tolower(string1[i]);
+        dictionarylow.insert(string1);
+    }
+    string sentence;
+    cin.ignore();
+    getline(cin,sentence);
+    string words;
+    int a = 0;
+    int count=0;
+    string str;
+    int length;
+    string str2;
+    for (int j = 0; j < sentence.size(); j++) {
+        if (sentence[j] == ' ') {
+            length = j-a;
+            str = sentence.substr(a,length);
+            a = j + 1;
+            str2 = str;
+            for(int i=0; i < str.size(); i++) str[i]=tolower(str[i]);
+            if((dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
+            else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
+        }
+    }
+    str = sentence.substr(a,sentence.size()-a);
+    str2 = str;
+    for(int i=0; i < str.size(); i++) str[i]=tolower(str[i]);
+    if(dictionarylow.count(str) == 1){
+        if(dictionary.count(str2) == 0) count++;
+    }
+    else {
+        if(amount(str2) != 1) count++;
+    }
+    cout << count;
+    return 0;
+}
+
+
+
