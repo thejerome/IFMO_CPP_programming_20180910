@@ -22,13 +22,13 @@
 using namespace std;
 
 int t04_deposit() {
-    double P,X,Y,K,B;
-    cin>>P>>X>>Y>>K;
-    B=X*100+Y;
-    while(K!=0){
-        --K;
-        B=B*(1+P/100);
-        modf(B,&B);
+    double percent,X_rub,Y_cent,K_years,B,;
+    cin>>percent>>X_rub>>Y_cent>>K_years;
+    B=X_rub*100+Y_cent;
+    while(K_years!=0){
+        --K_years;
+        B=B*(1+percent/100);
+        B=trunc(B);
     }
     cout<<trunc(B/100)<<" "<<(B/100-trunc(B/100))*100;
 };

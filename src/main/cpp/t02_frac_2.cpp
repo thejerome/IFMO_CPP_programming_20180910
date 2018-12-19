@@ -20,5 +20,5 @@ using namespace std;
 int t02_frac_2() {
     double X;
     cin>>X;
-    cout<<trunc(modf(X, &X)*10);
+    cout<<trunc(10*X) - trunc(X)*10;
 };
