@@ -23,5 +23,5 @@ int t01_frac()
 {
 	double A;
 	cin >> A;
-	cout << modf(A, &A);
+	cout << f-trunc(A);
 };
