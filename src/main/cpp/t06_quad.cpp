@@ -20,6 +20,28 @@
 
 using namespace std;
 
-int t06_quad() {
-
+int t06_quad() 
+{
+	double a, b, c;
+	cin >> a >> b >> c;
+	if (a)
+	{
+		double d = b * b - 4 * a*c;
+		double ba = -b / (2.0*a);
+		if (d > 0)
+		{
+			double sd = sqrt(d) / (2.0*a);
+			if (a > 0)
+				cout << ba - sd << " " << ba + sd;
+			else
+				cout << ba + sd << " " << ba - sd;
+		}
+		else
+			if (d == 0)
+	    	{
+			cout << ba;
+			}
+		
+	}
+	return 0;
 };
