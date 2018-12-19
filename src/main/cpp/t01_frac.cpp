@@ -22,7 +22,6 @@ using namespace std;
 int t01_frac() {
     double X;
     cin >> X;
-    double i,k;
-    i = modf (X,&k);
-    cout << i;
+    cout << X - int(X);
+    return 0;
 };
