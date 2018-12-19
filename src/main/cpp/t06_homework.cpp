@@ -86,16 +86,9 @@ using namespace std;
 
 int N;
 
-string low(string s){
-    for (int i=0; i<N; i++){
-        if(s[i]>='A' && s[i]<='Z') s[i] = s[i]+32;
-    }
-    return s;
-}
-
 int amount(string s){
     int amount = 0;
-    for (int i=0; i<N; i++){
+    for (int i=0; i<s.size(); i++){
         if(s[i]>='A' && s[i]<='Z') amount++;
     }
     return amount;
@@ -114,7 +107,7 @@ int t06_homework() {
     for (it = dictionary.begin(); it != dictionary.end(); it++) {
         string string1;
         string1 = *it;
-        low(string1);
+        for(int i=0; i < string1.size(); i++) string1[i]=tolower(string1[i]);
         dictionarylow.insert(string1);
     }
     string sentence;
@@ -132,15 +125,20 @@ int t06_homework() {
             str = sentence.substr(a,length);
             a = j + 1;
             str2 = str;
-            low(str);
+            for(int i=0; i < str.size(); i++) str[i]=tolower(str[i]);
             if((dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
             else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
         }
     }
-    str = sentence.substr(a,sentence.size()-1);
-    str2 = str2;
-    if((dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
-    else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
+    str = sentence.substr(a,sentence.size()-a); cout << a; cout << str;
+    str2 = str;
+    for(int i=0; i < str.size(); i++) str[i]=tolower(str[i]);
+    if(dictionarylow.count(str) == 1){
+        if(dictionary.count(str2) == 0) count++;
+    }
+    else {
+        if(amount(str2) != 1) count++;
+    }
     cout << count;
     return 0;
 }
