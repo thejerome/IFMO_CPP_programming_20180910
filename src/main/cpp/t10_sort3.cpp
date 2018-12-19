@@ -15,19 +15,29 @@
 
 #include "t10_sort3.h"
 #include <iostream>
-#include <vector>     // vector
-#include <algorithm>  // sort
 
 using namespace std;
 
 int t10_sort3() 
 {
 	int A, B, C;
-	vector<int> vec{ };
-	cin >> A >> B >> C;
-	vec.push_back(A);
-	vec.push_back(B);
-	vec.push_back(C);
-	sort(vec.begin(), vec.end());
-	cout << vec[0] << " " << vec[1] << " " << vec[2];
+	cin >> A >> B >>C;
+	if (A > B)
+	{
+		if (B > C) 
+			cout << C << " " << B << " " << A;
+		else if(A > C)
+			cout << B << " " << C << " " << A;
+		else 
+			cout << C << " " << A << " " << C;
+	}
+	else
+	{
+		if (A > C) 
+			cout << C << " " << A << " " << B;
+		else if(B > C)
+			cout << A << " " << C << " " << B;
+		else 
+			cout << A << " " << B << " " << C;
+	}
 };
