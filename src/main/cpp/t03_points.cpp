@@ -23,10 +23,38 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
 
 
 using namespace std;
 
+struct Point{
+    double x, y, r;
+    bool operator < (const Point& cmp) const
+    {
+        return (r < cmp.r);
+    }
+};
+
+
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector<Point> input(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> input[i].x >> input[i].y;
+        input[i].r = sqrt(input[i].x * input[i].x + input[i].y * input[i].y);
+    }
+
+    sort(input.begin(), input.end());
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << input[i].x << " " << input[i].y << endl;
+    }
+
+    return 0;
 }
