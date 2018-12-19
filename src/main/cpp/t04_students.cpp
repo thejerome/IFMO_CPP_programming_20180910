@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
+struct classmates {
+    string surname;
+    string name;
+    int sum_of_marks;
+};
+
+bool cmp (const classmates &s1, const classmates &s2) {
+    return s1.sum_of_marks > s2.sum_of_marks;
+}
+
 int t04_students() {
-    
+    unsigned int n;
+    cin >> n;
+    vector <classmates> student(n);
+    for (int i = 0; i < n; i++) {
+        cin >> student[i].surname >> student[i].name;
+        for (int j = 0; j < 3; j++) {
+            int mark;
+            cin >> mark;
+            student[i].sum_of_marks += mark;
+        }
+    }
+    stable_sort (student.begin(), student.end(), cmp);
+    for (int i = 0; i < n; i++) {
+        cout << student[i].surname << " " << student[i].name << endl;
+    }
 }
 

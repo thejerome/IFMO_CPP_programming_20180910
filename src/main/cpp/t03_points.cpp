@@ -23,10 +23,32 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
 
+struct dot {
+    int x;
+    int y;
+    double sqr_dist;
+};
+
+bool cmp (const dot &p1, const dot &p2){
+    return p1.sqr_dist < p2.sqr_dist;
+}
+
 int t03_points() {
-    
+    unsigned int n;
+    cin >> n;
+    vector <dot> point(n);
+    for (int i = 0; i < n; i++){
+        cin >> point[i].x >> point[i].y;
+        point[i].sqr_dist = pow(point[i].x,2) + pow(point[i].y,2);
+    }
+    sort (point.begin(), point.end(), cmp);
+    for (int i = 0; i < n; i++) {
+        cout << point[i].x << " " << point[i].y << endl;
+    }
 }
