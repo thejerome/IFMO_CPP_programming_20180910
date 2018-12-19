@@ -20,8 +20,8 @@
 using namespace std;
 
 int t01_frac() {
-double X, i, k;
+double X;
 cin >> X;
-i= modf(X,&k);
-cout << i;
+X = X - int(X);
+cout << X;
 };
