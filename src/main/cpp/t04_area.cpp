@@ -36,7 +36,7 @@ using namespace std;
 
 
     bool IsPointInArea(double x, double y){
-       return (((y >= (-x)) && (y >= (2*x+2)) && (sqrt(x+1)+sqrt(y-1) <= 4.0)) || ((y <= (-x)) && (y <= (2*x+2)) && (sqrt(x+1)+sqrt(y-1) >= 4.0)));
+       return (((y >= (-x)) && (y >= (2*x+2)) && (pow(x+1,2)+pow(y-1,2) <= 4.0)) || ((y <= (-x)) && (y <= (2*x+2)) && (pow(x+1,2)+pow(y-1,2) >= 4.0)));
 }
    
 int t04_area() {
