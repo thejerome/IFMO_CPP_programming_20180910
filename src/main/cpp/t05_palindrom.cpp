@@ -24,8 +24,8 @@ using namespace std;
 
 int t05_palindrom() {
 	string x;
- 	int e,b,u;
- 	b = 0;
+ 	int e,c,u;
+ 	c = 0;
 
  	getline(cin,x);
 
@@ -39,17 +39,17 @@ int t05_palindrom() {
  	for (int i = 0; i < e/2 ; i++){
     	if (u%2 == 1){ 
     		if(x[i] == x[e-i]){
-    			b++;
+    			c++;
     		}
     	}
     	else if (u%2 == 0){
     		if (x[i] == x[e-i-1]){
-    			b++;
+    			c++;
     		}
     	}
  	}
 
- 	if(b == e/2){
+ 	if(c == e/2){
  		cout<< "yes";
  	}else{
  		cout<<"no";
