@@ -57,7 +57,7 @@ int t04_students() {
             student[i].sum_of_marks += mark;
         }
     }
-    sort (student.begin(), student.end(), cmp);
+    stable_sort (student.begin(), student.end(), cmp);
     for (int i = 0; i < n; i++) {
         cout << student[i].surname << " " << student[i].name << endl;
     }
