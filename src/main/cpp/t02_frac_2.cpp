@@ -18,5 +18,12 @@
 using namespace std;
 
 int t02_frac_2() {
-
+    double x,i,k;
+    cin >> x;
+    i=x;
+    i = floor (i);
+    k=x-i;
+    k=k*10;
+    k = floor (k);
+    cout<< k;
 };
