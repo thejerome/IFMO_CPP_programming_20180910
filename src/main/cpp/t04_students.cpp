@@ -29,10 +29,40 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct Student
+{
+    string name, surname;
+    int math, phys, cs;
+
+    bool operator > (const Student& cmp) const
+    {
+        return ( math+phys+cs > cmp.math+cmp.phys+cmp.cs );
+    }
+};
+
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector<Student> students(n);
+
+    for (int i = 0; i < n; i++)
+    {
+        cin >> students[i].name >> students[i].surname;
+        cin >> students[i].math >> students[i].phys >> students[i].cs;
+    }
+
+    sort(students.begin(), students.end(), greater<Student>());
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << students[i].name << " " << students[i].surname << endl;
+    }
+
+    return 0;
 }
 
