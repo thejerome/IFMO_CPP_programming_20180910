@@ -29,10 +29,34 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
 
 using namespace std;
+struct students{
+    string family;
+    string name;
+    int math;
+    int phys;
+    int comp;
+    int sred;
+};
 
+bool sortirovka (students v1, students v2){
+    return v1.sred>v2.sred;
+}
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector <students> v(n);
+    for (int i=0; i<n; i++){
+        cin>>v[i].family>>v[i].name>>v[i].math>>v[i].phys>>v[i].comp;
+        v[i].sred=v[i].math+v[i].phys+v[i].comp;
+    };
+    sort(v.begin(), v.end(), sortirovka);
+    for (int i=0; i<n; i++){
+        cout<<v[i].family<<' '<<v[i].name<<endl;
+    }
 }
 
