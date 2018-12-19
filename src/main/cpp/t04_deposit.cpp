@@ -21,6 +21,21 @@
 
 using namespace std;
 
-int t04_deposit() {
+const double m = 1e-10;
 
+int t04_deposit() {
+    double x, y, p;
+    int k;
+    cin >> p >> x >> y >> k;
+    while (k != 0) {
+        x = (x * (1 + p / 100)) + m;
+        y = (trunc(y * (1 + p / 100)) + (trunc (100 * x) - 100 * trunc(x)));
+        x = trunc(x);
+        if (y > 99) {
+            x += trunc(y / 100);
+            y -= trunc(y / 100) * 100;
+        }
+        k--;
+    }
+    cout << x << " " << y;
 };

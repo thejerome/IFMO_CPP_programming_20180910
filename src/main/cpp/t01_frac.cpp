@@ -21,4 +21,7 @@ using namespace std;
 
 int t01_frac() {
 
+    double x;
+    cin >> x;
+    cout << x - trunc(x);
 };
