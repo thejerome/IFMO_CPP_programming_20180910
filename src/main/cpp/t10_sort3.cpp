@@ -29,7 +29,7 @@ int t10_sort3()
 		else if(A > C)
 			cout << B << " " << C << " " << A;
 		else 
-			cout << C << " " << A << " " << C;
+			cout << B << " " << A << " " << C;
 	}
 	else
 	{
