@@ -1,0 +1,12 @@
+//
+// Created by theje on 2018-10-23.
+//
+
+#ifndef IFMO_CPP_PROGRAMMING_20180910_T07_SNAKE_H
+#define IFMO_CPP_PROGRAMMING_20180910_T07_SNAKE_H
+
+
+int t07_snake();
+
+
+#endif //IFMO_CPP_PROGRAMMING_20180910_T07_SNAKE_H
