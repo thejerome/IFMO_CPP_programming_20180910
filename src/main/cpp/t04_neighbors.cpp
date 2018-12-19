@@ -21,5 +21,14 @@
 using namespace std;
 
 int t04_neighbors() {
-
+	int a[100], n = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		cin >> a[i];
+	for (int i = 1; i < n; i++) {
+		if (a[i - 1] * a[i] > 0) {
+			cout << a[i - 1] << " " << a[i] << endl;
+			break;
+		}
+	}
 }
