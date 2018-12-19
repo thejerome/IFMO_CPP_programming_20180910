@@ -23,5 +23,5 @@ int t02_frac_2() {
 
  	cin >> x;
 
- 	cout << trunc(modf(x, &x) * 10);
+ 	cout << trunc(10 * x) - trunc(x)*10;
 };
