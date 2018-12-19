@@ -26,7 +26,7 @@ int t05_ave() {
     n=0;
     y=0;
     cin>>x;
-    while(x!=0){
+    while(x != 0){
         y=y+x;
         n++;
         cin>>x;

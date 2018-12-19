@@ -22,7 +22,7 @@
 using namespace std;
 
 int t04_deposit() {
-    double percent,X_rub,Y_cent,K_years,B,;
+    double percent,X_rub,Y_cent,K_years,B;
     cin>>percent>>X_rub>>Y_cent>>K_years;
     B=X_rub*100+Y_cent;
     while(K_years!=0){
