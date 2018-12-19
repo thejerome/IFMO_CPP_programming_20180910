@@ -22,4 +22,18 @@ using namespace std;
 
 int t06_quad() {
 
+	int a, b, c, d;
+
+ 	cin >> a >> b >> c;
+
+ 	d = pow(b, 2) - 4 * a * c;
+
+ 	if (d == 0) 
+ 	{
+ 		cout << -b / (2 * a);
+ 	}
+ 	else if (d > 0) 
+ 	{
+ 		cout << (-b - sqrt(d)) / (2 * a) << " " << (-b + sqrt(d)) / (2 * a);
+ 	}
 };
