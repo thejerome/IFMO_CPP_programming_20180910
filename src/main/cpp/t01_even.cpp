@@ -19,10 +19,5 @@
 using namespace std;
 
 int t01_even() {
-	int a[100], n = 0;
-	cin >> n;
-	for (int i = 0; i < n; i++)
-		cin >> a[i];
-	for (int i = 0; i < n; i += 2)
-		cout << a[i] << " ";
+
 }
