@@ -21,8 +21,46 @@
 #include <vector>
 
 using namespace std;
+void queen(int m, int l, int* a, int n, int* ans) {
+    int k = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (*(a + i * n + j) == 1) {
+                if ((m != i) && (l != j) && (abs(m - i) != abs(l - j)))
+                    k++;
+            }
+        }
+    }
+
+    if (k == l) {
+        if (l== n - 1)
+            (*ans)++;
+
+        *(a + m * n + l) = 1;
+        if (l < n - 1) {
+            for (int i = 0; i < n; i++)
+                queen(i, l + 1, a, n, ans);
+        }
+        *(a + m * n + l) = 0;
+    }
+
+}
 
 int t08_queen(){
+    int n, ans = 0;
+    cin >> n;
+    int a[n][n];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a[i][j] = 0;
+
+    for (int i = 0; i < n; i++)
+        queen(i, 0, (int*) a, n, &ans);
+    cout << ans;
+
 
     return 0;
+
 }
+
+
