@@ -23,9 +23,36 @@
 
 #include "t04_both2.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
-int t04_both2() {
+void intersection2 (int N, int M) {
+    int number;
+    cin >> N;
+    set<int> numbers_one;
+    set<int> numbers_two;
+    int i;
+    for (i = 0; i < N; i ++) {
+        cin >> number;
+        numbers_one.insert(number);
+    }
+    cin >> M;
+    for (i = 0; i < M; i ++) {
+        cin >> number;
+        numbers_two.insert(number);
+    }
+    set<int> scroll;
+    for (auto number : numbers_one) {
+        if (numbers_two.find(number) != numbers_two.end()) {
+            scroll.insert(number);
+        }
+    }
+    for (auto number : scroll) {
+        cout << number << " ";
+    }
+}
 
+int t04_both2() {
+    int N, M;
+    intersection2(N, M);
 }

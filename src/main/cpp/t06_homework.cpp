@@ -80,7 +80,8 @@
 
 #include "t06_homework.h"
 #include <iostream>
-
+#include <set>
+#include <map>
 using namespace std;
 
 int t06_homework() {

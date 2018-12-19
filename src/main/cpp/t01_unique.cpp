@@ -19,9 +19,22 @@
 
 #include "t01_unique.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
+void scroll (int N) {
+    int number;
+    cin >> N;
+    set<int>numbers;
+    for (int i = 0; i < N; i ++) {
+        cin >> number;
+        numbers.insert(number);
+    }
+    cout << numbers.size();
+}
+
 int t01_unique() {
-    
+    int N;
+    scroll(N);
 }
