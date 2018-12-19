@@ -33,7 +33,7 @@ int t10_unique() {
 	for (int i = 0; i < n; i++) {
 		int b = 0;
 		for (int j = 0; j < n; j++) {
-			if (a[i] == a[j] && i!=j) {
+			if (a[i] == a[j] && i != j) {
 				b = 1;
 				break;
 			}
