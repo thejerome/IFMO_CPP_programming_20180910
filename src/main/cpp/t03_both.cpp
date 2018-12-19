@@ -23,9 +23,32 @@
 
 #include "t03_both.h"
 #include <iostream>
+#include <set>
+#include <algorithm>
 
 using namespace std;
 
-int t03_both() {
+void intersection1 (int N, int M) {
+    int number;
+    cin >> N;
+    set<int> numbers_one;
+    set<int> numbers_two;
+    int i;
+    for (i = 0; i < N; i ++) {
+        cin >> number;
+        numbers_one.insert(number);
+    }
+    cin >> M;
+    for (i = 0; i < M; i ++) {
+        cin >> number;
+        numbers_two.insert(number);
+    }
+    set<int> scroll;
+    set_intersection(numbers_one.begin(), numbers_one.end(), numbers_two.begin(), numbers_two.end(),std::inserter( scroll , scroll.begin()));
+    cout << scroll.size();
+}
 
+int t03_both() {
+    int N, M;
+    intersection1(N, M);
 }
