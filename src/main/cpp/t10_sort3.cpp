@@ -18,6 +18,26 @@
 
 using namespace std;
 
-int t10_sort3() {
-
+int t10_sort3() 
+{
+	int A, B, C;
+	cin >> A >> B >>C;
+	if (A > B)
+	{
+		if (B > C) 
+			cout << C << " " << B << " " << A;
+		else if(A > C)
+			cout << B << " " << C << " " << A;
+		else 
+			cout << B << " " << A << " " << C;
+	}
+	else
+	{
+		if (A > C) 
+			cout << C << " " << A << " " << B;
+		else if(B > C)
+			cout << A << " " << C << " " << B;
+		else 
+			cout << A << " " << B << " " << C;
+	}
 };

@@ -28,6 +28,12 @@
 
 using namespace std;
 
-int t07_chess_queen() {
-
+int t07_chess_queen() 
+{
+	int A, B, C, D;
+	cin >> A >> B >> C >> D;
+	if ((A == C || B == D) || (abs(A - C) == abs(B - D)))
+		cout << "YES";
+	else 
+		cout << "NO";
 };
