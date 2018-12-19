@@ -88,9 +88,17 @@ int N;
 
 string low(string s){
     for (int i=0; i<N; i++){
-        if(s[i]>'A' && s[i]<'Z') s[i] = s[i]+32;
+        if(s[i]>='A' && s[i]<='Z') s[i] = s[i]+32;
     }
     return s;
+}
+
+int amount(string s){
+    int amount = 0;
+    for (int i=0; i<N; i++){
+        if(s[i]>='A' && s[i]<='Z') amount++;
+    }
+    return amount;
 }
 
 int t06_homework() {
@@ -120,18 +128,19 @@ int t06_homework() {
     string str2;
     for (int j = 0; j < sentence.size(); j++) {
         if (sentence[j] == ' ') {
-            cout << j;
             length = j-a;
             str = sentence.substr(a,length);
             a = j + 1;
             str2 = str;
             low(str);
-            if((dictionarylow.count(str) == 0) && (str2 != "The") && (str2 != "thE") || (dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
+            if((dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
+            else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
         }
     }
     str = sentence.substr(a,sentence.size()-1);
     str2 = str2;
     if((dictionarylow.count(str) == 0) && (str2 != "The") && (str2 != "thE") || (dictionarylow.count(str) == 1) && (dictionary.count(str2) == 0)) count++;
+    else if((dictionarylow.count(str) == 0) && (amount(str2) != 1)) count++;
     cout << count;
     return 0;
 }
