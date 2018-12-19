@@ -24,21 +24,37 @@ using namespace std;
 
 int t09_row() {
 
-    int n;
+    int b = 0, no = 1, count = 0, n;
+
     cin >> n;
-    int m = n, count = 0, count_max = 0;
-    while (n)
+
+    while (n > 0)
     {
-        if (m == n)
-            count++;
-        else
+        if (n == b)
         {
-            m = n;
-            count = 1;
+            no += 1;
         }
-        count_max = max(count_max, count);
+
+        else
+            {
+            b = n;
+
+            no = 1;
+            }
+
+        if ( no > count )
+        {
+            count = no;
+        }
+
         cin >> n;
+
+        if (n==0)
+        {
+            break;
+        }
     }
-    cout << count_max;
+
+    cout << count;
 
 };
