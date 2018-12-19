@@ -150,5 +150,3 @@ string TLC(string startValue) {
         cout << errors - 1;
     }
 
-}
-
