@@ -42,11 +42,11 @@ using namespace std;
 int t04_area() {
     int x,y;
     cin >> x >> y;
-    if (IsPointInArea(x,y)) {
+    if (IsPointInArea(x,y)) 
         cout <<"YES";
-    }
-    else {
+ 
+    else
         cout << "NO";
-    }
+    
     return 0;
 }
