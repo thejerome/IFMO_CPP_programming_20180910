@@ -21,5 +21,5 @@ int t02_frac_2()
 {
 	double A;
 	cin >> A;
-	cout << trunc(modf(A, &A) * 10);
+	cout << ((int)trunc(A * 10)) % 10;
 }
