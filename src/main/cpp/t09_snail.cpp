@@ -27,8 +27,12 @@
 using namespace std;
 
 int t09_snail() {
+<<<<<<< HEAD
     int H,A,B;
     cin >>H>>A>>B;
     int result = ((H-B)+(A-B)-1)/(A-B);
     cout<< result;
+=======
+
+>>>>>>> parent of 8565609... solved task-1
 };

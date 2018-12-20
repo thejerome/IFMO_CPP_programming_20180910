@@ -24,8 +24,13 @@
 using namespace std;
 
 int t01_squirrels() {
+<<<<<<< HEAD
     int squirrels , peanuts;
     cin >> squirrels>> peanuts;
     int result = peanuts / squirrels;
     cout << result;
 };
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1

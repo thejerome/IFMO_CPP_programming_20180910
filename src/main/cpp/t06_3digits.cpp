@@ -23,8 +23,13 @@
 using namespace std;
 
 int t06_3digits() {
+<<<<<<< HEAD
     int N;
     cin >> N;
     int result = N/100 + N/10%10 + N%10;
     cout<< result;
 };
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1

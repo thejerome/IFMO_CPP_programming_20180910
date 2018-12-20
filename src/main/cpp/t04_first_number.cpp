@@ -23,8 +23,12 @@
 using namespace std;
 
 int t04_first_number() {
+<<<<<<< HEAD
     int N;
     cin>> N;
     int result = N/10;
     cout << result;
+=======
+
+>>>>>>> parent of 8565609... solved task-1
 };

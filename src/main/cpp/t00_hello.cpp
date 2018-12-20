@@ -12,5 +12,9 @@
 using namespace std;
 
 int t00_hello() {
+<<<<<<< HEAD
     cout << "Hello, World!" ;
+=======
+
+>>>>>>> parent of 8565609... solved task-1
 };

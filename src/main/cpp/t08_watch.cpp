@@ -35,6 +35,7 @@
 using namespace std;
 
 int t08_watch() {
+<<<<<<< HEAD
     int N;
     cin >> N;
     int hours = N/3600%24;
@@ -45,3 +46,7 @@ int t08_watch() {
     cout<< hours << ":" <<no<< minutes << ":" <<on<< seconds;
     return 0;
 };
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1
