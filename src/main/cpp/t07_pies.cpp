@@ -41,6 +41,6 @@ int t07_pies() {
     cin >> A>>B>>N;
     int rub = A*N + B*N/100;
     int cop = B*N%100;
-    cout << rub << " " << cop;
+    cout<< rub << " " << cop;
     return 0;
 };

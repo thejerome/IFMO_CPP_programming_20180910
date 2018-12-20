@@ -24,7 +24,7 @@ using namespace std;
 
 int t04_first_number() {
     int N;
-    cin >> N;
+    cin>> N;
     int result = N/10;
     cout << result;
 };

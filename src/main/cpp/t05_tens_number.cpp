@@ -26,5 +26,5 @@ int t05_tens_number() {
     int N;
     cin >> N;
     int result = N/10%10;
-    cout << result;
+    cout<< result;
 };

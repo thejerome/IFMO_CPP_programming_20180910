@@ -26,5 +26,5 @@ int t06_3digits() {
     int N;
     cin >> N;
     int result = N/100 + N/10%10 + N%10;
-    cout << result;
+    cout<< result;
 };
