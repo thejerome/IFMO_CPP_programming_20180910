@@ -34,5 +34,39 @@
 using namespace std;
 
 int t07_ip() {
+    string ip;
+    getline(cin, ip);
+    int dots = 0, if_was_break = 0;
+    string number;
+    if (ip[0] == '.' || ip[ip.size()-1] == '.' || ip.size() < 7){
+        cout << "NO";
+    }
+    else  {
+        for(int i = 0; i < ip.size(); i++){
+            if (ip[i] != '.') {
+                if (ip[i] >= '0' && ip[i] <= '9') {
+                    number += ip[i];
+                }
+                else {
+                    if_was_break++;
+                    break;
+                }
+            }
+            else {
+                if (stoi(number) > 255 || stoi(number) < 0) {
+                    if_was_break++;
+                    break;
+                }
+                number = '0';
+                dots++;
+            }
+        }
+        if (dots == 3 && if_was_break == 0) {
+            cout << "YES";
+        }
+        else {
+            cout << "NO";
+        }
+    }
 
 }

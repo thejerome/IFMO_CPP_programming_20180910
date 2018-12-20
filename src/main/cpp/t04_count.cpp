@@ -28,5 +28,15 @@
 using namespace std;
 
 int t04_count() {
+    string s;
+    getline(cin, s);
+    int word = 0;
+    int m = 0;
+    m=s.find(' ', 0);
+    while (s.find(' ', m) != 0 && m > 0) {
+        word++;
+        m=s.find(' ',m+1);
+    }
+    cout << word+1;
 
 }
