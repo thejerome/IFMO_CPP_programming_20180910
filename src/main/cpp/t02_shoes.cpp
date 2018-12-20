@@ -45,10 +45,12 @@ int t02_shoes() {
     sort(array,array+n);
     int count=0;
     for(int i=0; i<n; i++){
-        if(array[i] == size) count++;
-        else if(array[i] > size+2){
-            count++;
-            size = array[i];
+        if(array[i] >= size) {
+            if(i == 0) count++;
+            else if(array[i] > size+2){
+                count++;
+                size = array[i];
+            }
         }
     }
     cout << count;
