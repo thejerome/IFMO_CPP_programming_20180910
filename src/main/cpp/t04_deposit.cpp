@@ -22,10 +22,11 @@
 using namespace std;
 
 int t04_deposit() {
-double p,x,y, k,rub,kop;
+double p,x,y, k;
 cin>>p>>x>>y>>k;
 p=1+(p/100);
 while (k!=0){
+    double rub,kop;
     x=x*p;
     y=y*p;
     y=trunc(y);

@@ -21,13 +21,14 @@
 using namespace std;
 
 int t06_quad() {
-double a,b,c,dis,x1,x2;
+double a,b,c,dis;
 cin>>a>>b>>c;
 dis=b*b-4*a*c;
 if (dis==0){
     cout<<-b/(2*a);
 }
 if (dis>0){
+    double x1,x2;
     x1=(-b-sqrt(dis))/(2*a);
     x2=(-b+sqrt(dis))/(2*a);
     cout<<min(x1,x2)<<" "<<max(x1,x2);
