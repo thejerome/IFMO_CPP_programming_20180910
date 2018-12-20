@@ -22,5 +22,19 @@
 using namespace std;
 
 int t04_deposit() {
-
+double p,x,y, k;
+cin>>p>>x>>y>>k;
+p=1+(p/100);
+while (k!=0){
+    double rub,kop;
+    x=x*p;
+    y=y*p;
+    y=trunc(y);
+    rub=trunc(x);
+    kop=x*100-rub*100+y;
+    x=rub+trunc(kop/100);
+    y=kop-trunc(kop/100)*100;
+    k=k-1;
+}
+cout<<x<<" "<<y;
 };

@@ -22,5 +22,16 @@
 using namespace std;
 
 int t05_ave() {
-
+double a,k,sum,sr;
+k=0;
+sum=0;
+cin>>a;
+while (a!=0) {
+    sum=sum+a;
+    k=k+1;
+    cin>>a;
+}
+sr=sum/k;
+cout.precision(11);
+cout<<fixed<<sr;
 };
