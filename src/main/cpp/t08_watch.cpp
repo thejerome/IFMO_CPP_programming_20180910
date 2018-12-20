@@ -35,5 +35,23 @@
 using namespace std;
 
 int t08_watch() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    int N;
+    cin >> N;
+    int hours = N/3600%24;
+    int minutes = N/60%60%10;
+    int seconds = N%60%10;
+    int no = N/60%60/10;
+    int on = N%60/10;
+    cout<< hours << ":" <<no<< minutes << ":" <<on<< seconds;
+    return 0;
+};
+=======
 
 };
+>>>>>>> parent of 8565609... solved task-1
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1

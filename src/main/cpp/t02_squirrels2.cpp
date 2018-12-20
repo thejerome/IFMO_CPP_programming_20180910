@@ -24,5 +24,18 @@
 using namespace std;
 
 int t02_squirrels2() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    int squirrels , peanuts ;
+    cin >> squirrels>> peanuts;
+    int result = peanuts%squirrels;
+    cout << result;
+};
+=======
 
 };
+>>>>>>> parent of 8565609... solved task-1
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1
