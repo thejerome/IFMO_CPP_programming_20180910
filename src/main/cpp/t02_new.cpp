@@ -25,10 +25,27 @@
 
 #include "t02_new.h"
 #include <iostream>
-
+#include <set>
 
 using namespace std;
 
 int t02_new() {
-    
+    int n;
+    cin>>n;
+    string result[n];
+    set <int> list;
+
+    for (int i=0; i < n; i++)
+    {
+        int current;
+        cin>>current;
+        if (list.find(current) == list.end())
+            result[i] = "NO";
+        else
+            result[i] = "YES";
+        list.insert(current);
+    }
+    for (int j = 0; j < n; ++j) {
+        cout<<result[j]<<endl;
+    }
 }

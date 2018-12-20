@@ -28,9 +28,23 @@
 #include "t05_syn.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t05_syn() {
+    int n;
+    cin>>n;
+    string dict[n*2];
+    for (int i = 0; i < n*2; i+=2) {
+        cin>>dict[i]>>dict[i+1];
+    }
 
+    string my_word;
+    cin>>my_word;
+
+    for (int j = 0; j < n*2; j+=2) {
+        if (dict[j] == my_word)
+            cout<<dict[j+1];
+        else if (dict[j+1] == my_word)
+                cout<<dict[j];
+    }
 }

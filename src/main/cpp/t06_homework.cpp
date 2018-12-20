@@ -1,4 +1,4 @@
-//Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах, 
+//Учительница задала Пете домашнее задание — в заданном тексте расставить ударения в словах,
 // после чего поручила Васе проверить это домашнее задание. 
 // Вася очень плохо знаком с данной темой, поэтому он нашел словарь, 
 // в котором указано, как ставятся ударения в словах. 
@@ -80,9 +80,75 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int t06_homework() {
+string toLower(string s, int n) {
+    for (int i = 0; i < n; i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z')
+            s[i] = s[i] - 'A' + 'a';
+    }
+    return s;
+}
 
+int countAccents(string H, int n) {
+    int cnt = 0;
+    for (int i=0; i < n; i++)
+    {
+        if (H[i] >= 'A' && H[i] <= 'Z')
+            cnt++;
+    }
+    return cnt;
+}
+
+bool checkInDictionary (string *dict, int dict_len, string element) {
+    //проверяем на полное совпадение
+    for (int i=0; i < dict_len; i++) {
+        if (dict[i] == element)
+            return true;
+    }
+
+    //проверяем без учета регистра, есть ли такое слово в словаре
+    for (int i=0; i < dict_len; i++)
+    {
+        if (toLower(dict[i], dict[i].length()) == toLower(element, element.length()))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int t06_homework() {
+    int n;
+    cin>>n;
+    string dict[n];
+    for (int i = 0; i < n; ++i) {
+        cin>>dict[i];
+    }
+    cin.putback(' ');
+    vector <string> p;
+    while (cin.peek() != '\n')
+    {
+        string current;
+        cin>>current;
+        p.push_back(current);
+    }
+
+    int mistakes = 0;
+    for (auto it: p)
+    {
+        int it_len = it.length();
+        if (countAccents(it, it_len) != 1)
+        {
+            mistakes++;
+        }
+
+        else if (!checkInDictionary(dict, n, it))
+        {
+            mistakes++;
+        }
+    }
+    cout<<mistakes;
 }
