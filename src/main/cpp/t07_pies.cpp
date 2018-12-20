@@ -38,6 +38,7 @@ using namespace std;
 
 int t07_pies() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     int N,A,B;
     cin >> A>>B>>N;
     int rub = A*N + B*N/100;
@@ -45,6 +46,10 @@ int t07_pies() {
     cout<< rub << " " << cop;
     return 0;
 };
+=======
+
+};
+>>>>>>> parent of 8565609... solved task-1
 =======
 
 };

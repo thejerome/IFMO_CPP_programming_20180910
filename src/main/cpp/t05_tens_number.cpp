@@ -24,11 +24,14 @@ using namespace std;
 
 int t05_tens_number() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     int N;
     cin >> N;
     int result = N/10%10;
     cout<< result;
 =======
+=======
+>>>>>>> parent of 8565609... solved task-1
 
 >>>>>>> parent of 8565609... solved task-1
 };
