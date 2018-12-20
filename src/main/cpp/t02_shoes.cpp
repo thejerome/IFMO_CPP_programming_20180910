@@ -46,11 +46,15 @@ int t02_shoes() {
     int count=0;
     for(int i=0; i<n; i++){
         if(array[i] >= size) {
-            if(i == 0) count++;
-            else if(array[i] > size+2){
-                count++;
-                size = array[i];
-            }
+            count++;
+            size = array[i];
+            break;
+        }
+    }
+    for (int i=0; i<n; i++){
+        if(array[i] >= size+3){
+            count++;
+            size = array[i];
         }
     }
     cout << count;
