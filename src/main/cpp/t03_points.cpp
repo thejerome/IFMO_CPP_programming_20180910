@@ -23,10 +23,33 @@
 
 #include "t03_points.h"
 #include <iostream>
+#include <algorithm>
 
 
 using namespace std;
 
+struct coord{
+    double x;
+    double y;
+    double d;
+};
+
+bool dif(coord a, coord b){
+    return a.d < b.d;
+};
+
 int t03_points() {
+    int n;
+    cin >> n;
+    coord c[n];
+    for(int i=0; i<n; i++){
+        cin >> c[i].x >> c[i].y;
+        c[i].d = c[i].x*c[i].x + c[i].y*c[i].y;
+    }
+    sort(c,c+n,dif);
+    for(int i=0; i<n; i++){
+        cout << c[i].x << " " << c[i].y << endl;
+    }
+    return 0;
     
 }

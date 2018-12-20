@@ -29,10 +29,36 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
+struct student{
+    string name;
+    string surname;
+    double b1;
+    double b2;
+    double b3;
+    double average;
+};
+
+bool dif(student st1, student st2){
+    return st1.average > st2.average;
+};
+
 int t04_students() {
+    int n;
+    cin >> n;
+    student st[n];
+    for(int i=0; i<n; i++){
+        cin >> st[i].name >> st[i].surname >> st[i].b1 >> st[i].b2 >> st[i].b3;
+        st[i].average = (st[i].b1 + st[i].b2 + st[i].b3)/3;
+    }
+    sort(st, st+n, dif);
+    for(int i=0; i<n; i++){
+        cout << st[i].name << " " << st[i].surname << endl;
+    }
+    return 0;
     
 }
 
