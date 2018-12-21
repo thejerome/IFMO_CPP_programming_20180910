@@ -23,7 +23,6 @@
 
 #include "t03_points.h"
 #include <iostream>
-#include <vector>
 #include <algorithm>
 
 using namespace std;
@@ -33,26 +32,24 @@ struct onepoint{
     double distance;
 
     void calculatedistance (){
-        distance = sqrt(pow(x,2) + pow(y,2));
+        distance = pow(x,2) + pow(y,2);
     }
 };
 
-bool lalala (onepoint &p1, onepoint &p2){
+bool lalala (onepoint p1, onepoint p2){
     return p1.distance < p2.distance;
 }
 
 int t03_points() {
     int n;
     cin >> n;
-    vector<onepoint> manypoints;
+    onepoint manypoints[n];
     for (int i = 0; i < n; i++){
-        onepoint p{};
-        cin >> p.x >> p.y;
-        p.calculatedistance();
-        manypoints.push_back(p);
+        cin >> manypoints[i].x >> manypoints[i].y;
+        manypoints[i].calculatedistance();
     }
     if (n > 0) {
-        sort(manypoints.begin(), manypoints.end(), lalala);
+        sort(manypoints, manypoints + n, lalala);
     }
 
     for (int i = 0; i < n; i++){
