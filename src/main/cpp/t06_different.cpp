@@ -19,5 +19,20 @@
 using namespace std;
 
 int t06_different() {
-
+    int n, i, temp;
+    int counter = 1;
+    int*Arr;
+    cin >> n;
+    Arr = new int[n];
+    for (i = 0; i < n; i++) {
+        cin >> Arr[i];
+    }
+    temp = Arr[0];
+    for (i = 1; i < n; i++) {
+        if (temp != Arr[i]) {
+	    counter++;
+	}
+	temp = Arr[i];
+    }
+    cout << counter;
 }

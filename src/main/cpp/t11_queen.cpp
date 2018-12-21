@@ -39,5 +39,26 @@
 using namespace std;
 
 int t11_queen() {
-
+    int i, j;
+    int n = 8;
+    bool trigger = false;
+    int*Arrx;
+    int*Arry;
+    Arrx = new int[n];
+    Arry = new int[n];
+    for (i = 0; i < n; i++){
+	cin >> Arrx[i] >> Arry[i];
+    }
+    for (i = 0; i < n; i++) {
+	for (j = 0; j < n; j++) {
+	    if ( (j != i) & ((Arrx[i] == Arrx[j]) || (Arry[i] == Arry[j]) || (abs(Arrx[i] - Arrx[j]) == abs(Arry[i] - Arry[j])))) {
+	        trigger = true;
+	    }
+	}
+    }
+    if (trigger == true) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 }
