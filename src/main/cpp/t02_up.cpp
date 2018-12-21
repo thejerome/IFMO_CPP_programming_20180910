@@ -24,5 +24,11 @@
 using namespace std;
 
 int t02_up() {
-    
+    char upper;
+    cin >> upper;
+    if (upper - 'A' < 32) {
+        cout << upper;
+    } else {
+        cout << char(upper - 32);
+    }
 }
