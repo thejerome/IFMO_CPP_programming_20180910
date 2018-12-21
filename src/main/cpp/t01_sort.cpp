@@ -24,5 +24,27 @@
 using namespace std;
 
 int t01_sort() {
-    
+    int size,temp;
+    cin >> size;
+    int array[size];
+    for (int i = 0; i < size; ++i) {
+        cin >> array[i];
+    }
+
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                // меняем элементы местами
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+
+    // Вывод отсортированного массива на экран
+    for (int i = 0; i < size; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
 }
