@@ -30,5 +30,11 @@
 using namespace std;
 
 int t01_char() {
-
+   char check;
+   cin >> check;
+   if (check >= '0' && check <= '9') {
+      cout << "yes";
+   } else {
+      cout << "no";
+   }
 }

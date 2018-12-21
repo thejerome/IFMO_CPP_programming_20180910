@@ -24,5 +24,14 @@
 using namespace std;
 
 int t03_toggle() {
-
+    char input;
+    cin >> input;
+//    cout << find('a', 'z', input)
+    if (input >= 'A' && input <= 'Z') {
+        cout << char(input + 32);
+    } else if (input >= 'a' && input <= 'z' ) {
+        cout << char(input - 32);
+    } else {
+    	    cout << input;
+    }
 }

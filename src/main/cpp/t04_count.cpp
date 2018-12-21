@@ -28,5 +28,11 @@
 using namespace std;
 
 int t04_count() {
-
+    string input;
+    int i = -1;
+    while (cin) {
+        cin >> input;
+	i = i + 1;
+    }
+    cout << i;
 }
