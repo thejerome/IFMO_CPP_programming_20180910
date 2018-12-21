@@ -29,10 +29,44 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct student{
+    string nameandsurname;
+    float average;
+
+    void calculateaverage(int a, int b, int c){
+        average = float(a + b + c) / 3 ;
+    }
+};
+
+bool operator < (student s1, student s2){
+    return s1.average > s2.average;
+}
+
 int t04_students() {
-    
+    int n;
+    cin >> n;
+    vector<student> students;
+    for (int i = 0; i < n; i++){
+        student anotherone;
+        string stohelp;
+        cin >> anotherone.nameandsurname;
+        cin >> stohelp;
+        anotherone.nameandsurname += " " + stohelp;
+        int a, b, c;
+        cin >> a >> b >> c;
+        anotherone.calculateaverage(a,b,c);
+        students.push_back(anotherone);
+    }
+    if (n > 0){
+        stable_sort(students.begin(), students.end());
+    }
+    for (int i = 0; i < n; i++){
+        cout << students[i].nameandsurname << " " ;
+    }
 }
 
