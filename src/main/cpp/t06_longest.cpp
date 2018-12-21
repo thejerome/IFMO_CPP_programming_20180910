@@ -23,4 +23,21 @@ using namespace std;
 
 int t06_longest() {
 
+	string s;
+	getline(cin, s);
+
+	int l = 0, r = 0, maxl = 0, maxr = 0;
+
+	while (r < s.length()) {
+		r = s.find(' ', r);
+		r = (r == -1) ? s.length() : r;
+
+		if (r - l > maxr - maxl) {
+			maxl = l;
+			maxr = r;
+		}
+		r++;
+		l = r;
+	}
+	cout << s.substr(maxl, maxr - maxl);
 }
