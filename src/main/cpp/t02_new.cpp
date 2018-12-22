@@ -25,10 +25,21 @@
 
 #include "t02_new.h"
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 
 int t02_new() {
-    
+	int n, a;
+	cin >> n;
+	map< int, int > cnt;
+	for (int i = 0; i < n; i++) {
+		cin >> a;
+		if (cnt[a] == 0)
+			cout << "NO\n";
+		else
+			cout << "YES\n";
+		cnt[a]++;
+	}
 }

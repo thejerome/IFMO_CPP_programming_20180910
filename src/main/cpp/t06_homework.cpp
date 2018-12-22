@@ -80,9 +80,63 @@
 
 #include "t06_homework.h"
 #include <iostream>
+#include <vector>
+#include <map>
 
 using namespace std;
 
 int t06_homework() {
 
+	int n, cur, curPos, ans = 0;
+
+	cin >> n;
+
+	string s, text;
+
+	map< string, vector< int > > pos;
+
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		for (int i = 0; i < s.length(); i++)
+			if (s[i] >= 'A' && s[i] <= 'Z') {
+				cur = i;
+				s[i] = (char)((int)'a' + s[i] - (int)'A');
+			}
+		pos[s].push_back(cur);
+	}
+
+	cin.get();
+
+	getline(cin, text);
+
+	int begIndex = 0, index = 0;
+	do {
+		bool ok = false;
+		index = text.find(" ", begIndex);
+		if (index == -1)
+			s = text.substr(begIndex, text.length() - begIndex);
+		else
+			s = text.substr(begIndex, index - begIndex);
+
+		cur = 0;
+		for (int i = 0; i < s.length(); i++)
+			if (s[i] >= 'A' && s[i] <= 'Z') {
+				cur++;
+				curPos = i;
+				s[i] = (char)((int)'a' + s[i] - (int)'A');
+			}
+		if (cur == 1)
+			if (pos[s].size() == 0)
+				ok = true;
+			else
+				for (int i = 0; i < pos[s].size(); i++)
+					if (curPos == pos[s][i])
+						ok = true;
+		if (index != -1)
+			begIndex = index + 1;
+		if (!ok)
+			ans++;
+	} while (index != -1);
+
+	cout << ans;
 }
