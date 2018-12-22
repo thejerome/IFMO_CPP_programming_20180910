@@ -33,5 +33,25 @@
 using namespace std;
 
 int t02_shoes() {
-    
+    int foot, N, i = 0;
+    cin >> foot >> N;
+    int size [N];
+    for (i; i < N; i++) {
+        cin >> size[i];
+    }
+    int  calculator = 0;
+    for (i = 0; i < N; i++) {
+        if (foot < size[i]) {
+            foot = size[i];
+            calculator = calculator + 1;
+            break;
+        }
+    }
+    for (i; i < N; i++) {
+        if (size[i] - foot >= 3) {
+            foot = size[i];
+            calculator = calculator + 1;
+        }
+    }
+    cout << calculator;
 }

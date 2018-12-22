@@ -28,5 +28,11 @@
 using namespace std;
 
 int t03_points() {
-    
+    int N;
+    cin >> N;
+    int A[N];
+    int i = 0;
+    for (i; i < N; i++){
+
+        }
 }
