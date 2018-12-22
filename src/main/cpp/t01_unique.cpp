@@ -19,9 +19,24 @@
 
 #include "t01_unique.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t01_unique() {
-    
+
+	int n, a, ans = 0;
+
+	cin >> n;
+
+	set< int > un;
+
+	for (int i = 0; i < n; i++) {
+		cin >> a;
+		un.insert(a);
+	}
+	for (auto x : un)
+		ans++;
+
+	cout << ans;
 }
