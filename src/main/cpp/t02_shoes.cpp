@@ -28,10 +28,25 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
 
 using namespace std;
 
 int t02_shoes() {
-    
+	int pairsNumber, footSize, 
+		count = 0, 
+		currentMax = -3;
+	cin >> footSize >> pairsNumber;
+	vector <int> shoes(pairsNumber);
+	for (int i=0; i<pairsNumber; i++) {
+		cin >> shoes[i];
+	}
+	for (int i=0; i<pairsNumber; i++) {
+		if (shoes[i] >= footSize && shoes[i] - currentMax >= 3) {
+			currentMax = shoes[i];
+			count++;
+		}
+	}
+	cout << count;
+	return 0;
 }
