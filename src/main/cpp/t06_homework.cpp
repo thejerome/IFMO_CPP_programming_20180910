@@ -81,55 +81,60 @@
 #include "t06_homework.h"
 #include <iostream>
 #include <map>
-#include <set>
-
+#include <string>
 using namespace std;
 
-string low (string s) {
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] >= 'A' && s[i] <= 'Z') {
-            s[i] = s[i] - 'A' + 'a';
+string propis(string str) {
+    string answer = "";
+    for (int i = 0; i < str.size(); i++) {
+        if ((str[i] >= 'A') && (str[i] <= 'Z')) {
+            answer += char(int(str[i]) + (int('a') - int('A')));
+        }
+        else {
+            answer += str[i];
         }
     }
-    return s;
+    return answer;
+}
+int stressingcount(string str) {
+    int answer = 0;
+    for (int i = 0; i < str.size(); i++) {
+        if ((str[i] >= 'A') && (str[i] <= 'Z')) {
+            answer++;
+        }
+    }
+    return answer;
 }
 
-bool is_stressed_correct (string s) {
-    int count = 0;
-    for (int i = 0; i < s.size(); i++)
-        if (s[i] >= 'A' && s[i] <= 'Z')
-            count++;
-    return count == 1;
-}
+
 
 int t06_homework() {
-    int N;
-    cin >> N;
-    N++;
-    map<string, set<string>> dictionary;
-    for (int i = 0; i < N; i++) {
-        string straight, stressed;
-        cin >> stressed;
-        straight = low(stressed);
-        dictionary[straight].insert (stressed);
+    int n, i, mist = 0;
+    string w;
+    multimap < string, string> dict = {};
+    cin >> n;
+    for (i = 0; i < n; i++) {
+        cin >> w;
+        dict.insert(make_pair(propis(w), w));
     }
-    string homework;
-    getline (cin, homework);
-    homework += ' ';
-    string w = "";
-    int count = 0;
-    for (int i = 0; i < homework.size(); i++)
-        if (homework[i] != ' ')
-            w += homework[i];
-        else {
-            if (dictionary.count (low (w)) == 1) {
-                if (dictionary[low (w)].count (w) == 0)
-                    count++;
+    while (cin >> w) {
+        if (dict.find(propis(w)) == dict.end()) {
+            if (stressingcount(w) != 1) {
+                mist++;
             }
-            else if (!is_stressed_correct(w)) {
-                count++;
-            }
-            w = "";
         }
-    cout << count - 1;
+        else {
+            bool flag = false;
+            for (auto it = dict.begin(); it != dict.end(); it++) {
+                if ((it->first == propis(w)) && (it->second == w)) {
+                flag = true;
+            }
+        }
+        if (!flag) {
+            mist++;
+        }
+    }
+}
+cout << mist;
+return 0;
 }
