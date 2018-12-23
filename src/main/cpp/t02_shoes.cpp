@@ -29,9 +29,30 @@
 #include "t02_shoes.h"
 #include <iostream>
 
-
 using namespace std;
 
 int t02_shoes() {
-    
+    int customer_size;
+    cin>>customer_size;
+    int n;
+    cin>>n;
+    int sizes[n];
+    for (int i = 0; i < n; ++i) {
+        cin>>sizes[i];
+    }
+
+    int total_count = 0;
+    for (int i = 0; i < n; i++) {
+        if (total_count == 0 && sizes[i] >= customer_size)
+        {
+            total_count++;
+            customer_size = sizes[i];
+        }
+        else if (sizes[i] - customer_size >= 3)
+        {
+            customer_size = sizes[i];
+            total_count++;
+        }
+    }
+    cout<<total_count;
 }
