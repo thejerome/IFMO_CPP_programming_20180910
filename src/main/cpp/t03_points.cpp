@@ -23,10 +23,25 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
+bool NO (pair< int, int > a, pair< int, int > b)
+{
+    return (a.first * a.first + a.second * a.second < b.first * b.first + b.second * b.second);
+}
+
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector <pair<int, int>> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i].first >> a[i].second;
+    }
+    sort(a.begin(), a.end(), NO);
+    for (int i = 0; i < n; i++) {
+        cout << a[i].first << " " << a[i].second << " ";
+    }
 }

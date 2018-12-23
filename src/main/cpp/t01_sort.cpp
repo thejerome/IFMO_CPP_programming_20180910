@@ -19,10 +19,18 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
-
+#include <algorithm>
+#include <vector>
 using namespace std;
-
 int t01_sort() {
-    
+    int N;
+    cin >> N;
+    int SONO[N], i = 0;
+    for (i; i < N; i++) {
+        cin >> SONO[i];
+    }
+    sort(SONO, SONO + N);
+    for (i = 0; i < N; ++i) {
+        cout << SONO[i] << ' ';
+    }
 }
