@@ -26,6 +26,8 @@
 //
 //3
 
+#include <vector>
+#include <algorithm>
 #include "t02_shoes.h"
 #include <iostream>
 
@@ -33,5 +35,38 @@
 using namespace std;
 
 int t02_shoes() {
-    
+
+	int n, x;
+
+	cin >> x >> n;
+
+	vector <int> v(n);
+
+	for (int i = 0; i < n; ++i)
+	{
+		cin >> v[i];
+	}
+	sort(v.begin(), v.end());
+
+	int max = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		if (max == 0 && v[i] >= x)
+		{
+			max++;
+			x = v[i];
+		}
+
+		else
+		{
+			if (v[i] - x >= 3)
+			{
+				x = v[i];
+				max++;
+			}
+		}
+	}
+	cout << max;
+
 }
