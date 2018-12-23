@@ -25,12 +25,12 @@ using namespace std;
 int t01_sort() {
     int N;
     cin >> N;
-    int array[N], i = 0;
+    int SONO[N], i = 0;
     for (i; i < N; i++) {
-        cin >> array[i];
+        cin >> SONO[i];
     }
-    sort(array, array + N);
+    sort(SONO, SONO + N);
     for (i = 0; i < N; ++i) {
-        cout << array[i] << ' ';
+        cout << SONO[i] << ' ';
     }
 }
