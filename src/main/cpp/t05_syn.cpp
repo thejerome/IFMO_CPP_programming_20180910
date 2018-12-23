@@ -27,10 +27,19 @@
 
 #include "t05_syn.h"
 #include <iostream>
-
+#include <map>
 
 using namespace std;
 
 int t05_syn() {
-
+int N;string s,s1,s2;
+cin >> N;
+map<string,string>dict;
+for(int i=0;i<N;i++){
+    cin >> s1 >> s2;
+    dict.insert(pair<string,string>(s1,s2));
+    dict.insert(pair<string,string>(s2,s1));
+}
+cin >> s;
+cout << dict[s];
 }
