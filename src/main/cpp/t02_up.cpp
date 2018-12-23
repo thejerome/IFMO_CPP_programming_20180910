@@ -24,5 +24,7 @@
 using namespace std;
 
 int t02_up() {
-    
+    char x;
+    cin>>x;
+    cout<<char(x-32);
 }
