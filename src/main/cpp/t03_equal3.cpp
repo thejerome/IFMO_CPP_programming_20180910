@@ -26,4 +26,4 @@ int t03_equal3() {
     }else if (a != b && a != c && b != c) {
             cout << 0;
     }else { cout << 2; }
-};
+}

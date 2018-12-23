@@ -36,4 +36,4 @@ int t08_chess_knight() {
     else if (abs(b - a) == 2 && abs(d - c) == 1)
         cout << "yes";
     else cout << "no";
-};
+}

@@ -54,4 +54,4 @@ int t11_boxes() {
     }else if((a<=e&&b<=c&&d<f) || (a<=e&&b<=f&&d<=c)){
                                 cout << "The first box is smaller than the second one";
     }else{ cout << "Boxes are incomparable"; }
-};
+}

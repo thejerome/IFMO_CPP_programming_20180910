@@ -28,4 +28,4 @@ int t05_chess_king() {
     }else if (lef && rig){
             cout << "yes";
     }else {cout << "no";}
-};
+}

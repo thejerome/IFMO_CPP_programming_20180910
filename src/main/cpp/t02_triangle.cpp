@@ -24,4 +24,4 @@ int t02_triangle() {
     if ((a<(b+c))&&(b<(a+c))&&(c<(a+b))) {
         cout << "yes";
     }else cout << "no";
-};
+}

@@ -34,4 +34,4 @@ int t07_chess_queen() {
     if (abs(a-c) == abs(b-d) || a == c || b == d) {
         cout << "yes";
     }else { cout << "no"; }
-};
+}

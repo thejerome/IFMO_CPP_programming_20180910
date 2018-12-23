@@ -29,4 +29,4 @@ int t01_max3() {
         if (b>c) {
             cout << b;
         }else {cout << c;} }
-};
+}

@@ -21,7 +21,7 @@ using namespace std;
 int t10_sort3() {
     int a, b, c;
     cin >> a >> b >> c;
-    int maxx = max(max(a,b),c);
+    int maX = max(max(a,b),c);
     int minx = min(min(a,b),c);
-    cout << minx << " " << a+b+c–minx-maxx << " " << maxx;
-};
+    cout << minx << " " << a+b+c-minx-maX << " " << maX;
+}
