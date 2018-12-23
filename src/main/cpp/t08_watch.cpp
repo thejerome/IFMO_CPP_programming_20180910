@@ -37,7 +37,7 @@ using namespace std;
 int t08_watch() {
 int t,h,m,s;
 cin>>t;
-h=t/3600;
+h=t/3600%24;
 s=t%60;
 m=t%3600/60;
 cout<<h<<":"<<m/10<<m%10<<":"<<s/10<<s%10;
