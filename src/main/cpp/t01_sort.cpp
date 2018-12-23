@@ -19,10 +19,21 @@
 
 #include "t01_sort.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t01_sort() {
-    
+	int N;
+    cin >> N;
+    vector <int> array(N);
+    for (int i=0; i<N; i++) {
+    	cin >> array[i];
+    }
+    sort(array.begin(), array.end());
+    for (auto i : array) {
+    	cout << i << " ";
+    }
+    return 0;
 }
