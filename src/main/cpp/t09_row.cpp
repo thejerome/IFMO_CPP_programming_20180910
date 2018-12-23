@@ -23,14 +23,27 @@
 using namespace std;
 
 int t09_row() {
-    int n;
+    int n,t;
     cin >> n;
-    int m=n,count=0,Max=0;
-    while (n) {
-        if (m == n)
-            count++;
-        else {m=n;count=1;}
-        Max=max(Max,count);
+    t = n;
+    int max1, max2;
+    max1 = 1;
+    max2 = 1;
+    while (n != 0) {
         cin >> n;
-    } cout << count_Max;
+        if (n == t) {
+            max1 = max1 + 1;
+        }
+        else {
+            if (max1 > max2) { max2 = max1; }
+            max1 = 1;
+        }
+        t = n;
+    }
+    if (max1 > max2) {
+        cout << max1;
+    }
+    else {
+        cout << max2;
+    }
 };

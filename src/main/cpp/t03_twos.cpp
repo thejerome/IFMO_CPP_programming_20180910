@@ -30,7 +30,7 @@ int t03_twos() {
         n/=2;
     }
     if(x == 1)
-        cout << "yes";
+        cout << "YES";
     else
-        cout << "no";
+        cout << "NO";
 };
