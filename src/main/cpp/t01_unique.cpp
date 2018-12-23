@@ -19,9 +19,17 @@
 
 #include "t01_unique.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t01_unique() {
-    
+    int n;
+    cin>>n;
+    set<int>arr;
+    for (int i = 0; i < n; ++i) {
+        int count;
+        cin>>count;
+        arr.insert(count);
+    }
+    cout<<arr.size();
 }
