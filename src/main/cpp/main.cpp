@@ -2,8 +2,11 @@
 #include <map>
 #include <functional>
 #include <cstring>
-#include "plus.h"
-#include "minus.h"
+
+#include "t01_sort.h"
+#include "t02_shoes.h"
+#include "t03_points.h"
+#include "t04_students.h"
 
 using namespace std;
 
@@ -14,10 +17,12 @@ int main(int argc, char **argv) {
     }
     char *functionName = argv[1];
 
-    std::map <std::string, std::function<int()>> funcMap =
+    std::map<std::string, std::function<int()>> funcMap =
             {
-                    {"plus", plus_task},
-                    {"minus",  minus_task}
+                    {"t01_sort", t01_sort},
+                    {"t02_shoes", t02_shoes},
+                    {"t03_points", t03_points},
+                    {"t04_students", t04_students},
             };
 
     funcMap[functionName]();

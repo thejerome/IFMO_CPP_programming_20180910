@@ -1,0 +1,11 @@
+10
+Markov Valeriy 5 1 5
+Markovin Valeriy 5 4 5
+Petrov Petr 3 3 3
+Sergey Petrov 3 2 3
+Markovetsky Valeriy 4 3 4
+Markovtsev Valeriy 5 1 5
+Markovinsky Valeriy 5 4 2
+Petrovsky Petr 1 5 3
+Sergeyenko Petrov 3 2 5
+Morkovetsky Valeriy 4 4 2
