@@ -32,5 +32,21 @@
 using namespace std;
 
 int t05_syn() {
-
+    int n;
+    cin>>n;
+    string list[n*2];
+    for (int i = 0; i < n*2; i=i+2) {
+        cin>>list[i]>>list[i+1];
+    }
+    string word;
+    cin>>word;
+    for (int j = 0; j < n*2; j+=2) {
+        if (word==list[j]) {
+            cout<<list[j+1];
+        } else {
+            if (word==list[j+1]) {
+                cout<<list[j];
+            }
+        }
+    }
 }
