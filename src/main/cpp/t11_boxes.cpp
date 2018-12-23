@@ -37,21 +37,49 @@
 using namespace std;
 
 int t11_boxes() {
-    int a,b,c,d,e,f;
-    cin >> a >> b >> c >> d >> f >> e;
-    if((a == e && b == c && d == f) || (a == e && b == f && d == c)){
+    int a1,b1,c1,a2,b2,c2;
+    cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+    int t;
+    if (b1 < a1) {
+        t = a1;
+        a1 = b1;
+        b1 = t;
+    }
+    if (c1 < b1) {
+        t = b1;
+        b1 = c1;
+        c1 = t;
+    }
+    if (b1 < a1) {
+        t = a1;
+        a1 = b1;
+        b1 = t;
+    }
+    if (b2 < a2) {
+        t = a2;
+        a2 = b2;
+        b2 = t;
+    }
+    if (c2 < b2) {
+        t = b2;
+        b2 = c2;
+        c2 = t;
+    }
+    if (b2 < a2) {
+        t = a2;
+        a2 = b2;
+        b2 = t;
+    }
+    if (a1 == a2 && b1 == b2 && c1 == c2) {
         cout << "Boxes are equal";
-    }else if((a == f && b == c && d == e)|| (a == f && b == e && d == c)){
-            cout << "Boxes are equal";
-    }else if((a == c && b == e && d == f)|| (a == c && b == f && d == e)){
-                cout << "Boxes are equal";
-    }else if((a>=f&&b>=c&&d>=e) || (a>=f&&b>=e&&d>=c) || (a>=c&&b>=f&&d>=e) || (a>=c&&b>=e&&d>=f)){
-                    cout << "The first box is larger than the second one";
-    }else if((a>=e&&b>=c&&d>=f) || (a>=e&&b>=f&&d>=c)){
-                        cout << "The first box is larger than the second one";
-    }else if((a<=f&&b<=c&&d<=e) || (a<=f&&b<=e&&d<=c) || (a<=c&&b<=f&&d<=e) || (a<=c&&b<=e&&d<f)){
-                            cout << "The first box is smaller than the second one";
-    }else if((a<=e&&b<=c&&d<f) || (a<=e&&b<=f&&d<=c)){
-                                cout << "The first box is smaller than the second one";
-    }else{ cout << "Boxes are incomparable"; }
+    }
+    else if (a1 <= a2 && b1 <= b2 && c1 <= c2) {
+        cout << "The first box is smaller than the second one";
+    }
+    else if (a1 >= a2 && b1 >= b2 && c1 >= c2) {
+        cout << "The first box is larger than the second one";
+    }
+    else {
+        cout << "Boxes are incomparable";
+    }
 }

@@ -24,8 +24,8 @@ int t05_chess_king() {
     cin >> a >> b >> c >> d;
     bool lef (a - c <= 1 && a - c >= -1), rig (b - d <= 1 && b - d >= -1);
     if (a == c && b == d){
-        cout << "no";
+        cout << "NO";
     }else if (lef && rig){
-            cout << "yes";
-    }else {cout << "no";}
+            cout << "YES";
+    }else {cout << "NO";}
 }
