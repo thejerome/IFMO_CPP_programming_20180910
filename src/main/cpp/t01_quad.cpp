@@ -22,7 +22,7 @@ int t01_quad() {
     int n,x;
     cin >> n;
     x=1;
-    while(x*x<n){
+    while(x*x<=n){
         cout << x*x << " ";
         x=x+1;
     }
