@@ -29,10 +29,39 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <algorithm>
+#include <string>
+#include <vector>
 using namespace std;
+struct student
+{
+    string name;
+    string surname;
 
+    int a1;
+    int a2;
+    int a3;
+    double srd;
+};
+bool kobain(student a, student b)
+{
+    return a.srd > b.srd;
+};
 int t04_students() {
-    
-}
+    int n;
+    cin >> n;
+    vector< student> ppl(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> ppl[i].name >> ppl[i].surname;
+        cin >> ppl[i].a1 >> ppl[i].a2 >> ppl[i].a3;
+        ppl[i].srd = ppl[i].a1 + ppl[i].a2 + ppl[i].a3;
+    }
+    stable_sort(ppl.begin(), ppl.end(), kobain);
+    for (int i = 0; i < n; i++)
+    {
+        cout << ppl[i].name << " " << ppl[i].surname << endl;
 
+    }
+    return 0;
+}
