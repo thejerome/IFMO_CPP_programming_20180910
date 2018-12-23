@@ -22,5 +22,30 @@
 using namespace std;
 
 int t06_longest() {
-
+    string x;
+    int dlin, dlinmax;
+    dlin = 0;
+    dlinmax = 0;
+    int pos;
+    getline(cin, x);
+    for (int i = 0; i < x.length() + 1; i++)
+    {
+        dlin++;
+        if (x[i] == ' ')
+        {
+            if (dlin > dlinmax)
+            {
+                pos = i;
+                dlinmax = dlin;
+            }
+            dlin = 0;
+        }
+    }
+    if (dlin > dlinmax)
+    {
+        pos = x.length();
+        dlinmax = dlin;
+    }
+    cout << x.substr(pos - dlinmax + 1, dlinmax);
 }
+
