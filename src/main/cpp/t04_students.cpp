@@ -29,10 +29,31 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
+struct STUDENTS {
+    string name, surname;
+    int p1, p2, p3;
+};
+
+bool cmp(const STUDENTS &s1, const STUDENTS &s2) {
+    return (s1.p1 + s1.p2 + s1.p3) > (s2.p1 + s2.p2 + s2.p3);
+}
+
 int t04_students() {
-    
+    int n;
+    cin>>n;
+    STUDENTS s[n];
+    for (int i=0; i < n; i++) {
+        cin>>s[i].surname>>s[i].name>>s[i].p1>>s[i].p2>>s[i].p3;
+    }
+
+    sort(s, s + n, cmp);
+
+    for (int j = 0; j < n; ++j) {
+        cout<<s[j].surname<<' '<<s[j].name<<endl;
+    }
 }
 
