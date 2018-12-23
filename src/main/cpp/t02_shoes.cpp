@@ -28,10 +28,29 @@
 
 #include "t02_shoes.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 
 using namespace std;
 
 int t02_shoes() {
-    
+int csize, pairs, max=0;
+cin>>csize>>pairs;
+    if(pairs==0){
+     cout<<0;
+        return 0;}
+vector<int>size(pairs);
+    for (int i=0; i<pairs; i++){
+        cin>>size[i];}
+sort(size.begin(), size.end());
+    if(csize<size[0]){
+        csize=size[0];}
+    for (int j=0; j<pairs; j++) {
+        if(csize<=size[j]-3||csize==size[j]){
+            csize=size[j];
+            max++;}}
+cout<<max;
+return 0;
+
 }
