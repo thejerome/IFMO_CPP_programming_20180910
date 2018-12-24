@@ -28,10 +28,31 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int t02_shoes() {
-    
+int N,X;
+cin >> X >> N;
+vector<int>v(N);
+for(int i=0;i<N;i++){
+    cin >> v[i];
+}
+sort(v.begin(),v.end());
+int max=0;
+for(int i=0;i<N;i++){
+    if (max==0&&v[i]>=X){
+        max++;
+        X=v[i];
+    }
+    else{
+        if(v[i]-X>=3){
+          X=v[i];
+          max++;
+        }
+    }
+}
+cout << max;
 }
