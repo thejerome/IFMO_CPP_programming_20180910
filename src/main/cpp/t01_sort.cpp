@@ -1,3 +1,4 @@
+
 //Отсортируйте массив.
 //
 //Входные данные
@@ -22,10 +23,11 @@
 #include <algorithm>
 #include <cmath>
 
+
 using namespace std;
 
 int t01_sort() {
-	int n;
+    int n;
 	cin >> n;
 	int a[n];
 
@@ -40,3 +42,4 @@ int t01_sort() {
 	}
 	return 0;
 }
+
