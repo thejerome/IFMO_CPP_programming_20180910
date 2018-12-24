@@ -29,10 +29,32 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
+struct Student{
+    string name, surname;
+    int mat, fiz, inf;
+    bool operator>(const Student&cmp) const{
+        return(mat+fiz+inf>cmp.mat+cmp.fiz+cmp.inf);
+    }
+};
 int t04_students() {
+    int n;
+    cin >> n;
+    vector<Student>v(n);
+    for(int i=0;i<n;i++){
+        cin >> v[i].name >> v[i].surname;
+        cin >> v[i].mat >> v[i].fiz >> v[i].inf;
+    }
     
+    sort(v.begin(),v.end(),greater<Student>());
+    
+    for(int i=0;i<n;i++){
+        cout<<v[i].name<<" "<<v[i].surname<<endl;
+    }
+    return 0;
 }
 
