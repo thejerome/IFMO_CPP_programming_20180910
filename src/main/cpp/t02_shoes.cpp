@@ -28,10 +28,36 @@
 
 #include "t02_shoes.h"
 #include <iostream>
-
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
 
 int t02_shoes() {
-    
+	int foot, n;
+	cin >> foot >> n;
+	int s[n];
+	for (int i=0; i < n; i++) 
+	{
+		cin >> s[i];
+	}
+	int  r = 0;
+	for (int i = 0; i < n; i++) 
+	{
+		if (foot < s[i]) {
+			foot = s[i];
+			r = r + 1;
+			break;
+		}
+	}
+	for (int i; i < n; i++) 
+	{
+		if (s[i] - foot >= 3) 
+		{
+			foot = s[i];
+			r = r + 1;
+		}
+	}
+	cout << r;
+	return 0;
 }

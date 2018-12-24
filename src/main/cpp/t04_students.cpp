@@ -1,3 +1,4 @@
+
 //Выведите фамилии и имена учащихся в порядке убывания их среднего балла.
 //
 //Входные данные
@@ -29,10 +30,36 @@
 
 #include "t04_students.h"
 #include <iostream>
-
+#include <algorithm>
+#include <cmath>
+#include <vector>
 using namespace std;
+struct student {
+	string family;
+	string name;
+	int math;
+	int phys;
+	int comp;
+	int sred;
+};
 
-int t04_students() {
-    
+bool srt(student v1, student v2)
+{
+	return v1.sred > v2.sred;
 }
-
+int t04_student() {
+	int n;
+	cin >> n;
+	vector <student> v(n);
+	for (int i = 0; i < n; i++)
+	{
+		cin >> v[i].family >> v[i].name >> v[i].math >> v[i].phys >> v[i].comp;
+		v[i].sred = v[i].math + v[i].phys + v[i].comp;
+	};
+	sort(v.begin(), v.end(), srt);
+	for (int i = 0; i < n; i++)
+	{
+		cout << v[i].family << ' ' << v[i].name << endl;
+	}
+	return 0;
+}

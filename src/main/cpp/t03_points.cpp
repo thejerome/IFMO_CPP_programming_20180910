@@ -1,3 +1,4 @@
+
 //Выведите все исходные точки в порядке возрастания их расстояний от начала координат.
 //
 //Входные данные
@@ -23,10 +24,30 @@
 
 #include "t03_points.h"
 #include <iostream>
-
-
+#include <algorithm>
+#include <cmath>
+#include <vector>
 using namespace std;
+struct pt {
+	int x;
+	int y;
+	int dist;
+};
 
+bool srt(pt v1, pt v2)
+{
+	return v1.dist < v2.dist;
+};
 int t03_points() {
-    
+	int n;
+	cin >> n;
+	vector <pt> v(n);
+	for (int i = 0; i < n; i++) {
+		cin >> v[i].x >> v[i].y;
+		v[i].dist = pow(v[i].x, 2) + pow(v[i].y, 2);
+	}
+	sort(v.begin(), v.end(), srt);
+	for (int i = 0; i < n; i++)
+		cout << v[i].x << ' ' << v[i].y << endl;
+	return 0;
 }
