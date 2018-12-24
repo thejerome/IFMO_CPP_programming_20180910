@@ -29,10 +29,41 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <string>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
-int t04_students() {
-    
-}
+    struct students {
+        string name, surname;
+        int marks[3];
+    };
+
+    bool compare(students a, students b) {
+        int sum1 = 0,
+                sum2 = 0;
+        for (int i=0; i<3; i++) {
+            sum1 += a.marks[i];
+            sum2 += b.marks[i];
+        }
+        return sum1 > sum2;
+    }
+
+    int t04_students() {
+        int N;
+        cin >> N;
+        vector <students> arr(N);
+        for (int i=0; i<N; i++) {
+            cin >> arr[i].name >> arr[i].surname;
+            for (int j=0; j<3; j++) {
+                cin >> arr[i].marks[j];
+            }
+        }
+        stable_sort(arr.begin(), arr.end(), compare);
+        for (auto i : arr) {
+            cout << i.name << " " << i.surname << " ";
+        }
+        return 0;
+    }
 

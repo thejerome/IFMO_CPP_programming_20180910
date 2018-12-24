@@ -23,10 +23,25 @@
 
 #include "t03_points.h"
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
+#include <cmath>
 
 using namespace std;
 
+bool compare(pair <int, int> v1, pair <int, int> v2) {
+    return pow(v1.first, 2) + pow(v1.second, 2) < pow(v2.first, 2) + pow(v2.second, 2);
+}
 int t03_points() {
-    
+    int N;
+    cin >> N;
+    vector <pair<int, int>> p(N);
+    for (int i=0; i<N; i++) {
+        cin >> p[i].first >> p[i].second;
+    }
+    sort(p.begin(), p.end(), compare);
+    for (auto i : p) {
+        cout << i.first << " " << i.second << " ";
+    }
+    return 0;
 }
