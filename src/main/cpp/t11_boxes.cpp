@@ -37,24 +37,20 @@
 using namespace std;
 
 int t11_boxes() {
-    int A1, B1, C1, A2, B2, C2;
-    cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2;
-    if (A1 > B1) swap (A1, B1);
-    if (A1 > C1) swap (A1, C1);
-    if (B1 > C1) swap (B1, C1);
-    if (A2 > B2) swap (A2, B2);
-    if (A2 > C2) swap (A2, C2);
-    if (B2 > C2) swap (B2, C2);
-    if ( A1==A2 && B1==B2 && C1==C2 ) {
-        cout << "Boxes are equal";
-    }
-    else if ( A1 >= A2 && B1 >= B2 && C1 >= C2 ) {
-        cout << "The first box is larger than the second one";
-    }
-    else if  ( A1 <= A2 && B1 <= B2 && C1 <= C2) {
-        cout << "The first box is smaller than the second one";
-    }
-    else {
-        cout << "Boxes are incomparable";
-    }
+    int a1,b1,c1,a2,b2,c2;
+    bool writing=false;
+
+    cin >> a1 >> b1 >> c1 >>a2 >> b2 >> c2;
+
+    int v1=a1*b1*c1; int v2=a2*b2*c2;
+
+    if ((v1==v2) && ((a1==a2 && b1==b2) || (a1==c2 && c1==a2) || (a1==b2 && b1==a2) || (c1==b2 && b1==c2)))
+    {cout << "Boxes are equal"; writing=true;}
+    if ((v1>v2) && ((a1>=a2 && b1>=b2 && c1>=c2) || (a1>=c2 && c1>=a2 && b1>=b2) || (a1>=b2 && b1>=a2 && c1>=c2) || (c1>=b2 && b1>=c2 && a1>=a2)))
+    {cout << "The first box is larger than the second one"; writing=true;}
+    if ((v1<v2) && ((a1<=a2 && b1<=b2 && c1<=c2) || (a1<=c2 && c1<=a2 && b1<=b2) || (a1<=b2 && b1<=a2 && c1<=c2) || (c1<=b2 && b1<=c2 && a1<=a2)))
+    {cout << "The first box is smaller than the second one"; writing=true;}
+    else if(!writing)
+        cout <<"Boxes are incomparable";
+
 };

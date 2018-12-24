@@ -19,10 +19,13 @@
 using namespace std;
 
 int t10_sort3() {
-   int a, b, c;
+   int a, b, c ,k;
     cin >> a >> b >> c;
-    if (a>b) swap (a,b);
-    if (a>c) swap (a,c);
-    if (b>c) swap (b,c);
+    if (a>b)
+    {k = b; b = a; a = k;};
+    if (b>c)
+    {k = b; b = c; c = k;};
+    if (a>b)
+    {k = b; b = a; a = k;};
     cout << a << " " << b << " " << c;
 };
