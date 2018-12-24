@@ -29,10 +29,36 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
-int t04_students() {
-    
+struct student{
+    string name, ser;
+    int mark[3];
+};
+bool comp(student a, student b){
+    int sum1, sum2;
+    sum1 = sum2 = 0;
+    for (int i = 0; i < 3; i++){
+        sum1 += a.mark[i];
+        sum2 += b.mark[i];
+    }
+    return sum1 > sum2;
 }
-
+int t04_students() {
+    int x;
+    cin >> x;
+    vector<student> a(x);
+    for ( int i=0; i<x;i++ ){
+        cin >> a[i].name >> a[i].ser;
+        for (int j = 0; j < 3; j++){
+            cin >> a[i].mark[j];
+        }
+    }
+    stable_sort(a.begin(), a.end(), comp);
+    for (auto x : a){
+        cout << x.name << " " << x.ser << " ";
+    }
+}
