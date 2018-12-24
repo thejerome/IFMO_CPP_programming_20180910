@@ -29,10 +29,37 @@
 
 #include "t04_students.h"
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 using namespace std;
 
+struct groupmates {
+	string surname;
+	string name;
+	int summury_of_marks;
+};
+
+bool cmp(const groupmates &s1, const groupmates &s2) {
+	return s1.summury_of_marks > s2.summury_of_marks;
+}
+
 int t04_students() {
-    
+	unsigned int number_of_students;
+	cin >> number_of_students;
+	vector <groupmates> student(number_of_students);
+	for (int i = 0; i < number_of_students; i++) {
+		cin >> student[i].surname >> student[i].name;
+		for (int j = 0; j < 3; j++) {
+			int mark;
+			cin >> mark;
+			student[i].summury_of_marks += mark;
+		}
+	}
+	stable_sort(student.begin(), student.end(), cmp);
+	for (int i = 0; i < number_of_students; i++) {
+		cout << student[i].surname << " " << student[i].name << endl;
+	}
 }
 
