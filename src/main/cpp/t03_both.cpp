@@ -23,9 +23,38 @@
 
 #include "t03_both.h"
 #include <iostream>
-
+#include <set>
 using namespace std;
 
 int t03_both() {
+    int n1;
+    cin>>n1;
+    set <int> check1;
+    for (int i = 0; i < n1; ++i)
+    {
+        int current;
+        cin>>current;
+        check1.insert(current);
+    }
 
+    int n2;
+    cin>>n2;
+    set <int> check2;
+    for (int i=0; i < n2; i++)
+    {
+        int current;
+        cin>>current;
+        check2.insert(current);
+    }
+
+    int count = 0;
+    for (auto el_1: check1)
+    {
+        for (auto el_2: check2)
+        {
+            if (el_1 == el_2)
+                count++;
+        }
+    }
+    cout<<count;
 }
