@@ -23,9 +23,37 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
+    int n;
+    cin>>n;
+    set <int> check1;
+    for (int i = 0; i < n; ++i){
+
+        int curr;
+        cin >> curr;
+        check1.insert(curr);
+    }
+
+    int n1;
+    cin >> n1;
+    set <int> check2;
+    for (int i=0; i < n1; i++){
+
+        int current;
+        cin >> current;
+        check2.insert(current);
+    }
+    for (auto el_1: check1){
+
+        for (auto el_2: check2){
+
+            if (el_1 == el_2)
+                cout << el_1 << ' ';
+        }
+    }
 
 }
