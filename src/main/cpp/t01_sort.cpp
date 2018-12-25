@@ -18,14 +18,14 @@
 //1 2 3 4 5
 
 #include "t01_sort.h"
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 
 using namespace std;
 
-int t01_sort( {
+int t01_sort() {
     int n;
     cin >> n;
     vector< int > a(n);
