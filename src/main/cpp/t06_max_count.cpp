@@ -30,5 +30,18 @@
 using namespace std;
 
 int t06_max_count() {
-
+    int a,b=0,c=0;
+    cin>>a;
+    while(a)
+    {
+        if(a==b)
+            c++;
+        if(a>b)
+        {
+            b=a;
+            c=1;
+        }
+        cin>>a;
+    }
+    cout<<c;
 };
