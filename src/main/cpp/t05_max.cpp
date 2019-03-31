@@ -20,5 +20,15 @@
 using namespace std;
 
 int t05_max() {
+    int a;
+    cin >> a;
+    int max=a;
+    while ((a>0) || (a<0)) {
+        if (max<a) {
+            max=a;
+        }
+        cin >> a;
+    }
+    cout << max;
 
 };
