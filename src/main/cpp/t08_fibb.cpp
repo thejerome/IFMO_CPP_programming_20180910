@@ -37,6 +37,5 @@ int t08_fibb() {
 		}
 		cout << R;
 	}
-
 	return 0;
 };

@@ -28,6 +28,6 @@ int t04_sum() {
 		cin >> N;
 	}
 	cout << sum;
-
+ 
 	return 0;
 };
