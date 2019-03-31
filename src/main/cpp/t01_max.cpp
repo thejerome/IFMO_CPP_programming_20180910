@@ -27,6 +27,24 @@
 using namespace std;
 
 int t01_max() {
-    
+	int n, m, k = 0, arre = -1, arra = -1;
+	cin >> n >> m;
+	int arr[n][m];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cin >> arr[i][j];
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			if (arr[i][j] > k) {
+				k = arr[i][j];
+				arre = i;
+				arra = j;
+			}
+		}
+	}
+	cout << arre << " " << arra;
+
     return 0;
 }
