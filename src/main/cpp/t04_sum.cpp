@@ -20,5 +20,14 @@
 using namespace std;
 
 int t04_sum() {
+	int N, sum;
+	cin >> N;
+	sum = 0;
+	while (N != 0) {
+		sum += N;
+		cin >> N;
+	}
+	cout << sum;
 
+	return 0;
 };
