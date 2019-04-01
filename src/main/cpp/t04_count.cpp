@@ -28,11 +28,14 @@
 using namespace std;
 
 int t04_count() {
-	string s;
-	int n = 0;
-	getline(cin, s);
-	for (int i = 1; i <= s.size(); i++) {
-		if (s[i] == ' ') { n = n + 1; }
+	string str;
+	int counter = 1;
+	getline(cin, str);
+	for (int i = 0; i < str.size(); i++) {
+		if (str[i] == ' ') {
+			counter++;
+		}
 	}
-	cout << n + 1;
+	cout << counter;
 }
+
