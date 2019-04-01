@@ -36,4 +36,3 @@ int t04_count() {
 	}
 	cout << n + 1;
 }
-
