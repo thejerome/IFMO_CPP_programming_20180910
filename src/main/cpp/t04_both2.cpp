@@ -23,9 +23,31 @@
 
 #include "t04_both2.h"
 #include <iostream>
+#include <map>
+#include <set>
 
 using namespace std;
 
 int t04_both2() {
-
+	map <int, int> counter;
+	set <int> sorted;
+	int n;
+	cin >> n;
+	int a[n];
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+		counter[a[i]]++;
+	}
+	int m;
+	cin >> m;
+	int b[m];
+	for (int i = 0; i < m; i++) {
+		cin >> b[i];
+		if (counter[b[i]] != 0) {
+			sorted.insert(b[i]);
+		}
+	}
+	for (auto now = sorted.begin(); now != sorted.end(); now++) {
+		cout << *now << " ";
+	}
 }
