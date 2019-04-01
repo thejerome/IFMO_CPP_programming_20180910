@@ -30,15 +30,17 @@ using namespace std;
 //function power
 double power(double a, int n) {
 		double r = 1;
+
 		if (n > 0)
-			r = a * power(a, n - 1);
+		r = a * power(a, n - 1);
 		if (n < 0)
 			r /= a * power(a, -n - 1);
 		return r;
+}
 int t05_power() {
 	double a;
 	int n;
 	cin >> a >> n;
 	cout << power(a, n);
-    return 0;
+	return 0;
 }
