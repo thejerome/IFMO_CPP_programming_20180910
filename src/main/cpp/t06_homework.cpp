@@ -80,73 +80,73 @@
 
 #include "t06_homework.h"
 #include <iostream>
-#include <set>
+#include <map>
+#include <vector>
 
 using namespace std;
-string TLC(string startValue) {
-	string temp = startValue;
-	for (int i = 0; i < temp.size(); i++)
-	{
-		if (temp[i] >= 'A' and temp[i] <= 'Z') {
-			temp[i] = temp[i] + 'a' - 'A';
+
+string toLower(string s) {
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] >= 'A' && s[i] <= 'Z') {
+			s[i] = s[i] - 'A' + 'a';
 		}
 	}
-	return temp;
+	return s;
 }
 
-int GUC(string value) {
-	int count = 0;
-	for (int i = 0; i < value.size(); i++)
-	{
-		if (value[i] >= 'A' and value[i] <= 'Z') {
-			count++;
+int findPos(string s) {
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] >= 'A' && s[i] <= 'Z') {
+			return i;
 		}
 	}
-	return count;
+	return -1;
 }
 
-int analysis(string value, set<string> dictionaryWords, set<string> dictionaryAccent) {
-	if (dictionaryAccent.count(value)) {
-		return 0;
-	}
-	else if (!dictionaryWords.count(TLC(value))) {
-		if (GUC(value) != 1) {
-			return 1;
-		}
-		else {
-			return 0;
+bool check(string s) {
+	int counter = 0;
+	for (int i = 0; i < s.size(); i++) {
+		if (s[i] >= 'A' && s[i] <= 'Z') {
+			counter++;
 		}
 	}
-	return 1;
+	return (counter == 1);
 }
+
+
 
 int t06_homework() {
-	set<string> dictionaryWords;
-	set<string> dictionaryAccent;
+		map <string, vector <int>> list;
+		int n, mistakes = 0;
+		string homework, word;
+		cin >> n;
+		for (int i = 0; i < n; i++) {
+			cin >> word;
+			list[toLower(word)].push_back(findPos(word));
+		}
+		getline(cin, homework);
+		homework += " ";
+		for (int i = 0; i < homework.size(); i++) {
+			if (homework[i] != ' ') {
+				word += homework[i];
+			}
+			else {
+				bool ok = false;
+				if (check(word))
+					if (list[toLower(word)].size() != 0) {
+						for (auto x : list[toLower(word)])
+							if (findPos(word) == x)
+								ok = true;
+					}
+					else
+						ok = true;
+				if (!ok)
+					mistakes++;
+				word = "";
+			}
+		}
+		cout << mistakes;
 
-	int dictLength;
-	cin >> dictLength;
-	for (int i = 0; i < dictLength; i++)
-	{
-		string word;
-		cin >> word;
-		dictionaryAccent.insert(word);
-		dictionaryWords.insert(TLC(word));
+
+
 	}
-	string input;
-	getline(cin, input);
-	string temp;
-	int errorsCount = 0;
-	for (int i = 0; i < input.size(); i++)
-	{
-		if (input[i] == ' ') {
-			errorsCount += analysis(temp, dictionaryWords, dictionaryAccent);
-			temp.clear();
-		}
-		else {
-			temp += input[i];
-		}
-	}
-	errorsCount += analysis(temp, dictionaryWords, dictionaryAccent);
-	cout << errorsCount - 1;
-}
