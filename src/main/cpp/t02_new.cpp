@@ -30,5 +30,17 @@
 using namespace std;
 
 int t02_new() {
-    
+    int N;
+    cin >> N;
+    set<int> s;
+    for (int i = 0; i < N; i++) {
+        int x;
+        cin >> x;
+        if (s.count(x) > 0) {
+            cout << "YES" << ' '; }
+        else {
+            cout << "NO" << ' ';
+            s.insert(x);
+        }
+    }
 }

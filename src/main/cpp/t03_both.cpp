@@ -27,5 +27,21 @@
 using namespace std;
 
 int t03_both() {
-
+    int N;
+    cin >> N;
+    set<int> s;
+    for (int i = 0; i < N; i++) {
+        int x;
+        cin >> x;
+        s.insert(x);
+    }
+    cin >> N;
+    int t = 0;
+    for (int i = 0; i < N; i++) {
+        int x;
+        cin >> x;
+        if (s.count(x) > 0)
+            t++;
+    }
+    cout << t;
 }
