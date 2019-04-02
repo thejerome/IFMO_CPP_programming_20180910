@@ -22,7 +22,8 @@
 
 using namespace std;
 
-int t05_palindrom() {string x;
+int t05_palindrom() {
+    string x;
     int a,b,c;
     b = 0;
     getline(cin,x);
