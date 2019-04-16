@@ -23,5 +23,31 @@
 using namespace std;
 
 int t09_row() {
+    int duration = 1;
+    int max_duration = 1;
 
+    int N;
+    cin >> N;
+
+    int prev = N;
+
+    while (N)
+    {
+        cin >> N;
+        if (N == prev) duration++;
+
+        else if (duration > max_duration)
+            {
+                max_duration = duration;
+                duration = 1;
+                prev = N;
+            } else
+            {
+                duration = 1;
+                prev = N;
+            }
+    }
+
+    cout << max_duration;
+    return 0;
 };
