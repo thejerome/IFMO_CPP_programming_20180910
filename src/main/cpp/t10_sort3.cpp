@@ -19,5 +19,29 @@
 using namespace std;
 
 int t10_sort3() {
+    int A, B, C, T;
+    cin >> A >> B >> C;
 
+    if (A > B)
+    {
+        T = A;
+        A = B;
+        B = T;
+    }
+
+    if (A > C)
+    {
+        T = A;
+        A = C;
+        C = T;
+    }
+
+    if (B > C)
+    {
+        T = B;
+        B = C;
+        C = T;
+    }
+
+    cout << A << " " << B << " " << C;
 };
