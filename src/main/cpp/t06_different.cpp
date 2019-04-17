@@ -19,5 +19,26 @@
 using namespace std;
 
 int t06_different() {
-
+    int N, k;
+    cin >> N;
+    
+    int prev = 1000000000;
+    int difr = 1;
+    
+    for (int i = 0; i < N; i++)
+    {
+        cin >> k;
+        
+        if (i == 0) prev = k;
+        
+        else
+        {
+            if (k != prev) difr++;
+            
+            prev = k;
+        }
+    }
+    
+    cout << difr;
+    return 0;
 }
