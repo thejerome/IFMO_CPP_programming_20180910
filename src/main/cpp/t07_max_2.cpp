@@ -30,4 +30,23 @@ using namespace std;
 
 int t07_max_2() {
 
+    int N;
+    cin >> N;
+
+    int max = N;
+    int after_max = -1;
+
+    while (N)
+    {
+        cin >> N;
+        if (N > max)
+        {
+            after_max = max;
+            max = N;
+        }
+        else if (N > after_max)  after_max = N;
+    }
+
+    cout << after_max;
+    return 0;
 };

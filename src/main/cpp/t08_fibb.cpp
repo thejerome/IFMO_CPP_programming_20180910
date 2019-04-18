@@ -21,5 +21,29 @@
 using namespace std;
 
 int t08_fibb() {
+    int N, prev;
+    int i = 2;
+    cin >> N;
 
+    int F1 = 1;
+    int F2 = 1;
+    if (N == 1 | N == 2)
+    {
+        cout << '1';
+        exit(0);
+    }
+
+    if (N)
+    {
+        while (N - i)
+        {
+            prev = F2;
+            F2 += F1;
+            F1 = prev;
+            i++;
+        }
+        cout << F2;
+    }
+    else cout << '0';
+    return 0;
 };
