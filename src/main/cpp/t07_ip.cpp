@@ -34,5 +34,43 @@
 using namespace std;
 
 int t07_ip() {
+    string s, cur_el;
+    cin >> s;
+    if (s[0] == '.')
+    {
+        cout << "NO";
+        exit(0);
+    }
+
+
+    int i = -1, x;
+    for (int k = 0; k < 3; k++) {
+        i++; cur_el = "";
+        while (i < s.size() && s[i] != '.') {
+            cur_el += s[i];
+            i++;
+        }
+        x = stoi(cur_el);
+        if (x < 0 || x > 255 || i == s.size() || s[i + 1] == '.') {
+            cout << "NO";
+            exit(0);
+        }
+    }
+
+    i++; cur_el = "";
+    while (i < s.size() && s[i] != '.')
+    {
+        cur_el += s[i];
+        i++;
+    }
+    x = stoi(cur_el);
+    if (x < 0 || x > 255 || i != s.size())
+    {
+        cout << "NO";
+        exit(0);
+    }
+
+    cout << "YES";
+    return 0;
 
 }
