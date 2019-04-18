@@ -22,7 +22,34 @@
 
 using namespace std;
 
+int board[10];
+bool check(int r, int q, int k)
+{
+    if (k == r) return true;
+    else return ((r - k) != (q - board[k])) & (board[k] != q) & check(r, q, k + 1) & ((r - k) != (board[k] - q));
+}
+
+int HowMany(int n, int r, int q)
+{
+    if (r == n) return 1;
+    else
+        if (q < n) {
+            int cur_step = 0;
+            if (check(r, q, 0)) {
+                board[r] = q;
+                cur_step = HowMany(n, r + 1, 0);
+            }
+            return cur_step + HowMany(n, r, q + 1);
+        }
+        else return 0;
+
+}
+
 int t08_queen(){
+    int n;
+    cin >> n;
+
+    cout << HowMany(n, 0, 0);
 
     return 0;
 }
