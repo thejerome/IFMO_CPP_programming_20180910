@@ -133,6 +133,6 @@ int t06_homework() {
             err++;
     } while (index != -1);
 
-    cout << (err - 1);
+    cout << err;
     return 0;
 }
