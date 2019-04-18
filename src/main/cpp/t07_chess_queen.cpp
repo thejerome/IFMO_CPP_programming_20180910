@@ -29,5 +29,15 @@
 using namespace std;
 
 int t07_chess_queen() {
+    int A, B, C, D;
 
+    cin >> A >> B >> C >> D;
+    A -= C;
+    B -= D;
+    A *= A;
+    B *= B;
+
+    if (A == B | A==0 | B==0) cout << "YES";
+
+    else cout << "NO";
 };

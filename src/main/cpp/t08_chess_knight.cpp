@@ -30,4 +30,16 @@ using namespace std;
 
 int t08_chess_knight() {
 
-};
+    int A, B, C, D;
+
+    cin >> A >> B >> C >> D;
+
+    A -= C;
+    B -= D;
+    A *= A;
+    B *= B;
+
+    if ((A == 4 & B == 1) | (A == 1 & B == 4)) cout << "YES";
+
+    else cout << "NO";
+}
