@@ -22,11 +22,38 @@
 //2 3
 
 #include "t03_points.h"
+#include <vector>
+#include <math.h>
+#include <algorithm>
 #include <iostream>
 
 
 using namespace std;
 
+struct point {
+    int x;
+    int y;
+    double r;
+};
+
+bool test(point v1, point v2)
+{
+    return v1.r < v2.r;
+};
+
 int t03_points() {
-    
+    int n;
+    cin >> n;
+    vector <point> v(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> v[i].x >> v[i].y;
+        v[i].r = sqrt( v[i].x * v[i].x + v[i].y * v[i].y );
+    }
+
+    sort(v.begin(), v.end(), test);
+
+    for (int i = 0; i < n; i++)
+        cout << v[i].x << ' ' << v[i].y << endl;
+    return 0;
 }
