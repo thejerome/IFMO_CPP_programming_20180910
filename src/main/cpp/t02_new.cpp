@@ -24,11 +24,26 @@
 //NO
 
 #include "t02_new.h"
+#include <set>
 #include <iostream>
 
 
 using namespace std;
 
 int t02_new() {
+    int N, cur;
+    cin >> N;
+    set<int> numbers;
     
+    for (int i = 0; i < N; i++) {
+        cin >> cur;
+        if (numbers.find(cur) == numbers.end())
+            cout << "NO" << endl;
+        
+        else
+            cout << "YES" << endl;
+        
+        numbers.insert(cur);
+    }
+    return 0;
 }

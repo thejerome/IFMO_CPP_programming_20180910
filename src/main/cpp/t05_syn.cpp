@@ -32,5 +32,29 @@
 using namespace std;
 
 int t05_syn() {
+    int N;
+    cin >> N;
+    string a[N], b[N], cur;
 
+    for (int i = 0; i < N; i++)
+    {
+        cin >> cur;
+        a[i] = cur;
+
+        cin >> cur;
+        b[i] = cur;
+    }
+    
+    cin >> cur;
+
+    for (int i = 0; i < N; i++)
+    {
+        if (a[i] == cur)
+            cout << b[i];
+        else
+            if (b[i] == cur)
+                cout << a[i];
+    }
+
+    return 0;
 }

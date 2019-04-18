@@ -22,10 +22,38 @@
 //2
 
 #include "t03_both.h"
+#include <set>
 #include <iostream>
 
 using namespace std;
 
 int t03_both() {
+    int N, M, cur, count = 0, r, q;
+    set<int> a;
+    set<int> b;
 
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> cur;
+        a.insert(cur);
+    }
+
+    cin >> M;
+    for (int i = 0; i < M; i++) {
+        cin >> cur;
+        b.insert(cur);
+    }
+
+    for (auto i = a.begin(); i != a.end(); i++) {
+        r = *i;
+        for (auto j = b.begin(); j != b.end(); j++) {
+            q = *j;
+            if (r == q)
+                count++;
+
+        }
+    }
+
+    cout << count;
+    return 0;
 }
