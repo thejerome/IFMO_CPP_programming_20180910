@@ -25,7 +25,5 @@ using namespace std;
 int t05_tens_number() {
     int N;
     cin >> N;
-    if (N / 10 > 0){
-        cout << 
-    }
+    cout << N / 10;
 };
