@@ -41,8 +41,8 @@ void TimePrinter(int i)
 int t08_watch() {
     int seconds;
     cin >> seconds;
-    TimePrinter(seconds / 3600 % 24);
-    cout << ':';
+   
+    cout << seconds / 3600 % 24 << ':';
     TimePrinter(seconds % 3600 / 60);
     cout << ':';
     TimePrinter(seconds % 3600 % 60);
