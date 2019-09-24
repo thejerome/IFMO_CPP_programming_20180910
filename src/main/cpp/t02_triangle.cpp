@@ -17,7 +17,17 @@
 #include <iostream>
 
 using namespace std;
-
+bool check(int a, int b, int c){
+    if (c < (a + b))
+        return true;
+    else
+        return false;
+    
+}
 int t02_triangle() {
-
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (check(a,b,c) && check(a,c,b) && check(b,c,a))
+        cout << "YES";
+    else cout << "NO";
 };

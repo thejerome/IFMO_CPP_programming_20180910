@@ -17,7 +17,23 @@
 #include <iostream>
 
 using namespace std;
-
+int check(int *array, int start = 0, int size = 3){
+    int count = 0;
+    for (int i = start; i < size; ++i)
+        if (*(array + start) == *(array + i))
+            count++;
+    return count;
+}
 int t03_equal3() {
-
+    int a[3];
+    cin >> a[0] >> a[1] >> a[2];
+    if (check(a) == 3)
+        cout << 3;
+    else if (check(a) == 2)
+        cout << 2;
+    else {
+        if (check(a,1) == 2)
+            cout << 2;
+        else cout << 1;
+    }
 };
