@@ -31,9 +31,17 @@
 
 #include "t08_watch.h"
 #include <iostream>
-
 using namespace std;
-
+void TimePrinter(int i)
+{
+    if (i < 10)
+        cout << 0 << i;
+    else cout << i;
+}
 int t08_watch() {
-
+    int seconds;
+    cin >> seconds;
+    
+    cout << seconds / 3600 % 24 << ':'<< seconds % 3600 / 600 << seconds % 3600 / 60 % 10;
+    cout << ':' <<  seconds % 3600 % 60 / 10 << seconds % 3600 % 60 % 10;
 };
