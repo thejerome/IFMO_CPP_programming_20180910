@@ -16,17 +16,11 @@
 #include <iostream>
 
 using namespace std;
-int sorted(int *array, int size){
-    int max = *array;
-    for (int i = 0; i < size; ++i) {
-        if (*(array + i) > max)
-            max = *(array + i);
-        else continue;
-    }
-    return max;
-}
+
 int t01_max3() {
-    int a[3];
-    cin >> a[0] >> a[1] >> a[2];
-    cout << sorted(a,3);
+    int a,b,c;
+    cin >> a >> b >> c;
+    if (a>=b && a>=c) {cout << a;}
+    else if (b>=a && b>=c) cout << b;
+    else if (c>=a && c>=b) cout << c;
 };

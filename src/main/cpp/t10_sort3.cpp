@@ -17,24 +17,14 @@
 #include <iostream>
 
 using namespace std;
-void swap(int &a, int &b){
-    a = a^b;
-    b = a^b;
-    a = a^b;
-}
-void sort(int *array, int size = 3){
-    for (int i = 0; i < size; ++i) {
-        if (*(array + i) > *(array + i+1))
-            swap(*(array + i), *(array + i+1));
-    }
-}
+
 int t10_sort3() {
-    int a[3];
-    for (int i = 0; i < 3; ++i) {
-        cin >> a[i];
-    }
-    sort(a);
-    for (int i = 0; i < 3; ++i) {
-        cout << a[i] << ' ';
-    }
+    int a,b,c;
+    cin>>a>>b>>c;
+    if (a>=b && a>=c && b>=c) cout<<c<<" "<<b<<" "<<a;
+    else if (a>=b && a>=c && b<=c) cout<<b<<" "<<c<<" "<<a;
+    else if (b>=a && b>=c && a>=c) cout<<c<<" "<<a<<" "<<b;
+    else if (b>=a && b>=c && a<=c) cout<<a<<" "<<c<<" "<<b;
+    else if (c>=b && c>=a && b>=a) cout<<a<<" "<<b<<" "<<c;
+    else if (c>=b && a<=c && b<=a) cout<<b<<" "<<a<<" "<<c;
 };
