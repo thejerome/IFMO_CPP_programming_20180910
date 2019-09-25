@@ -19,23 +19,16 @@
 #include <iostream>
 
 using namespace std;
-int fibonacci(int number)
-{
-    if (number == 0)
-        return 0;
-    if (number == 1)
-        return 1;
-    return fibonacci(number-1) + fibonacci(number-2);
-}
+
 int t08_fibb() {
-    int n, i = 1;
+
+    int a=0, b=1, i=0, n;
     cin >> n;
-    
-    while (true){
-        if (i == n) {
-            cout << fibonacci(i);
-            break;
-        }
+    while (i<n) {
         i++;
+        b=a+b;
+        a=b-a;
     }
+    cout << a;
+    
 };

@@ -28,11 +28,7 @@
 #include <iostream>
 
 using namespace std;
-void swap(int &a, int &b){
-    a = a^b;
-    b = b^a;
-    a = a^b;
-}
+
 int t06_max_count() {
     int n, count = 1;
     cin >> n;
@@ -43,7 +39,9 @@ int t06_max_count() {
             count++;
         else if (n > max){
             count = 1;
-            swap(n, max);
+            n = n ^ max;
+            max = max ^ n;
+            n = n ^ max;
         }
     } while (n != 0);
     cout << count;

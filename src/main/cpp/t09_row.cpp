@@ -21,11 +21,7 @@
 #include <iostream>
 
 using namespace std;
-void swap(int &a, int &b){
-    a = a^b;
-    b = b^a;
-    a = a^b;
-}
+
 int t09_row() {
     int n = 1, count = 1, last, max = 0;
     cin >> last;
@@ -38,7 +34,9 @@ int t09_row() {
                 max = count;
             count = 1;
         }
-        swap(n, last);
+        n = n ^ last;
+        last = last ^ n;
+        n = n ^ last;
     }
     cout << max;
 };
