@@ -23,5 +23,9 @@
 using namespace std;
 
 int t03_twos() {
-
+    int n;
+    cin >> n;
+    if ((n & (n - 1)) == 0 && n > 0)
+        cout << "YES";
+    else cout << "NO";
 };
