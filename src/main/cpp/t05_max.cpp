@@ -18,7 +18,19 @@
 #include <iostream>
 
 using namespace std;
-
+void swap(int &a, int &b){
+    a = a^b;
+    b = b^a;
+    a = a^b;
+}
 int t05_max() {
-
+    int n;
+    cin >> n;
+    int max = n;
+    while (n != 0) {
+        cin >> n;
+        if (n > max)
+            swap(n, max);
+    }
+    cout << max;
 };

@@ -28,7 +28,23 @@
 #include <iostream>
 
 using namespace std;
-
+void swap(int &a, int &b){
+    a = a^b;
+    b = b^a;
+    a = a^b;
+}
 int t06_max_count() {
-
+    int n, count = 1;
+    cin >> n;
+    int max = n;
+    do {
+        cin >> n;
+        if (n == max)
+            count++;
+        else if (n > max){
+            count = 1;
+            swap(n, max);
+        }
+    } while (n != 0);
+    cout << count;
 };
