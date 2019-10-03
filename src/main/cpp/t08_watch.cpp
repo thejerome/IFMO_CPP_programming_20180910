@@ -35,5 +35,11 @@
 using namespace std;
 
 int t08_watch() {
-
+	int N, H, M, s;
+	cin >> N;
+	H = (N % 86400 / 3600);
+	M = (N % 3600 / 60);
+	s = (N % 60);
+	cout << H << ":" << M / 10 << M % 10 << ":" << s / 10 << s % 10;
+	return 0;
 };
